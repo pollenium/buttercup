@@ -8,12 +8,12 @@ export class Buttercup {
     return this.uint8Array.length
   }
 
-  equals(bytes: Buttercup): boolean {
-    if (this.uint8Array.length !== bytes.uint8Array.length) {
+  equals(buttercup: Buttercup): boolean {
+    if (this.uint8Array.length !== buttercup.uint8Array.length) {
       return false
     }
     for (let i = 0; i < this.uint8Array.length; i++) {
-      if (this.uint8Array[i] !== bytes.uint8Array[i]) {
+      if (this.uint8Array[i] !== buttercup.uint8Array[i]) {
         return false
       }
     }
@@ -46,7 +46,7 @@ export class Buttercup {
 
   getPaddedLeft(length: number): Buttercup {
     if (this.getLength() > length) {
-      throw new Error(`Cannot pad, bytes.length (${this.getLength()}) > length (${length})`)
+      throw new Error(`Cannot pad, buttercup.length (${this.getLength()}) > length (${length})`)
     }
     const uint8Array = (new Uint8Array(length)).fill(0)
     uint8Array.set(this.uint8Array, length - this.getLength())
@@ -60,10 +60,10 @@ export class Buttercup {
     return new Buttercup(uint8Array)
   }
 
-  append(bytes: Buttercup): Buttercup {
-    const uint8Array = new Uint8Array(this.getLength() + bytes.getLength())
+  append(buttercup: Buttercup): Buttercup {
+    const uint8Array = new Uint8Array(this.getLength() + buttercup.getLength())
     uint8Array.set(this.uint8Array)
-    uint8Array.set(bytes.uint8Array, this.getLength())
+    uint8Array.set(buttercup.uint8Array, this.getLength())
     return new Buttercup(uint8Array)
   }
 
@@ -75,23 +75,23 @@ export class Buttercup {
     return this.getBn().toNumber()
   }
 
-  getXor(bytes: Buttercup): Buttercup {
-    if (this.getLength() !== bytes.getLength()) {
+  getXor(buttercup: Buttercup): Buttercup {
+    if (this.getLength() !== buttercup.getLength()) {
       throw new Error('Cannot xor, length mismatch')
     }
 
-    const xorUint8Array = new Uint8Array(bytes.getLength())
+    const xorUint8Array = new Uint8Array(buttercup.getLength())
 
-    for (let i = 0; i < bytes.getLength(); i++) {
+    for (let i = 0; i < buttercup.getLength(); i++) {
       // eslint-disable-next-line no-bitwise
-      xorUint8Array[i] = this.uint8Array[i] ^ bytes.uint8Array[i]
+      xorUint8Array[i] = this.uint8Array[i] ^ buttercup.uint8Array[i]
     }
 
     return new Buttercup(xorUint8Array)
   }
 
-  compare(bytes: Buttercup): number {
-    return this.getBuffer().compare(bytes.getBuffer())
+  compare(buttercup: Buttercup): number {
+    return this.getBuffer().compare(buttercup.getBuffer())
   }
 
   static fromUtf8(utf8: string): Buttercup {

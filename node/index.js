@@ -19,12 +19,12 @@ var Buttercup = /** @class */ (function () {
     Buttercup.prototype.getLength = function () {
         return this.uint8Array.length;
     };
-    Buttercup.prototype.equals = function (bytes) {
-        if (this.uint8Array.length !== bytes.uint8Array.length) {
+    Buttercup.prototype.equals = function (buttercup) {
+        if (this.uint8Array.length !== buttercup.uint8Array.length) {
             return false;
         }
         for (var i = 0; i < this.uint8Array.length; i++) {
-            if (this.uint8Array[i] !== bytes.uint8Array[i]) {
+            if (this.uint8Array[i] !== buttercup.uint8Array[i]) {
                 return false;
             }
         }
@@ -50,7 +50,7 @@ var Buttercup = /** @class */ (function () {
     };
     Buttercup.prototype.getPaddedLeft = function (length) {
         if (this.getLength() > length) {
-            throw new Error("Cannot pad, bytes.length (" + this.getLength() + ") > length (" + length + ")");
+            throw new Error("Cannot pad, buttercup.length (" + this.getLength() + ") > length (" + length + ")");
         }
         var uint8Array = (new Uint8Array(length)).fill(0);
         uint8Array.set(this.uint8Array, length - this.getLength());
@@ -62,10 +62,10 @@ var Buttercup = /** @class */ (function () {
         uint8Array.set(this.uint8Array, 1);
         return new Buttercup(uint8Array);
     };
-    Buttercup.prototype.append = function (bytes) {
-        var uint8Array = new Uint8Array(this.getLength() + bytes.getLength());
+    Buttercup.prototype.append = function (buttercup) {
+        var uint8Array = new Uint8Array(this.getLength() + buttercup.getLength());
         uint8Array.set(this.uint8Array);
-        uint8Array.set(bytes.uint8Array, this.getLength());
+        uint8Array.set(buttercup.uint8Array, this.getLength());
         return new Buttercup(uint8Array);
     };
     Buttercup.prototype.getBn = function () {
@@ -74,19 +74,19 @@ var Buttercup = /** @class */ (function () {
     Buttercup.prototype.getNumber = function () {
         return this.getBn().toNumber();
     };
-    Buttercup.prototype.getXor = function (bytes) {
-        if (this.getLength() !== bytes.getLength()) {
+    Buttercup.prototype.getXor = function (buttercup) {
+        if (this.getLength() !== buttercup.getLength()) {
             throw new Error('Cannot xor, length mismatch');
         }
-        var xorUint8Array = new Uint8Array(bytes.getLength());
-        for (var i = 0; i < bytes.getLength(); i++) {
+        var xorUint8Array = new Uint8Array(buttercup.getLength());
+        for (var i = 0; i < buttercup.getLength(); i++) {
             // eslint-disable-next-line no-bitwise
-            xorUint8Array[i] = this.uint8Array[i] ^ bytes.uint8Array[i];
+            xorUint8Array[i] = this.uint8Array[i] ^ buttercup.uint8Array[i];
         }
         return new Buttercup(xorUint8Array);
     };
-    Buttercup.prototype.compare = function (bytes) {
-        return this.getBuffer().compare(bytes.getBuffer());
+    Buttercup.prototype.compare = function (buttercup) {
+        return this.getBuffer().compare(buttercup.getBuffer());
     };
     Buttercup.fromUtf8 = function (utf8) {
         return Buttercup.fromBuffer(Buffer.from(utf8, 'utf8'));

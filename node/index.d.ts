@@ -4,7 +4,7 @@ export declare class Buttercup {
     uint8Array: Uint8Array;
     constructor(uint8Array: Uint8Array);
     getLength(): number;
-    equals(bytes: Buttercup): boolean;
+    equals(buttercup: Buttercup): boolean;
     slice(start: number, end: number): Buttercup;
     getHash(): Buttercup;
     getHex(): string;
@@ -13,11 +13,11 @@ export declare class Buttercup {
     getBuffer(): Buffer;
     getPaddedLeft(length: number): Buttercup;
     prependByte(byte: number): Buttercup;
-    append(bytes: Buttercup): Buttercup;
+    append(buttercup: Buttercup): Buttercup;
     getBn(): Bn;
     getNumber(): number;
-    getXor(bytes: Buttercup): Buttercup;
-    compare(bytes: Buttercup): number;
+    getXor(buttercup: Buttercup): Buttercup;
+    compare(buttercup: Buttercup): number;
     static fromUtf8(utf8: string): Buttercup;
     static fromBuffer(buffer: Buffer): Buttercup;
     static fromHex(hex: string): Buttercup;
