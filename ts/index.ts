@@ -115,6 +115,6 @@ export class Buttercup {
   }
 
   static random(length: number): Buttercup {
-    return Buttercup.fromBuffer(crypto.randomButtercup(length))
+    return Buttercup.fromBuffer(crypto.randomBytes(length))
   }
 }
