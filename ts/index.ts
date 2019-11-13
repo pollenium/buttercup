@@ -106,6 +106,10 @@ export class Buttercup {
     return Buttercup.fromBuffer(Buffer.from(hex, 'hex'))
   }
 
+  static fromPhex(phex: string): Buttercup {
+    return Buttercup.fromHex(phex.substr(2))
+  }
+
   static fromBn(bn: Bn): Buttercup {
     return Buttercup.fromHex(bn.toString(16))
   }
