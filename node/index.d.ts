@@ -21,6 +21,7 @@ export declare class Buttercup {
     static fromUtf8(utf8: string): Buttercup;
     static fromBuffer(buffer: Buffer): Buttercup;
     static fromHex(hex: string): Buttercup;
+    static fromPhex(phex: string): Buttercup;
     static fromBn(bn: Bn): Buttercup;
     static fromNumber(number: number): Buttercup;
     static random(length: number): Buttercup;

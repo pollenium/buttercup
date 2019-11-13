@@ -97,6 +97,9 @@ var Buttercup = /** @class */ (function () {
     Buttercup.fromHex = function (hex) {
         return Buttercup.fromBuffer(Buffer.from(hex, 'hex'));
     };
+    Buttercup.fromPhex = function (phex) {
+        return Buttercup.fromHex(phex.substr(2));
+    };
     Buttercup.fromBn = function (bn) {
         return Buttercup.fromHex(bn.toString(16));
     };
