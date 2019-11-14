@@ -4,13 +4,14 @@ export declare class Buttercup {
     uint8Array: Uint8Array;
     constructor(uint8Array: Uint8Array);
     getLength(): number;
-    equals(buttercup: Buttercup): boolean;
+    strictEquals(buttercup: Buttercup): boolean;
     slice(start: number, end: number): Buttercup;
     getHash(): Buttercup;
     getHex(): string;
     getPhex(): string;
     getUtf8(): string;
     getBuffer(): Buffer;
+    unstrictEquals(buttercup: Buttercup): boolean;
     add(buttercup: Buttercup): Buttercup;
     sub(buttercup: Buttercup): Buttercup;
     mul(buttercup: Buttercup): Buttercup;

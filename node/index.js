@@ -19,7 +19,7 @@ var Buttercup = /** @class */ (function () {
     Buttercup.prototype.getLength = function () {
         return this.uint8Array.length;
     };
-    Buttercup.prototype.equals = function (buttercup) {
+    Buttercup.prototype.strictEquals = function (buttercup) {
         if (this.uint8Array.length !== buttercup.uint8Array.length) {
             return false;
         }
@@ -47,6 +47,9 @@ var Buttercup = /** @class */ (function () {
     };
     Buttercup.prototype.getBuffer = function () {
         return Buffer.from(this.uint8Array);
+    };
+    Buttercup.prototype.unstrictEquals = function (buttercup) {
+        return this.getBn().eq(buttercup.getBn());
     };
     Buttercup.prototype.add = function (buttercup) {
         return Buttercup.fromBn(this.getBn().add(buttercup.getBn()));

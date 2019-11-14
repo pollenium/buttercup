@@ -8,7 +8,7 @@ export class Buttercup {
     return this.uint8Array.length
   }
 
-  equals(buttercup: Buttercup): boolean {
+  strictEquals(buttercup: Buttercup): boolean {
     if (this.uint8Array.length !== buttercup.uint8Array.length) {
       return false
     }
@@ -42,6 +42,10 @@ export class Buttercup {
 
   getBuffer(): Buffer {
     return Buffer.from(this.uint8Array)
+  }
+
+  unstrictEquals(buttercup: Buttercup): boolean {
+    return this.getBn().eq(buttercup.getBn())
   }
 
   add(buttercup: Buttercup): Buttercup {
