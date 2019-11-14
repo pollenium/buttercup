@@ -16,6 +16,7 @@ export declare class Buttercup {
     sub(buttercup: Buttercup): Buttercup;
     mul(buttercup: Buttercup): Buttercup;
     div(buttercup: Buttercup): Buttercup;
+    mod(buttercup: Buttercup): Buttercup;
     gt(buttercup: Buttercup): Buttercup;
     gte(buttercup: Buttercup): Buttercup;
     lt(buttercup: Buttercup): Buttercup;

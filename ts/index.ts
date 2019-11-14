@@ -72,6 +72,12 @@ export class Buttercup {
     )
   }
 
+  mod(buttercup: Buttercup): Buttercup {
+    return Buttercup.fromBn(
+      this.getBn().mod(buttercup.getBn())
+    )
+  }
+
   gt(buttercup: Buttercup): Buttercup {
     return Buttercup.fromBn(
       this.getBn().gt(buttercup.getBn())

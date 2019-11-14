@@ -63,6 +63,9 @@ var Buttercup = /** @class */ (function () {
     Buttercup.prototype.div = function (buttercup) {
         return Buttercup.fromBn(this.getBn().divRound(buttercup.getBn()));
     };
+    Buttercup.prototype.mod = function (buttercup) {
+        return Buttercup.fromBn(this.getBn().mod(buttercup.getBn()));
+    };
     Buttercup.prototype.gt = function (buttercup) {
         return Buttercup.fromBn(this.getBn().gt(buttercup.getBn()));
     };
