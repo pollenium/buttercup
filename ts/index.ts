@@ -66,10 +66,18 @@ export class Buttercup {
     )
   }
 
-  div(buttercup: Buttercup): Buttercup {
+  divDn(buttercup: Buttercup): Buttercup {
     return Buttercup.fromBn(
       this.getBn().divRound(buttercup.getBn())
     )
+  }
+
+  divUp(buttercup: Buttercup): Buttercup {
+    if (this.mod(buttercup).unstrictEquals(ZERO)) {
+      return this.divDn(buttercup)
+    } else {
+      return this.divDn(buttercup).add(ONE)
+    }
   }
 
   mod(buttercup: Buttercup): Buttercup {
@@ -180,3 +188,6 @@ export class Buttercup {
     return Buttercup.fromBuffer(crypto.randomBytes(length))
   }
 }
+
+export const ZERO = Buttercup.fromNumber(0)
+export const ONE = Buttercup.fromNumber(0)

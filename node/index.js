@@ -60,8 +60,16 @@ var Buttercup = /** @class */ (function () {
     Buttercup.prototype.mul = function (buttercup) {
         return Buttercup.fromBn(this.getBn().mul(buttercup.getBn()));
     };
-    Buttercup.prototype.div = function (buttercup) {
+    Buttercup.prototype.divDn = function (buttercup) {
         return Buttercup.fromBn(this.getBn().divRound(buttercup.getBn()));
+    };
+    Buttercup.prototype.divUp = function (buttercup) {
+        if (this.mod(buttercup).unstrictEquals(exports.ZERO)) {
+            return this.divDn(buttercup);
+        }
+        else {
+            return this.divDn(buttercup).add(exports.ONE);
+        }
     };
     Buttercup.prototype.mod = function (buttercup) {
         return Buttercup.fromBn(this.getBn().mod(buttercup.getBn()));
@@ -142,3 +150,5 @@ var Buttercup = /** @class */ (function () {
     return Buttercup;
 }());
 exports.Buttercup = Buttercup;
+exports.ZERO = Buttercup.fromNumber(0);
+exports.ONE = Buttercup.fromNumber(0);

@@ -15,7 +15,8 @@ export declare class Buttercup {
     add(buttercup: Buttercup): Buttercup;
     sub(buttercup: Buttercup): Buttercup;
     mul(buttercup: Buttercup): Buttercup;
-    div(buttercup: Buttercup): Buttercup;
+    divDn(buttercup: Buttercup): Buttercup;
+    divUp(buttercup: Buttercup): Buttercup;
     mod(buttercup: Buttercup): Buttercup;
     gt(buttercup: Buttercup): Buttercup;
     gte(buttercup: Buttercup): Buttercup;
@@ -36,3 +37,5 @@ export declare class Buttercup {
     static fromNumber(number: number): Buttercup;
     static random(length: number): Buttercup;
 }
+export declare const ZERO: Buttercup;
+export declare const ONE: Buttercup;
