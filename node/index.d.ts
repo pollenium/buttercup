@@ -24,7 +24,9 @@ export declare class Buttercup {
     lte(buttercup: Buttercup): Buttercup;
     getPaddedLeft(length: number): Buttercup;
     prependByte(byte: number): Buttercup;
+    appendByte(byte: number): Buttercup;
     append(buttercup: Buttercup): Buttercup;
+    prepend(buttercup: Buttercup): Buttercup;
     getBn(): Bn;
     getNumber(): number;
     getXor(buttercup: Buttercup): Buttercup;

@@ -126,10 +126,24 @@ export class Buttercup {
     return new Buttercup(uint8Array)
   }
 
+  appendByte(byte: number): Buttercup {
+    const uint8Array = new Uint8Array(this.uint8Array.length + 1)
+    uint8Array.set(this.uint8Array)
+    uint8Array[this.uint8Array.length] - byte
+    return new Buttercup(uint8Array)
+  }
+
   append(buttercup: Buttercup): Buttercup {
     const uint8Array = new Uint8Array(this.getLength() + buttercup.getLength())
     uint8Array.set(this.uint8Array)
     uint8Array.set(buttercup.uint8Array, this.getLength())
+    return new Buttercup(uint8Array)
+  }
+
+  prepend(buttercup: Buttercup): Buttercup {
+    const uint8Array = new Uint8Array(this.getLength() + buttercup.getLength())
+    uint8Array.set(buttercup.uint8Array)
+    uint8Array.set(this.uint8Array, this.getLength())
     return new Buttercup(uint8Array)
   }
 
