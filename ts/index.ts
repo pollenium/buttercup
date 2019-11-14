@@ -44,6 +44,54 @@ export class Buttercup {
     return Buffer.from(this.uint8Array)
   }
 
+  add(buttercup: Buttercup): Buttercup {
+    return Buttercup.fromBn(
+      this.getBn().add(buttercup.getBn())
+    )
+  }
+
+  sub(buttercup: Buttercup): Buttercup {
+    return Buttercup.fromBn(
+      this.getBn().sub(buttercup.getBn())
+    )
+  }
+
+  mul(buttercup: Buttercup): Buttercup {
+    return Buttercup.fromBn(
+      this.getBn().mul(buttercup.getBn())
+    )
+  }
+
+  div(buttercup: Buttercup): Buttercup {
+    return Buttercup.fromBn(
+      this.getBn().divRound(buttercup.getBn())
+    )
+  }
+
+  gt(buttercup: Buttercup): Buttercup {
+    return Buttercup.fromBn(
+      this.getBn().gt(buttercup.getBn())
+    )
+  }
+
+  gte(buttercup: Buttercup): Buttercup {
+    return Buttercup.fromBn(
+      this.getBn().gte(buttercup.getBn())
+    )
+  }
+
+  lt(buttercup: Buttercup): Buttercup {
+    return Buttercup.fromBn(
+      this.getBn().lt(buttercup.getBn())
+    )
+  }
+
+  lte(buttercup: Buttercup): Buttercup {
+    return Buttercup.fromBn(
+      this.getBn().lte(buttercup.getBn())
+    )
+  }
+
   getPaddedLeft(length: number): Buttercup {
     if (this.getLength() > length) {
       throw new Error(`Cannot pad, buttercup.length (${this.getLength()}) > length (${length})`)

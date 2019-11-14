@@ -48,6 +48,30 @@ var Buttercup = /** @class */ (function () {
     Buttercup.prototype.getBuffer = function () {
         return Buffer.from(this.uint8Array);
     };
+    Buttercup.prototype.add = function (buttercup) {
+        return Buttercup.fromBn(this.getBn().add(buttercup.getBn()));
+    };
+    Buttercup.prototype.sub = function (buttercup) {
+        return Buttercup.fromBn(this.getBn().sub(buttercup.getBn()));
+    };
+    Buttercup.prototype.mul = function (buttercup) {
+        return Buttercup.fromBn(this.getBn().mul(buttercup.getBn()));
+    };
+    Buttercup.prototype.div = function (buttercup) {
+        return Buttercup.fromBn(this.getBn().divRound(buttercup.getBn()));
+    };
+    Buttercup.prototype.gt = function (buttercup) {
+        return Buttercup.fromBn(this.getBn().gt(buttercup.getBn()));
+    };
+    Buttercup.prototype.gte = function (buttercup) {
+        return Buttercup.fromBn(this.getBn().gte(buttercup.getBn()));
+    };
+    Buttercup.prototype.lt = function (buttercup) {
+        return Buttercup.fromBn(this.getBn().lt(buttercup.getBn()));
+    };
+    Buttercup.prototype.lte = function (buttercup) {
+        return Buttercup.fromBn(this.getBn().lte(buttercup.getBn()));
+    };
     Buttercup.prototype.getPaddedLeft = function (length) {
         if (this.getLength() > length) {
             throw new Error("Cannot pad, buttercup.length (" + this.getLength() + ") > length (" + length + ")");

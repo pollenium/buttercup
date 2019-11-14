@@ -11,6 +11,14 @@ export declare class Buttercup {
     getPhex(): string;
     getUtf8(): string;
     getBuffer(): Buffer;
+    add(buttercup: Buttercup): Buttercup;
+    sub(buttercup: Buttercup): Buttercup;
+    mul(buttercup: Buttercup): Buttercup;
+    div(buttercup: Buttercup): Buttercup;
+    gt(buttercup: Buttercup): Buttercup;
+    gte(buttercup: Buttercup): Buttercup;
+    lt(buttercup: Buttercup): Buttercup;
+    lte(buttercup: Buttercup): Buttercup;
     getPaddedLeft(length: number): Buttercup;
     prependByte(byte: number): Buttercup;
     append(buttercup: Buttercup): Buttercup;
