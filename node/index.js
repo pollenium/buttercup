@@ -37,7 +37,11 @@ var Buttercup = /** @class */ (function () {
         return Buttercup.fromBuffer(crypto.createHash('sha256').update(this.uint8Array).digest());
     };
     Buttercup.prototype.getHex = function () {
-        return this.getBuffer().toString('hex');
+        var hex = '';
+        this.uint8Array.forEach(function (byte) {
+            hex += byte.toString(16).padStart(2, '0');
+        });
+        return hex;
     };
     Buttercup.prototype.getPhex = function () {
         return "0x" + this.getHex();
@@ -145,7 +149,10 @@ var Buttercup = /** @class */ (function () {
         return new Buttercup(new Uint8Array(buffer));
     };
     Buttercup.fromHex = function (hex) {
-        return Buttercup.fromBuffer(Buffer.from(hex, 'hex'));
+        var array = hex.match(/.{1,2}/g).map(function (byteHex) {
+            return parseInt(byteHex, 16);
+        });
+        return new Buttercup(new Uint8Array(array));
     };
     Buttercup.fromPhex = function (phex) {
         return Buttercup.fromHex(phex.substr(2));

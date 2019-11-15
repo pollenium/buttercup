@@ -29,7 +29,13 @@ export class Buttercup {
   }
 
   getHex(): string {
-    return this.getBuffer().toString('hex')
+    let hex = ''
+
+    this.uint8Array.forEach((byte) => {
+      hex += byte.toString(16).padStart(2, '0')
+    })
+
+    return hex
   }
 
   getPhex(): string {
@@ -183,7 +189,10 @@ export class Buttercup {
   }
 
   static fromHex(hex: string): Buttercup {
-    return Buttercup.fromBuffer(Buffer.from(hex, 'hex'))
+    const array = hex.match(/.{1,2}/g).map((byteHex) => {
+      return parseInt(byteHex, 16)
+    })
+    return new Buttercup(new Uint8Array(array))
   }
 
   static fromPhex(phex: string): Buttercup {
