@@ -154,7 +154,7 @@ export class Buttercup {
   }
 
   getBn(): Bn {
-    return new Bn(this.getHex(), 16)
+    return new Bn(this.uint8Array)
   }
 
   getNumber(): number {
@@ -204,7 +204,7 @@ export class Buttercup {
   }
 
   static fromBn(bn: Bn): Buttercup {
-    return Buttercup.fromHex(bn.toString(16))
+    return Buttercup.fromArray(bn.toArray('le'))
   }
 
   static fromNumber(number: number): Buttercup {

@@ -123,7 +123,7 @@ var Buttercup = /** @class */ (function () {
         return new Buttercup(uint8Array);
     };
     Buttercup.prototype.getBn = function () {
-        return new bn_js_1["default"](this.getHex(), 16);
+        return new bn_js_1["default"](this.uint8Array);
     };
     Buttercup.prototype.getNumber = function () {
         return this.getBn().toNumber();
@@ -161,7 +161,7 @@ var Buttercup = /** @class */ (function () {
         return Buttercup.fromHex(phex.substr(2));
     };
     Buttercup.fromBn = function (bn) {
-        return Buttercup.fromHex(bn.toString(16));
+        return Buttercup.fromArray(bn.toArray('le'));
     };
     Buttercup.fromNumber = function (number) {
         return Buttercup.fromBn(new bn_js_1["default"](number));
