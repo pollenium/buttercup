@@ -148,11 +148,14 @@ var Buttercup = /** @class */ (function () {
     Buttercup.fromBuffer = function (buffer) {
         return new Buttercup(new Uint8Array(buffer));
     };
+    Buttercup.fromArray = function (array) {
+        return new Buttercup(new Uint8Array(array));
+    };
     Buttercup.fromHex = function (hex) {
         var array = hex.match(/.{1,2}/g).map(function (byteHex) {
             return parseInt(byteHex, 16);
         });
-        return new Buttercup(new Uint8Array(array));
+        return Buttercup.fromArray(array);
     };
     Buttercup.fromPhex = function (phex) {
         return Buttercup.fromHex(phex.substr(2));

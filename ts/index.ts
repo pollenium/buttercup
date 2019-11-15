@@ -188,11 +188,15 @@ export class Buttercup {
     return new Buttercup(new Uint8Array(buffer))
   }
 
+  static fromArray(array: Array<number>): Buttercup {
+    return new Buttercup(new Uint8Array(array))
+  }
+
   static fromHex(hex: string): Buttercup {
     const array = hex.match(/.{1,2}/g).map((byteHex) => {
       return parseInt(byteHex, 16)
     })
-    return new Buttercup(new Uint8Array(array))
+    return Buttercup.fromArray(array)
   }
 
   static fromPhex(phex: string): Buttercup {

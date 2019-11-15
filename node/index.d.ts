@@ -33,6 +33,7 @@ export declare class Buttercup {
     compare(buttercup: Buttercup): number;
     static fromUtf8(utf8: string): Buttercup;
     static fromBuffer(buffer: Buffer): Buttercup;
+    static fromArray(array: Array<number>): Buttercup;
     static fromHex(hex: string): Buttercup;
     static fromPhex(phex: string): Buttercup;
     static fromBn(bn: Bn): Buttercup;
