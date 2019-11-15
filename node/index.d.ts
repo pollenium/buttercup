@@ -37,7 +37,9 @@ export declare class Buttercup {
     static fromPhex(phex: string): Buttercup;
     static fromBn(bn: Bn): Buttercup;
     static fromNumber(number: number): Buttercup;
-    static random(length: number): Buttercup;
+    static getRandom(length: number): Buttercup;
+    static getNow(): Buttercup;
+    static getNowMs(): Buttercup;
 }
 export declare const ZERO: Buttercup;
 export declare const ONE: Buttercup;

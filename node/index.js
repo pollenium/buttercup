@@ -156,8 +156,14 @@ var Buttercup = /** @class */ (function () {
     Buttercup.fromNumber = function (number) {
         return Buttercup.fromBn(new bn_js_1["default"](number));
     };
-    Buttercup.random = function (length) {
+    Buttercup.getRandom = function (length) {
         return Buttercup.fromBuffer(crypto.randomBytes(length));
+    };
+    Buttercup.getNow = function () {
+        return Buttercup.getNowMs().divDn(Buttercup.fromNumber(1000));
+    };
+    Buttercup.getNowMs = function () {
+        return Buttercup.fromNumber((new Date).getTime());
     };
     return Buttercup;
 }());

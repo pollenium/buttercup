@@ -198,9 +198,18 @@ export class Buttercup {
     return Buttercup.fromBn(new Bn(number))
   }
 
-  static random(length: number): Buttercup {
+  static getRandom(length: number): Buttercup {
     return Buttercup.fromBuffer(crypto.randomBytes(length))
   }
+
+  static getNow(): Buttercup {
+    return Buttercup.getNowMs().divDn(Buttercup.fromNumber(1000))
+  }
+
+  static getNowMs(): Buttercup {
+    return Buttercup.fromNumber((new Date).getTime())
+  }
+
 }
 
 export const ZERO = Buttercup.fromNumber(0)
