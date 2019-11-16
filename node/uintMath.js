@@ -7,11 +7,8 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 exports.__esModule = true;
-var _from = __importStar(require("./from"));
-var _uintMath = __importStar(require("./uintMath"));
-exports.from = _from;
-exports.uintMath = _uintMath;
-var Bytes_1 = require("./classes/externals/Bytes");
-exports.Bytes = Bytes_1.Bytes;
-var uints_1 = require("./classes/externals/uints");
-exports.Uint8 = uints_1.Uint8;
+var from = __importStar(require("./from"));
+function add(UintClass, a, b) {
+    return new UintClass(from.bn(a.getBn().add(b.getBn())));
+}
+exports.add = add;
