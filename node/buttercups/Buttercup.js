@@ -4,7 +4,7 @@ var Buttercup = /** @class */ (function () {
     function Buttercup(uint8Array) {
         this.uint8Array = uint8Array;
     }
-    Buttercup.prototype.cloneUint8Array = function () {
+    Buttercup.prototype.getUint8Array = function () {
         return this.uint8Array.slice();
     };
     Buttercup.prototype.getLength = function () {
@@ -22,7 +22,7 @@ var Buttercup = /** @class */ (function () {
         return true;
     };
     Buttercup.prototype.getSlice = function (start, end) {
-        return new Buttercup(this.cloneUint8Array().slice(start, end));
+        return new Buttercup(this.uint8Array.slice(start, end));
     };
     Buttercup.prototype.getArray = function () {
         return Array.from(this.cloneUint8Array());

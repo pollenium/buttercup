@@ -3,7 +3,7 @@ import crypto from 'crypto'
 export class Buttercup {
   constructor(private uint8Array: Uint8Array) {}
 
-  cloneUint8Array(): Uint8Array {
+  getUint8Array(): Uint8Array {
     return this.uint8Array.slice()
   }
 
@@ -24,7 +24,7 @@ export class Buttercup {
   }
 
   getSlice(start: number, end: number): Buttercup {
-    return new Buttercup(this.cloneUint8Array().slice(start, end))
+    return new Buttercup(this.uint8Array.slice(start, end))
   }
 
   getArray(): Array<number> {

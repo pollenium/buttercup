@@ -2,7 +2,7 @@
 export declare class Buttercup {
     private uint8Array;
     constructor(uint8Array: Uint8Array);
-    cloneUint8Array(): Uint8Array;
+    getUint8Array(): Uint8Array;
     getLength(): number;
     getIsEqual(wrapper: Buttercup): boolean;
     getSlice(start: number, end: number): Buttercup;
