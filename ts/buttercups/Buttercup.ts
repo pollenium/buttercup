@@ -23,18 +23,13 @@ export class Buttercup {
     return true
   }
 
-  // slice(start: number, end: number): Buttercup {
-  //   return new Buttercup(this.cloneUint8Array().slice(start, end))
-  // }
-
-  // getSha256Hash(): Buttercup {
-  //   return Buttercup.fromBuffer(crypto.createHash('sha256').update(this.uint8Array).digest())
-  // }
+  getSlice(start: number, end: number): Buttercup {
+    return new Buttercup(this.cloneUint8Array().slice(start, end))
+  }
 
   getArray(): Array<number> {
     return Array.from(this.cloneUint8Array())
   }
-
 
   getHex(): string {
     let hex = ''

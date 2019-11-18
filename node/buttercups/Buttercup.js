@@ -21,12 +21,9 @@ var Buttercup = /** @class */ (function () {
         }
         return true;
     };
-    // slice(start: number, end: number): Buttercup {
-    //   return new Buttercup(this.cloneUint8Array().slice(start, end))
-    // }
-    // getSha256Hash(): Buttercup {
-    //   return Buttercup.fromBuffer(crypto.createHash('sha256').update(this.uint8Array).digest())
-    // }
+    Buttercup.prototype.getSlice = function (start, end) {
+        return new Buttercup(this.cloneUint8Array().slice(start, end));
+    };
     Buttercup.prototype.getArray = function () {
         return Array.from(this.cloneUint8Array());
     };

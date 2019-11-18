@@ -5,6 +5,7 @@ export declare class Buttercup {
     cloneUint8Array(): Uint8Array;
     getLength(): number;
     getIsEqual(wrapper: Buttercup): boolean;
+    getSlice(start: number, end: number): Buttercup;
     getArray(): Array<number>;
     getHex(): string;
     getPhex(): string;
