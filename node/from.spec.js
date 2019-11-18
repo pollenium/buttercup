@@ -4,8 +4,15 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 exports.__esModule = true;
 var _1 = require("./");
-var from_1 = require("./from");
 var bn_js_1 = __importDefault(require("bn.js"));
+var externals = {
+    uintish: [
+        _1.Uint8
+    ],
+    bytish: [
+        _1.Bytes
+    ]
+};
 var fixtures = [
     {
         uint8Array: new Uint8Array(0),
@@ -14,8 +21,8 @@ var fixtures = [
             { array: [] },
             { hexish: '' },
             { hexish: '0x' },
-            { number: 0 },
-            { bn: new bn_js_1["default"](0) }
+            { uintNumber: 0 },
+            { uintBn: new bn_js_1["default"](0) }
         ]
     },
     {
@@ -38,8 +45,8 @@ var fixtures = [
             { hexish: '01' },
             { hexish: '0x1' },
             { hexish: '0x01' },
-            { number: 1 },
-            { bn: new bn_js_1["default"](1) }
+            //     { uintNumber: 1 },
+            { uintBn: new bn_js_1["default"](1) }
         ]
     },
     {
@@ -49,8 +56,8 @@ var fixtures = [
             { array: [255] },
             { hexish: 'ff' },
             { hexish: '0xff' },
-            { number: 255 },
-            { bn: new bn_js_1["default"](255) }
+            //     { uintNumber: 255 },
+            { uintBn: new bn_js_1["default"](255) }
         ]
     },
     {
@@ -73,8 +80,8 @@ var fixtures = [
             { hexish: '0100' },
             { hexish: '0x010' },
             { hexish: '0x0100' },
-            { number: 256 },
-            { bn: new bn_js_1["default"](256) }
+            //     { uintNumber: 256 },
+            { uintBn: new bn_js_1["default"](256) }
         ]
     },
     {
@@ -86,8 +93,8 @@ var fixtures = [
             { hexish: 'fFFf' },
             { hexish: '0xffff' },
             { hexish: '0xFFFF' },
-            { number: 256 * 256 - 1 },
-            { bn: new bn_js_1["default"](256 * 256 - 1) }
+            //     { uintNumber: 256 * 256 - 1 },
+            { uintBn: new bn_js_1["default"](256 * 256 - 1) }
         ]
     },
     {
@@ -99,75 +106,92 @@ var fixtures = [
             { hexish: '010000' },
             { hexish: '0x01000' },
             { hexish: '0x010000' },
-            { number: 256 * 256 },
-            { bn: new bn_js_1["default"](256 * 256) }
+            { uintNumber: 256 * 256 },
+            { uintBn: new bn_js_1["default"](256 * 256) }
         ]
-    },
+    }
 ];
-fixtures.forEach(function (fixture, index) {
-    fixture.inputs.forEach(function (input) {
-        var fromKey = Object.keys(input)[0];
-        var fromValue = input[fromKey];
-        test("fixture #" + index + " " + fromKey, function () {
-            expect(_1.from[fromKey](fromValue)).toStrictEqual(fixture.uint8Array);
-        });
-    });
-});
-var invalidHexishChar = [
-    '\x2F',
-    '/',
-    '\x3A',
-    ':',
-    '\x40',
-    '@',
-    '\x47',
-    'G',
-    '\x60',
-    '`',
-    '\x67',
-    'g',
-    '\n',
-    '\x00',
-    '\xff'
-];
-var validHexishChars = ['0', '9', 'a', 'f', 'A', 'F'];
-invalidHexishChar.forEach(function (invalidHexishChar) {
-    validHexishChars.forEach(function (validHexishChar) {
-        var invalidHexishes = [
-            "" + invalidHexishChar,
-            "" + validHexishChar + invalidHexishChar,
-            "" + invalidHexishChar + validHexishChar,
-            "" + validHexishChar + invalidHexishChar + validHexishChar,
-            "" + validHexishChar + validHexishChar + invalidHexishChar,
-            "" + invalidHexishChar + validHexishChar + validHexishChar,
-            "0x" + invalidHexishChar,
-            "0x" + validHexishChar + invalidHexishChar,
-            "0x" + invalidHexishChar + validHexishChar,
-            "0x" + validHexishChar + invalidHexishChar + validHexishChar,
-            "0x" + validHexishChar + validHexishChar + invalidHexishChar,
-            "0x" + invalidHexishChar + validHexishChar + validHexishChar,
-        ];
-        var validHexishes = [
-            "" + validHexishChar,
-            "" + validHexishChar + validHexishChar,
-            "" + validHexishChar + validHexishChar + validHexishChar,
-            "0x" + validHexishChar,
-            "0x" + validHexishChar + validHexishChar,
-            "0x" + validHexishChar + validHexishChar + validHexishChar,
-        ];
-        invalidHexishes.forEach(function (invalidHexish) {
-            test("invalidHexish: " + invalidHexish, function () {
-                expect(function () {
-                    _1.from.hexish(invalidHexish);
-                }).toThrow(from_1.InvalidHexishError);
-            });
-        });
-        validHexishes.forEach(function (validHexish) {
-            test("validHexish: " + validHexish, function () {
-                expect(function () {
-                    _1.from.hexish(validHexish);
-                }).not.toThrow();
+var lengthFixtures = fixtures.forEach(function (fixture, index) {
+    var externalTypes = Object.keys(externals);
+    externalTypes.forEach(function (externalType) {
+        externals[externalType].forEach(function (External) {
+            var uint8Array = fixture.uint8Array;
+            if (uint8Array.length > 1 && External === _1.Uint8) {
+                return;
+            }
+            var reference = _1.from.uint8Array(External, fixture.uint8Array);
+            fixture.inputs.forEach(function (input) {
+                var fromKey = Object.keys(input)[0];
+                var fromFunc = _1.from[fromKey];
+                var fromValue = input[fromKey];
+                test("fixture " + External.name + " #" + index + " " + fromKey + ": '" + fromValue + "'", function () {
+                    // console.log('External', External)
+                    var fromInstance = fromFunc(External, fromValue);
+                    // console.log('fromInstance', fromInstance)
+                    expect(fromInstance.cloneUint8Array()).toBeInstanceOf(Uint8Array);
+                });
             });
         });
     });
 });
+// const invalidHexishChar = [
+//   '\x2F',
+//   '/',
+//   '\x3A',
+//   ':',
+//   '\x40',
+//   '@',
+//   '\x47',
+//   'G',
+//   '\x60',
+//   '`',
+//   '\x67',
+//   'g',
+//   '\n',
+//   '\x00',
+//   '\xff'
+// ]
+//
+// const validHexishChars = ['0', '9', 'a', 'f', 'A', 'F']
+//
+// invalidHexishChar.forEach((invalidHexishChar) => {
+//   validHexishChars.forEach((validHexishChar) => {
+//     const invalidHexishes = [
+//       `${invalidHexishChar}`,
+//       `${validHexishChar}${invalidHexishChar}`,
+//       `${invalidHexishChar}${validHexishChar}`,
+//       `${validHexishChar}${invalidHexishChar}${validHexishChar}`,
+//       `${validHexishChar}${validHexishChar}${invalidHexishChar}`,
+//       `${invalidHexishChar}${validHexishChar}${validHexishChar}`,
+//       `0x${invalidHexishChar}`,
+//       `0x${validHexishChar}${invalidHexishChar}`,
+//       `0x${invalidHexishChar}${validHexishChar}`,
+//       `0x${validHexishChar}${invalidHexishChar}${validHexishChar}`,
+//       `0x${validHexishChar}${validHexishChar}${invalidHexishChar}`,
+//       `0x${invalidHexishChar}${validHexishChar}${validHexishChar}`,
+//
+//     ]
+//     const validHexishes = [
+//       `${validHexishChar}`,
+//       `${validHexishChar}${validHexishChar}`,
+//       `${validHexishChar}${validHexishChar}${validHexishChar}`,
+//       `0x${validHexishChar}`,
+//       `0x${validHexishChar}${validHexishChar}`,
+//       `0x${validHexishChar}${validHexishChar}${validHexishChar}`,
+//     ]
+//     invalidHexishes.forEach((invalidHexish) => {
+//       test(`invalidHexish: ${invalidHexish}`, () => {
+//         expect(() => {
+//           from.hexish(invalidHexish)
+//         }).toThrow(InvalidHexishError)
+//       })
+//     })
+//     validHexishes.forEach((validHexish) => {
+//       test(`validHexish: ${validHexish}`, () => {
+//         expect(() => {
+//           from.hexish(validHexish)
+//         }).not.toThrow()
+//       })
+//     })
+//   })
+// })

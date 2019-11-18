@@ -15,40 +15,19 @@ var __extends = (this && this.__extends) || (function () {
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
-    result["default"] = mod;
-    return result;
-};
 exports.__esModule = true;
-var FixWrapper_1 = require("../wrappers/FixWrapper");
+var fixWrappers_1 = require("../wrappers/fixWrappers");
 var bn_js_1 = __importDefault(require("bn.js"));
-var from = __importStar(require("../../from"));
-exports.BITS_MIN = 8;
-exports.BITS_MAX = 256;
 var Uint = /** @class */ (function (_super) {
     __extends(Uint, _super);
-    function Uint(bitsLength, uint8Array) {
-        var _this = _super.call(this, bitsLength / 8, uint8Array) || this;
-        _this.bitsLength = bitsLength;
-        if (bitsLength % exports.BITS_MIN !== 0) {
-            throw new Error("bitsLength must be multiple of " + exports.BITS_MIN);
-        }
-        if (bitsLength < exports.BITS_MIN) {
-            throw new Error("bitsLength must be greater than or equal to " + exports.BITS_MIN);
-        }
-        if (bitsLength > exports.BITS_MAX) {
-            throw new Error("bitsLength must be less than or equal to " + exports.BITS_MAX);
-        }
-        return _this;
+    function Uint(length, uint8Array) {
+        return _super.call(this, length, uint8Array) || this;
     }
     Uint.prototype.getBn = function () {
         if (this.bn) {
             return this.bn;
         }
-        this.bn = new bn_js_1["default"](this.getUint8Array());
+        this.bn = new bn_js_1["default"](this.cloneUint8Array());
         return this.bn;
     };
     Uint.prototype.getNumber = function () {
@@ -62,7 +41,7 @@ var Uint = /** @class */ (function (_super) {
         return this.getBn().eq(uint.getBn());
     };
     return Uint;
-}(FixWrapper_1.FixWrapper));
+}(fixWrappers_1.FixLeftWrapper));
 exports.Uint = Uint;
-exports.ZERO = new Uint(8, from.number(0));
-exports.ONE = new Uint(8, from.number(1));
+// export const ZERO = new Uint(8, from.number(0))
+// export const ONE = new Uint(8, from.number(1))

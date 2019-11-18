@@ -15,44 +15,44 @@ var __extends = (this && this.__extends) || (function () {
 exports.__esModule = true;
 var DynWrapper_1 = require("../wrappers/DynWrapper");
 exports.Bytes = /** @class */ (function (_super) {
-    __extends(DynBytes, _super);
-    function DynBytes() {
+    __extends(Bytes, _super);
+    function Bytes() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    DynBytes.prototype.getUtf8 = function () {
+    Bytes.prototype.getUtf8 = function () {
         return this.getBuffer().toString('utf8');
     };
-    DynBytes.prototype.getPaddedLeft = function (length) {
+    Bytes.prototype.getPaddedLeft = function (length) {
         if (this.getLength() > length) {
-            throw new Error("Cannot pad, buttercup.length (" + this.getLength() + ") > length (" + length + ")");
+            throw new Error("Cannot pad, wrapper.length (" + this.getLength() + ") > length (" + length + ")");
         }
         var uint8Array = (new Uint8Array(length)).fill(0);
-        uint8Array.set(this.getUint8Array(), length - this.getLength());
-        return new DynBytes(uint8Array);
+        uint8Array.set(this.cloneUint8Array(), length - this.getLength());
+        return new Bytes(uint8Array);
     };
-    DynBytes.prototype.prependByte = function (byte) {
+    Bytes.prototype.prependByte = function (byte) {
         var uint8Array = new Uint8Array(this.getLength() + 1);
         uint8Array[0] = byte;
-        uint8Array.set(this.getUint8Array(), 1);
-        return new DynBytes(uint8Array);
+        uint8Array.set(this.cloneUint8Array(), 1);
+        return new Bytes(uint8Array);
     };
-    DynBytes.prototype.appendByte = function (byte) {
+    Bytes.prototype.appendByte = function (byte) {
         var uint8Array = new Uint8Array(this.getLength() + 1);
-        uint8Array.set(this.getUint8Array());
+        uint8Array.set(this.cloneUint8Array());
         uint8Array[this.getLength()] - byte;
-        return new DynBytes(uint8Array);
+        return new Bytes(uint8Array);
     };
-    DynBytes.prototype.append = function (buttercup) {
-        var uint8Array = new Uint8Array(this.getLength() + buttercup.getLength());
-        uint8Array.set(this.getUint8Array());
-        uint8Array.set(buttercup.getUint8Array(), this.getLength());
-        return new DynBytes(uint8Array);
+    Bytes.prototype.append = function (wrapper) {
+        var uint8Array = new Uint8Array(this.getLength() + wrapper.getLength());
+        uint8Array.set(this.cloneUint8Array());
+        uint8Array.set(wrapper.cloneUint8Array(), this.getLength());
+        return new Bytes(uint8Array);
     };
-    DynBytes.prototype.prepend = function (buttercup) {
-        var uint8Array = new Uint8Array(this.getLength() + buttercup.getLength());
-        uint8Array.set(buttercup.getUint8Array());
-        uint8Array.set(this.getUint8Array(), this.getLength());
-        return new DynBytes(uint8Array);
+    Bytes.prototype.prepend = function (wrapper) {
+        var uint8Array = new Uint8Array(this.getLength() + wrapper.getLength());
+        uint8Array.set(wrapper.cloneUint8Array());
+        uint8Array.set(this.cloneUint8Array(), this.getLength());
+        return new Bytes(uint8Array);
     };
-    return DynBytes;
+    return Bytes;
 }(DynWrapper_1.DynWrapper));

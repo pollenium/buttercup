@@ -1,11 +1,9 @@
 /// <reference types="node" />
 import Bn from 'bn.js';
-export declare class InvalidHexishError extends Error {
-    constructor(hex: any);
-}
-export declare function array(array: Array<number>): Uint8Array;
-export declare function buffer(buffer: Buffer): Uint8Array;
-export declare function hexish(hexish: string): Uint8Array;
-export declare function random(length: number): Uint8Array;
-export declare function bn(bn: Bn): Uint8Array;
-export declare function number(number: number): Uint8Array;
+import { External, Uintish } from './interfaces';
+export declare function uint8Array<T extends External>(ExternalClass: T, uint8Array: Uint8Array): T;
+export declare function buffer<T extends External>(ExternalClass: T, buffer: Buffer): T;
+export declare function array<T extends External>(ExternalClass: T, array: Array<number>): T;
+export declare function hexish<T extends External>(ExternalClass: T, hexish: string): T;
+export declare function uintBn<T extends External & Uintish>(ExternalClass: T, bn: Bn): T;
+export declare function uintNumber<T extends External & Uintish>(ExternalClass: T, number: number): T;
