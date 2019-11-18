@@ -4,7 +4,7 @@ import * as from from '../utils/from'
 import * as uintMath from '../utils/uintMath'
 import Bn from 'bn.js'
 
-export const Bytes1: External = class Bytes1 extends BytesX {
+export class Bytes1 extends BytesX {
 
   public static LENGTH: number = 1;
 
@@ -30,7 +30,7 @@ export const Bytes1: External = class Bytes1 extends BytesX {
 
 }
 
-export const Bytes2: External = class Bytes2 extends BytesX {
+export class Bytes2 extends BytesX {
 
   public static LENGTH: number = 2;
 
@@ -56,7 +56,7 @@ export const Bytes2: External = class Bytes2 extends BytesX {
 
 }
 
-export const Bytes3: External = class Bytes3 extends BytesX {
+export class Bytes3 extends BytesX {
 
   public static LENGTH: number = 3;
 
@@ -82,7 +82,7 @@ export const Bytes3: External = class Bytes3 extends BytesX {
 
 }
 
-export const Bytes4: External = class Bytes4 extends BytesX {
+export class Bytes4 extends BytesX {
 
   public static LENGTH: number = 4;
 
@@ -108,7 +108,7 @@ export const Bytes4: External = class Bytes4 extends BytesX {
 
 }
 
-export const Bytes5: External = class Bytes5 extends BytesX {
+export class Bytes5 extends BytesX {
 
   public static LENGTH: number = 5;
 
@@ -134,7 +134,7 @@ export const Bytes5: External = class Bytes5 extends BytesX {
 
 }
 
-export const Bytes6: External = class Bytes6 extends BytesX {
+export class Bytes6 extends BytesX {
 
   public static LENGTH: number = 6;
 
@@ -160,7 +160,7 @@ export const Bytes6: External = class Bytes6 extends BytesX {
 
 }
 
-export const Bytes7: External = class Bytes7 extends BytesX {
+export class Bytes7 extends BytesX {
 
   public static LENGTH: number = 7;
 
@@ -186,7 +186,7 @@ export const Bytes7: External = class Bytes7 extends BytesX {
 
 }
 
-export const Bytes8: External = class Bytes8 extends BytesX {
+export class Bytes8 extends BytesX {
 
   public static LENGTH: number = 8;
 
@@ -212,7 +212,7 @@ export const Bytes8: External = class Bytes8 extends BytesX {
 
 }
 
-export const Bytes9: External = class Bytes9 extends BytesX {
+export class Bytes9 extends BytesX {
 
   public static LENGTH: number = 9;
 
@@ -238,7 +238,7 @@ export const Bytes9: External = class Bytes9 extends BytesX {
 
 }
 
-export const Bytes10: External = class Bytes10 extends BytesX {
+export class Bytes10 extends BytesX {
 
   public static LENGTH: number = 10;
 
@@ -264,7 +264,7 @@ export const Bytes10: External = class Bytes10 extends BytesX {
 
 }
 
-export const Bytes11: External = class Bytes11 extends BytesX {
+export class Bytes11 extends BytesX {
 
   public static LENGTH: number = 11;
 
@@ -290,7 +290,7 @@ export const Bytes11: External = class Bytes11 extends BytesX {
 
 }
 
-export const Bytes12: External = class Bytes12 extends BytesX {
+export class Bytes12 extends BytesX {
 
   public static LENGTH: number = 12;
 
@@ -316,7 +316,7 @@ export const Bytes12: External = class Bytes12 extends BytesX {
 
 }
 
-export const Bytes13: External = class Bytes13 extends BytesX {
+export class Bytes13 extends BytesX {
 
   public static LENGTH: number = 13;
 
@@ -342,7 +342,7 @@ export const Bytes13: External = class Bytes13 extends BytesX {
 
 }
 
-export const Bytes14: External = class Bytes14 extends BytesX {
+export class Bytes14 extends BytesX {
 
   public static LENGTH: number = 14;
 
@@ -368,7 +368,7 @@ export const Bytes14: External = class Bytes14 extends BytesX {
 
 }
 
-export const Bytes15: External = class Bytes15 extends BytesX {
+export class Bytes15 extends BytesX {
 
   public static LENGTH: number = 15;
 
@@ -394,7 +394,7 @@ export const Bytes15: External = class Bytes15 extends BytesX {
 
 }
 
-export const Bytes16: External = class Bytes16 extends BytesX {
+export class Bytes16 extends BytesX {
 
   public static LENGTH: number = 16;
 
@@ -420,7 +420,7 @@ export const Bytes16: External = class Bytes16 extends BytesX {
 
 }
 
-export const Bytes17: External = class Bytes17 extends BytesX {
+export class Bytes17 extends BytesX {
 
   public static LENGTH: number = 17;
 
@@ -446,7 +446,7 @@ export const Bytes17: External = class Bytes17 extends BytesX {
 
 }
 
-export const Bytes18: External = class Bytes18 extends BytesX {
+export class Bytes18 extends BytesX {
 
   public static LENGTH: number = 18;
 
@@ -472,7 +472,7 @@ export const Bytes18: External = class Bytes18 extends BytesX {
 
 }
 
-export const Bytes19: External = class Bytes19 extends BytesX {
+export class Bytes19 extends BytesX {
 
   public static LENGTH: number = 19;
 
@@ -498,7 +498,7 @@ export const Bytes19: External = class Bytes19 extends BytesX {
 
 }
 
-export const Bytes20: External = class Bytes20 extends BytesX {
+export class Bytes20 extends BytesX {
 
   public static LENGTH: number = 20;
 
@@ -524,7 +524,7 @@ export const Bytes20: External = class Bytes20 extends BytesX {
 
 }
 
-export const Bytes21: External = class Bytes21 extends BytesX {
+export class Bytes21 extends BytesX {
 
   public static LENGTH: number = 21;
 
@@ -550,7 +550,7 @@ export const Bytes21: External = class Bytes21 extends BytesX {
 
 }
 
-export const Bytes22: External = class Bytes22 extends BytesX {
+export class Bytes22 extends BytesX {
 
   public static LENGTH: number = 22;
 
@@ -576,7 +576,7 @@ export const Bytes22: External = class Bytes22 extends BytesX {
 
 }
 
-export const Bytes23: External = class Bytes23 extends BytesX {
+export class Bytes23 extends BytesX {
 
   public static LENGTH: number = 23;
 
@@ -602,7 +602,7 @@ export const Bytes23: External = class Bytes23 extends BytesX {
 
 }
 
-export const Bytes24: External = class Bytes24 extends BytesX {
+export class Bytes24 extends BytesX {
 
   public static LENGTH: number = 24;
 
@@ -628,7 +628,7 @@ export const Bytes24: External = class Bytes24 extends BytesX {
 
 }
 
-export const Bytes25: External = class Bytes25 extends BytesX {
+export class Bytes25 extends BytesX {
 
   public static LENGTH: number = 25;
 
@@ -654,7 +654,7 @@ export const Bytes25: External = class Bytes25 extends BytesX {
 
 }
 
-export const Bytes26: External = class Bytes26 extends BytesX {
+export class Bytes26 extends BytesX {
 
   public static LENGTH: number = 26;
 
@@ -680,7 +680,7 @@ export const Bytes26: External = class Bytes26 extends BytesX {
 
 }
 
-export const Bytes27: External = class Bytes27 extends BytesX {
+export class Bytes27 extends BytesX {
 
   public static LENGTH: number = 27;
 
@@ -706,7 +706,7 @@ export const Bytes27: External = class Bytes27 extends BytesX {
 
 }
 
-export const Bytes28: External = class Bytes28 extends BytesX {
+export class Bytes28 extends BytesX {
 
   public static LENGTH: number = 28;
 
@@ -732,7 +732,7 @@ export const Bytes28: External = class Bytes28 extends BytesX {
 
 }
 
-export const Bytes29: External = class Bytes29 extends BytesX {
+export class Bytes29 extends BytesX {
 
   public static LENGTH: number = 29;
 
@@ -758,7 +758,7 @@ export const Bytes29: External = class Bytes29 extends BytesX {
 
 }
 
-export const Bytes30: External = class Bytes30 extends BytesX {
+export class Bytes30 extends BytesX {
 
   public static LENGTH: number = 30;
 
@@ -784,7 +784,7 @@ export const Bytes30: External = class Bytes30 extends BytesX {
 
 }
 
-export const Bytes31: External = class Bytes31 extends BytesX {
+export class Bytes31 extends BytesX {
 
   public static LENGTH: number = 31;
 
@@ -810,7 +810,7 @@ export const Bytes31: External = class Bytes31 extends BytesX {
 
 }
 
-export const Bytes32: External = class Bytes32 extends BytesX {
+export class Bytes32 extends BytesX {
 
   public static LENGTH: number = 32;
 

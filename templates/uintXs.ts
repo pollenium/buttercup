@@ -5,7 +5,7 @@ import * as uintMath from '../utils/uintMath'
 import Bn from 'bn.js'
 
 {{#each classes}}
-export const Uint{{bits}}: External = class Uint{{bits}} extends UintX implements Uintish {
+export class Uint{{bits}} extends UintX implements Uintish {
 
   public static LENGTH: number = {{length}};
 

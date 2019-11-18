@@ -1,5 +1,12 @@
 "use strict";
 exports.__esModule = true;
+var Buttercup_1 = require("./buttercups/Buttercup");
+exports.Buttercup = Buttercup_1.Buttercup;
+var DynButtercup_1 = require("./buttercups/DynButtercup");
+exports.DynButtercup = DynButtercup_1.DynButtercup;
+var fixButtercups_1 = require("./buttercups/fixButtercups");
+exports.FixLeftButtercup = fixButtercups_1.FixLeftButtercup;
+exports.FixRightButtercup = fixButtercups_1.FixRightButtercup;
 var Bytes_1 = require("./externals/Bytes");
 exports.Bytes = Bytes_1.Bytes;
 var uintXs_1 = require("./externals/uintXs");

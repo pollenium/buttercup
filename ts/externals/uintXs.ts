@@ -4,7 +4,7 @@ import * as from from '../utils/from'
 import * as uintMath from '../utils/uintMath'
 import Bn from 'bn.js'
 
-export const Uint8: External = class Uint8 extends UintX implements Uintish {
+export class Uint8 extends UintX implements Uintish {
 
   public static LENGTH: number = 1;
 
@@ -66,7 +66,7 @@ export const Uint8: External = class Uint8 extends UintX implements Uintish {
 
 }
 
-export const Uint16: External = class Uint16 extends UintX implements Uintish {
+export class Uint16 extends UintX implements Uintish {
 
   public static LENGTH: number = 2;
 
@@ -128,7 +128,7 @@ export const Uint16: External = class Uint16 extends UintX implements Uintish {
 
 }
 
-export const Uint24: External = class Uint24 extends UintX implements Uintish {
+export class Uint24 extends UintX implements Uintish {
 
   public static LENGTH: number = 3;
 
@@ -190,7 +190,7 @@ export const Uint24: External = class Uint24 extends UintX implements Uintish {
 
 }
 
-export const Uint32: External = class Uint32 extends UintX implements Uintish {
+export class Uint32 extends UintX implements Uintish {
 
   public static LENGTH: number = 4;
 
@@ -252,7 +252,7 @@ export const Uint32: External = class Uint32 extends UintX implements Uintish {
 
 }
 
-export const Uint40: External = class Uint40 extends UintX implements Uintish {
+export class Uint40 extends UintX implements Uintish {
 
   public static LENGTH: number = 5;
 
@@ -314,7 +314,7 @@ export const Uint40: External = class Uint40 extends UintX implements Uintish {
 
 }
 
-export const Uint48: External = class Uint48 extends UintX implements Uintish {
+export class Uint48 extends UintX implements Uintish {
 
   public static LENGTH: number = 6;
 
@@ -376,7 +376,7 @@ export const Uint48: External = class Uint48 extends UintX implements Uintish {
 
 }
 
-export const Uint56: External = class Uint56 extends UintX implements Uintish {
+export class Uint56 extends UintX implements Uintish {
 
   public static LENGTH: number = 7;
 
@@ -438,7 +438,7 @@ export const Uint56: External = class Uint56 extends UintX implements Uintish {
 
 }
 
-export const Uint64: External = class Uint64 extends UintX implements Uintish {
+export class Uint64 extends UintX implements Uintish {
 
   public static LENGTH: number = 8;
 
@@ -500,7 +500,7 @@ export const Uint64: External = class Uint64 extends UintX implements Uintish {
 
 }
 
-export const Uint72: External = class Uint72 extends UintX implements Uintish {
+export class Uint72 extends UintX implements Uintish {
 
   public static LENGTH: number = 9;
 
@@ -562,7 +562,7 @@ export const Uint72: External = class Uint72 extends UintX implements Uintish {
 
 }
 
-export const Uint80: External = class Uint80 extends UintX implements Uintish {
+export class Uint80 extends UintX implements Uintish {
 
   public static LENGTH: number = 10;
 
@@ -624,7 +624,7 @@ export const Uint80: External = class Uint80 extends UintX implements Uintish {
 
 }
 
-export const Uint88: External = class Uint88 extends UintX implements Uintish {
+export class Uint88 extends UintX implements Uintish {
 
   public static LENGTH: number = 11;
 
@@ -686,7 +686,7 @@ export const Uint88: External = class Uint88 extends UintX implements Uintish {
 
 }
 
-export const Uint96: External = class Uint96 extends UintX implements Uintish {
+export class Uint96 extends UintX implements Uintish {
 
   public static LENGTH: number = 12;
 
@@ -748,7 +748,7 @@ export const Uint96: External = class Uint96 extends UintX implements Uintish {
 
 }
 
-export const Uint104: External = class Uint104 extends UintX implements Uintish {
+export class Uint104 extends UintX implements Uintish {
 
   public static LENGTH: number = 13;
 
@@ -810,7 +810,7 @@ export const Uint104: External = class Uint104 extends UintX implements Uintish 
 
 }
 
-export const Uint112: External = class Uint112 extends UintX implements Uintish {
+export class Uint112 extends UintX implements Uintish {
 
   public static LENGTH: number = 14;
 
@@ -872,7 +872,7 @@ export const Uint112: External = class Uint112 extends UintX implements Uintish 
 
 }
 
-export const Uint120: External = class Uint120 extends UintX implements Uintish {
+export class Uint120 extends UintX implements Uintish {
 
   public static LENGTH: number = 15;
 
@@ -934,7 +934,7 @@ export const Uint120: External = class Uint120 extends UintX implements Uintish 
 
 }
 
-export const Uint128: External = class Uint128 extends UintX implements Uintish {
+export class Uint128 extends UintX implements Uintish {
 
   public static LENGTH: number = 16;
 
@@ -996,7 +996,7 @@ export const Uint128: External = class Uint128 extends UintX implements Uintish 
 
 }
 
-export const Uint136: External = class Uint136 extends UintX implements Uintish {
+export class Uint136 extends UintX implements Uintish {
 
   public static LENGTH: number = 17;
 
@@ -1058,7 +1058,7 @@ export const Uint136: External = class Uint136 extends UintX implements Uintish 
 
 }
 
-export const Uint144: External = class Uint144 extends UintX implements Uintish {
+export class Uint144 extends UintX implements Uintish {
 
   public static LENGTH: number = 18;
 
@@ -1120,7 +1120,7 @@ export const Uint144: External = class Uint144 extends UintX implements Uintish 
 
 }
 
-export const Uint152: External = class Uint152 extends UintX implements Uintish {
+export class Uint152 extends UintX implements Uintish {
 
   public static LENGTH: number = 19;
 
@@ -1182,7 +1182,7 @@ export const Uint152: External = class Uint152 extends UintX implements Uintish 
 
 }
 
-export const Uint160: External = class Uint160 extends UintX implements Uintish {
+export class Uint160 extends UintX implements Uintish {
 
   public static LENGTH: number = 20;
 
@@ -1244,7 +1244,7 @@ export const Uint160: External = class Uint160 extends UintX implements Uintish 
 
 }
 
-export const Uint168: External = class Uint168 extends UintX implements Uintish {
+export class Uint168 extends UintX implements Uintish {
 
   public static LENGTH: number = 21;
 
@@ -1306,7 +1306,7 @@ export const Uint168: External = class Uint168 extends UintX implements Uintish 
 
 }
 
-export const Uint176: External = class Uint176 extends UintX implements Uintish {
+export class Uint176 extends UintX implements Uintish {
 
   public static LENGTH: number = 22;
 
@@ -1368,7 +1368,7 @@ export const Uint176: External = class Uint176 extends UintX implements Uintish 
 
 }
 
-export const Uint184: External = class Uint184 extends UintX implements Uintish {
+export class Uint184 extends UintX implements Uintish {
 
   public static LENGTH: number = 23;
 
@@ -1430,7 +1430,7 @@ export const Uint184: External = class Uint184 extends UintX implements Uintish 
 
 }
 
-export const Uint192: External = class Uint192 extends UintX implements Uintish {
+export class Uint192 extends UintX implements Uintish {
 
   public static LENGTH: number = 24;
 
@@ -1492,7 +1492,7 @@ export const Uint192: External = class Uint192 extends UintX implements Uintish 
 
 }
 
-export const Uint200: External = class Uint200 extends UintX implements Uintish {
+export class Uint200 extends UintX implements Uintish {
 
   public static LENGTH: number = 25;
 
@@ -1554,7 +1554,7 @@ export const Uint200: External = class Uint200 extends UintX implements Uintish 
 
 }
 
-export const Uint208: External = class Uint208 extends UintX implements Uintish {
+export class Uint208 extends UintX implements Uintish {
 
   public static LENGTH: number = 26;
 
@@ -1616,7 +1616,7 @@ export const Uint208: External = class Uint208 extends UintX implements Uintish 
 
 }
 
-export const Uint216: External = class Uint216 extends UintX implements Uintish {
+export class Uint216 extends UintX implements Uintish {
 
   public static LENGTH: number = 27;
 
@@ -1678,7 +1678,7 @@ export const Uint216: External = class Uint216 extends UintX implements Uintish 
 
 }
 
-export const Uint224: External = class Uint224 extends UintX implements Uintish {
+export class Uint224 extends UintX implements Uintish {
 
   public static LENGTH: number = 28;
 
@@ -1740,7 +1740,7 @@ export const Uint224: External = class Uint224 extends UintX implements Uintish 
 
 }
 
-export const Uint232: External = class Uint232 extends UintX implements Uintish {
+export class Uint232 extends UintX implements Uintish {
 
   public static LENGTH: number = 29;
 
@@ -1802,7 +1802,7 @@ export const Uint232: External = class Uint232 extends UintX implements Uintish 
 
 }
 
-export const Uint240: External = class Uint240 extends UintX implements Uintish {
+export class Uint240 extends UintX implements Uintish {
 
   public static LENGTH: number = 30;
 
@@ -1864,7 +1864,7 @@ export const Uint240: External = class Uint240 extends UintX implements Uintish 
 
 }
 
-export const Uint248: External = class Uint248 extends UintX implements Uintish {
+export class Uint248 extends UintX implements Uintish {
 
   public static LENGTH: number = 31;
 
@@ -1926,7 +1926,7 @@ export const Uint248: External = class Uint248 extends UintX implements Uintish 
 
 }
 
-export const Uint256: External = class Uint256 extends UintX implements Uintish {
+export class Uint256 extends UintX implements Uintish {
 
   public static LENGTH: number = 32;
 

@@ -23,7 +23,7 @@ exports.__esModule = true;
 var DynButtercup_1 = require("../buttercups/DynButtercup");
 var uint8Array_1 = require("../utils/uint8Array");
 var from = __importStar(require("../utils/from"));
-exports.Bytes = /** @class */ (function (_super) {
+var Bytes = /** @class */ (function (_super) {
     __extends(Bytes, _super);
     function Bytes() {
         return _super !== null && _super.apply(this, arguments) || this;
@@ -75,3 +75,4 @@ exports.Bytes = /** @class */ (function (_super) {
     };
     return Bytes;
 }(DynButtercup_1.DynButtercup));
+exports.Bytes = Bytes;

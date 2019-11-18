@@ -3,7 +3,7 @@ import { External } from '../interfaces'
 import { getPaddedLeft, getPaddedRight } from '../utils/uint8Array'
 import * as from from '../utils/from'
 
-export const Bytes: External = class Bytes extends DynButtercup {
+export class Bytes extends DynButtercup {
 
   getUtf8(): string {
     return this.getBuffer().toString('utf8')
