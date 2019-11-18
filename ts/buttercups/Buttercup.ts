@@ -1,6 +1,6 @@
 import crypto from 'crypto'
 
-export class Wrapper {
+export class Buttercup {
   constructor(private uint8Array: Uint8Array) {}
 
   cloneUint8Array(): Uint8Array {
@@ -11,7 +11,7 @@ export class Wrapper {
     return this.uint8Array.length
   }
 
-  getIsEqual(wrapper: Wrapper): boolean {
+  getIsEqual(wrapper: Buttercup): boolean {
     if (this.uint8Array.length !== wrapper.uint8Array.length) {
       return false
     }
@@ -23,12 +23,12 @@ export class Wrapper {
     return true
   }
 
-  // slice(start: number, end: number): Wrapper {
-  //   return new Wrapper(this.cloneUint8Array().slice(start, end))
+  // slice(start: number, end: number): Buttercup {
+  //   return new Buttercup(this.cloneUint8Array().slice(start, end))
   // }
 
-  // getSha256Hash(): Wrapper {
-  //   return Wrapper.fromBuffer(crypto.createHash('sha256').update(this.uint8Array).digest())
+  // getSha256Hash(): Buttercup {
+  //   return Buttercup.fromBuffer(crypto.createHash('sha256').update(this.uint8Array).digest())
   // }
 
   getArray(): Array<number> {
@@ -54,7 +54,7 @@ export class Wrapper {
     return Buffer.from(this.uint8Array)
   }
 
-  // getXor(wrapper: Wrapper): Wrapper {
+  // getXor(wrapper: Buttercup): Buttercup {
   //   if (this.getLength() !== wrapper.getLength()) {
   //     throw new Error('Cannot xor, length mismatch')
   //   }
@@ -66,10 +66,10 @@ export class Wrapper {
   //     xorUint8Array[i] = this.uint8Array[i] ^ wrapper.uint8Array[i]
   //   }
   //
-  //   return new Wrapper(xorUint8Array)
+  //   return new Buttercup(xorUint8Array)
   // }
 
-  compare(wrapper: Wrapper): number {
+  compare(wrapper: Buttercup): number {
     return this.getBuffer().compare(wrapper.getBuffer())
   }
 

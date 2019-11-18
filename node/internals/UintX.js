@@ -16,7 +16,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 exports.__esModule = true;
-var fixWrappers_1 = require("../wrappers/fixWrappers");
+var fixButtercups_1 = require("../buttercups/fixButtercups");
 var bn_js_1 = __importDefault(require("bn.js"));
 var UintX = /** @class */ (function (_super) {
     __extends(UintX, _super);
@@ -53,5 +53,5 @@ var UintX = /** @class */ (function (_super) {
         return a.getBn().lte(b.getBn());
     };
     return UintX;
-}(fixWrappers_1.FixLeftWrapper));
+}(fixButtercups_1.FixLeftButtercup));
 exports.UintX = UintX;

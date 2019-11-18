@@ -1,9 +1,9 @@
-import { FixLeftWrapper } from '../wrappers/fixWrappers'
+import { FixLeftButtercup } from '../buttercups/fixButtercups'
 import Bn from 'bn.js'
 import * as from from '../utils/from'
 import { Uintish } from '../interfaces'
 
-export class UintX extends FixLeftWrapper implements Uintish {
+export class UintX extends FixLeftButtercup implements Uintish {
 
   private bn?: Bn;
   private number?: number;

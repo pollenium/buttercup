@@ -13,12 +13,12 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 exports.__esModule = true;
-var fixWrappers_1 = require("../wrappers/fixWrappers");
+var fixButtercups_1 = require("../buttercups/fixButtercups");
 var BytesX = /** @class */ (function (_super) {
     __extends(BytesX, _super);
     function BytesX(length, uint8Array) {
         return _super.call(this, length, uint8Array) || this;
     }
     return BytesX;
-}(fixWrappers_1.FixRightWrapper));
+}(fixButtercups_1.FixRightButtercup));
 exports.BytesX = BytesX;

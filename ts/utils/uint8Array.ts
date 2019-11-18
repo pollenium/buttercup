@@ -2,7 +2,7 @@ import { assertIsValidHexish } from './assertIsValidHexish'
 
 export class OverflowError extends Error {
   constructor(length: number, uint8ArrayLength: number) {
-    super(`Overflow: Trying to put ${uint8ArrayLength} length Uint8Array into ${length} length Wrapper` )
+    super(`Overflow: Trying to put ${uint8ArrayLength} length Uint8Array into ${length} length Buttercup` )
     Object.setPrototypeOf(this, OverflowError.prototype)
   }
 }

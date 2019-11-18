@@ -1,7 +1,7 @@
-import { FixLeftWrapper } from '../wrappers/fixWrappers';
+import { FixLeftButtercup } from '../buttercups/fixButtercups';
 import Bn from 'bn.js';
 import { Uintish } from '../interfaces';
-export declare class UintX extends FixLeftWrapper implements Uintish {
+export declare class UintX extends FixLeftButtercup implements Uintish {
     private bn?;
     private number?;
     constructor(length: number, uint8Array: Uint8Array);

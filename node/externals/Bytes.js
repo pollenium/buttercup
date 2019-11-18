@@ -20,7 +20,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 exports.__esModule = true;
-var DynWrapper_1 = require("../wrappers/DynWrapper");
+var DynButtercup_1 = require("../buttercups/DynButtercup");
 var uint8Array_1 = require("../utils/uint8Array");
 var from = __importStar(require("../utils/from"));
 exports.Bytes = /** @class */ (function (_super) {
@@ -74,4 +74,4 @@ exports.Bytes = /** @class */ (function (_super) {
         return from.hexish(exports.Bytes, hexish);
     };
     return Bytes;
-}(DynWrapper_1.DynWrapper));
+}(DynButtercup_1.DynButtercup));
