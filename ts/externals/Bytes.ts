@@ -1,3 +1,4 @@
+import { Buttercup } from '../buttercups/Buttercup'
 import { DynButtercup } from '../buttercups/DynButtercup'
 import { External } from '../interfaces'
 import { getPaddedLeft, getPaddedRight } from '../utils/uint8Array'
@@ -31,14 +32,14 @@ export class Bytes extends DynButtercup {
     return new Bytes(uint8Array)
   }
 
-  getAppended(buttercup: Bytes): Bytes {
+  getAppended(buttercup: Buttercup): Bytes {
     const uint8Array = new Uint8Array(this.getLength() + buttercup.getLength())
     uint8Array.set(this.getUint8Array())
     uint8Array.set(buttercup.getUint8Array(), this.getLength())
     return new Bytes(uint8Array)
   }
 
-  getPrepended(buttercup: Bytes): Bytes {
+  getPrepended(buttercup: Buttercup): Bytes {
     const uint8Array = new Uint8Array(this.getLength() + buttercup.getLength())
     uint8Array.set(buttercup.getUint8Array())
     uint8Array.set(this.getUint8Array(), this.getLength())
