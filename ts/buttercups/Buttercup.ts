@@ -1,5 +1,6 @@
 import crypto from 'crypto'
-import { External } from '../interfaces'
+import { External, ExternalClass } from '../interfaces'
+import * as from from '../utils/from'
 
 export class Buttercup {
   constructor(private uint8Array: Uint8Array) {}
@@ -54,7 +55,7 @@ export class Buttercup {
     return this.getBuffer().compare(buttercup.getBuffer())
   }
 
-  getCasted<T extends External>(ExternalClass: External): T {
+  getCasted<T>(ExternalClass: ExternalClass<T>): T {
     return new ExternalClass(this.getUint8Array())
   }
 

@@ -1987,4 +1987,3 @@ export class Uint256 extends UintX implements Uintish {
   }
 
 }
-

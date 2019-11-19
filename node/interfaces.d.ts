@@ -8,3 +8,6 @@ export interface Uintish {
 }
 export interface ExternalUintish extends External, Uintish {
 }
+export interface ExternalClass<T> extends Function {
+    new (uint8Array: Uint8Array): T;
+}
