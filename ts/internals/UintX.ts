@@ -28,24 +28,24 @@ export class UintX extends FixLeftButtercup implements Uintish {
     return this.number
   }
 
-  unstrictEquals(uint: UintX): boolean {
-    return this.getBn().eq(uint.getBn())
+  unstrictEquals(uintX: UintX): boolean {
+    return this.getBn().eq(uintX.getBn())
   }
 
-  gt(a: UintX, b: UintX): boolean {
-    return a.getBn().gt(b.getBn())
+  gt(uintX: UintX): boolean {
+    return this.getBn().gt(uintX.getBn())
   }
 
-  gte(a: UintX, b: UintX): boolean {
-    return a.getBn().gte(b.getBn())
+  gte(uintX: UintX): boolean {
+    return this.getBn().gte(uintX.getBn())
   }
 
-  lt(a: UintX, b: UintX): boolean {
-    return a.getBn().lt(b.getBn())
+  lt(uintX: UintX): boolean {
+    return this.getBn().lt(uintX.getBn())
   }
 
-  lte(a: UintX, b: UintX): boolean {
-    return a.getBn().lte(b.getBn())
+  lte(uintX: UintX): boolean {
+    return this.getBn().lte(uintX.getBn())
   }
 
 }

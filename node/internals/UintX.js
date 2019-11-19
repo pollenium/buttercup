@@ -37,20 +37,20 @@ var UintX = /** @class */ (function (_super) {
         this.number = this.getBn().toNumber();
         return this.number;
     };
-    UintX.prototype.unstrictEquals = function (uint) {
-        return this.getBn().eq(uint.getBn());
+    UintX.prototype.unstrictEquals = function (uintX) {
+        return this.getBn().eq(uintX.getBn());
     };
-    UintX.prototype.gt = function (a, b) {
-        return a.getBn().gt(b.getBn());
+    UintX.prototype.gt = function (uintX) {
+        return this.getBn().gt(uintX.getBn());
     };
-    UintX.prototype.gte = function (a, b) {
-        return a.getBn().gte(b.getBn());
+    UintX.prototype.gte = function (uintX) {
+        return this.getBn().gte(uintX.getBn());
     };
-    UintX.prototype.lt = function (a, b) {
-        return a.getBn().lt(b.getBn());
+    UintX.prototype.lt = function (uintX) {
+        return this.getBn().lt(uintX.getBn());
     };
-    UintX.prototype.lte = function (a, b) {
-        return a.getBn().lte(b.getBn());
+    UintX.prototype.lte = function (uintX) {
+        return this.getBn().lte(uintX.getBn());
     };
     return UintX;
 }(fixButtercups_1.FixLeftButtercup));
