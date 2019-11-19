@@ -32,33 +32,33 @@ var Bytes = /** @class */ (function (_super) {
         return this.getBuffer().toString('utf8');
     };
     Bytes.prototype.getPaddedLeft = function (length) {
-        return new Bytes(uint8Array_1.getPaddedLeft(length, this.Buttercup()));
+        return new Bytes(uint8Array_1.getPaddedLeft(length, this.getUint8Array()));
     };
     Bytes.prototype.getPaddedRight = function (length) {
-        return new Bytes(uint8Array_1.getPaddedRight(length, this.Buttercup()));
+        return new Bytes(uint8Array_1.getPaddedRight(length, this.getUint8Array()));
     };
     Bytes.prototype.getBytePrepended = function (byte) {
         var uint8Array = new Uint8Array(this.getLength() + 1);
         uint8Array[0] = byte;
-        uint8Array.set(this.Buttercup(), 1);
+        uint8Array.set(this.getUint8Array(), 1);
         return new Bytes(uint8Array);
     };
     Bytes.prototype.getByteAppended = function (byte) {
         var uint8Array = new Uint8Array(this.getLength() + 1);
-        uint8Array.set(this.Buttercup());
+        uint8Array.set(this.getUint8Array());
         uint8Array[this.getLength()] - byte;
         return new Bytes(uint8Array);
     };
     Bytes.prototype.getAppended = function (buttercup) {
         var uint8Array = new Uint8Array(this.getLength() + buttercup.getLength());
-        uint8Array.set(this.Buttercup());
-        uint8Array.set(buttercup.Buttercup(), this.getLength());
+        uint8Array.set(this.getUint8Array());
+        uint8Array.set(buttercup.getUint8Array(), this.getLength());
         return new Bytes(uint8Array);
     };
     Bytes.prototype.getPrepended = function (buttercup) {
         var uint8Array = new Uint8Array(this.getLength() + buttercup.getLength());
-        uint8Array.set(buttercup.Buttercup());
-        uint8Array.set(this.Buttercup(), this.getLength());
+        uint8Array.set(buttercup.getUint8Array());
+        uint8Array.set(this.getUint8Array(), this.getLength());
         return new Bytes(uint8Array);
     };
     Bytes.fromUint8Array = function (uint8Array) {
