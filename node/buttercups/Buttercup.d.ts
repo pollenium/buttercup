@@ -1,4 +1,5 @@
 /// <reference types="node" />
+import { External } from '../interfaces';
 export declare class Buttercup {
     private uint8Array;
     constructor(uint8Array: Uint8Array);
@@ -11,4 +12,5 @@ export declare class Buttercup {
     getPhex(): string;
     getBuffer(): Buffer;
     compare(wrapper: Buttercup): number;
+    getCasted<T extends External>(ExternalClass: External): T;
 }

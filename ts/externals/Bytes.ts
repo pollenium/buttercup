@@ -10,38 +10,38 @@ export class Bytes extends DynButtercup {
   }
 
   getPaddedLeft(length: number): Bytes {
-    return new Bytes(getPaddedLeft(length, this.cloneUint8Array()))
+    return new Bytes(getPaddedLeft(length, this.getUint8Array()))
   }
 
   getPaddedRight(length: number): Bytes {
-    return new Bytes(getPaddedRight(length, this.cloneUint8Array()))
+    return new Bytes(getPaddedRight(length, this.getUint8Array()))
   }
 
   getBytePrepended(byte: number): Bytes {
     const uint8Array = new Uint8Array(this.getLength() + 1)
     uint8Array[0] = byte
-    uint8Array.set(this.cloneUint8Array(), 1)
+    uint8Array.set(this.getUint8Array(), 1)
     return new Bytes(uint8Array)
   }
 
   getByteAppended(byte: number): Bytes {
     const uint8Array = new Uint8Array(this.getLength() + 1)
-    uint8Array.set(this.cloneUint8Array())
+    uint8Array.set(this.getUint8Array())
     uint8Array[this.getLength()] - byte
     return new Bytes(uint8Array)
   }
 
   getAppended(wrapper: Bytes): Bytes {
     const uint8Array = new Uint8Array(this.getLength() + wrapper.getLength())
-    uint8Array.set(this.cloneUint8Array())
-    uint8Array.set(wrapper.cloneUint8Array(), this.getLength())
+    uint8Array.set(this.getUint8Array())
+    uint8Array.set(wrapper.getUint8Array(), this.getLength())
     return new Bytes(uint8Array)
   }
 
   getPrepended(wrapper: Bytes): Bytes {
     const uint8Array = new Uint8Array(this.getLength() + wrapper.getLength())
-    uint8Array.set(wrapper.cloneUint8Array())
-    uint8Array.set(this.cloneUint8Array(), this.getLength())
+    uint8Array.set(wrapper.getUint8Array())
+    uint8Array.set(this.getUint8Array(), this.getLength())
     return new Bytes(uint8Array)
   }
 

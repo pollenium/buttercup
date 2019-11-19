@@ -27,7 +27,7 @@ var UintX = /** @class */ (function (_super) {
         if (this.bn) {
             return this.bn;
         }
-        this.bn = new bn_js_1["default"](this.cloneUint8Array());
+        this.bn = new bn_js_1["default"](this.getUint8Array());
         return this.bn;
     };
     UintX.prototype.getNumber = function () {

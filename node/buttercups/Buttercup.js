@@ -25,7 +25,7 @@ var Buttercup = /** @class */ (function () {
         return new Buttercup(this.uint8Array.slice(start, end));
     };
     Buttercup.prototype.getArray = function () {
-        return Array.from(this.cloneUint8Array());
+        return Array.from(this.getUint8Array());
     };
     Buttercup.prototype.getHex = function () {
         var hex = '';
@@ -40,22 +40,11 @@ var Buttercup = /** @class */ (function () {
     Buttercup.prototype.getBuffer = function () {
         return Buffer.from(this.uint8Array);
     };
-    // getXor(wrapper: Buttercup): Buttercup {
-    //   if (this.getLength() !== wrapper.getLength()) {
-    //     throw new Error('Cannot xor, length mismatch')
-    //   }
-    //
-    //   const xorUint8Array = new Uint8Array(wrapper.getLength())
-    //
-    //   for (let i = 0; i < wrapper.getLength(); i++) {
-    //     // eslint-disable-next-line no-bitwise
-    //     xorUint8Array[i] = this.uint8Array[i] ^ wrapper.uint8Array[i]
-    //   }
-    //
-    //   return new Buttercup(xorUint8Array)
-    // }
     Buttercup.prototype.compare = function (wrapper) {
         return this.getBuffer().compare(wrapper.getBuffer());
+    };
+    Buttercup.prototype.getCasted = function (ExternalClass) {
+        return new ExternalClass(this.getUint8Array());
     };
     return Buttercup;
 }());

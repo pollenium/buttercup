@@ -16,7 +16,7 @@ export class UintX extends FixLeftButtercup implements Uintish {
     if (this.bn) {
       return this.bn
     }
-    this.bn = new Bn(this.cloneUint8Array())
+    this.bn = new Bn(this.getUint8Array())
     return this.bn
   }
 

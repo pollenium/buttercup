@@ -1,4 +1,5 @@
 import crypto from 'crypto'
+import { External } from '../interfaces'
 
 export class Buttercup {
   constructor(private uint8Array: Uint8Array) {}
@@ -28,7 +29,7 @@ export class Buttercup {
   }
 
   getArray(): Array<number> {
-    return Array.from(this.cloneUint8Array())
+    return Array.from(this.getUint8Array())
   }
 
   getHex(): string {
@@ -49,23 +50,12 @@ export class Buttercup {
     return Buffer.from(this.uint8Array)
   }
 
-  // getXor(wrapper: Buttercup): Buttercup {
-  //   if (this.getLength() !== wrapper.getLength()) {
-  //     throw new Error('Cannot xor, length mismatch')
-  //   }
-  //
-  //   const xorUint8Array = new Uint8Array(wrapper.getLength())
-  //
-  //   for (let i = 0; i < wrapper.getLength(); i++) {
-  //     // eslint-disable-next-line no-bitwise
-  //     xorUint8Array[i] = this.uint8Array[i] ^ wrapper.uint8Array[i]
-  //   }
-  //
-  //   return new Buttercup(xorUint8Array)
-  // }
-
   compare(wrapper: Buttercup): number {
     return this.getBuffer().compare(wrapper.getBuffer())
+  }
+
+  getCasted<T extends External>(ExternalClass: External): T {
+    return new ExternalClass(this.getUint8Array())
   }
 
 }

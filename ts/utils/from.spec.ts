@@ -141,7 +141,7 @@ fixtures.forEach((fixture, index) => {
           const fromInstance = fromFunc(External, fromValue)
           // console.log('fromInstance', fromInstance)
           expect(
-            fromInstance.cloneUint8Array()
+            fromInstance.getUint8Array()
           ).toBeInstanceOf(
             Uint8Array
           )

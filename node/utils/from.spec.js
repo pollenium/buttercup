@@ -136,7 +136,7 @@ var lengthFixtures = fixtures.forEach(function (fixture, index) {
                     // console.log('External', External)
                     var fromInstance = fromFunc(External, fromValue);
                     // console.log('fromInstance', fromInstance)
-                    expect(fromInstance.cloneUint8Array()).toBeInstanceOf(Uint8Array);
+                    expect(fromInstance.getUint8Array()).toBeInstanceOf(Uint8Array);
                 });
             });
         });

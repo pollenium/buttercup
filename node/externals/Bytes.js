@@ -32,33 +32,33 @@ var Bytes = /** @class */ (function (_super) {
         return this.getBuffer().toString('utf8');
     };
     Bytes.prototype.getPaddedLeft = function (length) {
-        return new Bytes(uint8Array_1.getPaddedLeft(length, this.cloneUint8Array()));
+        return new Bytes(uint8Array_1.getPaddedLeft(length, this.getUint8Array()));
     };
     Bytes.prototype.getPaddedRight = function (length) {
-        return new Bytes(uint8Array_1.getPaddedRight(length, this.cloneUint8Array()));
+        return new Bytes(uint8Array_1.getPaddedRight(length, this.getUint8Array()));
     };
     Bytes.prototype.getBytePrepended = function (byte) {
         var uint8Array = new Uint8Array(this.getLength() + 1);
         uint8Array[0] = byte;
-        uint8Array.set(this.cloneUint8Array(), 1);
+        uint8Array.set(this.getUint8Array(), 1);
         return new Bytes(uint8Array);
     };
     Bytes.prototype.getByteAppended = function (byte) {
         var uint8Array = new Uint8Array(this.getLength() + 1);
-        uint8Array.set(this.cloneUint8Array());
+        uint8Array.set(this.getUint8Array());
         uint8Array[this.getLength()] - byte;
         return new Bytes(uint8Array);
     };
     Bytes.prototype.getAppended = function (wrapper) {
         var uint8Array = new Uint8Array(this.getLength() + wrapper.getLength());
-        uint8Array.set(this.cloneUint8Array());
-        uint8Array.set(wrapper.cloneUint8Array(), this.getLength());
+        uint8Array.set(this.getUint8Array());
+        uint8Array.set(wrapper.getUint8Array(), this.getLength());
         return new Bytes(uint8Array);
     };
     Bytes.prototype.getPrepended = function (wrapper) {
         var uint8Array = new Uint8Array(this.getLength() + wrapper.getLength());
-        uint8Array.set(wrapper.cloneUint8Array());
-        uint8Array.set(this.cloneUint8Array(), this.getLength());
+        uint8Array.set(wrapper.getUint8Array());
+        uint8Array.set(this.getUint8Array(), this.getLength());
         return new Bytes(uint8Array);
     };
     Bytes.fromUint8Array = function (uint8Array) {
