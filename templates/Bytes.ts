@@ -31,16 +31,16 @@ export class Bytes extends DynButtercup {
     return new Bytes(uint8Array)
   }
 
-  getAppended(wrapper: Bytes): Bytes {
-    const uint8Array = new Uint8Array(this.getLength() + wrapper.getLength())
+  getAppended(buttercup: Bytes): Bytes {
+    const uint8Array = new Uint8Array(this.getLength() + buttercup.getLength())
     uint8Array.set(this.Buttercup())
-    uint8Array.set(wrapper.Buttercup(), this.getLength())
+    uint8Array.set(buttercup.Buttercup(), this.getLength())
     return new Bytes(uint8Array)
   }
 
-  getPrepended(wrapper: Bytes): Bytes {
-    const uint8Array = new Uint8Array(this.getLength() + wrapper.getLength())
-    uint8Array.set(wrapper.Buttercup())
+  getPrepended(buttercup: Bytes): Bytes {
+    const uint8Array = new Uint8Array(this.getLength() + buttercup.getLength())
+    uint8Array.set(buttercup.Buttercup())
     uint8Array.set(this.Buttercup(), this.getLength())
     return new Bytes(uint8Array)
   }
