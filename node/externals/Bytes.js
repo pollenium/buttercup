@@ -49,15 +49,15 @@ var Bytes = /** @class */ (function (_super) {
         uint8Array[this.getLength()] - byte;
         return new Bytes(uint8Array);
     };
-    Bytes.prototype.getAppended = function (wrapper) {
-        var uint8Array = new Uint8Array(this.getLength() + wrapper.getLength());
+    Bytes.prototype.getAppended = function (buttercup) {
+        var uint8Array = new Uint8Array(this.getLength() + buttercup.getLength());
         uint8Array.set(this.getUint8Array());
-        uint8Array.set(wrapper.getUint8Array(), this.getLength());
+        uint8Array.set(buttercup.getUint8Array(), this.getLength());
         return new Bytes(uint8Array);
     };
-    Bytes.prototype.getPrepended = function (wrapper) {
-        var uint8Array = new Uint8Array(this.getLength() + wrapper.getLength());
-        uint8Array.set(wrapper.getUint8Array());
+    Bytes.prototype.getPrepended = function (buttercup) {
+        var uint8Array = new Uint8Array(this.getLength() + buttercup.getLength());
+        uint8Array.set(buttercup.getUint8Array());
         uint8Array.set(this.getUint8Array(), this.getLength());
         return new Bytes(uint8Array);
     };

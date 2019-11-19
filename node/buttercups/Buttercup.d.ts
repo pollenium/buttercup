@@ -5,12 +5,12 @@ export declare class Buttercup {
     constructor(uint8Array: Uint8Array);
     getUint8Array(): Uint8Array;
     getLength(): number;
-    getIsEqual(wrapper: Buttercup): boolean;
+    getIsEqual(buttercup: Buttercup): boolean;
     getSlice(start: number, end: number): Buttercup;
     getArray(): Array<number>;
     getHex(): string;
     getPhex(): string;
     getBuffer(): Buffer;
-    compare(wrapper: Buttercup): number;
+    compare(buttercup: Buttercup): number;
     getCasted<T extends External>(ExternalClass: External): T;
 }

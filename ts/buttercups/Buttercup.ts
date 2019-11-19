@@ -12,12 +12,12 @@ export class Buttercup {
     return this.uint8Array.length
   }
 
-  getIsEqual(wrapper: Buttercup): boolean {
-    if (this.uint8Array.length !== wrapper.uint8Array.length) {
+  getIsEqual(buttercup: Buttercup): boolean {
+    if (this.uint8Array.length !== buttercup.uint8Array.length) {
       return false
     }
     for (let i = 0; i < this.uint8Array.length; i++) {
-      if (this.uint8Array[i] !== wrapper.uint8Array[i]) {
+      if (this.uint8Array[i] !== buttercup.uint8Array[i]) {
         return false
       }
     }
@@ -50,8 +50,8 @@ export class Buttercup {
     return Buffer.from(this.uint8Array)
   }
 
-  compare(wrapper: Buttercup): number {
-    return this.getBuffer().compare(wrapper.getBuffer())
+  compare(buttercup: Buttercup): number {
+    return this.getBuffer().compare(buttercup.getBuffer())
   }
 
   getCasted<T extends External>(ExternalClass: External): T {

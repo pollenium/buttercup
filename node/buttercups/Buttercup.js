@@ -10,12 +10,12 @@ var Buttercup = /** @class */ (function () {
     Buttercup.prototype.getLength = function () {
         return this.uint8Array.length;
     };
-    Buttercup.prototype.getIsEqual = function (wrapper) {
-        if (this.uint8Array.length !== wrapper.uint8Array.length) {
+    Buttercup.prototype.getIsEqual = function (buttercup) {
+        if (this.uint8Array.length !== buttercup.uint8Array.length) {
             return false;
         }
         for (var i = 0; i < this.uint8Array.length; i++) {
-            if (this.uint8Array[i] !== wrapper.uint8Array[i]) {
+            if (this.uint8Array[i] !== buttercup.uint8Array[i]) {
                 return false;
             }
         }
@@ -40,8 +40,8 @@ var Buttercup = /** @class */ (function () {
     Buttercup.prototype.getBuffer = function () {
         return Buffer.from(this.uint8Array);
     };
-    Buttercup.prototype.compare = function (wrapper) {
-        return this.getBuffer().compare(wrapper.getBuffer());
+    Buttercup.prototype.compare = function (buttercup) {
+        return this.getBuffer().compare(buttercup.getBuffer());
     };
     Buttercup.prototype.getCasted = function (ExternalClass) {
         return new ExternalClass(this.getUint8Array());
