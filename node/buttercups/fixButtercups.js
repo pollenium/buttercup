@@ -15,23 +15,39 @@ var __extends = (this && this.__extends) || (function () {
 exports.__esModule = true;
 var Buttercup_1 = require("./Buttercup");
 var uint8Array_1 = require("../utils/uint8Array");
+var InvalidLengthError = /** @class */ (function (_super) {
+    __extends(InvalidLengthError, _super);
+    function InvalidLengthError(length, uint8Array) {
+        return _super.call(this, "Invalid length; Expected " + length + " received " + uint8Array.length) || this;
+    }
+    return InvalidLengthError;
+}(Error));
+exports.InvalidLengthError = InvalidLengthError;
+var FixButtercup = /** @class */ (function (_super) {
+    __extends(FixButtercup, _super);
+    function FixButtercup(length, uint8Array) {
+        var _this = _super.call(this, uint8Array) || this;
+        if (uint8Array.length !== length) {
+            throw new InvalidLengthError(length, uint8Array);
+        }
+        return _this;
+    }
+    return FixButtercup;
+}(Buttercup_1.Buttercup));
+exports.FixButtercup = FixButtercup;
 var FixLeftButtercup = /** @class */ (function (_super) {
     __extends(FixLeftButtercup, _super);
     function FixLeftButtercup(length, uint8Array) {
-        var _this = _super.call(this, uint8Array_1.getPaddedLeft(length, uint8Array)) || this;
-        _this.length = length;
-        return _this;
+        return _super.call(this, length, uint8Array_1.getPaddedLeft(length, uint8Array)) || this;
     }
     return FixLeftButtercup;
-}(Buttercup_1.Buttercup));
+}(FixButtercup));
 exports.FixLeftButtercup = FixLeftButtercup;
 var FixRightButtercup = /** @class */ (function (_super) {
     __extends(FixRightButtercup, _super);
     function FixRightButtercup(length, uint8Array) {
-        var _this = _super.call(this, uint8Array_1.getPaddedRight(length, uint8Array)) || this;
-        _this.length = length;
-        return _this;
+        return _super.call(this, length, uint8Array_1.getPaddedRight(length, uint8Array)) || this;
     }
     return FixRightButtercup;
-}(Buttercup_1.Buttercup));
+}(FixButtercup));
 exports.FixRightButtercup = FixRightButtercup;

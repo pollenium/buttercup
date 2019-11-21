@@ -82,6 +82,10 @@ write('externals/Bytes', 'Bytes', {
   staticFroms: staticFroms
 })
 
+write('externals/Address', 'Address', {
+  staticFroms: staticFroms
+})
+
 write('externals/uintXs', 'uintXs', {
   classes: uintXClasses
 })
