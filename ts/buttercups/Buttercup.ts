@@ -25,10 +25,6 @@ export class Buttercup {
     return true
   }
 
-  getSlice(start: number, end: number): Buttercup {
-    return new Buttercup(this.uint8Array.slice(start, end))
-  }
-
   getArray(): Array<number> {
     return Array.from(this.getUint8Array())
   }

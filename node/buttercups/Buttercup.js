@@ -21,9 +21,6 @@ var Buttercup = /** @class */ (function () {
         }
         return true;
     };
-    Buttercup.prototype.getSlice = function (start, end) {
-        return new Buttercup(this.uint8Array.slice(start, end));
-    };
     Buttercup.prototype.getArray = function () {
         return Array.from(this.getUint8Array());
     };
