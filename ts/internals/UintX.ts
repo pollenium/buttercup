@@ -28,7 +28,7 @@ export class UintX extends FixLeftButtercup implements Uintish {
     return this.number
   }
 
-  unstrictEquals(uintX: UintX): boolean {
+  eq(uintX: UintX): boolean {
     return this.getBn().eq(uintX.getBn())
   }
 

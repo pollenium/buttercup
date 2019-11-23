@@ -9,6 +9,7 @@ export declare class Bytes extends DynButtercup {
     getByteAppended(byte: number): Bytes;
     getAppended(buttercup: Buttercup): Bytes;
     getPrepended(buttercup: Buttercup): Bytes;
+    getSlice(start: number, end: number): Bytes;
     static fromUint8Array(uint8Array: Uint8Array): Bytes;
     static fromArray(array: Array<number>): Bytes;
     static fromBuffer(buffer: Buffer): Bytes;

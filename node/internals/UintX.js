@@ -37,7 +37,7 @@ var UintX = /** @class */ (function (_super) {
         this.number = this.getBn().toNumber();
         return this.number;
     };
-    UintX.prototype.unstrictEquals = function (uintX) {
+    UintX.prototype.eq = function (uintX) {
         return this.getBn().eq(uintX.getBn());
     };
     UintX.prototype.gt = function (uintX) {

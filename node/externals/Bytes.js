@@ -61,6 +61,9 @@ var Bytes = /** @class */ (function (_super) {
         uint8Array.set(this.getUint8Array(), this.getLength());
         return new Bytes(uint8Array);
     };
+    Bytes.prototype.getSlice = function (start, end) {
+        return new Bytes(this.getUint8Array().slice(start, end));
+    };
     Bytes.fromUint8Array = function (uint8Array) {
         return from.uint8Array(exports.Bytes, uint8Array);
     };

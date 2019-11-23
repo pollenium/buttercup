@@ -46,6 +46,11 @@ export class Bytes extends DynButtercup {
     return new Bytes(uint8Array)
   }
 
+  getSlice(start: number, end: number): Bytes {
+    return new Bytes(this.getUint8Array().slice(start, end))
+  }
+
+
   {{#each staticFroms}}
   static {{{func}}}({{{arg}}}: {{{argClass}}}): Bytes {
     return from.{{{fromFunc}}}(exports.Bytes, {{{arg}}})

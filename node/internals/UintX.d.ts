@@ -7,7 +7,7 @@ export declare class UintX extends FixLeftButtercup implements Uintish {
     constructor(length: number, uint8Array: Uint8Array);
     getBn(): Bn;
     getNumber(): number;
-    unstrictEquals(uintX: UintX): boolean;
+    eq(uintX: UintX): boolean;
     gt(uintX: UintX): boolean;
     gte(uintX: UintX): boolean;
     lt(uintX: UintX): boolean;
