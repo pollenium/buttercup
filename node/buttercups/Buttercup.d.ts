@@ -11,6 +11,7 @@ export declare class Buttercup {
     getHex(): string;
     getPhex(): string;
     getBuffer(): Buffer;
-    compare(buttercup: Buttercup): number;
+    getComparison(buttercup: Buttercup): number;
     getCasted<T>(ExternalClass: ExternalClass<T>): T;
+    getIsNull(): boolean;
 }

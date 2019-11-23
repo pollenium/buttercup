@@ -40,11 +40,19 @@ var Buttercup = /** @class */ (function () {
     Buttercup.prototype.getBuffer = function () {
         return Buffer.from(this.uint8Array);
     };
-    Buttercup.prototype.compare = function (buttercup) {
+    Buttercup.prototype.getComparison = function (buttercup) {
         return this.getBuffer().compare(buttercup.getBuffer());
     };
     Buttercup.prototype.getCasted = function (ExternalClass) {
         return new ExternalClass(this.getUint8Array());
+    };
+    Buttercup.prototype.getIsNull = function () {
+        for (var i = 0; i <= this.uint8Array.length; i++) {
+            if (this.uint8Array[i] === 0) {
+                return false;
+            }
+        }
+        return true;
     };
     return Buttercup;
 }());

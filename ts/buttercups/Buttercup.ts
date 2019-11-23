@@ -51,12 +51,23 @@ export class Buttercup {
     return Buffer.from(this.uint8Array)
   }
 
-  compare(buttercup: Buttercup): number {
+  getComparison(buttercup: Buttercup): number {
     return this.getBuffer().compare(buttercup.getBuffer())
   }
 
   getCasted<T>(ExternalClass: ExternalClass<T>): T {
     return new ExternalClass(this.getUint8Array())
   }
+
+  getIsNull(): boolean {
+    for (let i = 0; i <= this.uint8Array.length; i++) {
+      if (this.uint8Array[i] === 0) {
+        return false
+      }
+    }
+    return true
+  }
+
+
 
 }
