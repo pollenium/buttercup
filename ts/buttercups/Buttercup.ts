@@ -55,7 +55,7 @@ export class Buttercup {
     return new ExternalClass(this.getUint8Array())
   }
 
-  getIsNull(): boolean {
+  getIsOnlyZeroes(): boolean {
     for (let i = 0; i <= this.uint8Array.length; i++) {
       if (this.uint8Array[i] === 0) {
         return false

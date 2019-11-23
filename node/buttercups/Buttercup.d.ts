@@ -12,5 +12,5 @@ export declare class Buttercup {
     getBuffer(): Buffer;
     getComparison(buttercup: Buttercup): number;
     getCasted<T>(ExternalClass: ExternalClass<T>): T;
-    getIsNull(): boolean;
+    getIsOnlyZeroes(): boolean;
 }
