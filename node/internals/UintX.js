@@ -37,6 +37,9 @@ var UintX = /** @class */ (function (_super) {
         this.number = this.getBn().toNumber();
         return this.number;
     };
+    UintX.prototype.getIsZero = function () {
+        return this.getIsOnlyZeroes();
+    };
     UintX.prototype.eq = function (uintX) {
         return this.getBn().eq(uintX.getBn());
     };

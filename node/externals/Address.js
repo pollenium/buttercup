@@ -27,6 +27,12 @@ var Address = /** @class */ (function (_super) {
     function Address(uint8Array) {
         return _super.call(this, 20, uint8Array) || this;
     }
+    Address.prototype.getIsNull = function () {
+        return this.getIsOnlyZeroes();
+    };
+    Address.genNull = function () {
+        return Address.fromUint8Array(new Uint8Array(20).fill(0));
+    };
     Address.fromUint8Array = function (uint8Array) {
         return from.uint8Array(exports.Address, uint8Array);
     };

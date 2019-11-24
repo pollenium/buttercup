@@ -2,6 +2,7 @@
 import { ExternalClass } from '../interfaces';
 export declare class Buttercup {
     private uint8Array;
+    private isOnlyZeros;
     constructor(uint8Array: Uint8Array);
     getUint8Array(): Uint8Array;
     getLength(): number;

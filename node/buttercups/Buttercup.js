@@ -44,7 +44,10 @@ var Buttercup = /** @class */ (function () {
         return new ExternalClass(this.getUint8Array());
     };
     Buttercup.prototype.getIsOnlyZeroes = function () {
-        for (var i = 0; i <= this.uint8Array.length; i++) {
+        if (this.isOnlyZeros) {
+            return this.isOnlyZeros;
+        }
+        for (var i = 0; i < this.uint8Array.length; i++) {
             if (this.uint8Array[i] !== 0) {
                 return false;
             }
