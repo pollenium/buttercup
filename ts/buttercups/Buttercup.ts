@@ -56,7 +56,7 @@ export class Buttercup {
   }
 
   getIsOnlyZeroes(): boolean {
-    for (let i = 0; i <= this.uint8Array.length; i++) {
+    for (let i = 0; i < this.uint8Array.length; i++) {
       if (this.uint8Array[i] !== 0) {
         return false
       }
