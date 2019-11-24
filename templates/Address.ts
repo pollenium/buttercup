@@ -13,6 +13,11 @@ export class Address extends FixButtercup {
     return this.getIsOnlyZeroes()
   }
 
+  static genNull(): Address {
+    return Address.fromUint8Array(
+      new Uint8Array(20).fill(0)
+    )
+  }
 
   {{#each staticFroms}}
   static {{{func}}}({{{arg}}}: {{{argClass}}}): Address {

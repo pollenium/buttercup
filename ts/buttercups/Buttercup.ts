@@ -3,6 +3,9 @@ import { External, ExternalClass } from '../interfaces'
 import * as from from '../utils/from'
 
 export class Buttercup {
+
+  private isOnlyZeros: boolean;
+
   constructor(private uint8Array: Uint8Array) {}
 
   getUint8Array(): Uint8Array {
@@ -56,6 +59,9 @@ export class Buttercup {
   }
 
   getIsOnlyZeroes(): boolean {
+    if (this.isOnlyZeros) {
+      return this.isOnlyZeros
+    }
     for (let i = 0; i < this.uint8Array.length; i++) {
       if (this.uint8Array[i] !== 0) {
         return false
