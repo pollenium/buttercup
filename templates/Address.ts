@@ -9,6 +9,10 @@ export class Address extends FixButtercup {
     super(20, uint8Array)
   }
 
+  getIsNull(): boolean {
+    return this.getIsOnlyZeroes()
+  }
+
 
   {{#each staticFroms}}
   static {{{func}}}({{{arg}}}: {{{argClass}}}): Address {
