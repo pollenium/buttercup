@@ -50,6 +50,10 @@ export class Bytes extends DynButtercup {
     return new Bytes(this.getUint8Array().slice(start, end))
   }
 
+  static genEmpty(): Bytes {
+    return Bytes.fromArray([])
+  }
+
 
   static fromUint8Array(uint8Array: Uint8Array): Bytes {
     return from.uint8Array(exports.Bytes, uint8Array)
