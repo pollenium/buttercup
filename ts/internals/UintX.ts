@@ -28,6 +28,10 @@ export class UintX extends FixLeftButtercup implements Uintish {
     return this.number
   }
 
+  getIsZero(): boolean {
+    return this.getBn().isZero()
+  }
+
   eq(uintX: UintX): boolean {
     return this.getBn().eq(uintX.getBn())
   }
