@@ -9,6 +9,10 @@ export class Address extends FixButtercup {
     super(20, uint8Array)
   }
 
+  getIsNull(): boolean {
+    return this.getIsOnlyZeroes()
+  }
+
 
   static fromUint8Array(uint8Array: Uint8Array): Address {
     return from.uint8Array(exports.Address, uint8Array)
