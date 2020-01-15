@@ -20,6 +20,7 @@
   "homepage": "https://github.com/pollenium/buttercup#readme",
   "dependencies": {
     "@types/node": "^12.12.7",
+    "bignumber.js": "^9.0.0",
     "bn.js": "^5.0.0"
   },
   "devDependencies": {

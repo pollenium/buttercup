@@ -1,5 +1,6 @@
 import crypto from 'crypto'
 import Bn from 'bn.js'
+import Bignumber from 'bignumber.js'
 import { External, Uintish } from '../interfaces'
 import { fromHexish } from './uint8Array'
 
@@ -30,6 +31,16 @@ export function uintBn<T extends External & Uintish>(ExternalClass: T, bn: Bn): 
   }
   return exports.array(ExternalClass, bn.toArray('be'))
 }
+
+export function uintBignumber<T extends External & Uintish>(ExternalClass: T, bignumber: Bignumber): T {
+  /* TODO: Use interface for Bignumber */
+  /* TODO: Validate uintish bignumber */
+  if (bignumber.isZero()) {
+    return exports.array(ExternalClass, [])
+  }
+  return exports.array(ExternalClass, bignumber.toString(16))
+}
+
 
 export function uintNumber<T extends External & Uintish>(ExternalClass: T, number: number): T {
   /* TODO: Validate uintish number */

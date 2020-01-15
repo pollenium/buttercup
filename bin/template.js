@@ -28,12 +28,22 @@ const staticFroms = [
   }
 ]
 
+const staticGens = [
+  'genNull'
+]
+
 const uintXStaticFroms = [
   {
     func: 'fromBn',
     fromFunc: 'uintBn',
     arg: 'bn',
     argClass: 'Bn'
+  },
+  {
+    func: 'fromBignumber',
+    fromFunc: 'uintBignumber',
+    arg: 'bignumber',
+    argClass: 'Bignumber'
   },
   {
     func: 'fromNumber',
@@ -70,20 +80,24 @@ for (let length = 1; length <= 32; length++) {
     length,
     bits: length * 8,
     ops: uintXOps,
-    staticFroms: staticFroms.concat(uintXStaticFroms)
+    staticFroms: staticFroms.concat(uintXStaticFroms),
+    staticGens: staticGens
   })
   bytesXClasses.push({
     length,
-    staticFroms: staticFroms
+    staticFroms: staticFroms,
+    staticGens: staticGens
   })
 }
 
 write('externals/Bytes', 'Bytes', {
-  staticFroms: staticFroms
+  staticFroms: staticFroms,
+  staticGens: staticGens
 })
 
 write('externals/Address', 'Address', {
-  staticFroms: staticFroms
+  staticFroms: staticFroms,
+  staticGens: staticGens
 })
 
 write('externals/uintXs', 'uintXs', {
