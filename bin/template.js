@@ -34,18 +34,6 @@ const staticGens = [
 
 const uintXStaticFroms = [
   {
-    func: 'fromBn',
-    fromFunc: 'uintBn',
-    arg: 'bn',
-    argClass: 'Bn'
-  },
-  {
-    func: 'fromBignumber',
-    fromFunc: 'uintBignumber',
-    arg: 'bignumber',
-    argClass: 'Bignumber'
-  },
-  {
     func: 'fromNumber',
     fromFunc: 'uintNumber',
     arg: 'number',

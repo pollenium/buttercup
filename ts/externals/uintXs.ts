@@ -3,7 +3,6 @@ import { External, Uintish } from '../interfaces'
 import * as from from '../utils/from'
 import * as uintMath from '../utils/uintMath'
 import Bn from 'bn.js'
-import Bignumber from 'bignumber.js'
 
 export class Uint8 extends UintX implements Uintish {
 
@@ -55,14 +54,6 @@ export class Uint8 extends UintX implements Uintish {
 
   static fromHexish(hexish: string): Uint8 {
     return from.hexish(exports.Uint8, hexish)
-  }
-
-  static fromBn(bn: Bn): Uint8 {
-    return from.uintBn(exports.Uint8, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint8 {
-    return from.uintBignumber(exports.Uint8, bignumber)
   }
 
   static fromNumber(number: number): Uint8 {
@@ -123,14 +114,6 @@ export class Uint16 extends UintX implements Uintish {
     return from.hexish(exports.Uint16, hexish)
   }
 
-  static fromBn(bn: Bn): Uint16 {
-    return from.uintBn(exports.Uint16, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint16 {
-    return from.uintBignumber(exports.Uint16, bignumber)
-  }
-
   static fromNumber(number: number): Uint16 {
     return from.uintNumber(exports.Uint16, number)
   }
@@ -187,14 +170,6 @@ export class Uint24 extends UintX implements Uintish {
 
   static fromHexish(hexish: string): Uint24 {
     return from.hexish(exports.Uint24, hexish)
-  }
-
-  static fromBn(bn: Bn): Uint24 {
-    return from.uintBn(exports.Uint24, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint24 {
-    return from.uintBignumber(exports.Uint24, bignumber)
   }
 
   static fromNumber(number: number): Uint24 {
@@ -255,14 +230,6 @@ export class Uint32 extends UintX implements Uintish {
     return from.hexish(exports.Uint32, hexish)
   }
 
-  static fromBn(bn: Bn): Uint32 {
-    return from.uintBn(exports.Uint32, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint32 {
-    return from.uintBignumber(exports.Uint32, bignumber)
-  }
-
   static fromNumber(number: number): Uint32 {
     return from.uintNumber(exports.Uint32, number)
   }
@@ -319,14 +286,6 @@ export class Uint40 extends UintX implements Uintish {
 
   static fromHexish(hexish: string): Uint40 {
     return from.hexish(exports.Uint40, hexish)
-  }
-
-  static fromBn(bn: Bn): Uint40 {
-    return from.uintBn(exports.Uint40, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint40 {
-    return from.uintBignumber(exports.Uint40, bignumber)
   }
 
   static fromNumber(number: number): Uint40 {
@@ -387,14 +346,6 @@ export class Uint48 extends UintX implements Uintish {
     return from.hexish(exports.Uint48, hexish)
   }
 
-  static fromBn(bn: Bn): Uint48 {
-    return from.uintBn(exports.Uint48, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint48 {
-    return from.uintBignumber(exports.Uint48, bignumber)
-  }
-
   static fromNumber(number: number): Uint48 {
     return from.uintNumber(exports.Uint48, number)
   }
@@ -451,14 +402,6 @@ export class Uint56 extends UintX implements Uintish {
 
   static fromHexish(hexish: string): Uint56 {
     return from.hexish(exports.Uint56, hexish)
-  }
-
-  static fromBn(bn: Bn): Uint56 {
-    return from.uintBn(exports.Uint56, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint56 {
-    return from.uintBignumber(exports.Uint56, bignumber)
   }
 
   static fromNumber(number: number): Uint56 {
@@ -519,14 +462,6 @@ export class Uint64 extends UintX implements Uintish {
     return from.hexish(exports.Uint64, hexish)
   }
 
-  static fromBn(bn: Bn): Uint64 {
-    return from.uintBn(exports.Uint64, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint64 {
-    return from.uintBignumber(exports.Uint64, bignumber)
-  }
-
   static fromNumber(number: number): Uint64 {
     return from.uintNumber(exports.Uint64, number)
   }
@@ -583,14 +518,6 @@ export class Uint72 extends UintX implements Uintish {
 
   static fromHexish(hexish: string): Uint72 {
     return from.hexish(exports.Uint72, hexish)
-  }
-
-  static fromBn(bn: Bn): Uint72 {
-    return from.uintBn(exports.Uint72, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint72 {
-    return from.uintBignumber(exports.Uint72, bignumber)
   }
 
   static fromNumber(number: number): Uint72 {
@@ -651,14 +578,6 @@ export class Uint80 extends UintX implements Uintish {
     return from.hexish(exports.Uint80, hexish)
   }
 
-  static fromBn(bn: Bn): Uint80 {
-    return from.uintBn(exports.Uint80, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint80 {
-    return from.uintBignumber(exports.Uint80, bignumber)
-  }
-
   static fromNumber(number: number): Uint80 {
     return from.uintNumber(exports.Uint80, number)
   }
@@ -715,14 +634,6 @@ export class Uint88 extends UintX implements Uintish {
 
   static fromHexish(hexish: string): Uint88 {
     return from.hexish(exports.Uint88, hexish)
-  }
-
-  static fromBn(bn: Bn): Uint88 {
-    return from.uintBn(exports.Uint88, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint88 {
-    return from.uintBignumber(exports.Uint88, bignumber)
   }
 
   static fromNumber(number: number): Uint88 {
@@ -783,14 +694,6 @@ export class Uint96 extends UintX implements Uintish {
     return from.hexish(exports.Uint96, hexish)
   }
 
-  static fromBn(bn: Bn): Uint96 {
-    return from.uintBn(exports.Uint96, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint96 {
-    return from.uintBignumber(exports.Uint96, bignumber)
-  }
-
   static fromNumber(number: number): Uint96 {
     return from.uintNumber(exports.Uint96, number)
   }
@@ -847,14 +750,6 @@ export class Uint104 extends UintX implements Uintish {
 
   static fromHexish(hexish: string): Uint104 {
     return from.hexish(exports.Uint104, hexish)
-  }
-
-  static fromBn(bn: Bn): Uint104 {
-    return from.uintBn(exports.Uint104, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint104 {
-    return from.uintBignumber(exports.Uint104, bignumber)
   }
 
   static fromNumber(number: number): Uint104 {
@@ -915,14 +810,6 @@ export class Uint112 extends UintX implements Uintish {
     return from.hexish(exports.Uint112, hexish)
   }
 
-  static fromBn(bn: Bn): Uint112 {
-    return from.uintBn(exports.Uint112, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint112 {
-    return from.uintBignumber(exports.Uint112, bignumber)
-  }
-
   static fromNumber(number: number): Uint112 {
     return from.uintNumber(exports.Uint112, number)
   }
@@ -979,14 +866,6 @@ export class Uint120 extends UintX implements Uintish {
 
   static fromHexish(hexish: string): Uint120 {
     return from.hexish(exports.Uint120, hexish)
-  }
-
-  static fromBn(bn: Bn): Uint120 {
-    return from.uintBn(exports.Uint120, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint120 {
-    return from.uintBignumber(exports.Uint120, bignumber)
   }
 
   static fromNumber(number: number): Uint120 {
@@ -1047,14 +926,6 @@ export class Uint128 extends UintX implements Uintish {
     return from.hexish(exports.Uint128, hexish)
   }
 
-  static fromBn(bn: Bn): Uint128 {
-    return from.uintBn(exports.Uint128, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint128 {
-    return from.uintBignumber(exports.Uint128, bignumber)
-  }
-
   static fromNumber(number: number): Uint128 {
     return from.uintNumber(exports.Uint128, number)
   }
@@ -1111,14 +982,6 @@ export class Uint136 extends UintX implements Uintish {
 
   static fromHexish(hexish: string): Uint136 {
     return from.hexish(exports.Uint136, hexish)
-  }
-
-  static fromBn(bn: Bn): Uint136 {
-    return from.uintBn(exports.Uint136, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint136 {
-    return from.uintBignumber(exports.Uint136, bignumber)
   }
 
   static fromNumber(number: number): Uint136 {
@@ -1179,14 +1042,6 @@ export class Uint144 extends UintX implements Uintish {
     return from.hexish(exports.Uint144, hexish)
   }
 
-  static fromBn(bn: Bn): Uint144 {
-    return from.uintBn(exports.Uint144, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint144 {
-    return from.uintBignumber(exports.Uint144, bignumber)
-  }
-
   static fromNumber(number: number): Uint144 {
     return from.uintNumber(exports.Uint144, number)
   }
@@ -1243,14 +1098,6 @@ export class Uint152 extends UintX implements Uintish {
 
   static fromHexish(hexish: string): Uint152 {
     return from.hexish(exports.Uint152, hexish)
-  }
-
-  static fromBn(bn: Bn): Uint152 {
-    return from.uintBn(exports.Uint152, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint152 {
-    return from.uintBignumber(exports.Uint152, bignumber)
   }
 
   static fromNumber(number: number): Uint152 {
@@ -1311,14 +1158,6 @@ export class Uint160 extends UintX implements Uintish {
     return from.hexish(exports.Uint160, hexish)
   }
 
-  static fromBn(bn: Bn): Uint160 {
-    return from.uintBn(exports.Uint160, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint160 {
-    return from.uintBignumber(exports.Uint160, bignumber)
-  }
-
   static fromNumber(number: number): Uint160 {
     return from.uintNumber(exports.Uint160, number)
   }
@@ -1375,14 +1214,6 @@ export class Uint168 extends UintX implements Uintish {
 
   static fromHexish(hexish: string): Uint168 {
     return from.hexish(exports.Uint168, hexish)
-  }
-
-  static fromBn(bn: Bn): Uint168 {
-    return from.uintBn(exports.Uint168, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint168 {
-    return from.uintBignumber(exports.Uint168, bignumber)
   }
 
   static fromNumber(number: number): Uint168 {
@@ -1443,14 +1274,6 @@ export class Uint176 extends UintX implements Uintish {
     return from.hexish(exports.Uint176, hexish)
   }
 
-  static fromBn(bn: Bn): Uint176 {
-    return from.uintBn(exports.Uint176, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint176 {
-    return from.uintBignumber(exports.Uint176, bignumber)
-  }
-
   static fromNumber(number: number): Uint176 {
     return from.uintNumber(exports.Uint176, number)
   }
@@ -1507,14 +1330,6 @@ export class Uint184 extends UintX implements Uintish {
 
   static fromHexish(hexish: string): Uint184 {
     return from.hexish(exports.Uint184, hexish)
-  }
-
-  static fromBn(bn: Bn): Uint184 {
-    return from.uintBn(exports.Uint184, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint184 {
-    return from.uintBignumber(exports.Uint184, bignumber)
   }
 
   static fromNumber(number: number): Uint184 {
@@ -1575,14 +1390,6 @@ export class Uint192 extends UintX implements Uintish {
     return from.hexish(exports.Uint192, hexish)
   }
 
-  static fromBn(bn: Bn): Uint192 {
-    return from.uintBn(exports.Uint192, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint192 {
-    return from.uintBignumber(exports.Uint192, bignumber)
-  }
-
   static fromNumber(number: number): Uint192 {
     return from.uintNumber(exports.Uint192, number)
   }
@@ -1639,14 +1446,6 @@ export class Uint200 extends UintX implements Uintish {
 
   static fromHexish(hexish: string): Uint200 {
     return from.hexish(exports.Uint200, hexish)
-  }
-
-  static fromBn(bn: Bn): Uint200 {
-    return from.uintBn(exports.Uint200, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint200 {
-    return from.uintBignumber(exports.Uint200, bignumber)
   }
 
   static fromNumber(number: number): Uint200 {
@@ -1707,14 +1506,6 @@ export class Uint208 extends UintX implements Uintish {
     return from.hexish(exports.Uint208, hexish)
   }
 
-  static fromBn(bn: Bn): Uint208 {
-    return from.uintBn(exports.Uint208, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint208 {
-    return from.uintBignumber(exports.Uint208, bignumber)
-  }
-
   static fromNumber(number: number): Uint208 {
     return from.uintNumber(exports.Uint208, number)
   }
@@ -1771,14 +1562,6 @@ export class Uint216 extends UintX implements Uintish {
 
   static fromHexish(hexish: string): Uint216 {
     return from.hexish(exports.Uint216, hexish)
-  }
-
-  static fromBn(bn: Bn): Uint216 {
-    return from.uintBn(exports.Uint216, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint216 {
-    return from.uintBignumber(exports.Uint216, bignumber)
   }
 
   static fromNumber(number: number): Uint216 {
@@ -1839,14 +1622,6 @@ export class Uint224 extends UintX implements Uintish {
     return from.hexish(exports.Uint224, hexish)
   }
 
-  static fromBn(bn: Bn): Uint224 {
-    return from.uintBn(exports.Uint224, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint224 {
-    return from.uintBignumber(exports.Uint224, bignumber)
-  }
-
   static fromNumber(number: number): Uint224 {
     return from.uintNumber(exports.Uint224, number)
   }
@@ -1903,14 +1678,6 @@ export class Uint232 extends UintX implements Uintish {
 
   static fromHexish(hexish: string): Uint232 {
     return from.hexish(exports.Uint232, hexish)
-  }
-
-  static fromBn(bn: Bn): Uint232 {
-    return from.uintBn(exports.Uint232, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint232 {
-    return from.uintBignumber(exports.Uint232, bignumber)
   }
 
   static fromNumber(number: number): Uint232 {
@@ -1971,14 +1738,6 @@ export class Uint240 extends UintX implements Uintish {
     return from.hexish(exports.Uint240, hexish)
   }
 
-  static fromBn(bn: Bn): Uint240 {
-    return from.uintBn(exports.Uint240, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint240 {
-    return from.uintBignumber(exports.Uint240, bignumber)
-  }
-
   static fromNumber(number: number): Uint240 {
     return from.uintNumber(exports.Uint240, number)
   }
@@ -2035,14 +1794,6 @@ export class Uint248 extends UintX implements Uintish {
 
   static fromHexish(hexish: string): Uint248 {
     return from.hexish(exports.Uint248, hexish)
-  }
-
-  static fromBn(bn: Bn): Uint248 {
-    return from.uintBn(exports.Uint248, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint248 {
-    return from.uintBignumber(exports.Uint248, bignumber)
   }
 
   static fromNumber(number: number): Uint248 {
@@ -2103,16 +1854,9 @@ export class Uint256 extends UintX implements Uintish {
     return from.hexish(exports.Uint256, hexish)
   }
 
-  static fromBn(bn: Bn): Uint256 {
-    return from.uintBn(exports.Uint256, bn)
-  }
-
-  static fromBignumber(bignumber: Bignumber): Uint256 {
-    return from.uintBignumber(exports.Uint256, bignumber)
-  }
-
   static fromNumber(number: number): Uint256 {
     return from.uintNumber(exports.Uint256, number)
   }
 
 }
+

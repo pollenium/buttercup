@@ -61,12 +61,6 @@ var Uint8 = /** @class */ (function (_super) {
     Uint8.fromHexish = function (hexish) {
         return from.hexish(exports.Uint8, hexish);
     };
-    Uint8.fromBn = function (bn) {
-        return from.uintBn(exports.Uint8, bn);
-    };
-    Uint8.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint8, bignumber);
-    };
     Uint8.fromNumber = function (number) {
         return from.uintNumber(exports.Uint8, number);
     };
@@ -111,12 +105,6 @@ var Uint16 = /** @class */ (function (_super) {
     };
     Uint16.fromHexish = function (hexish) {
         return from.hexish(exports.Uint16, hexish);
-    };
-    Uint16.fromBn = function (bn) {
-        return from.uintBn(exports.Uint16, bn);
-    };
-    Uint16.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint16, bignumber);
     };
     Uint16.fromNumber = function (number) {
         return from.uintNumber(exports.Uint16, number);
@@ -163,12 +151,6 @@ var Uint24 = /** @class */ (function (_super) {
     Uint24.fromHexish = function (hexish) {
         return from.hexish(exports.Uint24, hexish);
     };
-    Uint24.fromBn = function (bn) {
-        return from.uintBn(exports.Uint24, bn);
-    };
-    Uint24.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint24, bignumber);
-    };
     Uint24.fromNumber = function (number) {
         return from.uintNumber(exports.Uint24, number);
     };
@@ -213,12 +195,6 @@ var Uint32 = /** @class */ (function (_super) {
     };
     Uint32.fromHexish = function (hexish) {
         return from.hexish(exports.Uint32, hexish);
-    };
-    Uint32.fromBn = function (bn) {
-        return from.uintBn(exports.Uint32, bn);
-    };
-    Uint32.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint32, bignumber);
     };
     Uint32.fromNumber = function (number) {
         return from.uintNumber(exports.Uint32, number);
@@ -265,12 +241,6 @@ var Uint40 = /** @class */ (function (_super) {
     Uint40.fromHexish = function (hexish) {
         return from.hexish(exports.Uint40, hexish);
     };
-    Uint40.fromBn = function (bn) {
-        return from.uintBn(exports.Uint40, bn);
-    };
-    Uint40.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint40, bignumber);
-    };
     Uint40.fromNumber = function (number) {
         return from.uintNumber(exports.Uint40, number);
     };
@@ -315,12 +285,6 @@ var Uint48 = /** @class */ (function (_super) {
     };
     Uint48.fromHexish = function (hexish) {
         return from.hexish(exports.Uint48, hexish);
-    };
-    Uint48.fromBn = function (bn) {
-        return from.uintBn(exports.Uint48, bn);
-    };
-    Uint48.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint48, bignumber);
     };
     Uint48.fromNumber = function (number) {
         return from.uintNumber(exports.Uint48, number);
@@ -367,12 +331,6 @@ var Uint56 = /** @class */ (function (_super) {
     Uint56.fromHexish = function (hexish) {
         return from.hexish(exports.Uint56, hexish);
     };
-    Uint56.fromBn = function (bn) {
-        return from.uintBn(exports.Uint56, bn);
-    };
-    Uint56.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint56, bignumber);
-    };
     Uint56.fromNumber = function (number) {
         return from.uintNumber(exports.Uint56, number);
     };
@@ -417,12 +375,6 @@ var Uint64 = /** @class */ (function (_super) {
     };
     Uint64.fromHexish = function (hexish) {
         return from.hexish(exports.Uint64, hexish);
-    };
-    Uint64.fromBn = function (bn) {
-        return from.uintBn(exports.Uint64, bn);
-    };
-    Uint64.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint64, bignumber);
     };
     Uint64.fromNumber = function (number) {
         return from.uintNumber(exports.Uint64, number);
@@ -469,12 +421,6 @@ var Uint72 = /** @class */ (function (_super) {
     Uint72.fromHexish = function (hexish) {
         return from.hexish(exports.Uint72, hexish);
     };
-    Uint72.fromBn = function (bn) {
-        return from.uintBn(exports.Uint72, bn);
-    };
-    Uint72.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint72, bignumber);
-    };
     Uint72.fromNumber = function (number) {
         return from.uintNumber(exports.Uint72, number);
     };
@@ -519,12 +465,6 @@ var Uint80 = /** @class */ (function (_super) {
     };
     Uint80.fromHexish = function (hexish) {
         return from.hexish(exports.Uint80, hexish);
-    };
-    Uint80.fromBn = function (bn) {
-        return from.uintBn(exports.Uint80, bn);
-    };
-    Uint80.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint80, bignumber);
     };
     Uint80.fromNumber = function (number) {
         return from.uintNumber(exports.Uint80, number);
@@ -571,12 +511,6 @@ var Uint88 = /** @class */ (function (_super) {
     Uint88.fromHexish = function (hexish) {
         return from.hexish(exports.Uint88, hexish);
     };
-    Uint88.fromBn = function (bn) {
-        return from.uintBn(exports.Uint88, bn);
-    };
-    Uint88.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint88, bignumber);
-    };
     Uint88.fromNumber = function (number) {
         return from.uintNumber(exports.Uint88, number);
     };
@@ -621,12 +555,6 @@ var Uint96 = /** @class */ (function (_super) {
     };
     Uint96.fromHexish = function (hexish) {
         return from.hexish(exports.Uint96, hexish);
-    };
-    Uint96.fromBn = function (bn) {
-        return from.uintBn(exports.Uint96, bn);
-    };
-    Uint96.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint96, bignumber);
     };
     Uint96.fromNumber = function (number) {
         return from.uintNumber(exports.Uint96, number);
@@ -673,12 +601,6 @@ var Uint104 = /** @class */ (function (_super) {
     Uint104.fromHexish = function (hexish) {
         return from.hexish(exports.Uint104, hexish);
     };
-    Uint104.fromBn = function (bn) {
-        return from.uintBn(exports.Uint104, bn);
-    };
-    Uint104.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint104, bignumber);
-    };
     Uint104.fromNumber = function (number) {
         return from.uintNumber(exports.Uint104, number);
     };
@@ -723,12 +645,6 @@ var Uint112 = /** @class */ (function (_super) {
     };
     Uint112.fromHexish = function (hexish) {
         return from.hexish(exports.Uint112, hexish);
-    };
-    Uint112.fromBn = function (bn) {
-        return from.uintBn(exports.Uint112, bn);
-    };
-    Uint112.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint112, bignumber);
     };
     Uint112.fromNumber = function (number) {
         return from.uintNumber(exports.Uint112, number);
@@ -775,12 +691,6 @@ var Uint120 = /** @class */ (function (_super) {
     Uint120.fromHexish = function (hexish) {
         return from.hexish(exports.Uint120, hexish);
     };
-    Uint120.fromBn = function (bn) {
-        return from.uintBn(exports.Uint120, bn);
-    };
-    Uint120.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint120, bignumber);
-    };
     Uint120.fromNumber = function (number) {
         return from.uintNumber(exports.Uint120, number);
     };
@@ -825,12 +735,6 @@ var Uint128 = /** @class */ (function (_super) {
     };
     Uint128.fromHexish = function (hexish) {
         return from.hexish(exports.Uint128, hexish);
-    };
-    Uint128.fromBn = function (bn) {
-        return from.uintBn(exports.Uint128, bn);
-    };
-    Uint128.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint128, bignumber);
     };
     Uint128.fromNumber = function (number) {
         return from.uintNumber(exports.Uint128, number);
@@ -877,12 +781,6 @@ var Uint136 = /** @class */ (function (_super) {
     Uint136.fromHexish = function (hexish) {
         return from.hexish(exports.Uint136, hexish);
     };
-    Uint136.fromBn = function (bn) {
-        return from.uintBn(exports.Uint136, bn);
-    };
-    Uint136.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint136, bignumber);
-    };
     Uint136.fromNumber = function (number) {
         return from.uintNumber(exports.Uint136, number);
     };
@@ -927,12 +825,6 @@ var Uint144 = /** @class */ (function (_super) {
     };
     Uint144.fromHexish = function (hexish) {
         return from.hexish(exports.Uint144, hexish);
-    };
-    Uint144.fromBn = function (bn) {
-        return from.uintBn(exports.Uint144, bn);
-    };
-    Uint144.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint144, bignumber);
     };
     Uint144.fromNumber = function (number) {
         return from.uintNumber(exports.Uint144, number);
@@ -979,12 +871,6 @@ var Uint152 = /** @class */ (function (_super) {
     Uint152.fromHexish = function (hexish) {
         return from.hexish(exports.Uint152, hexish);
     };
-    Uint152.fromBn = function (bn) {
-        return from.uintBn(exports.Uint152, bn);
-    };
-    Uint152.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint152, bignumber);
-    };
     Uint152.fromNumber = function (number) {
         return from.uintNumber(exports.Uint152, number);
     };
@@ -1029,12 +915,6 @@ var Uint160 = /** @class */ (function (_super) {
     };
     Uint160.fromHexish = function (hexish) {
         return from.hexish(exports.Uint160, hexish);
-    };
-    Uint160.fromBn = function (bn) {
-        return from.uintBn(exports.Uint160, bn);
-    };
-    Uint160.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint160, bignumber);
     };
     Uint160.fromNumber = function (number) {
         return from.uintNumber(exports.Uint160, number);
@@ -1081,12 +961,6 @@ var Uint168 = /** @class */ (function (_super) {
     Uint168.fromHexish = function (hexish) {
         return from.hexish(exports.Uint168, hexish);
     };
-    Uint168.fromBn = function (bn) {
-        return from.uintBn(exports.Uint168, bn);
-    };
-    Uint168.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint168, bignumber);
-    };
     Uint168.fromNumber = function (number) {
         return from.uintNumber(exports.Uint168, number);
     };
@@ -1131,12 +1005,6 @@ var Uint176 = /** @class */ (function (_super) {
     };
     Uint176.fromHexish = function (hexish) {
         return from.hexish(exports.Uint176, hexish);
-    };
-    Uint176.fromBn = function (bn) {
-        return from.uintBn(exports.Uint176, bn);
-    };
-    Uint176.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint176, bignumber);
     };
     Uint176.fromNumber = function (number) {
         return from.uintNumber(exports.Uint176, number);
@@ -1183,12 +1051,6 @@ var Uint184 = /** @class */ (function (_super) {
     Uint184.fromHexish = function (hexish) {
         return from.hexish(exports.Uint184, hexish);
     };
-    Uint184.fromBn = function (bn) {
-        return from.uintBn(exports.Uint184, bn);
-    };
-    Uint184.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint184, bignumber);
-    };
     Uint184.fromNumber = function (number) {
         return from.uintNumber(exports.Uint184, number);
     };
@@ -1233,12 +1095,6 @@ var Uint192 = /** @class */ (function (_super) {
     };
     Uint192.fromHexish = function (hexish) {
         return from.hexish(exports.Uint192, hexish);
-    };
-    Uint192.fromBn = function (bn) {
-        return from.uintBn(exports.Uint192, bn);
-    };
-    Uint192.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint192, bignumber);
     };
     Uint192.fromNumber = function (number) {
         return from.uintNumber(exports.Uint192, number);
@@ -1285,12 +1141,6 @@ var Uint200 = /** @class */ (function (_super) {
     Uint200.fromHexish = function (hexish) {
         return from.hexish(exports.Uint200, hexish);
     };
-    Uint200.fromBn = function (bn) {
-        return from.uintBn(exports.Uint200, bn);
-    };
-    Uint200.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint200, bignumber);
-    };
     Uint200.fromNumber = function (number) {
         return from.uintNumber(exports.Uint200, number);
     };
@@ -1335,12 +1185,6 @@ var Uint208 = /** @class */ (function (_super) {
     };
     Uint208.fromHexish = function (hexish) {
         return from.hexish(exports.Uint208, hexish);
-    };
-    Uint208.fromBn = function (bn) {
-        return from.uintBn(exports.Uint208, bn);
-    };
-    Uint208.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint208, bignumber);
     };
     Uint208.fromNumber = function (number) {
         return from.uintNumber(exports.Uint208, number);
@@ -1387,12 +1231,6 @@ var Uint216 = /** @class */ (function (_super) {
     Uint216.fromHexish = function (hexish) {
         return from.hexish(exports.Uint216, hexish);
     };
-    Uint216.fromBn = function (bn) {
-        return from.uintBn(exports.Uint216, bn);
-    };
-    Uint216.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint216, bignumber);
-    };
     Uint216.fromNumber = function (number) {
         return from.uintNumber(exports.Uint216, number);
     };
@@ -1437,12 +1275,6 @@ var Uint224 = /** @class */ (function (_super) {
     };
     Uint224.fromHexish = function (hexish) {
         return from.hexish(exports.Uint224, hexish);
-    };
-    Uint224.fromBn = function (bn) {
-        return from.uintBn(exports.Uint224, bn);
-    };
-    Uint224.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint224, bignumber);
     };
     Uint224.fromNumber = function (number) {
         return from.uintNumber(exports.Uint224, number);
@@ -1489,12 +1321,6 @@ var Uint232 = /** @class */ (function (_super) {
     Uint232.fromHexish = function (hexish) {
         return from.hexish(exports.Uint232, hexish);
     };
-    Uint232.fromBn = function (bn) {
-        return from.uintBn(exports.Uint232, bn);
-    };
-    Uint232.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint232, bignumber);
-    };
     Uint232.fromNumber = function (number) {
         return from.uintNumber(exports.Uint232, number);
     };
@@ -1539,12 +1365,6 @@ var Uint240 = /** @class */ (function (_super) {
     };
     Uint240.fromHexish = function (hexish) {
         return from.hexish(exports.Uint240, hexish);
-    };
-    Uint240.fromBn = function (bn) {
-        return from.uintBn(exports.Uint240, bn);
-    };
-    Uint240.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint240, bignumber);
     };
     Uint240.fromNumber = function (number) {
         return from.uintNumber(exports.Uint240, number);
@@ -1591,12 +1411,6 @@ var Uint248 = /** @class */ (function (_super) {
     Uint248.fromHexish = function (hexish) {
         return from.hexish(exports.Uint248, hexish);
     };
-    Uint248.fromBn = function (bn) {
-        return from.uintBn(exports.Uint248, bn);
-    };
-    Uint248.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint248, bignumber);
-    };
     Uint248.fromNumber = function (number) {
         return from.uintNumber(exports.Uint248, number);
     };
@@ -1641,12 +1455,6 @@ var Uint256 = /** @class */ (function (_super) {
     };
     Uint256.fromHexish = function (hexish) {
         return from.hexish(exports.Uint256, hexish);
-    };
-    Uint256.fromBn = function (bn) {
-        return from.uintBn(exports.Uint256, bn);
-    };
-    Uint256.fromBignumber = function (bignumber) {
-        return from.uintBignumber(exports.Uint256, bignumber);
     };
     Uint256.fromNumber = function (number) {
         return from.uintNumber(exports.Uint256, number);

@@ -23,31 +23,11 @@ function hexish(ExternalClass, hexish) {
     return exports.uint8Array(ExternalClass, uint8Array_1.fromHexish(hexish));
 }
 exports.hexish = hexish;
-function uintBn(ExternalClass, bn) {
-    /* TODO: Use interface for Bn */
-    /* TODO: Validate uintish bn */
-    if (bn.eq(zeroBn)) {
-        return exports.array(ExternalClass, []);
-    }
-    return exports.array(ExternalClass, bn.toArray('be'));
-}
-exports.uintBn = uintBn;
-function uintBignumber(ExternalClass, bignumber) {
-    /* TODO: Use interface for Bignumber */
-    /* TODO: Validate uintish bignumber */
-    if (bignumber.isZero()) {
-        return exports.array(ExternalClass, []);
-    }
-    var bignumberHexish = bignumber.toString(16);
-    var hexish = bignumberHexish.length % 2 === 0 ? bignumberHexish : "0" + bignumberHexish;
-    return exports.hexish(ExternalClass, hexish);
-}
-exports.uintBignumber = uintBignumber;
 function uintNumber(ExternalClass, number) {
     /* TODO: Validate uintish number */
     if (number === 0) {
-        return exports.array(ExternalClass, []);
+        return exports.uint8Array(ExternalClass, new Uint8Array([]));
     }
-    return exports.uintBn(ExternalClass, new bn_js_1["default"](number));
+    return exports.uint8Array(ExternalClass, new bn_js_1["default"](number).toArrayLike(Uint8Array, 'be'));
 }
 exports.uintNumber = uintNumber;

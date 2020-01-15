@@ -1,8 +1,6 @@
 /// <reference types="node" />
 import { UintX } from '../internals/UintX';
 import { Uintish } from '../interfaces';
-import Bn from 'bn.js';
-import Bignumber from 'bignumber.js';
 export declare class Uint8 extends UintX implements Uintish {
     static LENGTH: number;
     constructor(uint8Array: Uint8Array);
@@ -17,8 +15,6 @@ export declare class Uint8 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint8;
     static fromBuffer(buffer: Buffer): Uint8;
     static fromHexish(hexish: string): Uint8;
-    static fromBn(bn: Bn): Uint8;
-    static fromBignumber(bignumber: Bignumber): Uint8;
     static fromNumber(number: number): Uint8;
 }
 export declare class Uint16 extends UintX implements Uintish {
@@ -35,8 +31,6 @@ export declare class Uint16 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint16;
     static fromBuffer(buffer: Buffer): Uint16;
     static fromHexish(hexish: string): Uint16;
-    static fromBn(bn: Bn): Uint16;
-    static fromBignumber(bignumber: Bignumber): Uint16;
     static fromNumber(number: number): Uint16;
 }
 export declare class Uint24 extends UintX implements Uintish {
@@ -53,8 +47,6 @@ export declare class Uint24 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint24;
     static fromBuffer(buffer: Buffer): Uint24;
     static fromHexish(hexish: string): Uint24;
-    static fromBn(bn: Bn): Uint24;
-    static fromBignumber(bignumber: Bignumber): Uint24;
     static fromNumber(number: number): Uint24;
 }
 export declare class Uint32 extends UintX implements Uintish {
@@ -71,8 +63,6 @@ export declare class Uint32 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint32;
     static fromBuffer(buffer: Buffer): Uint32;
     static fromHexish(hexish: string): Uint32;
-    static fromBn(bn: Bn): Uint32;
-    static fromBignumber(bignumber: Bignumber): Uint32;
     static fromNumber(number: number): Uint32;
 }
 export declare class Uint40 extends UintX implements Uintish {
@@ -89,8 +79,6 @@ export declare class Uint40 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint40;
     static fromBuffer(buffer: Buffer): Uint40;
     static fromHexish(hexish: string): Uint40;
-    static fromBn(bn: Bn): Uint40;
-    static fromBignumber(bignumber: Bignumber): Uint40;
     static fromNumber(number: number): Uint40;
 }
 export declare class Uint48 extends UintX implements Uintish {
@@ -107,8 +95,6 @@ export declare class Uint48 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint48;
     static fromBuffer(buffer: Buffer): Uint48;
     static fromHexish(hexish: string): Uint48;
-    static fromBn(bn: Bn): Uint48;
-    static fromBignumber(bignumber: Bignumber): Uint48;
     static fromNumber(number: number): Uint48;
 }
 export declare class Uint56 extends UintX implements Uintish {
@@ -125,8 +111,6 @@ export declare class Uint56 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint56;
     static fromBuffer(buffer: Buffer): Uint56;
     static fromHexish(hexish: string): Uint56;
-    static fromBn(bn: Bn): Uint56;
-    static fromBignumber(bignumber: Bignumber): Uint56;
     static fromNumber(number: number): Uint56;
 }
 export declare class Uint64 extends UintX implements Uintish {
@@ -143,8 +127,6 @@ export declare class Uint64 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint64;
     static fromBuffer(buffer: Buffer): Uint64;
     static fromHexish(hexish: string): Uint64;
-    static fromBn(bn: Bn): Uint64;
-    static fromBignumber(bignumber: Bignumber): Uint64;
     static fromNumber(number: number): Uint64;
 }
 export declare class Uint72 extends UintX implements Uintish {
@@ -161,8 +143,6 @@ export declare class Uint72 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint72;
     static fromBuffer(buffer: Buffer): Uint72;
     static fromHexish(hexish: string): Uint72;
-    static fromBn(bn: Bn): Uint72;
-    static fromBignumber(bignumber: Bignumber): Uint72;
     static fromNumber(number: number): Uint72;
 }
 export declare class Uint80 extends UintX implements Uintish {
@@ -179,8 +159,6 @@ export declare class Uint80 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint80;
     static fromBuffer(buffer: Buffer): Uint80;
     static fromHexish(hexish: string): Uint80;
-    static fromBn(bn: Bn): Uint80;
-    static fromBignumber(bignumber: Bignumber): Uint80;
     static fromNumber(number: number): Uint80;
 }
 export declare class Uint88 extends UintX implements Uintish {
@@ -197,8 +175,6 @@ export declare class Uint88 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint88;
     static fromBuffer(buffer: Buffer): Uint88;
     static fromHexish(hexish: string): Uint88;
-    static fromBn(bn: Bn): Uint88;
-    static fromBignumber(bignumber: Bignumber): Uint88;
     static fromNumber(number: number): Uint88;
 }
 export declare class Uint96 extends UintX implements Uintish {
@@ -215,8 +191,6 @@ export declare class Uint96 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint96;
     static fromBuffer(buffer: Buffer): Uint96;
     static fromHexish(hexish: string): Uint96;
-    static fromBn(bn: Bn): Uint96;
-    static fromBignumber(bignumber: Bignumber): Uint96;
     static fromNumber(number: number): Uint96;
 }
 export declare class Uint104 extends UintX implements Uintish {
@@ -233,8 +207,6 @@ export declare class Uint104 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint104;
     static fromBuffer(buffer: Buffer): Uint104;
     static fromHexish(hexish: string): Uint104;
-    static fromBn(bn: Bn): Uint104;
-    static fromBignumber(bignumber: Bignumber): Uint104;
     static fromNumber(number: number): Uint104;
 }
 export declare class Uint112 extends UintX implements Uintish {
@@ -251,8 +223,6 @@ export declare class Uint112 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint112;
     static fromBuffer(buffer: Buffer): Uint112;
     static fromHexish(hexish: string): Uint112;
-    static fromBn(bn: Bn): Uint112;
-    static fromBignumber(bignumber: Bignumber): Uint112;
     static fromNumber(number: number): Uint112;
 }
 export declare class Uint120 extends UintX implements Uintish {
@@ -269,8 +239,6 @@ export declare class Uint120 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint120;
     static fromBuffer(buffer: Buffer): Uint120;
     static fromHexish(hexish: string): Uint120;
-    static fromBn(bn: Bn): Uint120;
-    static fromBignumber(bignumber: Bignumber): Uint120;
     static fromNumber(number: number): Uint120;
 }
 export declare class Uint128 extends UintX implements Uintish {
@@ -287,8 +255,6 @@ export declare class Uint128 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint128;
     static fromBuffer(buffer: Buffer): Uint128;
     static fromHexish(hexish: string): Uint128;
-    static fromBn(bn: Bn): Uint128;
-    static fromBignumber(bignumber: Bignumber): Uint128;
     static fromNumber(number: number): Uint128;
 }
 export declare class Uint136 extends UintX implements Uintish {
@@ -305,8 +271,6 @@ export declare class Uint136 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint136;
     static fromBuffer(buffer: Buffer): Uint136;
     static fromHexish(hexish: string): Uint136;
-    static fromBn(bn: Bn): Uint136;
-    static fromBignumber(bignumber: Bignumber): Uint136;
     static fromNumber(number: number): Uint136;
 }
 export declare class Uint144 extends UintX implements Uintish {
@@ -323,8 +287,6 @@ export declare class Uint144 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint144;
     static fromBuffer(buffer: Buffer): Uint144;
     static fromHexish(hexish: string): Uint144;
-    static fromBn(bn: Bn): Uint144;
-    static fromBignumber(bignumber: Bignumber): Uint144;
     static fromNumber(number: number): Uint144;
 }
 export declare class Uint152 extends UintX implements Uintish {
@@ -341,8 +303,6 @@ export declare class Uint152 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint152;
     static fromBuffer(buffer: Buffer): Uint152;
     static fromHexish(hexish: string): Uint152;
-    static fromBn(bn: Bn): Uint152;
-    static fromBignumber(bignumber: Bignumber): Uint152;
     static fromNumber(number: number): Uint152;
 }
 export declare class Uint160 extends UintX implements Uintish {
@@ -359,8 +319,6 @@ export declare class Uint160 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint160;
     static fromBuffer(buffer: Buffer): Uint160;
     static fromHexish(hexish: string): Uint160;
-    static fromBn(bn: Bn): Uint160;
-    static fromBignumber(bignumber: Bignumber): Uint160;
     static fromNumber(number: number): Uint160;
 }
 export declare class Uint168 extends UintX implements Uintish {
@@ -377,8 +335,6 @@ export declare class Uint168 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint168;
     static fromBuffer(buffer: Buffer): Uint168;
     static fromHexish(hexish: string): Uint168;
-    static fromBn(bn: Bn): Uint168;
-    static fromBignumber(bignumber: Bignumber): Uint168;
     static fromNumber(number: number): Uint168;
 }
 export declare class Uint176 extends UintX implements Uintish {
@@ -395,8 +351,6 @@ export declare class Uint176 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint176;
     static fromBuffer(buffer: Buffer): Uint176;
     static fromHexish(hexish: string): Uint176;
-    static fromBn(bn: Bn): Uint176;
-    static fromBignumber(bignumber: Bignumber): Uint176;
     static fromNumber(number: number): Uint176;
 }
 export declare class Uint184 extends UintX implements Uintish {
@@ -413,8 +367,6 @@ export declare class Uint184 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint184;
     static fromBuffer(buffer: Buffer): Uint184;
     static fromHexish(hexish: string): Uint184;
-    static fromBn(bn: Bn): Uint184;
-    static fromBignumber(bignumber: Bignumber): Uint184;
     static fromNumber(number: number): Uint184;
 }
 export declare class Uint192 extends UintX implements Uintish {
@@ -431,8 +383,6 @@ export declare class Uint192 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint192;
     static fromBuffer(buffer: Buffer): Uint192;
     static fromHexish(hexish: string): Uint192;
-    static fromBn(bn: Bn): Uint192;
-    static fromBignumber(bignumber: Bignumber): Uint192;
     static fromNumber(number: number): Uint192;
 }
 export declare class Uint200 extends UintX implements Uintish {
@@ -449,8 +399,6 @@ export declare class Uint200 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint200;
     static fromBuffer(buffer: Buffer): Uint200;
     static fromHexish(hexish: string): Uint200;
-    static fromBn(bn: Bn): Uint200;
-    static fromBignumber(bignumber: Bignumber): Uint200;
     static fromNumber(number: number): Uint200;
 }
 export declare class Uint208 extends UintX implements Uintish {
@@ -467,8 +415,6 @@ export declare class Uint208 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint208;
     static fromBuffer(buffer: Buffer): Uint208;
     static fromHexish(hexish: string): Uint208;
-    static fromBn(bn: Bn): Uint208;
-    static fromBignumber(bignumber: Bignumber): Uint208;
     static fromNumber(number: number): Uint208;
 }
 export declare class Uint216 extends UintX implements Uintish {
@@ -485,8 +431,6 @@ export declare class Uint216 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint216;
     static fromBuffer(buffer: Buffer): Uint216;
     static fromHexish(hexish: string): Uint216;
-    static fromBn(bn: Bn): Uint216;
-    static fromBignumber(bignumber: Bignumber): Uint216;
     static fromNumber(number: number): Uint216;
 }
 export declare class Uint224 extends UintX implements Uintish {
@@ -503,8 +447,6 @@ export declare class Uint224 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint224;
     static fromBuffer(buffer: Buffer): Uint224;
     static fromHexish(hexish: string): Uint224;
-    static fromBn(bn: Bn): Uint224;
-    static fromBignumber(bignumber: Bignumber): Uint224;
     static fromNumber(number: number): Uint224;
 }
 export declare class Uint232 extends UintX implements Uintish {
@@ -521,8 +463,6 @@ export declare class Uint232 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint232;
     static fromBuffer(buffer: Buffer): Uint232;
     static fromHexish(hexish: string): Uint232;
-    static fromBn(bn: Bn): Uint232;
-    static fromBignumber(bignumber: Bignumber): Uint232;
     static fromNumber(number: number): Uint232;
 }
 export declare class Uint240 extends UintX implements Uintish {
@@ -539,8 +479,6 @@ export declare class Uint240 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint240;
     static fromBuffer(buffer: Buffer): Uint240;
     static fromHexish(hexish: string): Uint240;
-    static fromBn(bn: Bn): Uint240;
-    static fromBignumber(bignumber: Bignumber): Uint240;
     static fromNumber(number: number): Uint240;
 }
 export declare class Uint248 extends UintX implements Uintish {
@@ -557,8 +495,6 @@ export declare class Uint248 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint248;
     static fromBuffer(buffer: Buffer): Uint248;
     static fromHexish(hexish: string): Uint248;
-    static fromBn(bn: Bn): Uint248;
-    static fromBignumber(bignumber: Bignumber): Uint248;
     static fromNumber(number: number): Uint248;
 }
 export declare class Uint256 extends UintX implements Uintish {
@@ -575,7 +511,5 @@ export declare class Uint256 extends UintX implements Uintish {
     static fromArray(array: Array<number>): Uint256;
     static fromBuffer(buffer: Buffer): Uint256;
     static fromHexish(hexish: string): Uint256;
-    static fromBn(bn: Bn): Uint256;
-    static fromBignumber(bignumber: Bignumber): Uint256;
     static fromNumber(number: number): Uint256;
 }

@@ -32,8 +32,6 @@ const fixtures = [
       { hexish: '' },
       { hexish: '0x' },
       { uintNumber: 0 },
-      { uintBn: new Bn(0) },
-      { uintBignumber: new Bignumber(0) }
     ]
   },
   {
@@ -53,8 +51,8 @@ const fixtures = [
       { hexish: '01' },
       { hexish: '0x01' },
       { uintNumber: 1 },
-      { uintBn: new Bn(1) },
-      { uintBignumber: new Bignumber(1) }
+      { array: new Bn(1).toArray('be') },
+      { hexish: '0' + new Bignumber(1).toString(16) }
     ]
   },
   {
@@ -65,8 +63,8 @@ const fixtures = [
       { hexish: 'ff' },
       { hexish: '0xff' },
       { uintNumber: 255 },
-      { uintBn: new Bn(255) },
-      { uintBignumber: new Bignumber(255) }
+      { array: new Bn(255).toArray('be') },
+      { hexish: new Bignumber(255).toString(16) }
     ]
   },
   {
@@ -86,8 +84,8 @@ const fixtures = [
       { hexish: '0100' },
       { hexish: '0x0100' },
       { uintNumber: 256 },
-      { uintBn: new Bn(256) },
-      { uintBignumber: new Bignumber(256) }
+      { array: new Bn(256).toArray('be') },
+      { hexish: '0' + new Bignumber(256).toString(16) }
     ]
   },
   {
@@ -100,8 +98,8 @@ const fixtures = [
       { hexish: '0xffff' },
       { hexish: '0xFFFF' },
       { uintNumber: 256 * 256 - 1 },
-      { uintBn: new Bn(256 * 256 - 1) },
-      { uintBignumber: new Bignumber(256 * 256 - 1) }
+      { array: new Bn(256 * 256 - 1).toArray('be') },
+      { hexish: new Bignumber(256 * 256 - 1).toString(16) }
     ]
   },
   {
@@ -112,8 +110,8 @@ const fixtures = [
       { hexish: '010000' },
       { hexish: '0x010000' },
       { uintNumber: 256 * 256 },
-      { uintBn: new Bn(256 * 256) },
-      { uintBignumber: new Bignumber(256 * 256) }
+      { array: new Bn(256 * 256).toArray('be') },
+      { hexish: '0' + new Bignumber(256 * 256).toString(16) }
     ]
   }
 ]
