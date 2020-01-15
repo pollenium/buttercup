@@ -8,6 +8,7 @@ const zeroBn = new Bn(0)
 
 export function uint8Array<T extends External>(ExternalClass: T, uint8Array: Uint8Array): T
  {
+   /* TODO: Validate Uint8Array */
   return new ExternalClass(uint8Array)
 }
 
@@ -38,7 +39,9 @@ export function uintBignumber<T extends External & Uintish>(ExternalClass: T, bi
   if (bignumber.isZero()) {
     return exports.array(ExternalClass, [])
   }
-  return exports.array(ExternalClass, bignumber.toString(16))
+  const bignumberHexish = bignumber.toString(16)
+  const hexish = bignumberHexish.length % 2 === 0 ? bignumberHexish : `0${bignumberHexish}`
+  return exports.hexish(ExternalClass, hexish)
 }
 
 

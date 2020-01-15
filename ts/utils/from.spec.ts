@@ -41,9 +41,7 @@ const fixtures = [
     inputs: [
       { buffer: Buffer.from([0]) },
       { array: [0] },
-      { hexish: '0' },
       { hexish: '00' },
-      { hexish: '0x0' },
       { hexish: '0x00' }
     ]
   },
@@ -52,9 +50,7 @@ const fixtures = [
     inputs: [
       { buffer: Buffer.from([1]) },
       { array: [1] },
-      { hexish: '1' },
       { hexish: '01' },
-      { hexish: '0x1' },
       { hexish: '0x01' },
       { uintNumber: 1 },
       { uintBn: new Bn(1) },
@@ -76,12 +72,10 @@ const fixtures = [
   {
     uint8Array: new Uint8Array([255, 1]),
     inputs: [
-      { hexish: 'ff1' },
-      { hexish: 'FF1' },
       { hexish: 'FF01' },
-      { hexish: '0xff1' },
-      { hexish: '0xFF1' },
-      { hexish: '0xfF1' }
+      { hexish: '0xff01' },
+      { hexish: '0xFF01' },
+      { hexish: '0xfF01' }
     ]
   },
   {
@@ -89,9 +83,7 @@ const fixtures = [
     inputs: [
       { buffer: Buffer.from([1, 0]) },
       { array: [1, 0] },
-      { hexish: '010' },
       { hexish: '0100' },
-      { hexish: '0x010' },
       { hexish: '0x0100' },
       { uintNumber: 256 },
       { uintBn: new Bn(256) },
@@ -117,9 +109,7 @@ const fixtures = [
     inputs: [
       { buffer: Buffer.from([1, 0, 0]) },
       { array: [1, 0, 0] },
-      { hexish: '01000' },
       { hexish: '010000' },
-      { hexish: '0x01000' },
       { hexish: '0x010000' },
       { uintNumber: 256 * 256 },
       { uintBn: new Bn(256 * 256) },
@@ -144,6 +134,7 @@ fixtures.forEach((fixture, index) => {
         const fromFunc = from[fromKey]
         const fromValue = input[fromKey]
         test(`fixture ${External.name} #${index} ${fromKey}: '${fromValue}'`, () => {
+          // console.log(`fixture ${External.name} #${index} ${fromKey}: '${fromValue}'`)
           // console.log('External', External)
           const fromInstance = fromFunc(External, fromValue)
           // console.log('fromInstance', fromInstance)
@@ -151,6 +142,11 @@ fixtures.forEach((fixture, index) => {
             fromInstance.getUint8Array()
           ).toBeInstanceOf(
             Uint8Array
+          )
+          expect(
+            fromInstance.getUint8Array()
+          ).toStrictEqual(
+            reference.getUint8Array()
           )
         })
       })

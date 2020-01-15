@@ -7,6 +7,7 @@ var bn_js_1 = __importDefault(require("bn.js"));
 var uint8Array_1 = require("./uint8Array");
 var zeroBn = new bn_js_1["default"](0);
 function uint8Array(ExternalClass, uint8Array) {
+    /* TODO: Validate Uint8Array */
     return new ExternalClass(uint8Array);
 }
 exports.uint8Array = uint8Array;
@@ -37,7 +38,9 @@ function uintBignumber(ExternalClass, bignumber) {
     if (bignumber.isZero()) {
         return exports.array(ExternalClass, []);
     }
-    return exports.array(ExternalClass, bignumber.toString(16));
+    var bignumberHexish = bignumber.toString(16);
+    var hexish = bignumberHexish.length % 2 === 0 ? bignumberHexish : "0" + bignumberHexish;
+    return exports.hexish(ExternalClass, hexish);
 }
 exports.uintBignumber = uintBignumber;
 function uintNumber(ExternalClass, number) {

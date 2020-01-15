@@ -1,9 +1,17 @@
-export class InvalidHexishError extends Error {
-  constructor(hexish) {
-    super(`Invalid hexish: ${hexish}` )
-    Object.setPrototypeOf(this, InvalidHexishError.prototype)
+export class InvalidHexishCharError extends Error {
+  constructor(hexishChar) {
+    super(`Invalid hexish char: ${hexishChar}` )
+    Object.setPrototypeOf(this, InvalidHexishCharError.prototype)
   }
 }
+
+export class InvalidHexishParityError extends Error {
+  constructor(hexish) {
+    super(`Hexish should be even length, not odd: ${hexish}` )
+    Object.setPrototypeOf(this, InvalidHexishParityError.prototype)
+  }
+}
+
 
 const hexishCharCodesRanges = [
   [48, 57],   // 0-9
@@ -24,20 +32,18 @@ function getIsValidHexishChar(hexishChar: string): boolean {
 }
 
 
-function getIsValidHexish(hexish: string): boolean {
+export function assertIsValidHexish(hexish: string): void {
   if (hexish.indexOf('0x') === 0) {
-    return getIsValidHexish(hexish.substr(2))
+    assertIsValidHexish(hexish.substr(2))
+    return
+  }
+  if (hexish.length % 2 === 1) {
+    throw new InvalidHexishParityError(hexish)
   }
   for (let i = 0; i < hexish.length; i++) {
-    if (!getIsValidHexishChar(hexish[i])) {
-      return false
+    const hexishChar = hexish[i]
+    if (!getIsValidHexishChar(hexishChar)) {
+      throw new InvalidHexishCharError(hexishChar)
     }
-  }
-  return true
-}
-
-export function assertIsValidHexish(hexish: string): void {
-  if (!getIsValidHexish(hexish)) {
-    throw new InvalidHexishError(hexish)
   }
 }

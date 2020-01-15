@@ -21,39 +21,50 @@ var invalidHexishChar = [
 var validHexishChars = ['0', '9', 'a', 'f', 'A', 'F'];
 invalidHexishChar.forEach(function (invalidHexishChar) {
     validHexishChars.forEach(function (validHexishChar) {
-        var invalidHexishes = [
-            "" + invalidHexishChar,
+        var throwInvalidHexishCharErrors = [
             "" + validHexishChar + invalidHexishChar,
             "" + invalidHexishChar + validHexishChar,
-            "" + validHexishChar + invalidHexishChar + validHexishChar,
-            "" + validHexishChar + validHexishChar + invalidHexishChar,
-            "" + invalidHexishChar + validHexishChar + validHexishChar,
-            "0x" + invalidHexishChar,
+            "" + validHexishChar + invalidHexishChar + validHexishChar + validHexishChar,
+            "" + validHexishChar + validHexishChar + validHexishChar + invalidHexishChar,
+            "" + invalidHexishChar + validHexishChar + validHexishChar + validHexishChar,
             "0x" + validHexishChar + invalidHexishChar,
             "0x" + invalidHexishChar + validHexishChar,
-            "0x" + validHexishChar + invalidHexishChar + validHexishChar,
-            "0x" + validHexishChar + validHexishChar + invalidHexishChar,
-            "0x" + invalidHexishChar + validHexishChar + validHexishChar,
+            "0x" + validHexishChar + validHexishChar + invalidHexishChar + validHexishChar,
+            "0x" + validHexishChar + validHexishChar + validHexishChar + invalidHexishChar,
+            "0x" + invalidHexishChar + validHexishChar + validHexishChar + validHexishChar
         ];
-        var validHexishes = [
+        var throwInvalidHexishParityErrors = [
             "" + validHexishChar,
-            "" + validHexishChar + validHexishChar,
             "" + validHexishChar + validHexishChar + validHexishChar,
             "0x" + validHexishChar,
-            "0x" + validHexishChar + validHexishChar,
             "0x" + validHexishChar + validHexishChar + validHexishChar,
         ];
-        invalidHexishes.forEach(function (invalidHexish) {
-            test("invalidHexish: " + invalidHexish, function () {
+        var validHexishes = [
+            '',
+            "" + validHexishChar + validHexishChar,
+            "" + validHexishChar + validHexishChar + validHexishChar + validHexishChar,
+            '0x',
+            "0x" + validHexishChar + validHexishChar,
+            "0x" + validHexishChar + validHexishChar + validHexishChar + validHexishChar
+        ];
+        throwInvalidHexishCharErrors.forEach(function (hexish) {
+            test("invalidHexishChar: " + hexish, function () {
                 expect(function () {
-                    assertIsValidHexish_1.assertIsValidHexish(invalidHexish);
-                }).toThrow(assertIsValidHexish_1.InvalidHexishError);
+                    assertIsValidHexish_1.assertIsValidHexish(hexish);
+                }).toThrow(assertIsValidHexish_1.InvalidHexishCharError);
             });
         });
-        validHexishes.forEach(function (validHexish) {
-            test("validHexish: " + validHexish, function () {
+        throwInvalidHexishParityErrors.forEach(function (hexish) {
+            test("invalidHexishParity: " + hexish, function () {
                 expect(function () {
-                    assertIsValidHexish_1.assertIsValidHexish(validHexish);
+                    assertIsValidHexish_1.assertIsValidHexish(hexish);
+                }).toThrow(assertIsValidHexish_1.InvalidHexishParityError);
+            });
+        });
+        validHexishes.forEach(function (hexish) {
+            test("validHexish: " + hexish, function () {
+                expect(function () {
+                    assertIsValidHexish_1.assertIsValidHexish(hexish);
                 }).not.toThrow();
             });
         });

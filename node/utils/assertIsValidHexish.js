@@ -13,16 +13,26 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 exports.__esModule = true;
-var InvalidHexishError = /** @class */ (function (_super) {
-    __extends(InvalidHexishError, _super);
-    function InvalidHexishError(hexish) {
-        var _this = _super.call(this, "Invalid hexish: " + hexish) || this;
-        Object.setPrototypeOf(_this, InvalidHexishError.prototype);
+var InvalidHexishCharError = /** @class */ (function (_super) {
+    __extends(InvalidHexishCharError, _super);
+    function InvalidHexishCharError(hexishChar) {
+        var _this = _super.call(this, "Invalid hexish char: " + hexishChar) || this;
+        Object.setPrototypeOf(_this, InvalidHexishCharError.prototype);
         return _this;
     }
-    return InvalidHexishError;
+    return InvalidHexishCharError;
 }(Error));
-exports.InvalidHexishError = InvalidHexishError;
+exports.InvalidHexishCharError = InvalidHexishCharError;
+var InvalidHexishParityError = /** @class */ (function (_super) {
+    __extends(InvalidHexishParityError, _super);
+    function InvalidHexishParityError(hexish) {
+        var _this = _super.call(this, "Hexish should be even length, not odd: " + hexish) || this;
+        Object.setPrototypeOf(_this, InvalidHexishParityError.prototype);
+        return _this;
+    }
+    return InvalidHexishParityError;
+}(Error));
+exports.InvalidHexishParityError = InvalidHexishParityError;
 var hexishCharCodesRanges = [
     [48, 57],
     [97, 102],
@@ -39,20 +49,19 @@ function getIsValidHexishChar(hexishChar) {
     }
     return false;
 }
-function getIsValidHexish(hexish) {
+function assertIsValidHexish(hexish) {
     if (hexish.indexOf('0x') === 0) {
-        return getIsValidHexish(hexish.substr(2));
+        assertIsValidHexish(hexish.substr(2));
+        return;
+    }
+    if (hexish.length % 2 === 1) {
+        throw new InvalidHexishParityError(hexish);
     }
     for (var i = 0; i < hexish.length; i++) {
-        if (!getIsValidHexishChar(hexish[i])) {
-            return false;
+        var hexishChar = hexish[i];
+        if (!getIsValidHexishChar(hexishChar)) {
+            throw new InvalidHexishCharError(hexishChar);
         }
-    }
-    return true;
-}
-function assertIsValidHexish(hexish) {
-    if (!getIsValidHexish(hexish)) {
-        throw new InvalidHexishError(hexish);
     }
 }
 exports.assertIsValidHexish = assertIsValidHexish;
