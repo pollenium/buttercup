@@ -31,6 +31,15 @@ function uintBn(ExternalClass, bn) {
     return exports.array(ExternalClass, bn.toArray('be'));
 }
 exports.uintBn = uintBn;
+function uintBignumber(ExternalClass, bignumber) {
+    /* TODO: Use interface for Bignumber */
+    /* TODO: Validate uintish bignumber */
+    if (bignumber.isZero()) {
+        return exports.array(ExternalClass, []);
+    }
+    return exports.array(ExternalClass, bignumber.toString(16));
+}
+exports.uintBignumber = uintBignumber;
 function uintNumber(ExternalClass, number) {
     /* TODO: Validate uintish number */
     if (number === 0) {

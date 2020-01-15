@@ -13,6 +13,7 @@ exports.__esModule = true;
 var from = __importStar(require("./from"));
 var __1 = require("../");
 var bn_js_1 = __importDefault(require("bn.js"));
+var bignumber_js_1 = __importDefault(require("bignumber.js"));
 var externals = {
     uintish: [
         __1.Uint8,
@@ -30,7 +31,8 @@ var fixtures = [
             { hexish: '' },
             { hexish: '0x' },
             { uintNumber: 0 },
-            { uintBn: new bn_js_1["default"](0) }
+            { uintBn: new bn_js_1["default"](0) },
+            { uintBignumber: new bignumber_js_1["default"](0) }
         ]
     },
     {
@@ -41,7 +43,7 @@ var fixtures = [
             { hexish: '0' },
             { hexish: '00' },
             { hexish: '0x0' },
-            { hexish: '0x00' },
+            { hexish: '0x00' }
         ]
     },
     {
@@ -54,7 +56,8 @@ var fixtures = [
             { hexish: '0x1' },
             { hexish: '0x01' },
             { uintNumber: 1 },
-            { uintBn: new bn_js_1["default"](1) }
+            { uintBn: new bn_js_1["default"](1) },
+            { uintBignumber: new bignumber_js_1["default"](1) }
         ]
     },
     {
@@ -65,7 +68,8 @@ var fixtures = [
             { hexish: 'ff' },
             { hexish: '0xff' },
             { uintNumber: 255 },
-            { uintBn: new bn_js_1["default"](255) }
+            { uintBn: new bn_js_1["default"](255) },
+            { uintBignumber: new bignumber_js_1["default"](255) }
         ]
     },
     {
@@ -88,8 +92,9 @@ var fixtures = [
             { hexish: '0100' },
             { hexish: '0x010' },
             { hexish: '0x0100' },
-            //     { uintNumber: 256 },
-            { uintBn: new bn_js_1["default"](256) }
+            { uintNumber: 256 },
+            { uintBn: new bn_js_1["default"](256) },
+            { uintBignumber: new bignumber_js_1["default"](256) }
         ]
     },
     {
@@ -102,7 +107,8 @@ var fixtures = [
             { hexish: '0xffff' },
             { hexish: '0xFFFF' },
             { uintNumber: 256 * 256 - 1 },
-            { uintBn: new bn_js_1["default"](256 * 256 - 1) }
+            { uintBn: new bn_js_1["default"](256 * 256 - 1) },
+            { uintBignumber: new bignumber_js_1["default"](256 * 256 - 1) }
         ]
     },
     {
@@ -115,7 +121,8 @@ var fixtures = [
             { hexish: '0x01000' },
             { hexish: '0x010000' },
             { uintNumber: 256 * 256 },
-            { uintBn: new bn_js_1["default"](256 * 256) }
+            { uintBn: new bn_js_1["default"](256 * 256) },
+            { uintBignumber: new bignumber_js_1["default"](256 * 256) }
         ]
     }
 ];
@@ -142,64 +149,3 @@ var lengthFixtures = fixtures.forEach(function (fixture, index) {
         });
     });
 });
-// const invalidHexishChar = [
-//   '\x2F',
-//   '/',
-//   '\x3A',
-//   ':',
-//   '\x40',
-//   '@',
-//   '\x47',
-//   'G',
-//   '\x60',
-//   '`',
-//   '\x67',
-//   'g',
-//   '\n',
-//   '\x00',
-//   '\xff'
-// ]
-//
-// const validHexishChars = ['0', '9', 'a', 'f', 'A', 'F']
-//
-// invalidHexishChar.forEach((invalidHexishChar) => {
-//   validHexishChars.forEach((validHexishChar) => {
-//     const invalidHexishes = [
-//       `${invalidHexishChar}`,
-//       `${validHexishChar}${invalidHexishChar}`,
-//       `${invalidHexishChar}${validHexishChar}`,
-//       `${validHexishChar}${invalidHexishChar}${validHexishChar}`,
-//       `${validHexishChar}${validHexishChar}${invalidHexishChar}`,
-//       `${invalidHexishChar}${validHexishChar}${validHexishChar}`,
-//       `0x${invalidHexishChar}`,
-//       `0x${validHexishChar}${invalidHexishChar}`,
-//       `0x${invalidHexishChar}${validHexishChar}`,
-//       `0x${validHexishChar}${invalidHexishChar}${validHexishChar}`,
-//       `0x${validHexishChar}${validHexishChar}${invalidHexishChar}`,
-//       `0x${invalidHexishChar}${validHexishChar}${validHexishChar}`,
-//
-//     ]
-//     const validHexishes = [
-//       `${validHexishChar}`,
-//       `${validHexishChar}${validHexishChar}`,
-//       `${validHexishChar}${validHexishChar}${validHexishChar}`,
-//       `0x${validHexishChar}`,
-//       `0x${validHexishChar}${validHexishChar}`,
-//       `0x${validHexishChar}${validHexishChar}${validHexishChar}`,
-//     ]
-//     invalidHexishes.forEach((invalidHexish) => {
-//       test(`invalidHexish: ${invalidHexish}`, () => {
-//         expect(() => {
-//           from.hexish(invalidHexish)
-//         }).toThrow(InvalidHexishError)
-//       })
-//     })
-//     validHexishes.forEach((validHexish) => {
-//       test(`validHexish: ${validHexish}`, () => {
-//         expect(() => {
-//           from.hexish(validHexish)
-//         }).not.toThrow()
-//       })
-//     })
-//   })
-// })
