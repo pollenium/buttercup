@@ -10,12 +10,6 @@ export class Bytes{{length}} extends BytesX {
   constructor(uint8Array: Uint8Array) {
     super(Bytes{{length}}.LENGTH, uint8Array)
   }
-
-  {{#each uvaursiFroms}}
-  static {{{func}}}({{{arg}}}: {{{argClass}}}): {{../className}} {
-    return new {{../className}}(uvaursi.{{{func}}}({{{arg}}}))
-  }
-  {{/each}}
 }
 
 {{/each}}

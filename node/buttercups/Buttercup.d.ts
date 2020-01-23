@@ -1,14 +1,9 @@
 import { ExternalClass } from '../interfaces';
+import { Uvaursi } from 'pollenium-uvaursi';
 export declare class Buttercup {
-    private uint8Array;
-    private isOnlyZeros;
+    readonly uint8Array: Uint8Array;
+    private uvaursi;
     constructor(uint8Array: Uint8Array);
-    toUint8Array(): Uint8Array;
-    getLength(): number;
-    getIsEqual(buttercup: Buttercup): boolean;
-    toArray(): Array<number>;
-    toHex(): string;
-    toPhex(): string;
-    getCasted<T>(ExternalClass: ExternalClass<T>): T;
-    getIsOnlyZeroes(): boolean;
+    genCasted<T>(ExternalClass: ExternalClass<T>): T;
+    protected toUvaursi(): Uvaursi;
 }

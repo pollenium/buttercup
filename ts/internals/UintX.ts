@@ -12,41 +12,43 @@ export class UintX extends FixLeftButtercup implements Uintish {
   }
 
   toNumber(): number {
-    this.number = new Bn(this.toUint8Array()).toNumber()
+    this.number = new Bn(this.uint8Array).toNumber()
     return this.number
   }
 
   getIsZero(): boolean {
-    return this.getIsOnlyZeroes()
+    return this.toUvaursi().every((byte) => {
+      return byte === 0
+    })
   }
 
-  eq(value: UintX): boolean {
-    const thisBn = new Bn(this.toUint8Array())
-    const valueBn = new Bn(value.toUint8Array())
+  compEq(value: UintX): boolean {
+    const thisBn = new Bn(this.uint8Array)
+    const valueBn = new Bn(value.uint8Array)
     return thisBn.eq(valueBn)
   }
 
-  gt(value: UintX): boolean {
-    const thisBn = new Bn(this.toUint8Array())
-    const valueBn = new Bn(value.toUint8Array())
+  compGt(value: UintX): boolean {
+    const thisBn = new Bn(this.uint8Array)
+    const valueBn = new Bn(value.uint8Array)
     return thisBn.gt(valueBn)
   }
 
-  gte(value: UintX): boolean {
-    const thisBn = new Bn(this.toUint8Array())
-    const valueBn = new Bn(value.toUint8Array())
+  compGte(value: UintX): boolean {
+    const thisBn = new Bn(this.uint8Array)
+    const valueBn = new Bn(value.uint8Array)
     return thisBn.gte(valueBn)
   }
 
-  lt(value: UintX): boolean {
-    const thisBn = new Bn(this.toUint8Array())
-    const valueBn = new Bn(value.toUint8Array())
+  compLt(value: UintX): boolean {
+    const thisBn = new Bn(this.uint8Array)
+    const valueBn = new Bn(value.uint8Array)
     return thisBn.lt(valueBn)
   }
 
-  lte(value: UintX): boolean {
-    const thisBn = new Bn(this.toUint8Array())
-    const valueBn = new Bn(value.toUint8Array())
+  compLte(value: UintX): boolean {
+    const thisBn = new Bn(this.uint8Array)
+    const valueBn = new Bn(value.uint8Array)
     return thisBn.lte(valueBn)
   }
 

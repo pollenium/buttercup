@@ -38,7 +38,7 @@ exports.FixButtercup = FixButtercup;
 var FixLeftButtercup = /** @class */ (function (_super) {
     __extends(FixLeftButtercup, _super);
     function FixLeftButtercup(length, uint8Array) {
-        return _super.call(this, length, pollenium_uvaursi_1.getPaddedLeft(length, uint8Array)) || this;
+        return _super.call(this, length, new pollenium_uvaursi_1.Uvaursi(uint8Array).uuGenPaddedLeft(length)) || this;
     }
     return FixLeftButtercup;
 }(FixButtercup));
@@ -46,7 +46,7 @@ exports.FixLeftButtercup = FixLeftButtercup;
 var FixRightButtercup = /** @class */ (function (_super) {
     __extends(FixRightButtercup, _super);
     function FixRightButtercup(length, uint8Array) {
-        return _super.call(this, length, pollenium_uvaursi_1.getPaddedRight(length, uint8Array)) || this;
+        return _super.call(this, length, new pollenium_uvaursi_1.Uvaursi(uint8Array).uuGenPaddedRight(length)) || this;
     }
     return FixRightButtercup;
 }(FixButtercup));

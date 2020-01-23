@@ -12,32 +12,28 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
-    result["default"] = mod;
-    return result;
-};
 exports.__esModule = true;
 var fixButtercups_1 = require("../buttercups/fixButtercups");
-var uvaursi = __importStar(require("pollenium-uvaursi"));
+var pollenium_uvaursi_1 = require("pollenium-uvaursi");
 var Address = /** @class */ (function (_super) {
     __extends(Address, _super);
     function Address(uint8Array) {
-        return _super.call(this, 20, uint8Array) || this;
+        var _this = _super.call(this, 20, uint8Array) || this;
+        _this.isNull = null;
+        return _this;
     }
     Address.prototype.getIsNull = function () {
-        return this.getIsOnlyZeroes();
+        if (this.isNull !== null) {
+            return this.isNull;
+        }
+        this.isNull = this.toUvaursi().every(function (byte) {
+            return byte === 0;
+        });
+        return this.isNull;
     };
     Address.genNull = function () {
-        return new Address(new Uint8Array(20).fill(0));
-    };
-    Address.fromArray = function (array) {
-        return new Address(uvaursi.fromArray(array));
-    };
-    Address.fromHexish = function (hexish) {
-        return new Address(uvaursi.fromHexish(hexish));
+        var uvaursi = new pollenium_uvaursi_1.Uvaursi(new Uint8Array(20).fill(0));
+        return new Address(uvaursi);
     };
     return Address;
 }(fixButtercups_1.FixButtercup));

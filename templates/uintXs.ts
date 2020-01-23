@@ -14,37 +14,37 @@ export class Uint{{bits}} extends UintX {
     super(Uint{{bits}}.LENGTH, uint8Array)
   }
 
-  add(value: {{className}}): {{className}} {
-    const thisBn = new Bn(this.toUint8Array())
-    const valueBn = new Bn(value.toUint8Array())
+  opAdd(value: {{className}}): {{className}} {
+    const thisBn = new Bn(this.uint8Array)
+    const valueBn = new Bn(value.uint8Array)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new {{className}}(uint8Array)
   }
 
-  sub(value: {{className}}): {{className}} {
-    const thisBn = new Bn(this.toUint8Array())
-    const valueBn = new Bn(value.toUint8Array())
+  opSub(value: {{className}}): {{className}} {
+    const thisBn = new Bn(this.uint8Array)
+    const valueBn = new Bn(value.uint8Array)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new {{className}}(uint8Array)
   }
 
-  mul(value: {{className}}): {{className}} {
-    const thisBn = new Bn(this.toUint8Array())
-    const valueBn = new Bn(value.toUint8Array())
+  opMul(value: {{className}}): {{className}} {
+    const thisBn = new Bn(this.uint8Array)
+    const valueBn = new Bn(value.uint8Array)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new {{className}}(uint8Array)
   }
 
-  div(value: {{className}}): {{className}} {
-    const thisBn = new Bn(this.toUint8Array())
-    const valueBn = new Bn(value.toUint8Array())
+  opDiv(value: {{className}}): {{className}} {
+    const thisBn = new Bn(this.uint8Array)
+    const valueBn = new Bn(value.uint8Array)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new {{className}}(uint8Array)
   }
 
-  mod(value: {{className}}): {{className}} {
-    const thisBn = new Bn(this.toUint8Array())
-    const valueBn = new Bn(value.toUint8Array())
+  opMod(value: {{className}}): {{className}} {
+    const thisBn = new Bn(this.uint8Array)
+    const valueBn = new Bn(value.uint8Array)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new {{className}}(uint8Array)
   }
@@ -54,12 +54,6 @@ export class Uint{{bits}} extends UintX {
     return new {{className}}(bn.toArrayLike(Uint8Array, 'be'))
   }
 
-  {{#each uvaursiFroms}}
-  static {{{func}}}({{{arg}}}: {{{argClass}}}): {{../className}} {
-    return new {{../className}}(uvaursi.{{{func}}}({{{arg}}}))
-  }
-
-  {{/each}}
 }
 
 {{/each}}

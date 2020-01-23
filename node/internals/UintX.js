@@ -24,35 +24,37 @@ var UintX = /** @class */ (function (_super) {
         return _super.call(this, length, uint8Array) || this;
     }
     UintX.prototype.toNumber = function () {
-        this.number = new bn_js_1["default"](this.toUint8Array()).toNumber();
+        this.number = new bn_js_1["default"](this.uint8Array).toNumber();
         return this.number;
     };
     UintX.prototype.getIsZero = function () {
-        return this.getIsOnlyZeroes();
+        return this.toUvaursi().every(function (byte) {
+            return byte === 0;
+        });
     };
-    UintX.prototype.eq = function (value) {
-        var thisBn = new bn_js_1["default"](this.toUint8Array());
-        var valueBn = new bn_js_1["default"](value.toUint8Array());
+    UintX.prototype.compEq = function (value) {
+        var thisBn = new bn_js_1["default"](this.uint8Array);
+        var valueBn = new bn_js_1["default"](value.uint8Array);
         return thisBn.eq(valueBn);
     };
-    UintX.prototype.gt = function (value) {
-        var thisBn = new bn_js_1["default"](this.toUint8Array());
-        var valueBn = new bn_js_1["default"](value.toUint8Array());
+    UintX.prototype.compGt = function (value) {
+        var thisBn = new bn_js_1["default"](this.uint8Array);
+        var valueBn = new bn_js_1["default"](value.uint8Array);
         return thisBn.gt(valueBn);
     };
-    UintX.prototype.gte = function (value) {
-        var thisBn = new bn_js_1["default"](this.toUint8Array());
-        var valueBn = new bn_js_1["default"](value.toUint8Array());
+    UintX.prototype.compGte = function (value) {
+        var thisBn = new bn_js_1["default"](this.uint8Array);
+        var valueBn = new bn_js_1["default"](value.uint8Array);
         return thisBn.gte(valueBn);
     };
-    UintX.prototype.lt = function (value) {
-        var thisBn = new bn_js_1["default"](this.toUint8Array());
-        var valueBn = new bn_js_1["default"](value.toUint8Array());
+    UintX.prototype.compLt = function (value) {
+        var thisBn = new bn_js_1["default"](this.uint8Array);
+        var valueBn = new bn_js_1["default"](value.uint8Array);
         return thisBn.lt(valueBn);
     };
-    UintX.prototype.lte = function (value) {
-        var thisBn = new bn_js_1["default"](this.toUint8Array());
-        var valueBn = new bn_js_1["default"](value.toUint8Array());
+    UintX.prototype.compLte = function (value) {
+        var thisBn = new bn_js_1["default"](this.uint8Array);
+        var valueBn = new bn_js_1["default"](value.uint8Array);
         return thisBn.lte(valueBn);
     };
     return UintX;

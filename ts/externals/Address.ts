@@ -1,24 +1,27 @@
 import { FixButtercup } from '../buttercups/fixButtercups'
-import * as uvaursi from 'pollenium-uvaursi'
+import { Uvaursi } from 'pollenium-uvaursi'
 
 export class Address extends FixButtercup {
+
+  private isNull: boolean | null = null
 
   constructor(uint8Array: Uint8Array) {
     super(20, uint8Array)
   }
 
   getIsNull(): boolean {
-    return this.getIsOnlyZeroes()
+    if (this.isNull !== null) {
+      return this.isNull
+    }
+    this.isNull = this.toUvaursi().every((byte) => {
+      return byte === 0
+    })
+    return this.isNull
   }
 
   static genNull(): Address {
-    return new Address(new Uint8Array(20).fill(0))
+    const uvaursi = new Uvaursi(new Uint8Array(20).fill(0))
+    return new Address(uvaursi)
   }
 
-  static fromArray(array: Array<number>): Address {
-    return new Address(uvaursi.fromArray(array))
-  }
-  static fromHexish(hexish: string): Address {
-    return new Address(uvaursi.fromHexish(hexish))
-  }
 }

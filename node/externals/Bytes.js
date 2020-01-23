@@ -12,30 +12,13 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
-    result["default"] = mod;
-    return result;
-};
 exports.__esModule = true;
-var DynButtercup_1 = require("../buttercups/DynButtercup");
-var uvaursi = __importStar(require("pollenium-uvaursi"));
+var Buttercup_1 = require("../buttercups/Buttercup");
 var Bytes = /** @class */ (function (_super) {
     __extends(Bytes, _super);
     function Bytes() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    Bytes.genEmpty = function () {
-        return Bytes.fromArray([]);
-    };
-    Bytes.fromArray = function (array) {
-        return new Bytes(uvaursi.fromArray(array));
-    };
-    Bytes.fromHexish = function (hexish) {
-        return new Bytes(uvaursi.fromHexish(hexish));
-    };
     return Bytes;
-}(DynButtercup_1.DynButtercup));
+}(Buttercup_1.Buttercup));
 exports.Bytes = Bytes;

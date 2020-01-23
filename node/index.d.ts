@@ -1,5 +1,4 @@
 export { Buttercup } from './buttercups/Buttercup';
-export { DynButtercup } from './buttercups/DynButtercup';
 export { FixLeftButtercup, FixRightButtercup } from './buttercups/fixButtercups';
 export { Bytes } from './externals/Bytes';
 export { Address } from './externals/Address';

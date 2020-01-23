@@ -6,9 +6,9 @@ export declare class UintX extends FixLeftButtercup implements Uintish {
     constructor(length: number, uint8Array: Uint8Array);
     toNumber(): number;
     getIsZero(): boolean;
-    eq(value: UintX): boolean;
-    gt(value: UintX): boolean;
-    gte(value: UintX): boolean;
-    lt(value: UintX): boolean;
-    lte(value: UintX): boolean;
+    compEq(value: UintX): boolean;
+    compGt(value: UintX): boolean;
+    compGte(value: UintX): boolean;
+    compLt(value: UintX): boolean;
+    compLte(value: UintX): boolean;
 }
