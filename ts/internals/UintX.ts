@@ -1,6 +1,5 @@
 import { FixLeftButtercup } from '../buttercups/fixButtercups'
 import Bn from 'bn.js'
-import * as from from '../utils/from'
 import { Uintish } from '../interfaces'
 
 export class UintX extends FixLeftButtercup implements Uintish {
@@ -12,19 +11,8 @@ export class UintX extends FixLeftButtercup implements Uintish {
     super(length, uint8Array)
   }
 
-  getBn(): Bn {
-    if (this.bn) {
-      return this.bn
-    }
-    this.bn = new Bn(this.getUint8Array())
-    return this.bn
-  }
-
-  getNumber(): number {
-    if (this.number) {
-      return this.number
-    }
-    this.number = this.getBn().toNumber()
+  toNumber(): number {
+    this.number = new Bn(this.toUint8Array()).toNumber()
     return this.number
   }
 
@@ -32,24 +20,34 @@ export class UintX extends FixLeftButtercup implements Uintish {
     return this.getIsOnlyZeroes()
   }
 
-  eq(uintX: UintX): boolean {
-    return this.getBn().eq(uintX.getBn())
+  eq(value: UintX): boolean {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    return thisBn.eq(valueBn)
   }
 
-  gt(uintX: UintX): boolean {
-    return this.getBn().gt(uintX.getBn())
+  gt(value: UintX): boolean {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    return thisBn.gt(valueBn)
   }
 
-  gte(uintX: UintX): boolean {
-    return this.getBn().gte(uintX.getBn())
+  gte(value: UintX): boolean {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    return thisBn.gte(valueBn)
   }
 
-  lt(uintX: UintX): boolean {
-    return this.getBn().lt(uintX.getBn())
+  lt(value: UintX): boolean {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    return thisBn.lt(valueBn)
   }
 
-  lte(uintX: UintX): boolean {
-    return this.getBn().lte(uintX.getBn())
+  lte(value: UintX): boolean {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    return thisBn.lte(valueBn)
   }
 
 }

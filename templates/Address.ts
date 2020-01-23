@@ -1,7 +1,5 @@
 import { FixButtercup } from '../buttercups/fixButtercups'
-import { External } from '../interfaces'
-import { getPaddedLeft, getPaddedRight } from '../utils/uint8Array'
-import * as from from '../utils/from'
+import * as uvaursi from 'pollenium-uvaursi'
 
 export class Address extends FixButtercup {
 
@@ -14,15 +12,12 @@ export class Address extends FixButtercup {
   }
 
   static genNull(): Address {
-    return Address.fromUint8Array(
-      new Uint8Array(20).fill(0)
-    )
+    return new Address(new Uint8Array(20).fill(0))
   }
 
-  {{#each staticFroms}}
+  {{#each uvaursiFroms}}
   static {{{func}}}({{{arg}}}: {{{argClass}}}): Address {
-    return from.{{{fromFunc}}}(exports.Address, {{{arg}}})
+    return new Address(uvaursi.{{{func}}}({{{arg}}}))
   }
-
   {{/each}}
 }

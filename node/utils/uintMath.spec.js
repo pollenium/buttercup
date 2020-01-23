@@ -7,7 +7,6 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 exports.__esModule = true;
-var from = __importStar(require("./from"));
 var uintMath = __importStar(require("./uintMath"));
 var __1 = require("../");
 var fixtures = [
@@ -52,6 +51,6 @@ fixtures.forEach(function (fixture, index) {
     var b = fixture[3];
     var c = fixture[4];
     test("fixture " + index + " " + External.name + ": " + a + " " + op + " " + b + " = " + c, function () {
-        expect(uintMath[op](External, from.uintNumber(External, a), from.uintNumber(External, b)).getNumber()).toBe(c);
+        expect(uintMath[op](External, External.fromNumber(a), External.fromNumber(b)).getNumber()).toBe(c);
     });
 });

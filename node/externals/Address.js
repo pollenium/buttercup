@@ -21,7 +21,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 exports.__esModule = true;
 var fixButtercups_1 = require("../buttercups/fixButtercups");
-var from = __importStar(require("../utils/from"));
+var uvaursi = __importStar(require("pollenium-uvaursi"));
 var Address = /** @class */ (function (_super) {
     __extends(Address, _super);
     function Address(uint8Array) {
@@ -31,19 +31,13 @@ var Address = /** @class */ (function (_super) {
         return this.getIsOnlyZeroes();
     };
     Address.genNull = function () {
-        return Address.fromUint8Array(new Uint8Array(20).fill(0));
-    };
-    Address.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Address, uint8Array);
+        return new Address(new Uint8Array(20).fill(0));
     };
     Address.fromArray = function (array) {
-        return from.array(exports.Address, array);
-    };
-    Address.fromBuffer = function (buffer) {
-        return from.buffer(exports.Address, buffer);
+        return new Address(uvaursi.fromArray(array));
     };
     Address.fromHexish = function (hexish) {
-        return from.hexish(exports.Address, hexish);
+        return new Address(uvaursi.fromHexish(hexish));
     };
     return Address;
 }(fixButtercups_1.FixButtercup));

@@ -23,37 +23,37 @@ var UintX = /** @class */ (function (_super) {
     function UintX(length, uint8Array) {
         return _super.call(this, length, uint8Array) || this;
     }
-    UintX.prototype.getBn = function () {
-        if (this.bn) {
-            return this.bn;
-        }
-        this.bn = new bn_js_1["default"](this.getUint8Array());
-        return this.bn;
-    };
-    UintX.prototype.getNumber = function () {
-        if (this.number) {
-            return this.number;
-        }
-        this.number = this.getBn().toNumber();
+    UintX.prototype.toNumber = function () {
+        this.number = new bn_js_1["default"](this.toUint8Array()).toNumber();
         return this.number;
     };
     UintX.prototype.getIsZero = function () {
         return this.getIsOnlyZeroes();
     };
-    UintX.prototype.eq = function (uintX) {
-        return this.getBn().eq(uintX.getBn());
+    UintX.prototype.eq = function (value) {
+        var thisBn = new bn_js_1["default"](this.toUint8Array());
+        var valueBn = new bn_js_1["default"](value.toUint8Array());
+        return thisBn.eq(valueBn);
     };
-    UintX.prototype.gt = function (uintX) {
-        return this.getBn().gt(uintX.getBn());
+    UintX.prototype.gt = function (value) {
+        var thisBn = new bn_js_1["default"](this.toUint8Array());
+        var valueBn = new bn_js_1["default"](value.toUint8Array());
+        return thisBn.gt(valueBn);
     };
-    UintX.prototype.gte = function (uintX) {
-        return this.getBn().gte(uintX.getBn());
+    UintX.prototype.gte = function (value) {
+        var thisBn = new bn_js_1["default"](this.toUint8Array());
+        var valueBn = new bn_js_1["default"](value.toUint8Array());
+        return thisBn.gte(valueBn);
     };
-    UintX.prototype.lt = function (uintX) {
-        return this.getBn().lt(uintX.getBn());
+    UintX.prototype.lt = function (value) {
+        var thisBn = new bn_js_1["default"](this.toUint8Array());
+        var valueBn = new bn_js_1["default"](value.toUint8Array());
+        return thisBn.lt(valueBn);
     };
-    UintX.prototype.lte = function (uintX) {
-        return this.getBn().lte(uintX.getBn());
+    UintX.prototype.lte = function (value) {
+        var thisBn = new bn_js_1["default"](this.toUint8Array());
+        var valueBn = new bn_js_1["default"](value.toUint8Array());
+        return thisBn.lte(valueBn);
     };
     return UintX;
 }(fixButtercups_1.FixLeftButtercup));

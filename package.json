@@ -20,7 +20,8 @@
   "homepage": "https://github.com/pollenium/buttercup#readme",
   "dependencies": {
     "@types/node": "^12.12.7",
-    "bn.js": "^5.0.0"
+    "bn.js": "^5.0.0",
+    "pollenium-uvaursi": "^2.1.0"
   },
   "devDependencies": {
     "@types/jest": "^24.0.23",

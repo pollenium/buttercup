@@ -14,7 +14,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 exports.__esModule = true;
 var Buttercup_1 = require("./Buttercup");
-var uint8Array_1 = require("../utils/uint8Array");
+var pollenium_uvaursi_1 = require("pollenium-uvaursi");
 var InvalidLengthError = /** @class */ (function (_super) {
     __extends(InvalidLengthError, _super);
     function InvalidLengthError(length, uint8Array) {
@@ -38,7 +38,7 @@ exports.FixButtercup = FixButtercup;
 var FixLeftButtercup = /** @class */ (function (_super) {
     __extends(FixLeftButtercup, _super);
     function FixLeftButtercup(length, uint8Array) {
-        return _super.call(this, length, uint8Array_1.getPaddedLeft(length, uint8Array)) || this;
+        return _super.call(this, length, pollenium_uvaursi_1.getPaddedLeft(length, uint8Array)) || this;
     }
     return FixLeftButtercup;
 }(FixButtercup));
@@ -46,7 +46,7 @@ exports.FixLeftButtercup = FixLeftButtercup;
 var FixRightButtercup = /** @class */ (function (_super) {
     __extends(FixRightButtercup, _super);
     function FixRightButtercup(length, uint8Array) {
-        return _super.call(this, length, uint8Array_1.getPaddedRight(length, uint8Array)) || this;
+        return _super.call(this, length, pollenium_uvaursi_1.getPaddedRight(length, uint8Array)) || this;
     }
     return FixRightButtercup;
 }(FixButtercup));

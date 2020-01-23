@@ -1,8 +1,6 @@
 import { BytesX } from '../internals/BytesX'
-import { External, Uintish } from '../interfaces'
-import * as from from '../utils/from'
-import * as uintMath from '../utils/uintMath'
 import Bn from 'bn.js'
+import * as uvaursi from 'pollenium-uvaursi'
 
 {{#each classes}}
 export class Bytes{{length}} extends BytesX {
@@ -13,17 +11,10 @@ export class Bytes{{length}} extends BytesX {
     super(Bytes{{length}}.LENGTH, uint8Array)
   }
 
-  {{#each ops}}
-  {{this}}(value: Bytes{{../length}}): Bytes{{../length}} {
-    return uintMath.{{this}}(exports.Bytes{{../length}}, this, value);
+  {{#each uvaursiFroms}}
+  static {{{func}}}({{{arg}}}: {{{argClass}}}): {{../className}} {
+    return new {{../className}}(uvaursi.{{{func}}}({{{arg}}}))
   }
-
-  {{/each}}
-  {{#each staticFroms}}
-  static {{{func}}}({{{arg}}}: {{{argClass}}}): Bytes{{../length}} {
-    return from.{{{fromFunc}}}(exports.Bytes{{../length}}, {{{arg}}})
-  }
-
   {{/each}}
 }
 

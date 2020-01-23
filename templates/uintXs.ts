@@ -1,11 +1,12 @@
 import { UintX } from '../internals/UintX'
-import { External, Uintish } from '../interfaces'
-import * as from from '../utils/from'
-import * as uintMath from '../utils/uintMath'
 import Bn from 'bn.js'
+import * as uvaursi from 'pollenium-uvaursi'
+
+const zeroBn = new Bn(0)
+const oneBn = new Bn(1)
 
 {{#each classes}}
-export class Uint{{bits}} extends UintX implements Uintish {
+export class Uint{{bits}} extends UintX {
 
   public static LENGTH: number = {{length}};
 
@@ -13,15 +14,49 @@ export class Uint{{bits}} extends UintX implements Uintish {
     super(Uint{{bits}}.LENGTH, uint8Array)
   }
 
-  {{#each ops}}
-  {{this}}(value: Uint{{../bits}}): Uint{{../bits}} {
-    return uintMath.{{this}}(exports.Uint{{../bits}}, this, value);
+  add(value: {{className}}): {{className}} {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new {{className}}(uint8Array)
   }
 
-  {{/each}}
-  {{#each staticFroms}}
-  static {{{func}}}({{{arg}}}: {{{argClass}}}): Uint{{../bits}} {
-    return from.{{{fromFunc}}}(exports.Uint{{../bits}}, {{{arg}}})
+  sub(value: {{className}}): {{className}} {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new {{className}}(uint8Array)
+  }
+
+  mul(value: {{className}}): {{className}} {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new {{className}}(uint8Array)
+  }
+
+  div(value: {{className}}): {{className}} {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new {{className}}(uint8Array)
+  }
+
+  mod(value: {{className}}): {{className}} {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new {{className}}(uint8Array)
+  }
+
+  static fromNumber(number: number): {{className}} {
+    const bn = new Bn(number)
+    return new {{className}}(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  {{#each uvaursiFroms}}
+  static {{{func}}}({{{arg}}}: {{{argClass}}}): {{../className}} {
+    return new {{../className}}(uvaursi.{{{func}}}({{{arg}}}))
   }
 
   {{/each}}

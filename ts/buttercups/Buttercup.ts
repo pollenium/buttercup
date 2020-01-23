@@ -1,6 +1,6 @@
 import crypto from 'crypto'
 import { External, ExternalClass } from '../interfaces'
-import * as from from '../utils/from'
+import * as uvaursi from 'pollenium-uvaursi'
 
 export class Buttercup {
 
@@ -8,7 +8,7 @@ export class Buttercup {
 
   constructor(private uint8Array: Uint8Array) {}
 
-  getUint8Array(): Uint8Array {
+  toUint8Array(): Uint8Array {
     return this.uint8Array.slice()
   }
 
@@ -28,34 +28,20 @@ export class Buttercup {
     return true
   }
 
-  getArray(): Array<number> {
-    return Array.from(this.getUint8Array())
+  toArray(): Array<number> {
+    return Array.from(this.toUint8Array())
   }
 
-  getHex(): string {
-    let hex = ''
-
-    this.uint8Array.forEach((byte) => {
-      hex += byte.toString(16).padStart(2, '0')
-    })
-
-    return hex
+  toHex(): string {
+    return uvaursi.toHex(this.uint8Array)
   }
 
-  getPhex(): string {
-    return `0x${this.getHex()}`
-  }
-
-  getBuffer(): Buffer {
-    return Buffer.from(this.uint8Array)
-  }
-
-  getComparison(buttercup: Buttercup): number {
-    return this.getBuffer().compare(buttercup.getBuffer())
+  toPhex(): string {
+    return uvaursi.toPhex(this.uint8Array)
   }
 
   getCasted<T>(ExternalClass: ExternalClass<T>): T {
-    return new ExternalClass(this.getUint8Array())
+    return new ExternalClass(this.toUint8Array())
   }
 
   getIsOnlyZeroes(): boolean {

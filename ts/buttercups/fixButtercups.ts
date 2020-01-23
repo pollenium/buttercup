@@ -1,5 +1,5 @@
 import { Buttercup } from './Buttercup'
-import { getPaddedLeft, getPaddedRight } from '../utils/uint8Array'
+import { getPaddedLeft, getPaddedRight } from 'pollenium-uvaursi'
 
 export class InvalidLengthError extends Error {
   constructor(length: number, uint8Array: Uint8Array) {

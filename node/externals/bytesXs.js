@@ -21,23 +21,17 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 exports.__esModule = true;
 var BytesX_1 = require("../internals/BytesX");
-var from = __importStar(require("../utils/from"));
+var uvaursi = __importStar(require("pollenium-uvaursi"));
 var Bytes1 = /** @class */ (function (_super) {
     __extends(Bytes1, _super);
     function Bytes1(uint8Array) {
         return _super.call(this, Bytes1.LENGTH, uint8Array) || this;
     }
-    Bytes1.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes1, uint8Array);
-    };
     Bytes1.fromArray = function (array) {
-        return from.array(exports.Bytes1, array);
-    };
-    Bytes1.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes1, buffer);
+        return new Bytes1(uvaursi.fromArray(array));
     };
     Bytes1.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes1, hexish);
+        return new Bytes1(uvaursi.fromHexish(hexish));
     };
     Bytes1.LENGTH = 1;
     return Bytes1;
@@ -48,17 +42,11 @@ var Bytes2 = /** @class */ (function (_super) {
     function Bytes2(uint8Array) {
         return _super.call(this, Bytes2.LENGTH, uint8Array) || this;
     }
-    Bytes2.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes2, uint8Array);
-    };
     Bytes2.fromArray = function (array) {
-        return from.array(exports.Bytes2, array);
-    };
-    Bytes2.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes2, buffer);
+        return new Bytes2(uvaursi.fromArray(array));
     };
     Bytes2.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes2, hexish);
+        return new Bytes2(uvaursi.fromHexish(hexish));
     };
     Bytes2.LENGTH = 2;
     return Bytes2;
@@ -69,17 +57,11 @@ var Bytes3 = /** @class */ (function (_super) {
     function Bytes3(uint8Array) {
         return _super.call(this, Bytes3.LENGTH, uint8Array) || this;
     }
-    Bytes3.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes3, uint8Array);
-    };
     Bytes3.fromArray = function (array) {
-        return from.array(exports.Bytes3, array);
-    };
-    Bytes3.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes3, buffer);
+        return new Bytes3(uvaursi.fromArray(array));
     };
     Bytes3.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes3, hexish);
+        return new Bytes3(uvaursi.fromHexish(hexish));
     };
     Bytes3.LENGTH = 3;
     return Bytes3;
@@ -90,17 +72,11 @@ var Bytes4 = /** @class */ (function (_super) {
     function Bytes4(uint8Array) {
         return _super.call(this, Bytes4.LENGTH, uint8Array) || this;
     }
-    Bytes4.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes4, uint8Array);
-    };
     Bytes4.fromArray = function (array) {
-        return from.array(exports.Bytes4, array);
-    };
-    Bytes4.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes4, buffer);
+        return new Bytes4(uvaursi.fromArray(array));
     };
     Bytes4.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes4, hexish);
+        return new Bytes4(uvaursi.fromHexish(hexish));
     };
     Bytes4.LENGTH = 4;
     return Bytes4;
@@ -111,17 +87,11 @@ var Bytes5 = /** @class */ (function (_super) {
     function Bytes5(uint8Array) {
         return _super.call(this, Bytes5.LENGTH, uint8Array) || this;
     }
-    Bytes5.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes5, uint8Array);
-    };
     Bytes5.fromArray = function (array) {
-        return from.array(exports.Bytes5, array);
-    };
-    Bytes5.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes5, buffer);
+        return new Bytes5(uvaursi.fromArray(array));
     };
     Bytes5.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes5, hexish);
+        return new Bytes5(uvaursi.fromHexish(hexish));
     };
     Bytes5.LENGTH = 5;
     return Bytes5;
@@ -132,17 +102,11 @@ var Bytes6 = /** @class */ (function (_super) {
     function Bytes6(uint8Array) {
         return _super.call(this, Bytes6.LENGTH, uint8Array) || this;
     }
-    Bytes6.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes6, uint8Array);
-    };
     Bytes6.fromArray = function (array) {
-        return from.array(exports.Bytes6, array);
-    };
-    Bytes6.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes6, buffer);
+        return new Bytes6(uvaursi.fromArray(array));
     };
     Bytes6.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes6, hexish);
+        return new Bytes6(uvaursi.fromHexish(hexish));
     };
     Bytes6.LENGTH = 6;
     return Bytes6;
@@ -153,17 +117,11 @@ var Bytes7 = /** @class */ (function (_super) {
     function Bytes7(uint8Array) {
         return _super.call(this, Bytes7.LENGTH, uint8Array) || this;
     }
-    Bytes7.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes7, uint8Array);
-    };
     Bytes7.fromArray = function (array) {
-        return from.array(exports.Bytes7, array);
-    };
-    Bytes7.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes7, buffer);
+        return new Bytes7(uvaursi.fromArray(array));
     };
     Bytes7.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes7, hexish);
+        return new Bytes7(uvaursi.fromHexish(hexish));
     };
     Bytes7.LENGTH = 7;
     return Bytes7;
@@ -174,17 +132,11 @@ var Bytes8 = /** @class */ (function (_super) {
     function Bytes8(uint8Array) {
         return _super.call(this, Bytes8.LENGTH, uint8Array) || this;
     }
-    Bytes8.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes8, uint8Array);
-    };
     Bytes8.fromArray = function (array) {
-        return from.array(exports.Bytes8, array);
-    };
-    Bytes8.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes8, buffer);
+        return new Bytes8(uvaursi.fromArray(array));
     };
     Bytes8.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes8, hexish);
+        return new Bytes8(uvaursi.fromHexish(hexish));
     };
     Bytes8.LENGTH = 8;
     return Bytes8;
@@ -195,17 +147,11 @@ var Bytes9 = /** @class */ (function (_super) {
     function Bytes9(uint8Array) {
         return _super.call(this, Bytes9.LENGTH, uint8Array) || this;
     }
-    Bytes9.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes9, uint8Array);
-    };
     Bytes9.fromArray = function (array) {
-        return from.array(exports.Bytes9, array);
-    };
-    Bytes9.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes9, buffer);
+        return new Bytes9(uvaursi.fromArray(array));
     };
     Bytes9.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes9, hexish);
+        return new Bytes9(uvaursi.fromHexish(hexish));
     };
     Bytes9.LENGTH = 9;
     return Bytes9;
@@ -216,17 +162,11 @@ var Bytes10 = /** @class */ (function (_super) {
     function Bytes10(uint8Array) {
         return _super.call(this, Bytes10.LENGTH, uint8Array) || this;
     }
-    Bytes10.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes10, uint8Array);
-    };
     Bytes10.fromArray = function (array) {
-        return from.array(exports.Bytes10, array);
-    };
-    Bytes10.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes10, buffer);
+        return new Bytes10(uvaursi.fromArray(array));
     };
     Bytes10.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes10, hexish);
+        return new Bytes10(uvaursi.fromHexish(hexish));
     };
     Bytes10.LENGTH = 10;
     return Bytes10;
@@ -237,17 +177,11 @@ var Bytes11 = /** @class */ (function (_super) {
     function Bytes11(uint8Array) {
         return _super.call(this, Bytes11.LENGTH, uint8Array) || this;
     }
-    Bytes11.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes11, uint8Array);
-    };
     Bytes11.fromArray = function (array) {
-        return from.array(exports.Bytes11, array);
-    };
-    Bytes11.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes11, buffer);
+        return new Bytes11(uvaursi.fromArray(array));
     };
     Bytes11.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes11, hexish);
+        return new Bytes11(uvaursi.fromHexish(hexish));
     };
     Bytes11.LENGTH = 11;
     return Bytes11;
@@ -258,17 +192,11 @@ var Bytes12 = /** @class */ (function (_super) {
     function Bytes12(uint8Array) {
         return _super.call(this, Bytes12.LENGTH, uint8Array) || this;
     }
-    Bytes12.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes12, uint8Array);
-    };
     Bytes12.fromArray = function (array) {
-        return from.array(exports.Bytes12, array);
-    };
-    Bytes12.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes12, buffer);
+        return new Bytes12(uvaursi.fromArray(array));
     };
     Bytes12.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes12, hexish);
+        return new Bytes12(uvaursi.fromHexish(hexish));
     };
     Bytes12.LENGTH = 12;
     return Bytes12;
@@ -279,17 +207,11 @@ var Bytes13 = /** @class */ (function (_super) {
     function Bytes13(uint8Array) {
         return _super.call(this, Bytes13.LENGTH, uint8Array) || this;
     }
-    Bytes13.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes13, uint8Array);
-    };
     Bytes13.fromArray = function (array) {
-        return from.array(exports.Bytes13, array);
-    };
-    Bytes13.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes13, buffer);
+        return new Bytes13(uvaursi.fromArray(array));
     };
     Bytes13.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes13, hexish);
+        return new Bytes13(uvaursi.fromHexish(hexish));
     };
     Bytes13.LENGTH = 13;
     return Bytes13;
@@ -300,17 +222,11 @@ var Bytes14 = /** @class */ (function (_super) {
     function Bytes14(uint8Array) {
         return _super.call(this, Bytes14.LENGTH, uint8Array) || this;
     }
-    Bytes14.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes14, uint8Array);
-    };
     Bytes14.fromArray = function (array) {
-        return from.array(exports.Bytes14, array);
-    };
-    Bytes14.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes14, buffer);
+        return new Bytes14(uvaursi.fromArray(array));
     };
     Bytes14.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes14, hexish);
+        return new Bytes14(uvaursi.fromHexish(hexish));
     };
     Bytes14.LENGTH = 14;
     return Bytes14;
@@ -321,17 +237,11 @@ var Bytes15 = /** @class */ (function (_super) {
     function Bytes15(uint8Array) {
         return _super.call(this, Bytes15.LENGTH, uint8Array) || this;
     }
-    Bytes15.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes15, uint8Array);
-    };
     Bytes15.fromArray = function (array) {
-        return from.array(exports.Bytes15, array);
-    };
-    Bytes15.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes15, buffer);
+        return new Bytes15(uvaursi.fromArray(array));
     };
     Bytes15.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes15, hexish);
+        return new Bytes15(uvaursi.fromHexish(hexish));
     };
     Bytes15.LENGTH = 15;
     return Bytes15;
@@ -342,17 +252,11 @@ var Bytes16 = /** @class */ (function (_super) {
     function Bytes16(uint8Array) {
         return _super.call(this, Bytes16.LENGTH, uint8Array) || this;
     }
-    Bytes16.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes16, uint8Array);
-    };
     Bytes16.fromArray = function (array) {
-        return from.array(exports.Bytes16, array);
-    };
-    Bytes16.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes16, buffer);
+        return new Bytes16(uvaursi.fromArray(array));
     };
     Bytes16.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes16, hexish);
+        return new Bytes16(uvaursi.fromHexish(hexish));
     };
     Bytes16.LENGTH = 16;
     return Bytes16;
@@ -363,17 +267,11 @@ var Bytes17 = /** @class */ (function (_super) {
     function Bytes17(uint8Array) {
         return _super.call(this, Bytes17.LENGTH, uint8Array) || this;
     }
-    Bytes17.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes17, uint8Array);
-    };
     Bytes17.fromArray = function (array) {
-        return from.array(exports.Bytes17, array);
-    };
-    Bytes17.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes17, buffer);
+        return new Bytes17(uvaursi.fromArray(array));
     };
     Bytes17.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes17, hexish);
+        return new Bytes17(uvaursi.fromHexish(hexish));
     };
     Bytes17.LENGTH = 17;
     return Bytes17;
@@ -384,17 +282,11 @@ var Bytes18 = /** @class */ (function (_super) {
     function Bytes18(uint8Array) {
         return _super.call(this, Bytes18.LENGTH, uint8Array) || this;
     }
-    Bytes18.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes18, uint8Array);
-    };
     Bytes18.fromArray = function (array) {
-        return from.array(exports.Bytes18, array);
-    };
-    Bytes18.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes18, buffer);
+        return new Bytes18(uvaursi.fromArray(array));
     };
     Bytes18.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes18, hexish);
+        return new Bytes18(uvaursi.fromHexish(hexish));
     };
     Bytes18.LENGTH = 18;
     return Bytes18;
@@ -405,17 +297,11 @@ var Bytes19 = /** @class */ (function (_super) {
     function Bytes19(uint8Array) {
         return _super.call(this, Bytes19.LENGTH, uint8Array) || this;
     }
-    Bytes19.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes19, uint8Array);
-    };
     Bytes19.fromArray = function (array) {
-        return from.array(exports.Bytes19, array);
-    };
-    Bytes19.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes19, buffer);
+        return new Bytes19(uvaursi.fromArray(array));
     };
     Bytes19.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes19, hexish);
+        return new Bytes19(uvaursi.fromHexish(hexish));
     };
     Bytes19.LENGTH = 19;
     return Bytes19;
@@ -426,17 +312,11 @@ var Bytes20 = /** @class */ (function (_super) {
     function Bytes20(uint8Array) {
         return _super.call(this, Bytes20.LENGTH, uint8Array) || this;
     }
-    Bytes20.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes20, uint8Array);
-    };
     Bytes20.fromArray = function (array) {
-        return from.array(exports.Bytes20, array);
-    };
-    Bytes20.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes20, buffer);
+        return new Bytes20(uvaursi.fromArray(array));
     };
     Bytes20.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes20, hexish);
+        return new Bytes20(uvaursi.fromHexish(hexish));
     };
     Bytes20.LENGTH = 20;
     return Bytes20;
@@ -447,17 +327,11 @@ var Bytes21 = /** @class */ (function (_super) {
     function Bytes21(uint8Array) {
         return _super.call(this, Bytes21.LENGTH, uint8Array) || this;
     }
-    Bytes21.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes21, uint8Array);
-    };
     Bytes21.fromArray = function (array) {
-        return from.array(exports.Bytes21, array);
-    };
-    Bytes21.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes21, buffer);
+        return new Bytes21(uvaursi.fromArray(array));
     };
     Bytes21.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes21, hexish);
+        return new Bytes21(uvaursi.fromHexish(hexish));
     };
     Bytes21.LENGTH = 21;
     return Bytes21;
@@ -468,17 +342,11 @@ var Bytes22 = /** @class */ (function (_super) {
     function Bytes22(uint8Array) {
         return _super.call(this, Bytes22.LENGTH, uint8Array) || this;
     }
-    Bytes22.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes22, uint8Array);
-    };
     Bytes22.fromArray = function (array) {
-        return from.array(exports.Bytes22, array);
-    };
-    Bytes22.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes22, buffer);
+        return new Bytes22(uvaursi.fromArray(array));
     };
     Bytes22.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes22, hexish);
+        return new Bytes22(uvaursi.fromHexish(hexish));
     };
     Bytes22.LENGTH = 22;
     return Bytes22;
@@ -489,17 +357,11 @@ var Bytes23 = /** @class */ (function (_super) {
     function Bytes23(uint8Array) {
         return _super.call(this, Bytes23.LENGTH, uint8Array) || this;
     }
-    Bytes23.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes23, uint8Array);
-    };
     Bytes23.fromArray = function (array) {
-        return from.array(exports.Bytes23, array);
-    };
-    Bytes23.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes23, buffer);
+        return new Bytes23(uvaursi.fromArray(array));
     };
     Bytes23.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes23, hexish);
+        return new Bytes23(uvaursi.fromHexish(hexish));
     };
     Bytes23.LENGTH = 23;
     return Bytes23;
@@ -510,17 +372,11 @@ var Bytes24 = /** @class */ (function (_super) {
     function Bytes24(uint8Array) {
         return _super.call(this, Bytes24.LENGTH, uint8Array) || this;
     }
-    Bytes24.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes24, uint8Array);
-    };
     Bytes24.fromArray = function (array) {
-        return from.array(exports.Bytes24, array);
-    };
-    Bytes24.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes24, buffer);
+        return new Bytes24(uvaursi.fromArray(array));
     };
     Bytes24.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes24, hexish);
+        return new Bytes24(uvaursi.fromHexish(hexish));
     };
     Bytes24.LENGTH = 24;
     return Bytes24;
@@ -531,17 +387,11 @@ var Bytes25 = /** @class */ (function (_super) {
     function Bytes25(uint8Array) {
         return _super.call(this, Bytes25.LENGTH, uint8Array) || this;
     }
-    Bytes25.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes25, uint8Array);
-    };
     Bytes25.fromArray = function (array) {
-        return from.array(exports.Bytes25, array);
-    };
-    Bytes25.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes25, buffer);
+        return new Bytes25(uvaursi.fromArray(array));
     };
     Bytes25.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes25, hexish);
+        return new Bytes25(uvaursi.fromHexish(hexish));
     };
     Bytes25.LENGTH = 25;
     return Bytes25;
@@ -552,17 +402,11 @@ var Bytes26 = /** @class */ (function (_super) {
     function Bytes26(uint8Array) {
         return _super.call(this, Bytes26.LENGTH, uint8Array) || this;
     }
-    Bytes26.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes26, uint8Array);
-    };
     Bytes26.fromArray = function (array) {
-        return from.array(exports.Bytes26, array);
-    };
-    Bytes26.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes26, buffer);
+        return new Bytes26(uvaursi.fromArray(array));
     };
     Bytes26.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes26, hexish);
+        return new Bytes26(uvaursi.fromHexish(hexish));
     };
     Bytes26.LENGTH = 26;
     return Bytes26;
@@ -573,17 +417,11 @@ var Bytes27 = /** @class */ (function (_super) {
     function Bytes27(uint8Array) {
         return _super.call(this, Bytes27.LENGTH, uint8Array) || this;
     }
-    Bytes27.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes27, uint8Array);
-    };
     Bytes27.fromArray = function (array) {
-        return from.array(exports.Bytes27, array);
-    };
-    Bytes27.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes27, buffer);
+        return new Bytes27(uvaursi.fromArray(array));
     };
     Bytes27.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes27, hexish);
+        return new Bytes27(uvaursi.fromHexish(hexish));
     };
     Bytes27.LENGTH = 27;
     return Bytes27;
@@ -594,17 +432,11 @@ var Bytes28 = /** @class */ (function (_super) {
     function Bytes28(uint8Array) {
         return _super.call(this, Bytes28.LENGTH, uint8Array) || this;
     }
-    Bytes28.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes28, uint8Array);
-    };
     Bytes28.fromArray = function (array) {
-        return from.array(exports.Bytes28, array);
-    };
-    Bytes28.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes28, buffer);
+        return new Bytes28(uvaursi.fromArray(array));
     };
     Bytes28.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes28, hexish);
+        return new Bytes28(uvaursi.fromHexish(hexish));
     };
     Bytes28.LENGTH = 28;
     return Bytes28;
@@ -615,17 +447,11 @@ var Bytes29 = /** @class */ (function (_super) {
     function Bytes29(uint8Array) {
         return _super.call(this, Bytes29.LENGTH, uint8Array) || this;
     }
-    Bytes29.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes29, uint8Array);
-    };
     Bytes29.fromArray = function (array) {
-        return from.array(exports.Bytes29, array);
-    };
-    Bytes29.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes29, buffer);
+        return new Bytes29(uvaursi.fromArray(array));
     };
     Bytes29.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes29, hexish);
+        return new Bytes29(uvaursi.fromHexish(hexish));
     };
     Bytes29.LENGTH = 29;
     return Bytes29;
@@ -636,17 +462,11 @@ var Bytes30 = /** @class */ (function (_super) {
     function Bytes30(uint8Array) {
         return _super.call(this, Bytes30.LENGTH, uint8Array) || this;
     }
-    Bytes30.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes30, uint8Array);
-    };
     Bytes30.fromArray = function (array) {
-        return from.array(exports.Bytes30, array);
-    };
-    Bytes30.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes30, buffer);
+        return new Bytes30(uvaursi.fromArray(array));
     };
     Bytes30.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes30, hexish);
+        return new Bytes30(uvaursi.fromHexish(hexish));
     };
     Bytes30.LENGTH = 30;
     return Bytes30;
@@ -657,17 +477,11 @@ var Bytes31 = /** @class */ (function (_super) {
     function Bytes31(uint8Array) {
         return _super.call(this, Bytes31.LENGTH, uint8Array) || this;
     }
-    Bytes31.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes31, uint8Array);
-    };
     Bytes31.fromArray = function (array) {
-        return from.array(exports.Bytes31, array);
-    };
-    Bytes31.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes31, buffer);
+        return new Bytes31(uvaursi.fromArray(array));
     };
     Bytes31.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes31, hexish);
+        return new Bytes31(uvaursi.fromHexish(hexish));
     };
     Bytes31.LENGTH = 31;
     return Bytes31;
@@ -678,17 +492,11 @@ var Bytes32 = /** @class */ (function (_super) {
     function Bytes32(uint8Array) {
         return _super.call(this, Bytes32.LENGTH, uint8Array) || this;
     }
-    Bytes32.fromUint8Array = function (uint8Array) {
-        return from.uint8Array(exports.Bytes32, uint8Array);
-    };
     Bytes32.fromArray = function (array) {
-        return from.array(exports.Bytes32, array);
-    };
-    Bytes32.fromBuffer = function (buffer) {
-        return from.buffer(exports.Bytes32, buffer);
+        return new Bytes32(uvaursi.fromArray(array));
     };
     Bytes32.fromHexish = function (hexish) {
-        return from.hexish(exports.Bytes32, hexish);
+        return new Bytes32(uvaursi.fromHexish(hexish));
     };
     Bytes32.LENGTH = 32;
     return Bytes32;

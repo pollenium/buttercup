@@ -1,10 +1,11 @@
 import { UintX } from '../internals/UintX'
-import { External, Uintish } from '../interfaces'
-import * as from from '../utils/from'
-import * as uintMath from '../utils/uintMath'
 import Bn from 'bn.js'
+import * as uvaursi from 'pollenium-uvaursi'
 
-export class Uint8 extends UintX implements Uintish {
+const zeroBn = new Bn(0)
+const oneBn = new Bn(1)
+
+export class Uint8 extends UintX {
 
   public static LENGTH: number = 1;
 
@@ -13,56 +14,56 @@ export class Uint8 extends UintX implements Uintish {
   }
 
   add(value: Uint8): Uint8 {
-    return uintMath.add(exports.Uint8, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint8(uint8Array)
   }
 
   sub(value: Uint8): Uint8 {
-    return uintMath.sub(exports.Uint8, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint8(uint8Array)
   }
 
   mul(value: Uint8): Uint8 {
-    return uintMath.mul(exports.Uint8, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint8(uint8Array)
   }
 
-  divDn(value: Uint8): Uint8 {
-    return uintMath.divDn(exports.Uint8, this, value);
-  }
-
-  divUp(value: Uint8): Uint8 {
-    return uintMath.divUp(exports.Uint8, this, value);
-  }
-
-  divRd(value: Uint8): Uint8 {
-    return uintMath.divRd(exports.Uint8, this, value);
+  div(value: Uint8): Uint8 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint8(uint8Array)
   }
 
   mod(value: Uint8): Uint8 {
-    return uintMath.mod(exports.Uint8, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint8 {
-    return from.uint8Array(exports.Uint8, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint8 {
-    return from.array(exports.Uint8, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint8 {
-    return from.buffer(exports.Uint8, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint8 {
-    return from.hexish(exports.Uint8, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint8(uint8Array)
   }
 
   static fromNumber(number: number): Uint8 {
-    return from.uintNumber(exports.Uint8, number)
+    const bn = new Bn(number)
+    return new Uint8(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint8 {
+    return new Uint8(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint8 {
+    return new Uint8(uvaursi.fromHexish(hexish))
   }
 
 }
 
-export class Uint16 extends UintX implements Uintish {
+export class Uint16 extends UintX {
 
   public static LENGTH: number = 2;
 
@@ -71,56 +72,56 @@ export class Uint16 extends UintX implements Uintish {
   }
 
   add(value: Uint16): Uint16 {
-    return uintMath.add(exports.Uint16, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint16(uint8Array)
   }
 
   sub(value: Uint16): Uint16 {
-    return uintMath.sub(exports.Uint16, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint16(uint8Array)
   }
 
   mul(value: Uint16): Uint16 {
-    return uintMath.mul(exports.Uint16, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint16(uint8Array)
   }
 
-  divDn(value: Uint16): Uint16 {
-    return uintMath.divDn(exports.Uint16, this, value);
-  }
-
-  divUp(value: Uint16): Uint16 {
-    return uintMath.divUp(exports.Uint16, this, value);
-  }
-
-  divRd(value: Uint16): Uint16 {
-    return uintMath.divRd(exports.Uint16, this, value);
+  div(value: Uint16): Uint16 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint16(uint8Array)
   }
 
   mod(value: Uint16): Uint16 {
-    return uintMath.mod(exports.Uint16, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint16 {
-    return from.uint8Array(exports.Uint16, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint16 {
-    return from.array(exports.Uint16, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint16 {
-    return from.buffer(exports.Uint16, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint16 {
-    return from.hexish(exports.Uint16, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint16(uint8Array)
   }
 
   static fromNumber(number: number): Uint16 {
-    return from.uintNumber(exports.Uint16, number)
+    const bn = new Bn(number)
+    return new Uint16(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint16 {
+    return new Uint16(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint16 {
+    return new Uint16(uvaursi.fromHexish(hexish))
   }
 
 }
 
-export class Uint24 extends UintX implements Uintish {
+export class Uint24 extends UintX {
 
   public static LENGTH: number = 3;
 
@@ -129,56 +130,56 @@ export class Uint24 extends UintX implements Uintish {
   }
 
   add(value: Uint24): Uint24 {
-    return uintMath.add(exports.Uint24, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint24(uint8Array)
   }
 
   sub(value: Uint24): Uint24 {
-    return uintMath.sub(exports.Uint24, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint24(uint8Array)
   }
 
   mul(value: Uint24): Uint24 {
-    return uintMath.mul(exports.Uint24, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint24(uint8Array)
   }
 
-  divDn(value: Uint24): Uint24 {
-    return uintMath.divDn(exports.Uint24, this, value);
-  }
-
-  divUp(value: Uint24): Uint24 {
-    return uintMath.divUp(exports.Uint24, this, value);
-  }
-
-  divRd(value: Uint24): Uint24 {
-    return uintMath.divRd(exports.Uint24, this, value);
+  div(value: Uint24): Uint24 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint24(uint8Array)
   }
 
   mod(value: Uint24): Uint24 {
-    return uintMath.mod(exports.Uint24, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint24 {
-    return from.uint8Array(exports.Uint24, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint24 {
-    return from.array(exports.Uint24, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint24 {
-    return from.buffer(exports.Uint24, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint24 {
-    return from.hexish(exports.Uint24, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint24(uint8Array)
   }
 
   static fromNumber(number: number): Uint24 {
-    return from.uintNumber(exports.Uint24, number)
+    const bn = new Bn(number)
+    return new Uint24(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint24 {
+    return new Uint24(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint24 {
+    return new Uint24(uvaursi.fromHexish(hexish))
   }
 
 }
 
-export class Uint32 extends UintX implements Uintish {
+export class Uint32 extends UintX {
 
   public static LENGTH: number = 4;
 
@@ -187,56 +188,56 @@ export class Uint32 extends UintX implements Uintish {
   }
 
   add(value: Uint32): Uint32 {
-    return uintMath.add(exports.Uint32, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint32(uint8Array)
   }
 
   sub(value: Uint32): Uint32 {
-    return uintMath.sub(exports.Uint32, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint32(uint8Array)
   }
 
   mul(value: Uint32): Uint32 {
-    return uintMath.mul(exports.Uint32, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint32(uint8Array)
   }
 
-  divDn(value: Uint32): Uint32 {
-    return uintMath.divDn(exports.Uint32, this, value);
-  }
-
-  divUp(value: Uint32): Uint32 {
-    return uintMath.divUp(exports.Uint32, this, value);
-  }
-
-  divRd(value: Uint32): Uint32 {
-    return uintMath.divRd(exports.Uint32, this, value);
+  div(value: Uint32): Uint32 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint32(uint8Array)
   }
 
   mod(value: Uint32): Uint32 {
-    return uintMath.mod(exports.Uint32, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint32 {
-    return from.uint8Array(exports.Uint32, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint32 {
-    return from.array(exports.Uint32, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint32 {
-    return from.buffer(exports.Uint32, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint32 {
-    return from.hexish(exports.Uint32, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint32(uint8Array)
   }
 
   static fromNumber(number: number): Uint32 {
-    return from.uintNumber(exports.Uint32, number)
+    const bn = new Bn(number)
+    return new Uint32(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint32 {
+    return new Uint32(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint32 {
+    return new Uint32(uvaursi.fromHexish(hexish))
   }
 
 }
 
-export class Uint40 extends UintX implements Uintish {
+export class Uint40 extends UintX {
 
   public static LENGTH: number = 5;
 
@@ -245,56 +246,56 @@ export class Uint40 extends UintX implements Uintish {
   }
 
   add(value: Uint40): Uint40 {
-    return uintMath.add(exports.Uint40, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint40(uint8Array)
   }
 
   sub(value: Uint40): Uint40 {
-    return uintMath.sub(exports.Uint40, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint40(uint8Array)
   }
 
   mul(value: Uint40): Uint40 {
-    return uintMath.mul(exports.Uint40, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint40(uint8Array)
   }
 
-  divDn(value: Uint40): Uint40 {
-    return uintMath.divDn(exports.Uint40, this, value);
-  }
-
-  divUp(value: Uint40): Uint40 {
-    return uintMath.divUp(exports.Uint40, this, value);
-  }
-
-  divRd(value: Uint40): Uint40 {
-    return uintMath.divRd(exports.Uint40, this, value);
+  div(value: Uint40): Uint40 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint40(uint8Array)
   }
 
   mod(value: Uint40): Uint40 {
-    return uintMath.mod(exports.Uint40, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint40 {
-    return from.uint8Array(exports.Uint40, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint40 {
-    return from.array(exports.Uint40, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint40 {
-    return from.buffer(exports.Uint40, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint40 {
-    return from.hexish(exports.Uint40, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint40(uint8Array)
   }
 
   static fromNumber(number: number): Uint40 {
-    return from.uintNumber(exports.Uint40, number)
+    const bn = new Bn(number)
+    return new Uint40(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint40 {
+    return new Uint40(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint40 {
+    return new Uint40(uvaursi.fromHexish(hexish))
   }
 
 }
 
-export class Uint48 extends UintX implements Uintish {
+export class Uint48 extends UintX {
 
   public static LENGTH: number = 6;
 
@@ -303,56 +304,56 @@ export class Uint48 extends UintX implements Uintish {
   }
 
   add(value: Uint48): Uint48 {
-    return uintMath.add(exports.Uint48, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint48(uint8Array)
   }
 
   sub(value: Uint48): Uint48 {
-    return uintMath.sub(exports.Uint48, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint48(uint8Array)
   }
 
   mul(value: Uint48): Uint48 {
-    return uintMath.mul(exports.Uint48, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint48(uint8Array)
   }
 
-  divDn(value: Uint48): Uint48 {
-    return uintMath.divDn(exports.Uint48, this, value);
-  }
-
-  divUp(value: Uint48): Uint48 {
-    return uintMath.divUp(exports.Uint48, this, value);
-  }
-
-  divRd(value: Uint48): Uint48 {
-    return uintMath.divRd(exports.Uint48, this, value);
+  div(value: Uint48): Uint48 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint48(uint8Array)
   }
 
   mod(value: Uint48): Uint48 {
-    return uintMath.mod(exports.Uint48, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint48 {
-    return from.uint8Array(exports.Uint48, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint48 {
-    return from.array(exports.Uint48, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint48 {
-    return from.buffer(exports.Uint48, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint48 {
-    return from.hexish(exports.Uint48, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint48(uint8Array)
   }
 
   static fromNumber(number: number): Uint48 {
-    return from.uintNumber(exports.Uint48, number)
+    const bn = new Bn(number)
+    return new Uint48(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint48 {
+    return new Uint48(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint48 {
+    return new Uint48(uvaursi.fromHexish(hexish))
   }
 
 }
 
-export class Uint56 extends UintX implements Uintish {
+export class Uint56 extends UintX {
 
   public static LENGTH: number = 7;
 
@@ -361,56 +362,56 @@ export class Uint56 extends UintX implements Uintish {
   }
 
   add(value: Uint56): Uint56 {
-    return uintMath.add(exports.Uint56, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint56(uint8Array)
   }
 
   sub(value: Uint56): Uint56 {
-    return uintMath.sub(exports.Uint56, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint56(uint8Array)
   }
 
   mul(value: Uint56): Uint56 {
-    return uintMath.mul(exports.Uint56, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint56(uint8Array)
   }
 
-  divDn(value: Uint56): Uint56 {
-    return uintMath.divDn(exports.Uint56, this, value);
-  }
-
-  divUp(value: Uint56): Uint56 {
-    return uintMath.divUp(exports.Uint56, this, value);
-  }
-
-  divRd(value: Uint56): Uint56 {
-    return uintMath.divRd(exports.Uint56, this, value);
+  div(value: Uint56): Uint56 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint56(uint8Array)
   }
 
   mod(value: Uint56): Uint56 {
-    return uintMath.mod(exports.Uint56, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint56 {
-    return from.uint8Array(exports.Uint56, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint56 {
-    return from.array(exports.Uint56, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint56 {
-    return from.buffer(exports.Uint56, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint56 {
-    return from.hexish(exports.Uint56, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint56(uint8Array)
   }
 
   static fromNumber(number: number): Uint56 {
-    return from.uintNumber(exports.Uint56, number)
+    const bn = new Bn(number)
+    return new Uint56(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint56 {
+    return new Uint56(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint56 {
+    return new Uint56(uvaursi.fromHexish(hexish))
   }
 
 }
 
-export class Uint64 extends UintX implements Uintish {
+export class Uint64 extends UintX {
 
   public static LENGTH: number = 8;
 
@@ -419,56 +420,56 @@ export class Uint64 extends UintX implements Uintish {
   }
 
   add(value: Uint64): Uint64 {
-    return uintMath.add(exports.Uint64, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint64(uint8Array)
   }
 
   sub(value: Uint64): Uint64 {
-    return uintMath.sub(exports.Uint64, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint64(uint8Array)
   }
 
   mul(value: Uint64): Uint64 {
-    return uintMath.mul(exports.Uint64, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint64(uint8Array)
   }
 
-  divDn(value: Uint64): Uint64 {
-    return uintMath.divDn(exports.Uint64, this, value);
-  }
-
-  divUp(value: Uint64): Uint64 {
-    return uintMath.divUp(exports.Uint64, this, value);
-  }
-
-  divRd(value: Uint64): Uint64 {
-    return uintMath.divRd(exports.Uint64, this, value);
+  div(value: Uint64): Uint64 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint64(uint8Array)
   }
 
   mod(value: Uint64): Uint64 {
-    return uintMath.mod(exports.Uint64, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint64 {
-    return from.uint8Array(exports.Uint64, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint64 {
-    return from.array(exports.Uint64, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint64 {
-    return from.buffer(exports.Uint64, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint64 {
-    return from.hexish(exports.Uint64, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint64(uint8Array)
   }
 
   static fromNumber(number: number): Uint64 {
-    return from.uintNumber(exports.Uint64, number)
+    const bn = new Bn(number)
+    return new Uint64(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint64 {
+    return new Uint64(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint64 {
+    return new Uint64(uvaursi.fromHexish(hexish))
   }
 
 }
 
-export class Uint72 extends UintX implements Uintish {
+export class Uint72 extends UintX {
 
   public static LENGTH: number = 9;
 
@@ -477,56 +478,56 @@ export class Uint72 extends UintX implements Uintish {
   }
 
   add(value: Uint72): Uint72 {
-    return uintMath.add(exports.Uint72, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint72(uint8Array)
   }
 
   sub(value: Uint72): Uint72 {
-    return uintMath.sub(exports.Uint72, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint72(uint8Array)
   }
 
   mul(value: Uint72): Uint72 {
-    return uintMath.mul(exports.Uint72, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint72(uint8Array)
   }
 
-  divDn(value: Uint72): Uint72 {
-    return uintMath.divDn(exports.Uint72, this, value);
-  }
-
-  divUp(value: Uint72): Uint72 {
-    return uintMath.divUp(exports.Uint72, this, value);
-  }
-
-  divRd(value: Uint72): Uint72 {
-    return uintMath.divRd(exports.Uint72, this, value);
+  div(value: Uint72): Uint72 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint72(uint8Array)
   }
 
   mod(value: Uint72): Uint72 {
-    return uintMath.mod(exports.Uint72, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint72 {
-    return from.uint8Array(exports.Uint72, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint72 {
-    return from.array(exports.Uint72, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint72 {
-    return from.buffer(exports.Uint72, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint72 {
-    return from.hexish(exports.Uint72, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint72(uint8Array)
   }
 
   static fromNumber(number: number): Uint72 {
-    return from.uintNumber(exports.Uint72, number)
+    const bn = new Bn(number)
+    return new Uint72(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint72 {
+    return new Uint72(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint72 {
+    return new Uint72(uvaursi.fromHexish(hexish))
   }
 
 }
 
-export class Uint80 extends UintX implements Uintish {
+export class Uint80 extends UintX {
 
   public static LENGTH: number = 10;
 
@@ -535,56 +536,56 @@ export class Uint80 extends UintX implements Uintish {
   }
 
   add(value: Uint80): Uint80 {
-    return uintMath.add(exports.Uint80, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint80(uint8Array)
   }
 
   sub(value: Uint80): Uint80 {
-    return uintMath.sub(exports.Uint80, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint80(uint8Array)
   }
 
   mul(value: Uint80): Uint80 {
-    return uintMath.mul(exports.Uint80, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint80(uint8Array)
   }
 
-  divDn(value: Uint80): Uint80 {
-    return uintMath.divDn(exports.Uint80, this, value);
-  }
-
-  divUp(value: Uint80): Uint80 {
-    return uintMath.divUp(exports.Uint80, this, value);
-  }
-
-  divRd(value: Uint80): Uint80 {
-    return uintMath.divRd(exports.Uint80, this, value);
+  div(value: Uint80): Uint80 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint80(uint8Array)
   }
 
   mod(value: Uint80): Uint80 {
-    return uintMath.mod(exports.Uint80, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint80 {
-    return from.uint8Array(exports.Uint80, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint80 {
-    return from.array(exports.Uint80, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint80 {
-    return from.buffer(exports.Uint80, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint80 {
-    return from.hexish(exports.Uint80, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint80(uint8Array)
   }
 
   static fromNumber(number: number): Uint80 {
-    return from.uintNumber(exports.Uint80, number)
+    const bn = new Bn(number)
+    return new Uint80(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint80 {
+    return new Uint80(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint80 {
+    return new Uint80(uvaursi.fromHexish(hexish))
   }
 
 }
 
-export class Uint88 extends UintX implements Uintish {
+export class Uint88 extends UintX {
 
   public static LENGTH: number = 11;
 
@@ -593,56 +594,56 @@ export class Uint88 extends UintX implements Uintish {
   }
 
   add(value: Uint88): Uint88 {
-    return uintMath.add(exports.Uint88, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint88(uint8Array)
   }
 
   sub(value: Uint88): Uint88 {
-    return uintMath.sub(exports.Uint88, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint88(uint8Array)
   }
 
   mul(value: Uint88): Uint88 {
-    return uintMath.mul(exports.Uint88, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint88(uint8Array)
   }
 
-  divDn(value: Uint88): Uint88 {
-    return uintMath.divDn(exports.Uint88, this, value);
-  }
-
-  divUp(value: Uint88): Uint88 {
-    return uintMath.divUp(exports.Uint88, this, value);
-  }
-
-  divRd(value: Uint88): Uint88 {
-    return uintMath.divRd(exports.Uint88, this, value);
+  div(value: Uint88): Uint88 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint88(uint8Array)
   }
 
   mod(value: Uint88): Uint88 {
-    return uintMath.mod(exports.Uint88, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint88 {
-    return from.uint8Array(exports.Uint88, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint88 {
-    return from.array(exports.Uint88, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint88 {
-    return from.buffer(exports.Uint88, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint88 {
-    return from.hexish(exports.Uint88, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint88(uint8Array)
   }
 
   static fromNumber(number: number): Uint88 {
-    return from.uintNumber(exports.Uint88, number)
+    const bn = new Bn(number)
+    return new Uint88(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint88 {
+    return new Uint88(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint88 {
+    return new Uint88(uvaursi.fromHexish(hexish))
   }
 
 }
 
-export class Uint96 extends UintX implements Uintish {
+export class Uint96 extends UintX {
 
   public static LENGTH: number = 12;
 
@@ -651,56 +652,56 @@ export class Uint96 extends UintX implements Uintish {
   }
 
   add(value: Uint96): Uint96 {
-    return uintMath.add(exports.Uint96, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint96(uint8Array)
   }
 
   sub(value: Uint96): Uint96 {
-    return uintMath.sub(exports.Uint96, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint96(uint8Array)
   }
 
   mul(value: Uint96): Uint96 {
-    return uintMath.mul(exports.Uint96, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint96(uint8Array)
   }
 
-  divDn(value: Uint96): Uint96 {
-    return uintMath.divDn(exports.Uint96, this, value);
-  }
-
-  divUp(value: Uint96): Uint96 {
-    return uintMath.divUp(exports.Uint96, this, value);
-  }
-
-  divRd(value: Uint96): Uint96 {
-    return uintMath.divRd(exports.Uint96, this, value);
+  div(value: Uint96): Uint96 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint96(uint8Array)
   }
 
   mod(value: Uint96): Uint96 {
-    return uintMath.mod(exports.Uint96, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint96 {
-    return from.uint8Array(exports.Uint96, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint96 {
-    return from.array(exports.Uint96, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint96 {
-    return from.buffer(exports.Uint96, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint96 {
-    return from.hexish(exports.Uint96, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint96(uint8Array)
   }
 
   static fromNumber(number: number): Uint96 {
-    return from.uintNumber(exports.Uint96, number)
+    const bn = new Bn(number)
+    return new Uint96(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint96 {
+    return new Uint96(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint96 {
+    return new Uint96(uvaursi.fromHexish(hexish))
   }
 
 }
 
-export class Uint104 extends UintX implements Uintish {
+export class Uint104 extends UintX {
 
   public static LENGTH: number = 13;
 
@@ -709,56 +710,56 @@ export class Uint104 extends UintX implements Uintish {
   }
 
   add(value: Uint104): Uint104 {
-    return uintMath.add(exports.Uint104, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint104(uint8Array)
   }
 
   sub(value: Uint104): Uint104 {
-    return uintMath.sub(exports.Uint104, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint104(uint8Array)
   }
 
   mul(value: Uint104): Uint104 {
-    return uintMath.mul(exports.Uint104, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint104(uint8Array)
   }
 
-  divDn(value: Uint104): Uint104 {
-    return uintMath.divDn(exports.Uint104, this, value);
-  }
-
-  divUp(value: Uint104): Uint104 {
-    return uintMath.divUp(exports.Uint104, this, value);
-  }
-
-  divRd(value: Uint104): Uint104 {
-    return uintMath.divRd(exports.Uint104, this, value);
+  div(value: Uint104): Uint104 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint104(uint8Array)
   }
 
   mod(value: Uint104): Uint104 {
-    return uintMath.mod(exports.Uint104, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint104 {
-    return from.uint8Array(exports.Uint104, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint104 {
-    return from.array(exports.Uint104, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint104 {
-    return from.buffer(exports.Uint104, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint104 {
-    return from.hexish(exports.Uint104, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint104(uint8Array)
   }
 
   static fromNumber(number: number): Uint104 {
-    return from.uintNumber(exports.Uint104, number)
+    const bn = new Bn(number)
+    return new Uint104(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint104 {
+    return new Uint104(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint104 {
+    return new Uint104(uvaursi.fromHexish(hexish))
   }
 
 }
 
-export class Uint112 extends UintX implements Uintish {
+export class Uint112 extends UintX {
 
   public static LENGTH: number = 14;
 
@@ -767,56 +768,56 @@ export class Uint112 extends UintX implements Uintish {
   }
 
   add(value: Uint112): Uint112 {
-    return uintMath.add(exports.Uint112, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint112(uint8Array)
   }
 
   sub(value: Uint112): Uint112 {
-    return uintMath.sub(exports.Uint112, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint112(uint8Array)
   }
 
   mul(value: Uint112): Uint112 {
-    return uintMath.mul(exports.Uint112, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint112(uint8Array)
   }
 
-  divDn(value: Uint112): Uint112 {
-    return uintMath.divDn(exports.Uint112, this, value);
-  }
-
-  divUp(value: Uint112): Uint112 {
-    return uintMath.divUp(exports.Uint112, this, value);
-  }
-
-  divRd(value: Uint112): Uint112 {
-    return uintMath.divRd(exports.Uint112, this, value);
+  div(value: Uint112): Uint112 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint112(uint8Array)
   }
 
   mod(value: Uint112): Uint112 {
-    return uintMath.mod(exports.Uint112, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint112 {
-    return from.uint8Array(exports.Uint112, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint112 {
-    return from.array(exports.Uint112, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint112 {
-    return from.buffer(exports.Uint112, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint112 {
-    return from.hexish(exports.Uint112, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint112(uint8Array)
   }
 
   static fromNumber(number: number): Uint112 {
-    return from.uintNumber(exports.Uint112, number)
+    const bn = new Bn(number)
+    return new Uint112(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint112 {
+    return new Uint112(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint112 {
+    return new Uint112(uvaursi.fromHexish(hexish))
   }
 
 }
 
-export class Uint120 extends UintX implements Uintish {
+export class Uint120 extends UintX {
 
   public static LENGTH: number = 15;
 
@@ -825,56 +826,56 @@ export class Uint120 extends UintX implements Uintish {
   }
 
   add(value: Uint120): Uint120 {
-    return uintMath.add(exports.Uint120, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint120(uint8Array)
   }
 
   sub(value: Uint120): Uint120 {
-    return uintMath.sub(exports.Uint120, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint120(uint8Array)
   }
 
   mul(value: Uint120): Uint120 {
-    return uintMath.mul(exports.Uint120, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint120(uint8Array)
   }
 
-  divDn(value: Uint120): Uint120 {
-    return uintMath.divDn(exports.Uint120, this, value);
-  }
-
-  divUp(value: Uint120): Uint120 {
-    return uintMath.divUp(exports.Uint120, this, value);
-  }
-
-  divRd(value: Uint120): Uint120 {
-    return uintMath.divRd(exports.Uint120, this, value);
+  div(value: Uint120): Uint120 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint120(uint8Array)
   }
 
   mod(value: Uint120): Uint120 {
-    return uintMath.mod(exports.Uint120, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint120 {
-    return from.uint8Array(exports.Uint120, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint120 {
-    return from.array(exports.Uint120, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint120 {
-    return from.buffer(exports.Uint120, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint120 {
-    return from.hexish(exports.Uint120, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint120(uint8Array)
   }
 
   static fromNumber(number: number): Uint120 {
-    return from.uintNumber(exports.Uint120, number)
+    const bn = new Bn(number)
+    return new Uint120(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint120 {
+    return new Uint120(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint120 {
+    return new Uint120(uvaursi.fromHexish(hexish))
   }
 
 }
 
-export class Uint128 extends UintX implements Uintish {
+export class Uint128 extends UintX {
 
   public static LENGTH: number = 16;
 
@@ -883,56 +884,56 @@ export class Uint128 extends UintX implements Uintish {
   }
 
   add(value: Uint128): Uint128 {
-    return uintMath.add(exports.Uint128, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint128(uint8Array)
   }
 
   sub(value: Uint128): Uint128 {
-    return uintMath.sub(exports.Uint128, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint128(uint8Array)
   }
 
   mul(value: Uint128): Uint128 {
-    return uintMath.mul(exports.Uint128, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint128(uint8Array)
   }
 
-  divDn(value: Uint128): Uint128 {
-    return uintMath.divDn(exports.Uint128, this, value);
-  }
-
-  divUp(value: Uint128): Uint128 {
-    return uintMath.divUp(exports.Uint128, this, value);
-  }
-
-  divRd(value: Uint128): Uint128 {
-    return uintMath.divRd(exports.Uint128, this, value);
+  div(value: Uint128): Uint128 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint128(uint8Array)
   }
 
   mod(value: Uint128): Uint128 {
-    return uintMath.mod(exports.Uint128, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint128 {
-    return from.uint8Array(exports.Uint128, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint128 {
-    return from.array(exports.Uint128, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint128 {
-    return from.buffer(exports.Uint128, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint128 {
-    return from.hexish(exports.Uint128, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint128(uint8Array)
   }
 
   static fromNumber(number: number): Uint128 {
-    return from.uintNumber(exports.Uint128, number)
+    const bn = new Bn(number)
+    return new Uint128(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint128 {
+    return new Uint128(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint128 {
+    return new Uint128(uvaursi.fromHexish(hexish))
   }
 
 }
 
-export class Uint136 extends UintX implements Uintish {
+export class Uint136 extends UintX {
 
   public static LENGTH: number = 17;
 
@@ -941,56 +942,56 @@ export class Uint136 extends UintX implements Uintish {
   }
 
   add(value: Uint136): Uint136 {
-    return uintMath.add(exports.Uint136, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint136(uint8Array)
   }
 
   sub(value: Uint136): Uint136 {
-    return uintMath.sub(exports.Uint136, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint136(uint8Array)
   }
 
   mul(value: Uint136): Uint136 {
-    return uintMath.mul(exports.Uint136, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint136(uint8Array)
   }
 
-  divDn(value: Uint136): Uint136 {
-    return uintMath.divDn(exports.Uint136, this, value);
-  }
-
-  divUp(value: Uint136): Uint136 {
-    return uintMath.divUp(exports.Uint136, this, value);
-  }
-
-  divRd(value: Uint136): Uint136 {
-    return uintMath.divRd(exports.Uint136, this, value);
+  div(value: Uint136): Uint136 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint136(uint8Array)
   }
 
   mod(value: Uint136): Uint136 {
-    return uintMath.mod(exports.Uint136, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint136 {
-    return from.uint8Array(exports.Uint136, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint136 {
-    return from.array(exports.Uint136, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint136 {
-    return from.buffer(exports.Uint136, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint136 {
-    return from.hexish(exports.Uint136, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint136(uint8Array)
   }
 
   static fromNumber(number: number): Uint136 {
-    return from.uintNumber(exports.Uint136, number)
+    const bn = new Bn(number)
+    return new Uint136(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint136 {
+    return new Uint136(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint136 {
+    return new Uint136(uvaursi.fromHexish(hexish))
   }
 
 }
 
-export class Uint144 extends UintX implements Uintish {
+export class Uint144 extends UintX {
 
   public static LENGTH: number = 18;
 
@@ -999,56 +1000,56 @@ export class Uint144 extends UintX implements Uintish {
   }
 
   add(value: Uint144): Uint144 {
-    return uintMath.add(exports.Uint144, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint144(uint8Array)
   }
 
   sub(value: Uint144): Uint144 {
-    return uintMath.sub(exports.Uint144, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint144(uint8Array)
   }
 
   mul(value: Uint144): Uint144 {
-    return uintMath.mul(exports.Uint144, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint144(uint8Array)
   }
 
-  divDn(value: Uint144): Uint144 {
-    return uintMath.divDn(exports.Uint144, this, value);
-  }
-
-  divUp(value: Uint144): Uint144 {
-    return uintMath.divUp(exports.Uint144, this, value);
-  }
-
-  divRd(value: Uint144): Uint144 {
-    return uintMath.divRd(exports.Uint144, this, value);
+  div(value: Uint144): Uint144 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint144(uint8Array)
   }
 
   mod(value: Uint144): Uint144 {
-    return uintMath.mod(exports.Uint144, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint144 {
-    return from.uint8Array(exports.Uint144, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint144 {
-    return from.array(exports.Uint144, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint144 {
-    return from.buffer(exports.Uint144, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint144 {
-    return from.hexish(exports.Uint144, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint144(uint8Array)
   }
 
   static fromNumber(number: number): Uint144 {
-    return from.uintNumber(exports.Uint144, number)
+    const bn = new Bn(number)
+    return new Uint144(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint144 {
+    return new Uint144(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint144 {
+    return new Uint144(uvaursi.fromHexish(hexish))
   }
 
 }
 
-export class Uint152 extends UintX implements Uintish {
+export class Uint152 extends UintX {
 
   public static LENGTH: number = 19;
 
@@ -1057,56 +1058,56 @@ export class Uint152 extends UintX implements Uintish {
   }
 
   add(value: Uint152): Uint152 {
-    return uintMath.add(exports.Uint152, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint152(uint8Array)
   }
 
   sub(value: Uint152): Uint152 {
-    return uintMath.sub(exports.Uint152, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint152(uint8Array)
   }
 
   mul(value: Uint152): Uint152 {
-    return uintMath.mul(exports.Uint152, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint152(uint8Array)
   }
 
-  divDn(value: Uint152): Uint152 {
-    return uintMath.divDn(exports.Uint152, this, value);
-  }
-
-  divUp(value: Uint152): Uint152 {
-    return uintMath.divUp(exports.Uint152, this, value);
-  }
-
-  divRd(value: Uint152): Uint152 {
-    return uintMath.divRd(exports.Uint152, this, value);
+  div(value: Uint152): Uint152 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint152(uint8Array)
   }
 
   mod(value: Uint152): Uint152 {
-    return uintMath.mod(exports.Uint152, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint152 {
-    return from.uint8Array(exports.Uint152, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint152 {
-    return from.array(exports.Uint152, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint152 {
-    return from.buffer(exports.Uint152, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint152 {
-    return from.hexish(exports.Uint152, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint152(uint8Array)
   }
 
   static fromNumber(number: number): Uint152 {
-    return from.uintNumber(exports.Uint152, number)
+    const bn = new Bn(number)
+    return new Uint152(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint152 {
+    return new Uint152(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint152 {
+    return new Uint152(uvaursi.fromHexish(hexish))
   }
 
 }
 
-export class Uint160 extends UintX implements Uintish {
+export class Uint160 extends UintX {
 
   public static LENGTH: number = 20;
 
@@ -1115,56 +1116,56 @@ export class Uint160 extends UintX implements Uintish {
   }
 
   add(value: Uint160): Uint160 {
-    return uintMath.add(exports.Uint160, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint160(uint8Array)
   }
 
   sub(value: Uint160): Uint160 {
-    return uintMath.sub(exports.Uint160, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint160(uint8Array)
   }
 
   mul(value: Uint160): Uint160 {
-    return uintMath.mul(exports.Uint160, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint160(uint8Array)
   }
 
-  divDn(value: Uint160): Uint160 {
-    return uintMath.divDn(exports.Uint160, this, value);
-  }
-
-  divUp(value: Uint160): Uint160 {
-    return uintMath.divUp(exports.Uint160, this, value);
-  }
-
-  divRd(value: Uint160): Uint160 {
-    return uintMath.divRd(exports.Uint160, this, value);
+  div(value: Uint160): Uint160 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint160(uint8Array)
   }
 
   mod(value: Uint160): Uint160 {
-    return uintMath.mod(exports.Uint160, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint160 {
-    return from.uint8Array(exports.Uint160, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint160 {
-    return from.array(exports.Uint160, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint160 {
-    return from.buffer(exports.Uint160, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint160 {
-    return from.hexish(exports.Uint160, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint160(uint8Array)
   }
 
   static fromNumber(number: number): Uint160 {
-    return from.uintNumber(exports.Uint160, number)
+    const bn = new Bn(number)
+    return new Uint160(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint160 {
+    return new Uint160(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint160 {
+    return new Uint160(uvaursi.fromHexish(hexish))
   }
 
 }
 
-export class Uint168 extends UintX implements Uintish {
+export class Uint168 extends UintX {
 
   public static LENGTH: number = 21;
 
@@ -1173,56 +1174,56 @@ export class Uint168 extends UintX implements Uintish {
   }
 
   add(value: Uint168): Uint168 {
-    return uintMath.add(exports.Uint168, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint168(uint8Array)
   }
 
   sub(value: Uint168): Uint168 {
-    return uintMath.sub(exports.Uint168, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint168(uint8Array)
   }
 
   mul(value: Uint168): Uint168 {
-    return uintMath.mul(exports.Uint168, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint168(uint8Array)
   }
 
-  divDn(value: Uint168): Uint168 {
-    return uintMath.divDn(exports.Uint168, this, value);
-  }
-
-  divUp(value: Uint168): Uint168 {
-    return uintMath.divUp(exports.Uint168, this, value);
-  }
-
-  divRd(value: Uint168): Uint168 {
-    return uintMath.divRd(exports.Uint168, this, value);
+  div(value: Uint168): Uint168 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint168(uint8Array)
   }
 
   mod(value: Uint168): Uint168 {
-    return uintMath.mod(exports.Uint168, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint168 {
-    return from.uint8Array(exports.Uint168, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint168 {
-    return from.array(exports.Uint168, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint168 {
-    return from.buffer(exports.Uint168, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint168 {
-    return from.hexish(exports.Uint168, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint168(uint8Array)
   }
 
   static fromNumber(number: number): Uint168 {
-    return from.uintNumber(exports.Uint168, number)
+    const bn = new Bn(number)
+    return new Uint168(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint168 {
+    return new Uint168(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint168 {
+    return new Uint168(uvaursi.fromHexish(hexish))
   }
 
 }
 
-export class Uint176 extends UintX implements Uintish {
+export class Uint176 extends UintX {
 
   public static LENGTH: number = 22;
 
@@ -1231,56 +1232,56 @@ export class Uint176 extends UintX implements Uintish {
   }
 
   add(value: Uint176): Uint176 {
-    return uintMath.add(exports.Uint176, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint176(uint8Array)
   }
 
   sub(value: Uint176): Uint176 {
-    return uintMath.sub(exports.Uint176, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint176(uint8Array)
   }
 
   mul(value: Uint176): Uint176 {
-    return uintMath.mul(exports.Uint176, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint176(uint8Array)
   }
 
-  divDn(value: Uint176): Uint176 {
-    return uintMath.divDn(exports.Uint176, this, value);
-  }
-
-  divUp(value: Uint176): Uint176 {
-    return uintMath.divUp(exports.Uint176, this, value);
-  }
-
-  divRd(value: Uint176): Uint176 {
-    return uintMath.divRd(exports.Uint176, this, value);
+  div(value: Uint176): Uint176 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint176(uint8Array)
   }
 
   mod(value: Uint176): Uint176 {
-    return uintMath.mod(exports.Uint176, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint176 {
-    return from.uint8Array(exports.Uint176, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint176 {
-    return from.array(exports.Uint176, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint176 {
-    return from.buffer(exports.Uint176, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint176 {
-    return from.hexish(exports.Uint176, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint176(uint8Array)
   }
 
   static fromNumber(number: number): Uint176 {
-    return from.uintNumber(exports.Uint176, number)
+    const bn = new Bn(number)
+    return new Uint176(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint176 {
+    return new Uint176(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint176 {
+    return new Uint176(uvaursi.fromHexish(hexish))
   }
 
 }
 
-export class Uint184 extends UintX implements Uintish {
+export class Uint184 extends UintX {
 
   public static LENGTH: number = 23;
 
@@ -1289,56 +1290,56 @@ export class Uint184 extends UintX implements Uintish {
   }
 
   add(value: Uint184): Uint184 {
-    return uintMath.add(exports.Uint184, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint184(uint8Array)
   }
 
   sub(value: Uint184): Uint184 {
-    return uintMath.sub(exports.Uint184, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint184(uint8Array)
   }
 
   mul(value: Uint184): Uint184 {
-    return uintMath.mul(exports.Uint184, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint184(uint8Array)
   }
 
-  divDn(value: Uint184): Uint184 {
-    return uintMath.divDn(exports.Uint184, this, value);
-  }
-
-  divUp(value: Uint184): Uint184 {
-    return uintMath.divUp(exports.Uint184, this, value);
-  }
-
-  divRd(value: Uint184): Uint184 {
-    return uintMath.divRd(exports.Uint184, this, value);
+  div(value: Uint184): Uint184 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint184(uint8Array)
   }
 
   mod(value: Uint184): Uint184 {
-    return uintMath.mod(exports.Uint184, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint184 {
-    return from.uint8Array(exports.Uint184, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint184 {
-    return from.array(exports.Uint184, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint184 {
-    return from.buffer(exports.Uint184, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint184 {
-    return from.hexish(exports.Uint184, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint184(uint8Array)
   }
 
   static fromNumber(number: number): Uint184 {
-    return from.uintNumber(exports.Uint184, number)
+    const bn = new Bn(number)
+    return new Uint184(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint184 {
+    return new Uint184(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint184 {
+    return new Uint184(uvaursi.fromHexish(hexish))
   }
 
 }
 
-export class Uint192 extends UintX implements Uintish {
+export class Uint192 extends UintX {
 
   public static LENGTH: number = 24;
 
@@ -1347,56 +1348,56 @@ export class Uint192 extends UintX implements Uintish {
   }
 
   add(value: Uint192): Uint192 {
-    return uintMath.add(exports.Uint192, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint192(uint8Array)
   }
 
   sub(value: Uint192): Uint192 {
-    return uintMath.sub(exports.Uint192, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint192(uint8Array)
   }
 
   mul(value: Uint192): Uint192 {
-    return uintMath.mul(exports.Uint192, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint192(uint8Array)
   }
 
-  divDn(value: Uint192): Uint192 {
-    return uintMath.divDn(exports.Uint192, this, value);
-  }
-
-  divUp(value: Uint192): Uint192 {
-    return uintMath.divUp(exports.Uint192, this, value);
-  }
-
-  divRd(value: Uint192): Uint192 {
-    return uintMath.divRd(exports.Uint192, this, value);
+  div(value: Uint192): Uint192 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint192(uint8Array)
   }
 
   mod(value: Uint192): Uint192 {
-    return uintMath.mod(exports.Uint192, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint192 {
-    return from.uint8Array(exports.Uint192, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint192 {
-    return from.array(exports.Uint192, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint192 {
-    return from.buffer(exports.Uint192, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint192 {
-    return from.hexish(exports.Uint192, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint192(uint8Array)
   }
 
   static fromNumber(number: number): Uint192 {
-    return from.uintNumber(exports.Uint192, number)
+    const bn = new Bn(number)
+    return new Uint192(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint192 {
+    return new Uint192(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint192 {
+    return new Uint192(uvaursi.fromHexish(hexish))
   }
 
 }
 
-export class Uint200 extends UintX implements Uintish {
+export class Uint200 extends UintX {
 
   public static LENGTH: number = 25;
 
@@ -1405,56 +1406,56 @@ export class Uint200 extends UintX implements Uintish {
   }
 
   add(value: Uint200): Uint200 {
-    return uintMath.add(exports.Uint200, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint200(uint8Array)
   }
 
   sub(value: Uint200): Uint200 {
-    return uintMath.sub(exports.Uint200, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint200(uint8Array)
   }
 
   mul(value: Uint200): Uint200 {
-    return uintMath.mul(exports.Uint200, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint200(uint8Array)
   }
 
-  divDn(value: Uint200): Uint200 {
-    return uintMath.divDn(exports.Uint200, this, value);
-  }
-
-  divUp(value: Uint200): Uint200 {
-    return uintMath.divUp(exports.Uint200, this, value);
-  }
-
-  divRd(value: Uint200): Uint200 {
-    return uintMath.divRd(exports.Uint200, this, value);
+  div(value: Uint200): Uint200 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint200(uint8Array)
   }
 
   mod(value: Uint200): Uint200 {
-    return uintMath.mod(exports.Uint200, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint200 {
-    return from.uint8Array(exports.Uint200, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint200 {
-    return from.array(exports.Uint200, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint200 {
-    return from.buffer(exports.Uint200, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint200 {
-    return from.hexish(exports.Uint200, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint200(uint8Array)
   }
 
   static fromNumber(number: number): Uint200 {
-    return from.uintNumber(exports.Uint200, number)
+    const bn = new Bn(number)
+    return new Uint200(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint200 {
+    return new Uint200(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint200 {
+    return new Uint200(uvaursi.fromHexish(hexish))
   }
 
 }
 
-export class Uint208 extends UintX implements Uintish {
+export class Uint208 extends UintX {
 
   public static LENGTH: number = 26;
 
@@ -1463,56 +1464,56 @@ export class Uint208 extends UintX implements Uintish {
   }
 
   add(value: Uint208): Uint208 {
-    return uintMath.add(exports.Uint208, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint208(uint8Array)
   }
 
   sub(value: Uint208): Uint208 {
-    return uintMath.sub(exports.Uint208, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint208(uint8Array)
   }
 
   mul(value: Uint208): Uint208 {
-    return uintMath.mul(exports.Uint208, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint208(uint8Array)
   }
 
-  divDn(value: Uint208): Uint208 {
-    return uintMath.divDn(exports.Uint208, this, value);
-  }
-
-  divUp(value: Uint208): Uint208 {
-    return uintMath.divUp(exports.Uint208, this, value);
-  }
-
-  divRd(value: Uint208): Uint208 {
-    return uintMath.divRd(exports.Uint208, this, value);
+  div(value: Uint208): Uint208 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint208(uint8Array)
   }
 
   mod(value: Uint208): Uint208 {
-    return uintMath.mod(exports.Uint208, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint208 {
-    return from.uint8Array(exports.Uint208, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint208 {
-    return from.array(exports.Uint208, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint208 {
-    return from.buffer(exports.Uint208, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint208 {
-    return from.hexish(exports.Uint208, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint208(uint8Array)
   }
 
   static fromNumber(number: number): Uint208 {
-    return from.uintNumber(exports.Uint208, number)
+    const bn = new Bn(number)
+    return new Uint208(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint208 {
+    return new Uint208(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint208 {
+    return new Uint208(uvaursi.fromHexish(hexish))
   }
 
 }
 
-export class Uint216 extends UintX implements Uintish {
+export class Uint216 extends UintX {
 
   public static LENGTH: number = 27;
 
@@ -1521,56 +1522,56 @@ export class Uint216 extends UintX implements Uintish {
   }
 
   add(value: Uint216): Uint216 {
-    return uintMath.add(exports.Uint216, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint216(uint8Array)
   }
 
   sub(value: Uint216): Uint216 {
-    return uintMath.sub(exports.Uint216, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint216(uint8Array)
   }
 
   mul(value: Uint216): Uint216 {
-    return uintMath.mul(exports.Uint216, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint216(uint8Array)
   }
 
-  divDn(value: Uint216): Uint216 {
-    return uintMath.divDn(exports.Uint216, this, value);
-  }
-
-  divUp(value: Uint216): Uint216 {
-    return uintMath.divUp(exports.Uint216, this, value);
-  }
-
-  divRd(value: Uint216): Uint216 {
-    return uintMath.divRd(exports.Uint216, this, value);
+  div(value: Uint216): Uint216 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint216(uint8Array)
   }
 
   mod(value: Uint216): Uint216 {
-    return uintMath.mod(exports.Uint216, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint216 {
-    return from.uint8Array(exports.Uint216, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint216 {
-    return from.array(exports.Uint216, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint216 {
-    return from.buffer(exports.Uint216, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint216 {
-    return from.hexish(exports.Uint216, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint216(uint8Array)
   }
 
   static fromNumber(number: number): Uint216 {
-    return from.uintNumber(exports.Uint216, number)
+    const bn = new Bn(number)
+    return new Uint216(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint216 {
+    return new Uint216(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint216 {
+    return new Uint216(uvaursi.fromHexish(hexish))
   }
 
 }
 
-export class Uint224 extends UintX implements Uintish {
+export class Uint224 extends UintX {
 
   public static LENGTH: number = 28;
 
@@ -1579,56 +1580,56 @@ export class Uint224 extends UintX implements Uintish {
   }
 
   add(value: Uint224): Uint224 {
-    return uintMath.add(exports.Uint224, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint224(uint8Array)
   }
 
   sub(value: Uint224): Uint224 {
-    return uintMath.sub(exports.Uint224, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint224(uint8Array)
   }
 
   mul(value: Uint224): Uint224 {
-    return uintMath.mul(exports.Uint224, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint224(uint8Array)
   }
 
-  divDn(value: Uint224): Uint224 {
-    return uintMath.divDn(exports.Uint224, this, value);
-  }
-
-  divUp(value: Uint224): Uint224 {
-    return uintMath.divUp(exports.Uint224, this, value);
-  }
-
-  divRd(value: Uint224): Uint224 {
-    return uintMath.divRd(exports.Uint224, this, value);
+  div(value: Uint224): Uint224 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint224(uint8Array)
   }
 
   mod(value: Uint224): Uint224 {
-    return uintMath.mod(exports.Uint224, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint224 {
-    return from.uint8Array(exports.Uint224, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint224 {
-    return from.array(exports.Uint224, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint224 {
-    return from.buffer(exports.Uint224, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint224 {
-    return from.hexish(exports.Uint224, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint224(uint8Array)
   }
 
   static fromNumber(number: number): Uint224 {
-    return from.uintNumber(exports.Uint224, number)
+    const bn = new Bn(number)
+    return new Uint224(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint224 {
+    return new Uint224(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint224 {
+    return new Uint224(uvaursi.fromHexish(hexish))
   }
 
 }
 
-export class Uint232 extends UintX implements Uintish {
+export class Uint232 extends UintX {
 
   public static LENGTH: number = 29;
 
@@ -1637,56 +1638,56 @@ export class Uint232 extends UintX implements Uintish {
   }
 
   add(value: Uint232): Uint232 {
-    return uintMath.add(exports.Uint232, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint232(uint8Array)
   }
 
   sub(value: Uint232): Uint232 {
-    return uintMath.sub(exports.Uint232, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint232(uint8Array)
   }
 
   mul(value: Uint232): Uint232 {
-    return uintMath.mul(exports.Uint232, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint232(uint8Array)
   }
 
-  divDn(value: Uint232): Uint232 {
-    return uintMath.divDn(exports.Uint232, this, value);
-  }
-
-  divUp(value: Uint232): Uint232 {
-    return uintMath.divUp(exports.Uint232, this, value);
-  }
-
-  divRd(value: Uint232): Uint232 {
-    return uintMath.divRd(exports.Uint232, this, value);
+  div(value: Uint232): Uint232 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint232(uint8Array)
   }
 
   mod(value: Uint232): Uint232 {
-    return uintMath.mod(exports.Uint232, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint232 {
-    return from.uint8Array(exports.Uint232, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint232 {
-    return from.array(exports.Uint232, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint232 {
-    return from.buffer(exports.Uint232, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint232 {
-    return from.hexish(exports.Uint232, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint232(uint8Array)
   }
 
   static fromNumber(number: number): Uint232 {
-    return from.uintNumber(exports.Uint232, number)
+    const bn = new Bn(number)
+    return new Uint232(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint232 {
+    return new Uint232(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint232 {
+    return new Uint232(uvaursi.fromHexish(hexish))
   }
 
 }
 
-export class Uint240 extends UintX implements Uintish {
+export class Uint240 extends UintX {
 
   public static LENGTH: number = 30;
 
@@ -1695,56 +1696,56 @@ export class Uint240 extends UintX implements Uintish {
   }
 
   add(value: Uint240): Uint240 {
-    return uintMath.add(exports.Uint240, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint240(uint8Array)
   }
 
   sub(value: Uint240): Uint240 {
-    return uintMath.sub(exports.Uint240, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint240(uint8Array)
   }
 
   mul(value: Uint240): Uint240 {
-    return uintMath.mul(exports.Uint240, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint240(uint8Array)
   }
 
-  divDn(value: Uint240): Uint240 {
-    return uintMath.divDn(exports.Uint240, this, value);
-  }
-
-  divUp(value: Uint240): Uint240 {
-    return uintMath.divUp(exports.Uint240, this, value);
-  }
-
-  divRd(value: Uint240): Uint240 {
-    return uintMath.divRd(exports.Uint240, this, value);
+  div(value: Uint240): Uint240 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint240(uint8Array)
   }
 
   mod(value: Uint240): Uint240 {
-    return uintMath.mod(exports.Uint240, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint240 {
-    return from.uint8Array(exports.Uint240, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint240 {
-    return from.array(exports.Uint240, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint240 {
-    return from.buffer(exports.Uint240, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint240 {
-    return from.hexish(exports.Uint240, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint240(uint8Array)
   }
 
   static fromNumber(number: number): Uint240 {
-    return from.uintNumber(exports.Uint240, number)
+    const bn = new Bn(number)
+    return new Uint240(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint240 {
+    return new Uint240(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint240 {
+    return new Uint240(uvaursi.fromHexish(hexish))
   }
 
 }
 
-export class Uint248 extends UintX implements Uintish {
+export class Uint248 extends UintX {
 
   public static LENGTH: number = 31;
 
@@ -1753,56 +1754,56 @@ export class Uint248 extends UintX implements Uintish {
   }
 
   add(value: Uint248): Uint248 {
-    return uintMath.add(exports.Uint248, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint248(uint8Array)
   }
 
   sub(value: Uint248): Uint248 {
-    return uintMath.sub(exports.Uint248, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint248(uint8Array)
   }
 
   mul(value: Uint248): Uint248 {
-    return uintMath.mul(exports.Uint248, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint248(uint8Array)
   }
 
-  divDn(value: Uint248): Uint248 {
-    return uintMath.divDn(exports.Uint248, this, value);
-  }
-
-  divUp(value: Uint248): Uint248 {
-    return uintMath.divUp(exports.Uint248, this, value);
-  }
-
-  divRd(value: Uint248): Uint248 {
-    return uintMath.divRd(exports.Uint248, this, value);
+  div(value: Uint248): Uint248 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint248(uint8Array)
   }
 
   mod(value: Uint248): Uint248 {
-    return uintMath.mod(exports.Uint248, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint248 {
-    return from.uint8Array(exports.Uint248, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint248 {
-    return from.array(exports.Uint248, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint248 {
-    return from.buffer(exports.Uint248, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint248 {
-    return from.hexish(exports.Uint248, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint248(uint8Array)
   }
 
   static fromNumber(number: number): Uint248 {
-    return from.uintNumber(exports.Uint248, number)
+    const bn = new Bn(number)
+    return new Uint248(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint248 {
+    return new Uint248(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint248 {
+    return new Uint248(uvaursi.fromHexish(hexish))
   }
 
 }
 
-export class Uint256 extends UintX implements Uintish {
+export class Uint256 extends UintX {
 
   public static LENGTH: number = 32;
 
@@ -1811,51 +1812,51 @@ export class Uint256 extends UintX implements Uintish {
   }
 
   add(value: Uint256): Uint256 {
-    return uintMath.add(exports.Uint256, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint256(uint8Array)
   }
 
   sub(value: Uint256): Uint256 {
-    return uintMath.sub(exports.Uint256, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint256(uint8Array)
   }
 
   mul(value: Uint256): Uint256 {
-    return uintMath.mul(exports.Uint256, this, value);
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint256(uint8Array)
   }
 
-  divDn(value: Uint256): Uint256 {
-    return uintMath.divDn(exports.Uint256, this, value);
-  }
-
-  divUp(value: Uint256): Uint256 {
-    return uintMath.divUp(exports.Uint256, this, value);
-  }
-
-  divRd(value: Uint256): Uint256 {
-    return uintMath.divRd(exports.Uint256, this, value);
+  div(value: Uint256): Uint256 {
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint256(uint8Array)
   }
 
   mod(value: Uint256): Uint256 {
-    return uintMath.mod(exports.Uint256, this, value);
-  }
-
-  static fromUint8Array(uint8Array: Uint8Array): Uint256 {
-    return from.uint8Array(exports.Uint256, uint8Array)
-  }
-
-  static fromArray(array: Array<number>): Uint256 {
-    return from.array(exports.Uint256, array)
-  }
-
-  static fromBuffer(buffer: Buffer): Uint256 {
-    return from.buffer(exports.Uint256, buffer)
-  }
-
-  static fromHexish(hexish: string): Uint256 {
-    return from.hexish(exports.Uint256, hexish)
+    const thisBn = new Bn(this.toUint8Array())
+    const valueBn = new Bn(value.toUint8Array())
+    const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint256(uint8Array)
   }
 
   static fromNumber(number: number): Uint256 {
-    return from.uintNumber(exports.Uint256, number)
+    const bn = new Bn(number)
+    return new Uint256(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromArray(array: Array<number>): Uint256 {
+    return new Uint256(uvaursi.fromArray(array))
+  }
+
+  static fromHexish(hexish: string): Uint256 {
+    return new Uint256(uvaursi.fromHexish(hexish))
   }
 
 }

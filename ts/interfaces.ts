@@ -1,12 +1,11 @@
-import Bn from 'bn.js'
+import { Buttercup } from './buttercups/Buttercup'
 
-export interface External {
+export interface External extends Buttercup{
   new(uint8Array: Uint8Array);
 }
 
-export interface Uintish {
-  getBn(): Bn;
-  getNumber(): Number;
+export interface Uintish extends Buttercup {
+  toNumber(): number;
 }
 
 export interface ExternalUintish extends External, Uintish {

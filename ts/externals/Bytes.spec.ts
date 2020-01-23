@@ -1,5 +1,5 @@
 import { Bytes } from '../'
 
 test('from hexish', () => {
-  expect(Bytes.fromHexish('ffff').getArray()).toStrictEqual([255, 255])
+  expect(Bytes.fromHexish('ffff').toArray()).toStrictEqual([255, 255])
 })

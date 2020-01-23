@@ -1,28 +1,14 @@
 const fs = require('fs')
 const handlebars = require('handlebars')
 
-const staticFroms = [
-  {
-    func: 'fromUint8Array',
-    fromFunc: 'uint8Array',
-    arg: 'uint8Array',
-    argClass: 'Uint8Array'
-  },
+const uvaursiFroms = [
   {
     func: 'fromArray',
-    fromFunc: 'array',
     arg: 'array',
     argClass: 'Array<number>'
   },
   {
-    func: 'fromBuffer',
-    fromFunc: 'buffer',
-    arg: 'buffer',
-    argClass: 'Buffer'
-  },
-  {
     func: 'fromHexish',
-    fromFunc: 'hexish',
     arg: 'hexish',
     argClass: 'string'
   }
@@ -35,13 +21,10 @@ const staticGens = [
 const uintXStaticFroms = [
   {
     func: 'fromNumber',
-    fromFunc: 'uintNumber',
     arg: 'number',
     argClass: 'number'
   }
 ]
-
-const uintXOps = ['add', 'sub', 'mul', 'divDn', 'divUp', 'divRd', 'mod']
 
 function getCode(templatePath, data) {
   const source = fs.readFileSync(
@@ -64,27 +47,29 @@ const uintXClasses = []
 const bytesXClasses = []
 
 for (let length = 1; length <= 32; length++) {
+  const bits = length * 8
   uintXClasses.push({
     length,
-    bits: length * 8,
-    ops: uintXOps,
-    staticFroms: staticFroms.concat(uintXStaticFroms),
+    bits,
+    className: `Uint${bits}`,
+    uvaursiFroms,
     staticGens: staticGens
   })
   bytesXClasses.push({
     length,
-    staticFroms: staticFroms,
+    uvaursiFroms,
+    className: `Bytes${length}`,
     staticGens: staticGens
   })
 }
 
 write('externals/Bytes', 'Bytes', {
-  staticFroms: staticFroms,
+  uvaursiFroms,
   staticGens: staticGens
 })
 
 write('externals/Address', 'Address', {
-  staticFroms: staticFroms,
+  uvaursiFroms,
   staticGens: staticGens
 })
 

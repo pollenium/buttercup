@@ -1,10 +1,18 @@
 "use strict";
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (Object.hasOwnProperty.call(mod, k)) result[k] = mod[k];
+    result["default"] = mod;
+    return result;
+};
 exports.__esModule = true;
+var uvaursi = __importStar(require("pollenium-uvaursi"));
 var Buttercup = /** @class */ (function () {
     function Buttercup(uint8Array) {
         this.uint8Array = uint8Array;
     }
-    Buttercup.prototype.getUint8Array = function () {
+    Buttercup.prototype.toUint8Array = function () {
         return this.uint8Array.slice();
     };
     Buttercup.prototype.getLength = function () {
@@ -21,27 +29,17 @@ var Buttercup = /** @class */ (function () {
         }
         return true;
     };
-    Buttercup.prototype.getArray = function () {
-        return Array.from(this.getUint8Array());
+    Buttercup.prototype.toArray = function () {
+        return Array.from(this.toUint8Array());
     };
-    Buttercup.prototype.getHex = function () {
-        var hex = '';
-        this.uint8Array.forEach(function (byte) {
-            hex += byte.toString(16).padStart(2, '0');
-        });
-        return hex;
+    Buttercup.prototype.toHex = function () {
+        return uvaursi.toHex(this.uint8Array);
     };
-    Buttercup.prototype.getPhex = function () {
-        return "0x" + this.getHex();
-    };
-    Buttercup.prototype.getBuffer = function () {
-        return Buffer.from(this.uint8Array);
-    };
-    Buttercup.prototype.getComparison = function (buttercup) {
-        return this.getBuffer().compare(buttercup.getBuffer());
+    Buttercup.prototype.toPhex = function () {
+        return uvaursi.toPhex(this.uint8Array);
     };
     Buttercup.prototype.getCasted = function (ExternalClass) {
-        return new ExternalClass(this.getUint8Array());
+        return new ExternalClass(this.toUint8Array());
     };
     Buttercup.prototype.getIsOnlyZeroes = function () {
         if (this.isOnlyZeros) {
