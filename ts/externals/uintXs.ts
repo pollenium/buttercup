@@ -48,6 +48,13 @@ export class Uint8 extends UintX {
     return new Uint8(uint8Array)
   }
 
+  opPow(value: Uint8): Uint8 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint8(uint8Array)
+  }
+
   static fromNumber(number: number): Uint8 {
     const bn = new Bn(number)
     return new Uint8(bn.toArrayLike(Uint8Array, 'be'))
@@ -95,6 +102,13 @@ export class Uint16 extends UintX {
     const thisBn = new Bn(this.uu.u)
     const valueBn = new Bn(value.uu.u)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint16(uint8Array)
+  }
+
+  opPow(value: Uint16): Uint16 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint16(uint8Array)
   }
 
@@ -148,6 +162,13 @@ export class Uint24 extends UintX {
     return new Uint24(uint8Array)
   }
 
+  opPow(value: Uint24): Uint24 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint24(uint8Array)
+  }
+
   static fromNumber(number: number): Uint24 {
     const bn = new Bn(number)
     return new Uint24(bn.toArrayLike(Uint8Array, 'be'))
@@ -195,6 +216,13 @@ export class Uint32 extends UintX {
     const thisBn = new Bn(this.uu.u)
     const valueBn = new Bn(value.uu.u)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint32(uint8Array)
+  }
+
+  opPow(value: Uint32): Uint32 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint32(uint8Array)
   }
 
@@ -248,6 +276,13 @@ export class Uint40 extends UintX {
     return new Uint40(uint8Array)
   }
 
+  opPow(value: Uint40): Uint40 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint40(uint8Array)
+  }
+
   static fromNumber(number: number): Uint40 {
     const bn = new Bn(number)
     return new Uint40(bn.toArrayLike(Uint8Array, 'be'))
@@ -295,6 +330,13 @@ export class Uint48 extends UintX {
     const thisBn = new Bn(this.uu.u)
     const valueBn = new Bn(value.uu.u)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint48(uint8Array)
+  }
+
+  opPow(value: Uint48): Uint48 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint48(uint8Array)
   }
 
@@ -348,6 +390,13 @@ export class Uint56 extends UintX {
     return new Uint56(uint8Array)
   }
 
+  opPow(value: Uint56): Uint56 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint56(uint8Array)
+  }
+
   static fromNumber(number: number): Uint56 {
     const bn = new Bn(number)
     return new Uint56(bn.toArrayLike(Uint8Array, 'be'))
@@ -395,6 +444,13 @@ export class Uint64 extends UintX {
     const thisBn = new Bn(this.uu.u)
     const valueBn = new Bn(value.uu.u)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint64(uint8Array)
+  }
+
+  opPow(value: Uint64): Uint64 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint64(uint8Array)
   }
 
@@ -448,6 +504,13 @@ export class Uint72 extends UintX {
     return new Uint72(uint8Array)
   }
 
+  opPow(value: Uint72): Uint72 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint72(uint8Array)
+  }
+
   static fromNumber(number: number): Uint72 {
     const bn = new Bn(number)
     return new Uint72(bn.toArrayLike(Uint8Array, 'be'))
@@ -495,6 +558,13 @@ export class Uint80 extends UintX {
     const thisBn = new Bn(this.uu.u)
     const valueBn = new Bn(value.uu.u)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint80(uint8Array)
+  }
+
+  opPow(value: Uint80): Uint80 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint80(uint8Array)
   }
 
@@ -548,6 +618,13 @@ export class Uint88 extends UintX {
     return new Uint88(uint8Array)
   }
 
+  opPow(value: Uint88): Uint88 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint88(uint8Array)
+  }
+
   static fromNumber(number: number): Uint88 {
     const bn = new Bn(number)
     return new Uint88(bn.toArrayLike(Uint8Array, 'be'))
@@ -595,6 +672,13 @@ export class Uint96 extends UintX {
     const thisBn = new Bn(this.uu.u)
     const valueBn = new Bn(value.uu.u)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint96(uint8Array)
+  }
+
+  opPow(value: Uint96): Uint96 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint96(uint8Array)
   }
 
@@ -648,6 +732,13 @@ export class Uint104 extends UintX {
     return new Uint104(uint8Array)
   }
 
+  opPow(value: Uint104): Uint104 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint104(uint8Array)
+  }
+
   static fromNumber(number: number): Uint104 {
     const bn = new Bn(number)
     return new Uint104(bn.toArrayLike(Uint8Array, 'be'))
@@ -695,6 +786,13 @@ export class Uint112 extends UintX {
     const thisBn = new Bn(this.uu.u)
     const valueBn = new Bn(value.uu.u)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint112(uint8Array)
+  }
+
+  opPow(value: Uint112): Uint112 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint112(uint8Array)
   }
 
@@ -748,6 +846,13 @@ export class Uint120 extends UintX {
     return new Uint120(uint8Array)
   }
 
+  opPow(value: Uint120): Uint120 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint120(uint8Array)
+  }
+
   static fromNumber(number: number): Uint120 {
     const bn = new Bn(number)
     return new Uint120(bn.toArrayLike(Uint8Array, 'be'))
@@ -795,6 +900,13 @@ export class Uint128 extends UintX {
     const thisBn = new Bn(this.uu.u)
     const valueBn = new Bn(value.uu.u)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint128(uint8Array)
+  }
+
+  opPow(value: Uint128): Uint128 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint128(uint8Array)
   }
 
@@ -848,6 +960,13 @@ export class Uint136 extends UintX {
     return new Uint136(uint8Array)
   }
 
+  opPow(value: Uint136): Uint136 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint136(uint8Array)
+  }
+
   static fromNumber(number: number): Uint136 {
     const bn = new Bn(number)
     return new Uint136(bn.toArrayLike(Uint8Array, 'be'))
@@ -895,6 +1014,13 @@ export class Uint144 extends UintX {
     const thisBn = new Bn(this.uu.u)
     const valueBn = new Bn(value.uu.u)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint144(uint8Array)
+  }
+
+  opPow(value: Uint144): Uint144 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint144(uint8Array)
   }
 
@@ -948,6 +1074,13 @@ export class Uint152 extends UintX {
     return new Uint152(uint8Array)
   }
 
+  opPow(value: Uint152): Uint152 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint152(uint8Array)
+  }
+
   static fromNumber(number: number): Uint152 {
     const bn = new Bn(number)
     return new Uint152(bn.toArrayLike(Uint8Array, 'be'))
@@ -995,6 +1128,13 @@ export class Uint160 extends UintX {
     const thisBn = new Bn(this.uu.u)
     const valueBn = new Bn(value.uu.u)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint160(uint8Array)
+  }
+
+  opPow(value: Uint160): Uint160 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint160(uint8Array)
   }
 
@@ -1048,6 +1188,13 @@ export class Uint168 extends UintX {
     return new Uint168(uint8Array)
   }
 
+  opPow(value: Uint168): Uint168 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint168(uint8Array)
+  }
+
   static fromNumber(number: number): Uint168 {
     const bn = new Bn(number)
     return new Uint168(bn.toArrayLike(Uint8Array, 'be'))
@@ -1095,6 +1242,13 @@ export class Uint176 extends UintX {
     const thisBn = new Bn(this.uu.u)
     const valueBn = new Bn(value.uu.u)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint176(uint8Array)
+  }
+
+  opPow(value: Uint176): Uint176 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint176(uint8Array)
   }
 
@@ -1148,6 +1302,13 @@ export class Uint184 extends UintX {
     return new Uint184(uint8Array)
   }
 
+  opPow(value: Uint184): Uint184 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint184(uint8Array)
+  }
+
   static fromNumber(number: number): Uint184 {
     const bn = new Bn(number)
     return new Uint184(bn.toArrayLike(Uint8Array, 'be'))
@@ -1195,6 +1356,13 @@ export class Uint192 extends UintX {
     const thisBn = new Bn(this.uu.u)
     const valueBn = new Bn(value.uu.u)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint192(uint8Array)
+  }
+
+  opPow(value: Uint192): Uint192 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint192(uint8Array)
   }
 
@@ -1248,6 +1416,13 @@ export class Uint200 extends UintX {
     return new Uint200(uint8Array)
   }
 
+  opPow(value: Uint200): Uint200 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint200(uint8Array)
+  }
+
   static fromNumber(number: number): Uint200 {
     const bn = new Bn(number)
     return new Uint200(bn.toArrayLike(Uint8Array, 'be'))
@@ -1295,6 +1470,13 @@ export class Uint208 extends UintX {
     const thisBn = new Bn(this.uu.u)
     const valueBn = new Bn(value.uu.u)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint208(uint8Array)
+  }
+
+  opPow(value: Uint208): Uint208 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint208(uint8Array)
   }
 
@@ -1348,6 +1530,13 @@ export class Uint216 extends UintX {
     return new Uint216(uint8Array)
   }
 
+  opPow(value: Uint216): Uint216 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint216(uint8Array)
+  }
+
   static fromNumber(number: number): Uint216 {
     const bn = new Bn(number)
     return new Uint216(bn.toArrayLike(Uint8Array, 'be'))
@@ -1395,6 +1584,13 @@ export class Uint224 extends UintX {
     const thisBn = new Bn(this.uu.u)
     const valueBn = new Bn(value.uu.u)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint224(uint8Array)
+  }
+
+  opPow(value: Uint224): Uint224 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint224(uint8Array)
   }
 
@@ -1448,6 +1644,13 @@ export class Uint232 extends UintX {
     return new Uint232(uint8Array)
   }
 
+  opPow(value: Uint232): Uint232 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint232(uint8Array)
+  }
+
   static fromNumber(number: number): Uint232 {
     const bn = new Bn(number)
     return new Uint232(bn.toArrayLike(Uint8Array, 'be'))
@@ -1495,6 +1698,13 @@ export class Uint240 extends UintX {
     const thisBn = new Bn(this.uu.u)
     const valueBn = new Bn(value.uu.u)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint240(uint8Array)
+  }
+
+  opPow(value: Uint240): Uint240 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint240(uint8Array)
   }
 
@@ -1548,6 +1758,13 @@ export class Uint248 extends UintX {
     return new Uint248(uint8Array)
   }
 
+  opPow(value: Uint248): Uint248 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint248(uint8Array)
+  }
+
   static fromNumber(number: number): Uint248 {
     const bn = new Bn(number)
     return new Uint248(bn.toArrayLike(Uint8Array, 'be'))
@@ -1595,6 +1812,13 @@ export class Uint256 extends UintX {
     const thisBn = new Bn(this.uu.u)
     const valueBn = new Bn(value.uu.u)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
+    return new Uint256(uint8Array)
+  }
+
+  opPow(value: Uint256): Uint256 {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint256(uint8Array)
   }
 

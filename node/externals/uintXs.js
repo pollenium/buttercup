@@ -55,6 +55,12 @@ var Uint8 = /** @class */ (function (_super) {
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint8(uint8Array);
     };
+    Uint8.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint8(uint8Array);
+    };
     Uint8.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint8(bn.toArrayLike(Uint8Array, 'be'));
@@ -96,6 +102,12 @@ var Uint16 = /** @class */ (function (_super) {
         var thisBn = new bn_js_1["default"](this.uu.u);
         var valueBn = new bn_js_1["default"](value.uu.u);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint16(uint8Array);
+    };
+    Uint16.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint16(uint8Array);
     };
     Uint16.fromNumber = function (number) {
@@ -141,6 +153,12 @@ var Uint24 = /** @class */ (function (_super) {
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint24(uint8Array);
     };
+    Uint24.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint24(uint8Array);
+    };
     Uint24.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint24(bn.toArrayLike(Uint8Array, 'be'));
@@ -182,6 +200,12 @@ var Uint32 = /** @class */ (function (_super) {
         var thisBn = new bn_js_1["default"](this.uu.u);
         var valueBn = new bn_js_1["default"](value.uu.u);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint32(uint8Array);
+    };
+    Uint32.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint32(uint8Array);
     };
     Uint32.fromNumber = function (number) {
@@ -227,6 +251,12 @@ var Uint40 = /** @class */ (function (_super) {
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint40(uint8Array);
     };
+    Uint40.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint40(uint8Array);
+    };
     Uint40.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint40(bn.toArrayLike(Uint8Array, 'be'));
@@ -268,6 +298,12 @@ var Uint48 = /** @class */ (function (_super) {
         var thisBn = new bn_js_1["default"](this.uu.u);
         var valueBn = new bn_js_1["default"](value.uu.u);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint48(uint8Array);
+    };
+    Uint48.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint48(uint8Array);
     };
     Uint48.fromNumber = function (number) {
@@ -313,6 +349,12 @@ var Uint56 = /** @class */ (function (_super) {
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint56(uint8Array);
     };
+    Uint56.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint56(uint8Array);
+    };
     Uint56.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint56(bn.toArrayLike(Uint8Array, 'be'));
@@ -354,6 +396,12 @@ var Uint64 = /** @class */ (function (_super) {
         var thisBn = new bn_js_1["default"](this.uu.u);
         var valueBn = new bn_js_1["default"](value.uu.u);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint64(uint8Array);
+    };
+    Uint64.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint64(uint8Array);
     };
     Uint64.fromNumber = function (number) {
@@ -399,6 +447,12 @@ var Uint72 = /** @class */ (function (_super) {
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint72(uint8Array);
     };
+    Uint72.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint72(uint8Array);
+    };
     Uint72.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint72(bn.toArrayLike(Uint8Array, 'be'));
@@ -440,6 +494,12 @@ var Uint80 = /** @class */ (function (_super) {
         var thisBn = new bn_js_1["default"](this.uu.u);
         var valueBn = new bn_js_1["default"](value.uu.u);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint80(uint8Array);
+    };
+    Uint80.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint80(uint8Array);
     };
     Uint80.fromNumber = function (number) {
@@ -485,6 +545,12 @@ var Uint88 = /** @class */ (function (_super) {
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint88(uint8Array);
     };
+    Uint88.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint88(uint8Array);
+    };
     Uint88.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint88(bn.toArrayLike(Uint8Array, 'be'));
@@ -526,6 +592,12 @@ var Uint96 = /** @class */ (function (_super) {
         var thisBn = new bn_js_1["default"](this.uu.u);
         var valueBn = new bn_js_1["default"](value.uu.u);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint96(uint8Array);
+    };
+    Uint96.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint96(uint8Array);
     };
     Uint96.fromNumber = function (number) {
@@ -571,6 +643,12 @@ var Uint104 = /** @class */ (function (_super) {
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint104(uint8Array);
     };
+    Uint104.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint104(uint8Array);
+    };
     Uint104.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint104(bn.toArrayLike(Uint8Array, 'be'));
@@ -612,6 +690,12 @@ var Uint112 = /** @class */ (function (_super) {
         var thisBn = new bn_js_1["default"](this.uu.u);
         var valueBn = new bn_js_1["default"](value.uu.u);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint112(uint8Array);
+    };
+    Uint112.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint112(uint8Array);
     };
     Uint112.fromNumber = function (number) {
@@ -657,6 +741,12 @@ var Uint120 = /** @class */ (function (_super) {
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint120(uint8Array);
     };
+    Uint120.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint120(uint8Array);
+    };
     Uint120.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint120(bn.toArrayLike(Uint8Array, 'be'));
@@ -698,6 +788,12 @@ var Uint128 = /** @class */ (function (_super) {
         var thisBn = new bn_js_1["default"](this.uu.u);
         var valueBn = new bn_js_1["default"](value.uu.u);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint128(uint8Array);
+    };
+    Uint128.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint128(uint8Array);
     };
     Uint128.fromNumber = function (number) {
@@ -743,6 +839,12 @@ var Uint136 = /** @class */ (function (_super) {
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint136(uint8Array);
     };
+    Uint136.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint136(uint8Array);
+    };
     Uint136.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint136(bn.toArrayLike(Uint8Array, 'be'));
@@ -784,6 +886,12 @@ var Uint144 = /** @class */ (function (_super) {
         var thisBn = new bn_js_1["default"](this.uu.u);
         var valueBn = new bn_js_1["default"](value.uu.u);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint144(uint8Array);
+    };
+    Uint144.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint144(uint8Array);
     };
     Uint144.fromNumber = function (number) {
@@ -829,6 +937,12 @@ var Uint152 = /** @class */ (function (_super) {
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint152(uint8Array);
     };
+    Uint152.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint152(uint8Array);
+    };
     Uint152.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint152(bn.toArrayLike(Uint8Array, 'be'));
@@ -870,6 +984,12 @@ var Uint160 = /** @class */ (function (_super) {
         var thisBn = new bn_js_1["default"](this.uu.u);
         var valueBn = new bn_js_1["default"](value.uu.u);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint160(uint8Array);
+    };
+    Uint160.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint160(uint8Array);
     };
     Uint160.fromNumber = function (number) {
@@ -915,6 +1035,12 @@ var Uint168 = /** @class */ (function (_super) {
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint168(uint8Array);
     };
+    Uint168.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint168(uint8Array);
+    };
     Uint168.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint168(bn.toArrayLike(Uint8Array, 'be'));
@@ -956,6 +1082,12 @@ var Uint176 = /** @class */ (function (_super) {
         var thisBn = new bn_js_1["default"](this.uu.u);
         var valueBn = new bn_js_1["default"](value.uu.u);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint176(uint8Array);
+    };
+    Uint176.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint176(uint8Array);
     };
     Uint176.fromNumber = function (number) {
@@ -1001,6 +1133,12 @@ var Uint184 = /** @class */ (function (_super) {
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint184(uint8Array);
     };
+    Uint184.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint184(uint8Array);
+    };
     Uint184.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint184(bn.toArrayLike(Uint8Array, 'be'));
@@ -1042,6 +1180,12 @@ var Uint192 = /** @class */ (function (_super) {
         var thisBn = new bn_js_1["default"](this.uu.u);
         var valueBn = new bn_js_1["default"](value.uu.u);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint192(uint8Array);
+    };
+    Uint192.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint192(uint8Array);
     };
     Uint192.fromNumber = function (number) {
@@ -1087,6 +1231,12 @@ var Uint200 = /** @class */ (function (_super) {
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint200(uint8Array);
     };
+    Uint200.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint200(uint8Array);
+    };
     Uint200.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint200(bn.toArrayLike(Uint8Array, 'be'));
@@ -1128,6 +1278,12 @@ var Uint208 = /** @class */ (function (_super) {
         var thisBn = new bn_js_1["default"](this.uu.u);
         var valueBn = new bn_js_1["default"](value.uu.u);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint208(uint8Array);
+    };
+    Uint208.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint208(uint8Array);
     };
     Uint208.fromNumber = function (number) {
@@ -1173,6 +1329,12 @@ var Uint216 = /** @class */ (function (_super) {
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint216(uint8Array);
     };
+    Uint216.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint216(uint8Array);
+    };
     Uint216.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint216(bn.toArrayLike(Uint8Array, 'be'));
@@ -1214,6 +1376,12 @@ var Uint224 = /** @class */ (function (_super) {
         var thisBn = new bn_js_1["default"](this.uu.u);
         var valueBn = new bn_js_1["default"](value.uu.u);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint224(uint8Array);
+    };
+    Uint224.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint224(uint8Array);
     };
     Uint224.fromNumber = function (number) {
@@ -1259,6 +1427,12 @@ var Uint232 = /** @class */ (function (_super) {
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint232(uint8Array);
     };
+    Uint232.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint232(uint8Array);
+    };
     Uint232.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint232(bn.toArrayLike(Uint8Array, 'be'));
@@ -1300,6 +1474,12 @@ var Uint240 = /** @class */ (function (_super) {
         var thisBn = new bn_js_1["default"](this.uu.u);
         var valueBn = new bn_js_1["default"](value.uu.u);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint240(uint8Array);
+    };
+    Uint240.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint240(uint8Array);
     };
     Uint240.fromNumber = function (number) {
@@ -1345,6 +1525,12 @@ var Uint248 = /** @class */ (function (_super) {
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint248(uint8Array);
     };
+    Uint248.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint248(uint8Array);
+    };
     Uint248.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint248(bn.toArrayLike(Uint8Array, 'be'));
@@ -1386,6 +1572,12 @@ var Uint256 = /** @class */ (function (_super) {
         var thisBn = new bn_js_1["default"](this.uu.u);
         var valueBn = new bn_js_1["default"](value.uu.u);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
+        return new Uint256(uint8Array);
+    };
+    Uint256.prototype.opPow = function (value) {
+        var thisBn = new bn_js_1["default"](this.uu.u);
+        var valueBn = new bn_js_1["default"](value.uu.u);
+        var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint256(uint8Array);
     };
     Uint256.fromNumber = function (number) {

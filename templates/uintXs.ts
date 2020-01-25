@@ -49,6 +49,13 @@ export class Uint{{bits}} extends UintX {
     return new {{className}}(uint8Array)
   }
 
+  opPow(value: {{className}}): {{className}} {
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
+    const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
+    return new {{className}}(uint8Array)
+  }
+
   static fromNumber(number: number): {{className}} {
     const bn = new Bn(number)
     return new {{className}}(bn.toArrayLike(Uint8Array, 'be'))

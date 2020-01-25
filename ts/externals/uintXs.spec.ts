@@ -51,6 +51,20 @@ test('mod', () => {
   expect(a.opMod(b).toNumber()).toBe(35)
 })
 
+test('pow', () => {
+  const a = Uint16.fromNumber(3)
+  const b = Uint16.fromNumber(2)
+  expect(a.opPow(b).toNumber()).toBe(9)
+})
+
+test('pow', () => {
+  const a = Uint16.fromNumber(4)
+  const b = Uint16.fromNumber(3)
+  expect(a.opPow(b).toNumber()).toBe(64)
+})
+
+
+
 test('cast', () => {
   const a = Uint8.fromNumber(4)
   const b = a.genCasted(Bytes)
