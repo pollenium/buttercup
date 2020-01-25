@@ -1,22 +1,16 @@
 import { ExternalClass } from '../interfaces'
-import { Uvaursi } from 'pollenium-uvaursi'
+import { Uu, Uish } from 'pollenium-uvaursi'
 
 export class Buttercup {
 
-  private uvaursi: Uvaursi;
+  readonly uu: Uu;
 
-  constructor(readonly uint8Array: Uint8Array) {}
-
-  genCasted<T>(ExternalClass: ExternalClass<T>): T {
-    return new ExternalClass(this.uint8Array.slice())
+  constructor(uish: Uish) {
+    this.uu = Uu.wrap(uish)
   }
 
-  protected toUvaursi(): Uvaursi {
-    if (this.uvaursi) {
-      return this.uvaursi
-    }
-    this.uvaursi = new Uvaursi(this.uint8Array)
-    return this.uvaursi
+  genCasted<T>(ExternalClass: ExternalClass<T>): T {
+    return new ExternalClass(this.uu.u.slice())
   }
 
 }

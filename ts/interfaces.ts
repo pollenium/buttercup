@@ -1,7 +1,8 @@
 import { Buttercup } from './buttercups/Buttercup'
+import { Uish } from 'pollenium-uvaursi'
 
 export interface External extends Buttercup{
-  new(uint8Array: Uint8Array);
+  new(uish: Uish);
 }
 
 export interface Uintish extends Buttercup {
@@ -12,5 +13,5 @@ export interface ExternalUintish extends External, Uintish {
 }
 
 export interface ExternalClass<T> extends Function {
-    new (uint8Array: Uint8Array): T;
+    new (uish: Uish): T;
 }

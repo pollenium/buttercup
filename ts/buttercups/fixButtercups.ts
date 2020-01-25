@@ -1,29 +1,29 @@
 import { Buttercup } from './Buttercup'
-import { Uvaursi } from 'pollenium-uvaursi'
+import { Uu, Uish } from 'pollenium-uvaursi'
 
 export class InvalidLengthError extends Error {
-  constructor(length: number, uint8Array: Uint8Array) {
-    super(`Invalid length; Expected ${length} received ${uint8Array.length}`)
+  constructor(length: number, uLength: number) {
+    super(`Invalid length; Expected ${length} received ${uLength}`)
   }
 }
 
 export class FixButtercup extends Buttercup {
-  constructor(length: number, uint8Array: Uint8Array) {
-    super(uint8Array)
-    if (uint8Array.length !== length) {
-      throw new InvalidLengthError(length, uint8Array)
+  constructor(length: number, uish: Uish) {
+    super(uish)
+    if (this.uu.u.length !== length) {
+      throw new InvalidLengthError(length, this.uu.u.length)
     }
   }
 }
 
 export class FixLeftButtercup extends FixButtercup {
-  constructor(length: number, uint8Array: Uint8Array) {
-    super(length, new Uvaursi(uint8Array).uuGenPaddedLeft(length))
+  constructor(length: number, uish: Uish) {
+    super(length, Uu.wrap(uish).genPaddedLeft(length))
   }
 }
 
 export class FixRightButtercup extends FixButtercup {
-  constructor(length: number, uint8Array: Uint8Array) {
-    super(length, new Uvaursi(uint8Array).uuGenPaddedRight(length))
+  constructor(length: number, uish: Uish) {
+    super(length, Uu.wrap(uish).genPaddedRight(length))
   }
 }

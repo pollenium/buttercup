@@ -1,6 +1,6 @@
 import { UintX } from '../internals/UintX'
 import Bn from 'bn.js'
-import * as uvaursi from 'pollenium-uvaursi'
+import { Uish } from 'pollenium-uvaursi'
 
 const zeroBn = new Bn(0)
 const oneBn = new Bn(1)
@@ -10,41 +10,41 @@ export class Uint{{bits}} extends UintX {
 
   public static LENGTH: number = {{length}};
 
-  constructor(uint8Array: Uint8Array) {
-    super(Uint{{bits}}.LENGTH, uint8Array)
+  constructor(uish: Uish) {
+    super(Uint{{bits}}.LENGTH, uish)
   }
 
   opAdd(value: {{className}}): {{className}} {
-    const thisBn = new Bn(this.uint8Array)
-    const valueBn = new Bn(value.uint8Array)
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new {{className}}(uint8Array)
   }
 
   opSub(value: {{className}}): {{className}} {
-    const thisBn = new Bn(this.uint8Array)
-    const valueBn = new Bn(value.uint8Array)
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new {{className}}(uint8Array)
   }
 
   opMul(value: {{className}}): {{className}} {
-    const thisBn = new Bn(this.uint8Array)
-    const valueBn = new Bn(value.uint8Array)
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new {{className}}(uint8Array)
   }
 
   opDiv(value: {{className}}): {{className}} {
-    const thisBn = new Bn(this.uint8Array)
-    const valueBn = new Bn(value.uint8Array)
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new {{className}}(uint8Array)
   }
 
   opMod(value: {{className}}): {{className}} {
-    const thisBn = new Bn(this.uint8Array)
-    const valueBn = new Bn(value.uint8Array)
+    const thisBn = new Bn(this.uu.u)
+    const valueBn = new Bn(value.uu.u)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new {{className}}(uint8Array)
   }

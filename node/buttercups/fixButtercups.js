@@ -17,18 +17,18 @@ var Buttercup_1 = require("./Buttercup");
 var pollenium_uvaursi_1 = require("pollenium-uvaursi");
 var InvalidLengthError = /** @class */ (function (_super) {
     __extends(InvalidLengthError, _super);
-    function InvalidLengthError(length, uint8Array) {
-        return _super.call(this, "Invalid length; Expected " + length + " received " + uint8Array.length) || this;
+    function InvalidLengthError(length, uLength) {
+        return _super.call(this, "Invalid length; Expected " + length + " received " + uLength) || this;
     }
     return InvalidLengthError;
 }(Error));
 exports.InvalidLengthError = InvalidLengthError;
 var FixButtercup = /** @class */ (function (_super) {
     __extends(FixButtercup, _super);
-    function FixButtercup(length, uint8Array) {
-        var _this = _super.call(this, uint8Array) || this;
-        if (uint8Array.length !== length) {
-            throw new InvalidLengthError(length, uint8Array);
+    function FixButtercup(length, uish) {
+        var _this = _super.call(this, uish) || this;
+        if (_this.uu.u.length !== length) {
+            throw new InvalidLengthError(length, _this.uu.u.length);
         }
         return _this;
     }
@@ -37,16 +37,16 @@ var FixButtercup = /** @class */ (function (_super) {
 exports.FixButtercup = FixButtercup;
 var FixLeftButtercup = /** @class */ (function (_super) {
     __extends(FixLeftButtercup, _super);
-    function FixLeftButtercup(length, uint8Array) {
-        return _super.call(this, length, new pollenium_uvaursi_1.Uvaursi(uint8Array).uuGenPaddedLeft(length)) || this;
+    function FixLeftButtercup(length, uish) {
+        return _super.call(this, length, pollenium_uvaursi_1.Uu.wrap(uish).genPaddedLeft(length)) || this;
     }
     return FixLeftButtercup;
 }(FixButtercup));
 exports.FixLeftButtercup = FixLeftButtercup;
 var FixRightButtercup = /** @class */ (function (_super) {
     __extends(FixRightButtercup, _super);
-    function FixRightButtercup(length, uint8Array) {
-        return _super.call(this, length, new pollenium_uvaursi_1.Uvaursi(uint8Array).uuGenPaddedRight(length)) || this;
+    function FixRightButtercup(length, uish) {
+        return _super.call(this, length, pollenium_uvaursi_1.Uu.wrap(uish).genPaddedRight(length)) || this;
     }
     return FixRightButtercup;
 }(FixButtercup));

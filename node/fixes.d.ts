@@ -1,8 +1,8 @@
-import { Uvaursi } from 'pollenium-uvaursi';
+import { Uu } from 'pollenium-uvaursi';
 export declare class InvalidLengthError extends Error {
     constructor(length: number, uint8Array: Uint8Array);
 }
-export declare class Fix extends Uvaursi {
+export declare class Fix extends Uu {
     constructor(length: number, uint8Array: Uint8Array);
 }
 export declare class FixLeft extends Fix {

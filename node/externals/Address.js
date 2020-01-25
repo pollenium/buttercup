@@ -17,8 +17,8 @@ var fixButtercups_1 = require("../buttercups/fixButtercups");
 var pollenium_uvaursi_1 = require("pollenium-uvaursi");
 var Address = /** @class */ (function (_super) {
     __extends(Address, _super);
-    function Address(uint8Array) {
-        var _this = _super.call(this, 20, uint8Array) || this;
+    function Address(uish) {
+        var _this = _super.call(this, 20, uish) || this;
         _this.isNull = null;
         return _this;
     }
@@ -26,14 +26,13 @@ var Address = /** @class */ (function (_super) {
         if (this.isNull !== null) {
             return this.isNull;
         }
-        this.isNull = this.toUvaursi().every(function (byte) {
+        this.isNull = this.uu.u.every(function (byte) {
             return byte === 0;
         });
         return this.isNull;
     };
     Address.genNull = function () {
-        var uvaursi = new pollenium_uvaursi_1.Uvaursi(new Uint8Array(20).fill(0));
-        return new Address(uvaursi);
+        return new Address(pollenium_uvaursi_1.Uu.genZeros(20));
     };
     return Address;
 }(fixButtercups_1.FixButtercup));

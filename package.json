@@ -21,7 +21,7 @@
   "dependencies": {
     "@types/node": "^12.12.7",
     "bn.js": "^5.0.0",
-    "pollenium-uvaursi": "^5.0.0"
+    "pollenium-uvaursi": "^8.1.0"
   },
   "devDependencies": {
     "@types/jest": "^24.0.23",

@@ -1,5 +1,5 @@
 import { Uint8, Uint16, Bytes } from '../'
-import { Uvaursi } from 'pollenium-uvaursi'
+import { Uu } from 'pollenium-uvaursi'
 
 test('add', () => {
   const a = Uint8.fromNumber(4)
@@ -56,7 +56,7 @@ test('cast', () => {
   const b = a.genCasted(Bytes)
 
   expect(b).toBeInstanceOf(Bytes)
-  expect(b.uint8Array).toStrictEqual([4])
+  expect(b.uu.toArray()).toStrictEqual([4])
 })
 
 test('comparison', () => {

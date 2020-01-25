@@ -1,7 +1,8 @@
 import { UintX } from '../internals/UintX';
+import { Uish } from 'pollenium-uvaursi';
 export declare class Uint8 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint8): Uint8;
     opSub(value: Uint8): Uint8;
     opMul(value: Uint8): Uint8;
@@ -11,7 +12,7 @@ export declare class Uint8 extends UintX {
 }
 export declare class Uint16 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint16): Uint16;
     opSub(value: Uint16): Uint16;
     opMul(value: Uint16): Uint16;
@@ -21,7 +22,7 @@ export declare class Uint16 extends UintX {
 }
 export declare class Uint24 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint24): Uint24;
     opSub(value: Uint24): Uint24;
     opMul(value: Uint24): Uint24;
@@ -31,7 +32,7 @@ export declare class Uint24 extends UintX {
 }
 export declare class Uint32 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint32): Uint32;
     opSub(value: Uint32): Uint32;
     opMul(value: Uint32): Uint32;
@@ -41,7 +42,7 @@ export declare class Uint32 extends UintX {
 }
 export declare class Uint40 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint40): Uint40;
     opSub(value: Uint40): Uint40;
     opMul(value: Uint40): Uint40;
@@ -51,7 +52,7 @@ export declare class Uint40 extends UintX {
 }
 export declare class Uint48 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint48): Uint48;
     opSub(value: Uint48): Uint48;
     opMul(value: Uint48): Uint48;
@@ -61,7 +62,7 @@ export declare class Uint48 extends UintX {
 }
 export declare class Uint56 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint56): Uint56;
     opSub(value: Uint56): Uint56;
     opMul(value: Uint56): Uint56;
@@ -71,7 +72,7 @@ export declare class Uint56 extends UintX {
 }
 export declare class Uint64 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint64): Uint64;
     opSub(value: Uint64): Uint64;
     opMul(value: Uint64): Uint64;
@@ -81,7 +82,7 @@ export declare class Uint64 extends UintX {
 }
 export declare class Uint72 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint72): Uint72;
     opSub(value: Uint72): Uint72;
     opMul(value: Uint72): Uint72;
@@ -91,7 +92,7 @@ export declare class Uint72 extends UintX {
 }
 export declare class Uint80 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint80): Uint80;
     opSub(value: Uint80): Uint80;
     opMul(value: Uint80): Uint80;
@@ -101,7 +102,7 @@ export declare class Uint80 extends UintX {
 }
 export declare class Uint88 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint88): Uint88;
     opSub(value: Uint88): Uint88;
     opMul(value: Uint88): Uint88;
@@ -111,7 +112,7 @@ export declare class Uint88 extends UintX {
 }
 export declare class Uint96 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint96): Uint96;
     opSub(value: Uint96): Uint96;
     opMul(value: Uint96): Uint96;
@@ -121,7 +122,7 @@ export declare class Uint96 extends UintX {
 }
 export declare class Uint104 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint104): Uint104;
     opSub(value: Uint104): Uint104;
     opMul(value: Uint104): Uint104;
@@ -131,7 +132,7 @@ export declare class Uint104 extends UintX {
 }
 export declare class Uint112 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint112): Uint112;
     opSub(value: Uint112): Uint112;
     opMul(value: Uint112): Uint112;
@@ -141,7 +142,7 @@ export declare class Uint112 extends UintX {
 }
 export declare class Uint120 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint120): Uint120;
     opSub(value: Uint120): Uint120;
     opMul(value: Uint120): Uint120;
@@ -151,7 +152,7 @@ export declare class Uint120 extends UintX {
 }
 export declare class Uint128 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint128): Uint128;
     opSub(value: Uint128): Uint128;
     opMul(value: Uint128): Uint128;
@@ -161,7 +162,7 @@ export declare class Uint128 extends UintX {
 }
 export declare class Uint136 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint136): Uint136;
     opSub(value: Uint136): Uint136;
     opMul(value: Uint136): Uint136;
@@ -171,7 +172,7 @@ export declare class Uint136 extends UintX {
 }
 export declare class Uint144 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint144): Uint144;
     opSub(value: Uint144): Uint144;
     opMul(value: Uint144): Uint144;
@@ -181,7 +182,7 @@ export declare class Uint144 extends UintX {
 }
 export declare class Uint152 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint152): Uint152;
     opSub(value: Uint152): Uint152;
     opMul(value: Uint152): Uint152;
@@ -191,7 +192,7 @@ export declare class Uint152 extends UintX {
 }
 export declare class Uint160 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint160): Uint160;
     opSub(value: Uint160): Uint160;
     opMul(value: Uint160): Uint160;
@@ -201,7 +202,7 @@ export declare class Uint160 extends UintX {
 }
 export declare class Uint168 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint168): Uint168;
     opSub(value: Uint168): Uint168;
     opMul(value: Uint168): Uint168;
@@ -211,7 +212,7 @@ export declare class Uint168 extends UintX {
 }
 export declare class Uint176 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint176): Uint176;
     opSub(value: Uint176): Uint176;
     opMul(value: Uint176): Uint176;
@@ -221,7 +222,7 @@ export declare class Uint176 extends UintX {
 }
 export declare class Uint184 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint184): Uint184;
     opSub(value: Uint184): Uint184;
     opMul(value: Uint184): Uint184;
@@ -231,7 +232,7 @@ export declare class Uint184 extends UintX {
 }
 export declare class Uint192 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint192): Uint192;
     opSub(value: Uint192): Uint192;
     opMul(value: Uint192): Uint192;
@@ -241,7 +242,7 @@ export declare class Uint192 extends UintX {
 }
 export declare class Uint200 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint200): Uint200;
     opSub(value: Uint200): Uint200;
     opMul(value: Uint200): Uint200;
@@ -251,7 +252,7 @@ export declare class Uint200 extends UintX {
 }
 export declare class Uint208 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint208): Uint208;
     opSub(value: Uint208): Uint208;
     opMul(value: Uint208): Uint208;
@@ -261,7 +262,7 @@ export declare class Uint208 extends UintX {
 }
 export declare class Uint216 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint216): Uint216;
     opSub(value: Uint216): Uint216;
     opMul(value: Uint216): Uint216;
@@ -271,7 +272,7 @@ export declare class Uint216 extends UintX {
 }
 export declare class Uint224 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint224): Uint224;
     opSub(value: Uint224): Uint224;
     opMul(value: Uint224): Uint224;
@@ -281,7 +282,7 @@ export declare class Uint224 extends UintX {
 }
 export declare class Uint232 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint232): Uint232;
     opSub(value: Uint232): Uint232;
     opMul(value: Uint232): Uint232;
@@ -291,7 +292,7 @@ export declare class Uint232 extends UintX {
 }
 export declare class Uint240 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint240): Uint240;
     opSub(value: Uint240): Uint240;
     opMul(value: Uint240): Uint240;
@@ -301,7 +302,7 @@ export declare class Uint240 extends UintX {
 }
 export declare class Uint248 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint248): Uint248;
     opSub(value: Uint248): Uint248;
     opMul(value: Uint248): Uint248;
@@ -311,7 +312,7 @@ export declare class Uint248 extends UintX {
 }
 export declare class Uint256 extends UintX {
     static LENGTH: number;
-    constructor(uint8Array: Uint8Array);
+    constructor(uish: Uish);
     opAdd(value: Uint256): Uint256;
     opSub(value: Uint256): Uint256;
     opMul(value: Uint256): Uint256;

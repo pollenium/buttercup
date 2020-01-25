@@ -16,8 +16,8 @@ exports.__esModule = true;
 var fixButtercups_1 = require("../buttercups/fixButtercups");
 var BytesX = /** @class */ (function (_super) {
     __extends(BytesX, _super);
-    function BytesX(length, uint8Array) {
-        return _super.call(this, length, uint8Array) || this;
+    function BytesX(length, uish) {
+        return _super.call(this, length, uish) || this;
     }
     return BytesX;
 }(fixButtercups_1.FixRightButtercup));

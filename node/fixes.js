@@ -32,12 +32,12 @@ var Fix = /** @class */ (function (_super) {
         return _this;
     }
     return Fix;
-}(pollenium_uvaursi_1.Uvaursi));
+}(pollenium_uvaursi_1.Uu));
 exports.Fix = Fix;
 var FixLeft = /** @class */ (function (_super) {
     __extends(FixLeft, _super);
     function FixLeft(length, uint8Array) {
-        return _super.call(this, length, new pollenium_uvaursi_1.Uvaursi(uint8Array).uuGenPaddedLeft(length)) || this;
+        return _super.call(this, length, new pollenium_uvaursi_1.Uu(uint8Array).uuGenPaddedLeft(length)) || this;
     }
     return FixLeft;
 }(Fix));
@@ -45,7 +45,7 @@ exports.FixLeft = FixLeft;
 var FixRight = /** @class */ (function (_super) {
     __extends(FixRight, _super);
     function FixRight(length, uint8Array) {
-        return _super.call(this, length, new pollenium_uvaursi_1.Uvaursi(uint8Array).uuGenPaddedRight(length)) || this;
+        return _super.call(this, length, new pollenium_uvaursi_1.Uu(uint8Array).uuGenPaddedRight(length)) || this;
     }
     return FixRight;
 }(Fix));

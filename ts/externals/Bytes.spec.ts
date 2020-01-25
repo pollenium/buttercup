@@ -1,6 +1,6 @@
 import { Bytes } from '../'
-import { Uvaursi } from 'pollenium-uvaursi'
+import { Uu } from 'pollenium-uvaursi'
 
 test('from hexish', () => {
-  expect(new Bytes(Uvaursi.uuFromHexish('ffff')).uint8Array).toStrictEqual([255, 255])
+  expect(new Bytes(Uu.fromHexish('ffff')).uu.toArray()).toStrictEqual([255, 255])
 })

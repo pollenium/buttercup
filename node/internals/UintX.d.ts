@@ -1,9 +1,10 @@
 import { FixLeftButtercup } from '../buttercups/fixButtercups';
 import { Uintish } from '../interfaces';
+import { Uish } from 'pollenium-uvaursi';
 export declare class UintX extends FixLeftButtercup implements Uintish {
     private bn?;
     private number?;
-    constructor(length: number, uint8Array: Uint8Array);
+    constructor(length: number, uish: Uish);
     toNumber(): number;
     getIsZero(): boolean;
     compEq(value: UintX): boolean;

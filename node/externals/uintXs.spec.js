@@ -45,7 +45,7 @@ test('cast', function () {
     var a = __1.Uint8.fromNumber(4);
     var b = a.genCasted(__1.Bytes);
     expect(b).toBeInstanceOf(__1.Bytes);
-    expect(b.uint8Array).toStrictEqual([4]);
+    expect(b.uu.toArray()).toStrictEqual([4]);
 });
 test('comparison', function () {
     var a = __1.Uint8.fromNumber(4);
