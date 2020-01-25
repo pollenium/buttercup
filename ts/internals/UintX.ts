@@ -1,9 +1,10 @@
 import { FixLeftButtercup } from '../buttercups/fixButtercups'
 import Bn from 'bn.js'
-import { Uintish } from '../interfaces'
 import { Uish } from 'pollenium-uvaursi'
+import { Uintable } from '../types'
+import { genBnFromUintable } from '../utils'
 
-export class UintX extends FixLeftButtercup implements Uintish {
+export class UintX extends FixLeftButtercup {
 
   private bn?: Bn;
   private number?: number;
@@ -23,33 +24,33 @@ export class UintX extends FixLeftButtercup implements Uintish {
     })
   }
 
-  compEq(value: UintX): boolean {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  compEq(value: Uintable): boolean {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(value)
     return thisBn.eq(valueBn)
   }
 
-  compGt(value: UintX): boolean {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  compGt(value: Uintable): boolean {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(value)
     return thisBn.gt(valueBn)
   }
 
-  compGte(value: UintX): boolean {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  compGte(value: Uintable): boolean {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(value)
     return thisBn.gte(valueBn)
   }
 
-  compLt(value: UintX): boolean {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  compLt(value: Uintable): boolean {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(value)
     return thisBn.lt(valueBn)
   }
 
-  compLte(value: UintX): boolean {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  compLte(value: Uintable): boolean {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(value)
     return thisBn.lte(valueBn)
   }
 

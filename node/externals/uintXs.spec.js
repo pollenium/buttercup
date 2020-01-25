@@ -11,6 +11,11 @@ test('add', function () {
     var b = __1.Uint16.fromNumber(20);
     expect(a.opAdd(b).toNumber()).toBe(35);
 });
+test('add', function () {
+    var a = __1.Uint8.fromNumber(100);
+    var b = 27;
+    expect(a.opAdd(b).toNumber()).toBe(127);
+});
 test('sub', function () {
     var a = __1.Uint16.fromNumber(100);
     var b = __1.Uint16.fromNumber(1);
@@ -57,11 +62,23 @@ test('cast', function () {
     expect(b).toBeInstanceOf(__1.Bytes);
     expect(b.uu.toArray()).toStrictEqual([4]);
 });
+test('fromUintable', function () {
+    expect(__1.Uint8.fromUintable(4).toNumber()).toBe(4);
+    expect(__1.Uint16.fromUintable(__1.Uint8.fromNumber(5)).toNumber()).toBe(5);
+});
 test('comparison', function () {
     var a = __1.Uint8.fromNumber(4);
     var b = __1.Uint16.fromNumber(4);
     expect(a.compLt(b)).toBe(false);
     expect(a.compLte(b)).toBe(true);
     expect(a.compGt(b)).toBe(false);
+    expect(a.compGte(b)).toBe(true);
+});
+test('comparison', function () {
+    var a = __1.Uint8.fromNumber(7);
+    var b = 6;
+    expect(a.compLt(b)).toBe(false);
+    expect(a.compLte(b)).toBe(false);
+    expect(a.compGt(b)).toBe(true);
     expect(a.compGte(b)).toBe(true);
 });

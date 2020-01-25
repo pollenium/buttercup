@@ -2,6 +2,7 @@ import { UintX } from '../internals/UintX'
 import Bn from 'bn.js'
 import { Uish } from 'pollenium-uvaursi'
 import { Uintable } from '../types'
+import { genBnFromUintable } from '../utils'
 
 const zeroBn = new Bn(0)
 const oneBn = new Bn(1)
@@ -15,44 +16,44 @@ export class Uint{{bits}} extends UintX {
     super(Uint{{bits}}.LENGTH, uish)
   }
 
-  opAdd(value: {{className}}): {{className}} {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): {{className}} {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new {{className}}(uint8Array)
   }
 
-  opSub(value: {{className}}): {{className}} {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): {{className}} {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new {{className}}(uint8Array)
   }
 
-  opMul(value: {{className}}): {{className}} {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): {{className}} {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new {{className}}(uint8Array)
   }
 
-  opDiv(value: {{className}}): {{className}} {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): {{className}} {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new {{className}}(uint8Array)
   }
 
-  opMod(value: {{className}}): {{className}} {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): {{className}} {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new {{className}}(uint8Array)
   }
 
-  opPow(value: {{className}}): {{className}} {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): {{className}} {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new {{className}}(uint8Array)
   }

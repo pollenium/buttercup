@@ -13,6 +13,13 @@ test('add', () => {
   expect(a.opAdd(b).toNumber()).toBe(35)
 })
 
+test('add', () => {
+  const a = Uint8.fromNumber(100)
+  const b = 27
+  expect(a.opAdd(b).toNumber()).toBe(127)
+})
+
+
 test('sub', () => {
   const a = Uint16.fromNumber(100)
   const b = Uint16.fromNumber(1)
@@ -85,5 +92,15 @@ test('comparison', () => {
   expect(a.compLt(b)).toBe(false)
   expect(a.compLte(b)).toBe(true)
   expect(a.compGt(b)).toBe(false)
+  expect(a.compGte(b)).toBe(true)
+})
+
+test('comparison', () => {
+  const a = Uint8.fromNumber(7)
+  const b = 6
+
+  expect(a.compLt(b)).toBe(false)
+  expect(a.compLte(b)).toBe(false)
+  expect(a.compGt(b)).toBe(true)
   expect(a.compGte(b)).toBe(true)
 })

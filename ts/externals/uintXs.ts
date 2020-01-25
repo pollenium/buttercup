@@ -2,6 +2,7 @@ import { UintX } from '../internals/UintX'
 import Bn from 'bn.js'
 import { Uish } from 'pollenium-uvaursi'
 import { Uintable } from '../types'
+import { genBnFromUintable } from '../utils'
 
 const zeroBn = new Bn(0)
 const oneBn = new Bn(1)
@@ -14,44 +15,44 @@ export class Uint8 extends UintX {
     super(Uint8.LENGTH, uish)
   }
 
-  opAdd(value: Uint8): Uint8 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint8 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint8(uint8Array)
   }
 
-  opSub(value: Uint8): Uint8 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint8 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint8(uint8Array)
   }
 
-  opMul(value: Uint8): Uint8 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint8 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint8(uint8Array)
   }
 
-  opDiv(value: Uint8): Uint8 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint8 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint8(uint8Array)
   }
 
-  opMod(value: Uint8): Uint8 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint8 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint8(uint8Array)
   }
 
-  opPow(value: Uint8): Uint8 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint8 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint8(uint8Array)
   }
@@ -80,44 +81,44 @@ export class Uint16 extends UintX {
     super(Uint16.LENGTH, uish)
   }
 
-  opAdd(value: Uint16): Uint16 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint16 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint16(uint8Array)
   }
 
-  opSub(value: Uint16): Uint16 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint16 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint16(uint8Array)
   }
 
-  opMul(value: Uint16): Uint16 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint16 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint16(uint8Array)
   }
 
-  opDiv(value: Uint16): Uint16 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint16 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint16(uint8Array)
   }
 
-  opMod(value: Uint16): Uint16 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint16 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint16(uint8Array)
   }
 
-  opPow(value: Uint16): Uint16 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint16 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint16(uint8Array)
   }
@@ -146,44 +147,44 @@ export class Uint24 extends UintX {
     super(Uint24.LENGTH, uish)
   }
 
-  opAdd(value: Uint24): Uint24 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint24 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint24(uint8Array)
   }
 
-  opSub(value: Uint24): Uint24 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint24 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint24(uint8Array)
   }
 
-  opMul(value: Uint24): Uint24 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint24 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint24(uint8Array)
   }
 
-  opDiv(value: Uint24): Uint24 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint24 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint24(uint8Array)
   }
 
-  opMod(value: Uint24): Uint24 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint24 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint24(uint8Array)
   }
 
-  opPow(value: Uint24): Uint24 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint24 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint24(uint8Array)
   }
@@ -212,44 +213,44 @@ export class Uint32 extends UintX {
     super(Uint32.LENGTH, uish)
   }
 
-  opAdd(value: Uint32): Uint32 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint32 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint32(uint8Array)
   }
 
-  opSub(value: Uint32): Uint32 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint32 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint32(uint8Array)
   }
 
-  opMul(value: Uint32): Uint32 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint32 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint32(uint8Array)
   }
 
-  opDiv(value: Uint32): Uint32 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint32 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint32(uint8Array)
   }
 
-  opMod(value: Uint32): Uint32 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint32 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint32(uint8Array)
   }
 
-  opPow(value: Uint32): Uint32 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint32 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint32(uint8Array)
   }
@@ -278,44 +279,44 @@ export class Uint40 extends UintX {
     super(Uint40.LENGTH, uish)
   }
 
-  opAdd(value: Uint40): Uint40 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint40 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint40(uint8Array)
   }
 
-  opSub(value: Uint40): Uint40 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint40 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint40(uint8Array)
   }
 
-  opMul(value: Uint40): Uint40 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint40 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint40(uint8Array)
   }
 
-  opDiv(value: Uint40): Uint40 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint40 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint40(uint8Array)
   }
 
-  opMod(value: Uint40): Uint40 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint40 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint40(uint8Array)
   }
 
-  opPow(value: Uint40): Uint40 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint40 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint40(uint8Array)
   }
@@ -344,44 +345,44 @@ export class Uint48 extends UintX {
     super(Uint48.LENGTH, uish)
   }
 
-  opAdd(value: Uint48): Uint48 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint48 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint48(uint8Array)
   }
 
-  opSub(value: Uint48): Uint48 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint48 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint48(uint8Array)
   }
 
-  opMul(value: Uint48): Uint48 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint48 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint48(uint8Array)
   }
 
-  opDiv(value: Uint48): Uint48 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint48 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint48(uint8Array)
   }
 
-  opMod(value: Uint48): Uint48 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint48 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint48(uint8Array)
   }
 
-  opPow(value: Uint48): Uint48 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint48 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint48(uint8Array)
   }
@@ -410,44 +411,44 @@ export class Uint56 extends UintX {
     super(Uint56.LENGTH, uish)
   }
 
-  opAdd(value: Uint56): Uint56 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint56 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint56(uint8Array)
   }
 
-  opSub(value: Uint56): Uint56 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint56 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint56(uint8Array)
   }
 
-  opMul(value: Uint56): Uint56 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint56 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint56(uint8Array)
   }
 
-  opDiv(value: Uint56): Uint56 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint56 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint56(uint8Array)
   }
 
-  opMod(value: Uint56): Uint56 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint56 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint56(uint8Array)
   }
 
-  opPow(value: Uint56): Uint56 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint56 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint56(uint8Array)
   }
@@ -476,44 +477,44 @@ export class Uint64 extends UintX {
     super(Uint64.LENGTH, uish)
   }
 
-  opAdd(value: Uint64): Uint64 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint64 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint64(uint8Array)
   }
 
-  opSub(value: Uint64): Uint64 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint64 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint64(uint8Array)
   }
 
-  opMul(value: Uint64): Uint64 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint64 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint64(uint8Array)
   }
 
-  opDiv(value: Uint64): Uint64 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint64 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint64(uint8Array)
   }
 
-  opMod(value: Uint64): Uint64 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint64 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint64(uint8Array)
   }
 
-  opPow(value: Uint64): Uint64 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint64 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint64(uint8Array)
   }
@@ -542,44 +543,44 @@ export class Uint72 extends UintX {
     super(Uint72.LENGTH, uish)
   }
 
-  opAdd(value: Uint72): Uint72 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint72 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint72(uint8Array)
   }
 
-  opSub(value: Uint72): Uint72 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint72 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint72(uint8Array)
   }
 
-  opMul(value: Uint72): Uint72 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint72 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint72(uint8Array)
   }
 
-  opDiv(value: Uint72): Uint72 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint72 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint72(uint8Array)
   }
 
-  opMod(value: Uint72): Uint72 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint72 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint72(uint8Array)
   }
 
-  opPow(value: Uint72): Uint72 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint72 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint72(uint8Array)
   }
@@ -608,44 +609,44 @@ export class Uint80 extends UintX {
     super(Uint80.LENGTH, uish)
   }
 
-  opAdd(value: Uint80): Uint80 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint80 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint80(uint8Array)
   }
 
-  opSub(value: Uint80): Uint80 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint80 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint80(uint8Array)
   }
 
-  opMul(value: Uint80): Uint80 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint80 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint80(uint8Array)
   }
 
-  opDiv(value: Uint80): Uint80 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint80 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint80(uint8Array)
   }
 
-  opMod(value: Uint80): Uint80 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint80 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint80(uint8Array)
   }
 
-  opPow(value: Uint80): Uint80 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint80 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint80(uint8Array)
   }
@@ -674,44 +675,44 @@ export class Uint88 extends UintX {
     super(Uint88.LENGTH, uish)
   }
 
-  opAdd(value: Uint88): Uint88 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint88 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint88(uint8Array)
   }
 
-  opSub(value: Uint88): Uint88 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint88 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint88(uint8Array)
   }
 
-  opMul(value: Uint88): Uint88 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint88 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint88(uint8Array)
   }
 
-  opDiv(value: Uint88): Uint88 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint88 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint88(uint8Array)
   }
 
-  opMod(value: Uint88): Uint88 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint88 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint88(uint8Array)
   }
 
-  opPow(value: Uint88): Uint88 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint88 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint88(uint8Array)
   }
@@ -740,44 +741,44 @@ export class Uint96 extends UintX {
     super(Uint96.LENGTH, uish)
   }
 
-  opAdd(value: Uint96): Uint96 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint96 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint96(uint8Array)
   }
 
-  opSub(value: Uint96): Uint96 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint96 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint96(uint8Array)
   }
 
-  opMul(value: Uint96): Uint96 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint96 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint96(uint8Array)
   }
 
-  opDiv(value: Uint96): Uint96 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint96 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint96(uint8Array)
   }
 
-  opMod(value: Uint96): Uint96 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint96 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint96(uint8Array)
   }
 
-  opPow(value: Uint96): Uint96 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint96 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint96(uint8Array)
   }
@@ -806,44 +807,44 @@ export class Uint104 extends UintX {
     super(Uint104.LENGTH, uish)
   }
 
-  opAdd(value: Uint104): Uint104 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint104 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint104(uint8Array)
   }
 
-  opSub(value: Uint104): Uint104 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint104 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint104(uint8Array)
   }
 
-  opMul(value: Uint104): Uint104 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint104 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint104(uint8Array)
   }
 
-  opDiv(value: Uint104): Uint104 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint104 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint104(uint8Array)
   }
 
-  opMod(value: Uint104): Uint104 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint104 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint104(uint8Array)
   }
 
-  opPow(value: Uint104): Uint104 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint104 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint104(uint8Array)
   }
@@ -872,44 +873,44 @@ export class Uint112 extends UintX {
     super(Uint112.LENGTH, uish)
   }
 
-  opAdd(value: Uint112): Uint112 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint112 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint112(uint8Array)
   }
 
-  opSub(value: Uint112): Uint112 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint112 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint112(uint8Array)
   }
 
-  opMul(value: Uint112): Uint112 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint112 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint112(uint8Array)
   }
 
-  opDiv(value: Uint112): Uint112 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint112 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint112(uint8Array)
   }
 
-  opMod(value: Uint112): Uint112 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint112 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint112(uint8Array)
   }
 
-  opPow(value: Uint112): Uint112 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint112 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint112(uint8Array)
   }
@@ -938,44 +939,44 @@ export class Uint120 extends UintX {
     super(Uint120.LENGTH, uish)
   }
 
-  opAdd(value: Uint120): Uint120 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint120 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint120(uint8Array)
   }
 
-  opSub(value: Uint120): Uint120 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint120 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint120(uint8Array)
   }
 
-  opMul(value: Uint120): Uint120 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint120 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint120(uint8Array)
   }
 
-  opDiv(value: Uint120): Uint120 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint120 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint120(uint8Array)
   }
 
-  opMod(value: Uint120): Uint120 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint120 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint120(uint8Array)
   }
 
-  opPow(value: Uint120): Uint120 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint120 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint120(uint8Array)
   }
@@ -1004,44 +1005,44 @@ export class Uint128 extends UintX {
     super(Uint128.LENGTH, uish)
   }
 
-  opAdd(value: Uint128): Uint128 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint128 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint128(uint8Array)
   }
 
-  opSub(value: Uint128): Uint128 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint128 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint128(uint8Array)
   }
 
-  opMul(value: Uint128): Uint128 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint128 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint128(uint8Array)
   }
 
-  opDiv(value: Uint128): Uint128 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint128 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint128(uint8Array)
   }
 
-  opMod(value: Uint128): Uint128 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint128 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint128(uint8Array)
   }
 
-  opPow(value: Uint128): Uint128 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint128 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint128(uint8Array)
   }
@@ -1070,44 +1071,44 @@ export class Uint136 extends UintX {
     super(Uint136.LENGTH, uish)
   }
 
-  opAdd(value: Uint136): Uint136 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint136 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint136(uint8Array)
   }
 
-  opSub(value: Uint136): Uint136 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint136 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint136(uint8Array)
   }
 
-  opMul(value: Uint136): Uint136 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint136 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint136(uint8Array)
   }
 
-  opDiv(value: Uint136): Uint136 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint136 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint136(uint8Array)
   }
 
-  opMod(value: Uint136): Uint136 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint136 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint136(uint8Array)
   }
 
-  opPow(value: Uint136): Uint136 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint136 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint136(uint8Array)
   }
@@ -1136,44 +1137,44 @@ export class Uint144 extends UintX {
     super(Uint144.LENGTH, uish)
   }
 
-  opAdd(value: Uint144): Uint144 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint144 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint144(uint8Array)
   }
 
-  opSub(value: Uint144): Uint144 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint144 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint144(uint8Array)
   }
 
-  opMul(value: Uint144): Uint144 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint144 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint144(uint8Array)
   }
 
-  opDiv(value: Uint144): Uint144 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint144 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint144(uint8Array)
   }
 
-  opMod(value: Uint144): Uint144 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint144 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint144(uint8Array)
   }
 
-  opPow(value: Uint144): Uint144 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint144 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint144(uint8Array)
   }
@@ -1202,44 +1203,44 @@ export class Uint152 extends UintX {
     super(Uint152.LENGTH, uish)
   }
 
-  opAdd(value: Uint152): Uint152 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint152 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint152(uint8Array)
   }
 
-  opSub(value: Uint152): Uint152 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint152 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint152(uint8Array)
   }
 
-  opMul(value: Uint152): Uint152 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint152 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint152(uint8Array)
   }
 
-  opDiv(value: Uint152): Uint152 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint152 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint152(uint8Array)
   }
 
-  opMod(value: Uint152): Uint152 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint152 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint152(uint8Array)
   }
 
-  opPow(value: Uint152): Uint152 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint152 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint152(uint8Array)
   }
@@ -1268,44 +1269,44 @@ export class Uint160 extends UintX {
     super(Uint160.LENGTH, uish)
   }
 
-  opAdd(value: Uint160): Uint160 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint160 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint160(uint8Array)
   }
 
-  opSub(value: Uint160): Uint160 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint160 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint160(uint8Array)
   }
 
-  opMul(value: Uint160): Uint160 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint160 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint160(uint8Array)
   }
 
-  opDiv(value: Uint160): Uint160 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint160 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint160(uint8Array)
   }
 
-  opMod(value: Uint160): Uint160 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint160 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint160(uint8Array)
   }
 
-  opPow(value: Uint160): Uint160 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint160 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint160(uint8Array)
   }
@@ -1334,44 +1335,44 @@ export class Uint168 extends UintX {
     super(Uint168.LENGTH, uish)
   }
 
-  opAdd(value: Uint168): Uint168 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint168 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint168(uint8Array)
   }
 
-  opSub(value: Uint168): Uint168 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint168 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint168(uint8Array)
   }
 
-  opMul(value: Uint168): Uint168 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint168 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint168(uint8Array)
   }
 
-  opDiv(value: Uint168): Uint168 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint168 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint168(uint8Array)
   }
 
-  opMod(value: Uint168): Uint168 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint168 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint168(uint8Array)
   }
 
-  opPow(value: Uint168): Uint168 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint168 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint168(uint8Array)
   }
@@ -1400,44 +1401,44 @@ export class Uint176 extends UintX {
     super(Uint176.LENGTH, uish)
   }
 
-  opAdd(value: Uint176): Uint176 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint176 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint176(uint8Array)
   }
 
-  opSub(value: Uint176): Uint176 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint176 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint176(uint8Array)
   }
 
-  opMul(value: Uint176): Uint176 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint176 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint176(uint8Array)
   }
 
-  opDiv(value: Uint176): Uint176 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint176 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint176(uint8Array)
   }
 
-  opMod(value: Uint176): Uint176 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint176 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint176(uint8Array)
   }
 
-  opPow(value: Uint176): Uint176 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint176 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint176(uint8Array)
   }
@@ -1466,44 +1467,44 @@ export class Uint184 extends UintX {
     super(Uint184.LENGTH, uish)
   }
 
-  opAdd(value: Uint184): Uint184 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint184 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint184(uint8Array)
   }
 
-  opSub(value: Uint184): Uint184 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint184 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint184(uint8Array)
   }
 
-  opMul(value: Uint184): Uint184 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint184 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint184(uint8Array)
   }
 
-  opDiv(value: Uint184): Uint184 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint184 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint184(uint8Array)
   }
 
-  opMod(value: Uint184): Uint184 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint184 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint184(uint8Array)
   }
 
-  opPow(value: Uint184): Uint184 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint184 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint184(uint8Array)
   }
@@ -1532,44 +1533,44 @@ export class Uint192 extends UintX {
     super(Uint192.LENGTH, uish)
   }
 
-  opAdd(value: Uint192): Uint192 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint192 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint192(uint8Array)
   }
 
-  opSub(value: Uint192): Uint192 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint192 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint192(uint8Array)
   }
 
-  opMul(value: Uint192): Uint192 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint192 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint192(uint8Array)
   }
 
-  opDiv(value: Uint192): Uint192 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint192 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint192(uint8Array)
   }
 
-  opMod(value: Uint192): Uint192 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint192 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint192(uint8Array)
   }
 
-  opPow(value: Uint192): Uint192 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint192 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint192(uint8Array)
   }
@@ -1598,44 +1599,44 @@ export class Uint200 extends UintX {
     super(Uint200.LENGTH, uish)
   }
 
-  opAdd(value: Uint200): Uint200 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint200 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint200(uint8Array)
   }
 
-  opSub(value: Uint200): Uint200 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint200 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint200(uint8Array)
   }
 
-  opMul(value: Uint200): Uint200 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint200 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint200(uint8Array)
   }
 
-  opDiv(value: Uint200): Uint200 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint200 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint200(uint8Array)
   }
 
-  opMod(value: Uint200): Uint200 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint200 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint200(uint8Array)
   }
 
-  opPow(value: Uint200): Uint200 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint200 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint200(uint8Array)
   }
@@ -1664,44 +1665,44 @@ export class Uint208 extends UintX {
     super(Uint208.LENGTH, uish)
   }
 
-  opAdd(value: Uint208): Uint208 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint208 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint208(uint8Array)
   }
 
-  opSub(value: Uint208): Uint208 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint208 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint208(uint8Array)
   }
 
-  opMul(value: Uint208): Uint208 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint208 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint208(uint8Array)
   }
 
-  opDiv(value: Uint208): Uint208 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint208 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint208(uint8Array)
   }
 
-  opMod(value: Uint208): Uint208 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint208 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint208(uint8Array)
   }
 
-  opPow(value: Uint208): Uint208 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint208 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint208(uint8Array)
   }
@@ -1730,44 +1731,44 @@ export class Uint216 extends UintX {
     super(Uint216.LENGTH, uish)
   }
 
-  opAdd(value: Uint216): Uint216 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint216 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint216(uint8Array)
   }
 
-  opSub(value: Uint216): Uint216 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint216 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint216(uint8Array)
   }
 
-  opMul(value: Uint216): Uint216 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint216 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint216(uint8Array)
   }
 
-  opDiv(value: Uint216): Uint216 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint216 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint216(uint8Array)
   }
 
-  opMod(value: Uint216): Uint216 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint216 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint216(uint8Array)
   }
 
-  opPow(value: Uint216): Uint216 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint216 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint216(uint8Array)
   }
@@ -1796,44 +1797,44 @@ export class Uint224 extends UintX {
     super(Uint224.LENGTH, uish)
   }
 
-  opAdd(value: Uint224): Uint224 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint224 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint224(uint8Array)
   }
 
-  opSub(value: Uint224): Uint224 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint224 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint224(uint8Array)
   }
 
-  opMul(value: Uint224): Uint224 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint224 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint224(uint8Array)
   }
 
-  opDiv(value: Uint224): Uint224 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint224 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint224(uint8Array)
   }
 
-  opMod(value: Uint224): Uint224 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint224 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint224(uint8Array)
   }
 
-  opPow(value: Uint224): Uint224 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint224 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint224(uint8Array)
   }
@@ -1862,44 +1863,44 @@ export class Uint232 extends UintX {
     super(Uint232.LENGTH, uish)
   }
 
-  opAdd(value: Uint232): Uint232 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint232 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint232(uint8Array)
   }
 
-  opSub(value: Uint232): Uint232 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint232 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint232(uint8Array)
   }
 
-  opMul(value: Uint232): Uint232 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint232 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint232(uint8Array)
   }
 
-  opDiv(value: Uint232): Uint232 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint232 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint232(uint8Array)
   }
 
-  opMod(value: Uint232): Uint232 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint232 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint232(uint8Array)
   }
 
-  opPow(value: Uint232): Uint232 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint232 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint232(uint8Array)
   }
@@ -1928,44 +1929,44 @@ export class Uint240 extends UintX {
     super(Uint240.LENGTH, uish)
   }
 
-  opAdd(value: Uint240): Uint240 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint240 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint240(uint8Array)
   }
 
-  opSub(value: Uint240): Uint240 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint240 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint240(uint8Array)
   }
 
-  opMul(value: Uint240): Uint240 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint240 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint240(uint8Array)
   }
 
-  opDiv(value: Uint240): Uint240 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint240 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint240(uint8Array)
   }
 
-  opMod(value: Uint240): Uint240 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint240 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint240(uint8Array)
   }
 
-  opPow(value: Uint240): Uint240 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint240 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint240(uint8Array)
   }
@@ -1994,44 +1995,44 @@ export class Uint248 extends UintX {
     super(Uint248.LENGTH, uish)
   }
 
-  opAdd(value: Uint248): Uint248 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint248 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint248(uint8Array)
   }
 
-  opSub(value: Uint248): Uint248 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint248 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint248(uint8Array)
   }
 
-  opMul(value: Uint248): Uint248 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint248 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint248(uint8Array)
   }
 
-  opDiv(value: Uint248): Uint248 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint248 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint248(uint8Array)
   }
 
-  opMod(value: Uint248): Uint248 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint248 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint248(uint8Array)
   }
 
-  opPow(value: Uint248): Uint248 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint248 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint248(uint8Array)
   }
@@ -2060,44 +2061,44 @@ export class Uint256 extends UintX {
     super(Uint256.LENGTH, uish)
   }
 
-  opAdd(value: Uint256): Uint256 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opAdd(uintable: Uintable): Uint256 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint256(uint8Array)
   }
 
-  opSub(value: Uint256): Uint256 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opSub(uintable: Uintable): Uint256 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint256(uint8Array)
   }
 
-  opMul(value: Uint256): Uint256 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMul(uintable: Uintable): Uint256 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint256(uint8Array)
   }
 
-  opDiv(value: Uint256): Uint256 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opDiv(uintable: Uintable): Uint256 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint256(uint8Array)
   }
 
-  opMod(value: Uint256): Uint256 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opMod(uintable: Uintable): Uint256 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint256(uint8Array)
   }
 
-  opPow(value: Uint256): Uint256 {
-    const thisBn = new Bn(this.uu.u)
-    const valueBn = new Bn(value.uu.u)
+  opPow(uintable: Uintable): Uint256 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
     const uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be')
     return new Uint256(uint8Array)
   }

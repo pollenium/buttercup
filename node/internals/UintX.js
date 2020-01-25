@@ -18,6 +18,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 exports.__esModule = true;
 var fixButtercups_1 = require("../buttercups/fixButtercups");
 var bn_js_1 = __importDefault(require("bn.js"));
+var utils_1 = require("../utils");
 var UintX = /** @class */ (function (_super) {
     __extends(UintX, _super);
     function UintX(length, uish) {
@@ -33,28 +34,28 @@ var UintX = /** @class */ (function (_super) {
         });
     };
     UintX.prototype.compEq = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(value);
         return thisBn.eq(valueBn);
     };
     UintX.prototype.compGt = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(value);
         return thisBn.gt(valueBn);
     };
     UintX.prototype.compGte = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(value);
         return thisBn.gte(valueBn);
     };
     UintX.prototype.compLt = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(value);
         return thisBn.lt(valueBn);
     };
     UintX.prototype.compLte = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(value);
         return thisBn.lte(valueBn);
     };
     return UintX;

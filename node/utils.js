@@ -1,25 +1,20 @@
 "use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 exports.__esModule = true;
-var OverflowError = /** @class */ (function (_super) {
-    __extends(OverflowError, _super);
-    function OverflowError(length, uint8ArrayLength) {
-        var _this = _super.call(this, "Overflow: Trying to put " + uint8ArrayLength + " length Uint8Array into " + length + " length Wrapper") || this;
-        Object.setPrototypeOf(_this, OverflowError.prototype);
-        return _this;
+var UintX_1 = require("./internals/UintX");
+var bn_js_1 = __importDefault(require("bn.js"));
+function genBnFromUintable(uintable) {
+    if (uintable instanceof UintX_1.UintX) {
+        return new bn_js_1["default"](uintable.u);
     }
-    return OverflowError;
-}(Error));
-exports.OverflowError = OverflowError;
+    if (!Number.isNaN(uintable)) {
+        return genBnFromNumber(uintable);
+    }
+}
+exports.genBnFromUintable = genBnFromUintable;
+function genBnFromNumber(number) {
+    return new bn_js_1["default"](number);
+}
+exports.genBnFromNumber = genBnFromNumber;

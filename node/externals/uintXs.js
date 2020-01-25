@@ -18,6 +18,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 exports.__esModule = true;
 var UintX_1 = require("../internals/UintX");
 var bn_js_1 = __importDefault(require("bn.js"));
+var utils_1 = require("../utils");
 var zeroBn = new bn_js_1["default"](0);
 var oneBn = new bn_js_1["default"](1);
 var Uint8 = /** @class */ (function (_super) {
@@ -25,39 +26,39 @@ var Uint8 = /** @class */ (function (_super) {
     function Uint8(uish) {
         return _super.call(this, Uint8.LENGTH, uish) || this;
     }
-    Uint8.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint8.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint8(uint8Array);
     };
-    Uint8.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint8.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint8(uint8Array);
     };
-    Uint8.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint8.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint8(uint8Array);
     };
-    Uint8.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint8.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint8(uint8Array);
     };
-    Uint8.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint8.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint8(uint8Array);
     };
-    Uint8.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint8.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint8(uint8Array);
     };
@@ -82,39 +83,39 @@ var Uint16 = /** @class */ (function (_super) {
     function Uint16(uish) {
         return _super.call(this, Uint16.LENGTH, uish) || this;
     }
-    Uint16.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint16.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint16(uint8Array);
     };
-    Uint16.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint16.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint16(uint8Array);
     };
-    Uint16.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint16.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint16(uint8Array);
     };
-    Uint16.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint16.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint16(uint8Array);
     };
-    Uint16.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint16.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint16(uint8Array);
     };
-    Uint16.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint16.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint16(uint8Array);
     };
@@ -139,39 +140,39 @@ var Uint24 = /** @class */ (function (_super) {
     function Uint24(uish) {
         return _super.call(this, Uint24.LENGTH, uish) || this;
     }
-    Uint24.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint24.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint24(uint8Array);
     };
-    Uint24.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint24.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint24(uint8Array);
     };
-    Uint24.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint24.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint24(uint8Array);
     };
-    Uint24.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint24.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint24(uint8Array);
     };
-    Uint24.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint24.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint24(uint8Array);
     };
-    Uint24.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint24.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint24(uint8Array);
     };
@@ -196,39 +197,39 @@ var Uint32 = /** @class */ (function (_super) {
     function Uint32(uish) {
         return _super.call(this, Uint32.LENGTH, uish) || this;
     }
-    Uint32.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint32.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint32(uint8Array);
     };
-    Uint32.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint32.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint32(uint8Array);
     };
-    Uint32.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint32.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint32(uint8Array);
     };
-    Uint32.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint32.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint32(uint8Array);
     };
-    Uint32.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint32.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint32(uint8Array);
     };
-    Uint32.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint32.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint32(uint8Array);
     };
@@ -253,39 +254,39 @@ var Uint40 = /** @class */ (function (_super) {
     function Uint40(uish) {
         return _super.call(this, Uint40.LENGTH, uish) || this;
     }
-    Uint40.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint40.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint40(uint8Array);
     };
-    Uint40.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint40.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint40(uint8Array);
     };
-    Uint40.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint40.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint40(uint8Array);
     };
-    Uint40.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint40.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint40(uint8Array);
     };
-    Uint40.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint40.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint40(uint8Array);
     };
-    Uint40.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint40.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint40(uint8Array);
     };
@@ -310,39 +311,39 @@ var Uint48 = /** @class */ (function (_super) {
     function Uint48(uish) {
         return _super.call(this, Uint48.LENGTH, uish) || this;
     }
-    Uint48.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint48.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint48(uint8Array);
     };
-    Uint48.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint48.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint48(uint8Array);
     };
-    Uint48.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint48.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint48(uint8Array);
     };
-    Uint48.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint48.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint48(uint8Array);
     };
-    Uint48.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint48.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint48(uint8Array);
     };
-    Uint48.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint48.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint48(uint8Array);
     };
@@ -367,39 +368,39 @@ var Uint56 = /** @class */ (function (_super) {
     function Uint56(uish) {
         return _super.call(this, Uint56.LENGTH, uish) || this;
     }
-    Uint56.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint56.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint56(uint8Array);
     };
-    Uint56.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint56.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint56(uint8Array);
     };
-    Uint56.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint56.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint56(uint8Array);
     };
-    Uint56.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint56.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint56(uint8Array);
     };
-    Uint56.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint56.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint56(uint8Array);
     };
-    Uint56.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint56.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint56(uint8Array);
     };
@@ -424,39 +425,39 @@ var Uint64 = /** @class */ (function (_super) {
     function Uint64(uish) {
         return _super.call(this, Uint64.LENGTH, uish) || this;
     }
-    Uint64.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint64.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint64(uint8Array);
     };
-    Uint64.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint64.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint64(uint8Array);
     };
-    Uint64.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint64.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint64(uint8Array);
     };
-    Uint64.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint64.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint64(uint8Array);
     };
-    Uint64.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint64.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint64(uint8Array);
     };
-    Uint64.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint64.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint64(uint8Array);
     };
@@ -481,39 +482,39 @@ var Uint72 = /** @class */ (function (_super) {
     function Uint72(uish) {
         return _super.call(this, Uint72.LENGTH, uish) || this;
     }
-    Uint72.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint72.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint72(uint8Array);
     };
-    Uint72.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint72.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint72(uint8Array);
     };
-    Uint72.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint72.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint72(uint8Array);
     };
-    Uint72.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint72.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint72(uint8Array);
     };
-    Uint72.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint72.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint72(uint8Array);
     };
-    Uint72.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint72.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint72(uint8Array);
     };
@@ -538,39 +539,39 @@ var Uint80 = /** @class */ (function (_super) {
     function Uint80(uish) {
         return _super.call(this, Uint80.LENGTH, uish) || this;
     }
-    Uint80.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint80.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint80(uint8Array);
     };
-    Uint80.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint80.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint80(uint8Array);
     };
-    Uint80.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint80.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint80(uint8Array);
     };
-    Uint80.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint80.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint80(uint8Array);
     };
-    Uint80.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint80.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint80(uint8Array);
     };
-    Uint80.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint80.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint80(uint8Array);
     };
@@ -595,39 +596,39 @@ var Uint88 = /** @class */ (function (_super) {
     function Uint88(uish) {
         return _super.call(this, Uint88.LENGTH, uish) || this;
     }
-    Uint88.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint88.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint88(uint8Array);
     };
-    Uint88.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint88.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint88(uint8Array);
     };
-    Uint88.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint88.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint88(uint8Array);
     };
-    Uint88.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint88.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint88(uint8Array);
     };
-    Uint88.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint88.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint88(uint8Array);
     };
-    Uint88.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint88.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint88(uint8Array);
     };
@@ -652,39 +653,39 @@ var Uint96 = /** @class */ (function (_super) {
     function Uint96(uish) {
         return _super.call(this, Uint96.LENGTH, uish) || this;
     }
-    Uint96.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint96.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint96(uint8Array);
     };
-    Uint96.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint96.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint96(uint8Array);
     };
-    Uint96.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint96.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint96(uint8Array);
     };
-    Uint96.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint96.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint96(uint8Array);
     };
-    Uint96.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint96.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint96(uint8Array);
     };
-    Uint96.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint96.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint96(uint8Array);
     };
@@ -709,39 +710,39 @@ var Uint104 = /** @class */ (function (_super) {
     function Uint104(uish) {
         return _super.call(this, Uint104.LENGTH, uish) || this;
     }
-    Uint104.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint104.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint104(uint8Array);
     };
-    Uint104.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint104.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint104(uint8Array);
     };
-    Uint104.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint104.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint104(uint8Array);
     };
-    Uint104.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint104.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint104(uint8Array);
     };
-    Uint104.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint104.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint104(uint8Array);
     };
-    Uint104.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint104.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint104(uint8Array);
     };
@@ -766,39 +767,39 @@ var Uint112 = /** @class */ (function (_super) {
     function Uint112(uish) {
         return _super.call(this, Uint112.LENGTH, uish) || this;
     }
-    Uint112.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint112.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint112(uint8Array);
     };
-    Uint112.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint112.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint112(uint8Array);
     };
-    Uint112.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint112.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint112(uint8Array);
     };
-    Uint112.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint112.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint112(uint8Array);
     };
-    Uint112.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint112.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint112(uint8Array);
     };
-    Uint112.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint112.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint112(uint8Array);
     };
@@ -823,39 +824,39 @@ var Uint120 = /** @class */ (function (_super) {
     function Uint120(uish) {
         return _super.call(this, Uint120.LENGTH, uish) || this;
     }
-    Uint120.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint120.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint120(uint8Array);
     };
-    Uint120.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint120.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint120(uint8Array);
     };
-    Uint120.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint120.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint120(uint8Array);
     };
-    Uint120.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint120.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint120(uint8Array);
     };
-    Uint120.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint120.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint120(uint8Array);
     };
-    Uint120.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint120.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint120(uint8Array);
     };
@@ -880,39 +881,39 @@ var Uint128 = /** @class */ (function (_super) {
     function Uint128(uish) {
         return _super.call(this, Uint128.LENGTH, uish) || this;
     }
-    Uint128.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint128.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint128(uint8Array);
     };
-    Uint128.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint128.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint128(uint8Array);
     };
-    Uint128.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint128.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint128(uint8Array);
     };
-    Uint128.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint128.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint128(uint8Array);
     };
-    Uint128.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint128.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint128(uint8Array);
     };
-    Uint128.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint128.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint128(uint8Array);
     };
@@ -937,39 +938,39 @@ var Uint136 = /** @class */ (function (_super) {
     function Uint136(uish) {
         return _super.call(this, Uint136.LENGTH, uish) || this;
     }
-    Uint136.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint136.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint136(uint8Array);
     };
-    Uint136.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint136.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint136(uint8Array);
     };
-    Uint136.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint136.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint136(uint8Array);
     };
-    Uint136.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint136.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint136(uint8Array);
     };
-    Uint136.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint136.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint136(uint8Array);
     };
-    Uint136.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint136.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint136(uint8Array);
     };
@@ -994,39 +995,39 @@ var Uint144 = /** @class */ (function (_super) {
     function Uint144(uish) {
         return _super.call(this, Uint144.LENGTH, uish) || this;
     }
-    Uint144.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint144.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint144(uint8Array);
     };
-    Uint144.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint144.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint144(uint8Array);
     };
-    Uint144.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint144.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint144(uint8Array);
     };
-    Uint144.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint144.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint144(uint8Array);
     };
-    Uint144.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint144.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint144(uint8Array);
     };
-    Uint144.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint144.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint144(uint8Array);
     };
@@ -1051,39 +1052,39 @@ var Uint152 = /** @class */ (function (_super) {
     function Uint152(uish) {
         return _super.call(this, Uint152.LENGTH, uish) || this;
     }
-    Uint152.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint152.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint152(uint8Array);
     };
-    Uint152.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint152.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint152(uint8Array);
     };
-    Uint152.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint152.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint152(uint8Array);
     };
-    Uint152.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint152.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint152(uint8Array);
     };
-    Uint152.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint152.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint152(uint8Array);
     };
-    Uint152.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint152.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint152(uint8Array);
     };
@@ -1108,39 +1109,39 @@ var Uint160 = /** @class */ (function (_super) {
     function Uint160(uish) {
         return _super.call(this, Uint160.LENGTH, uish) || this;
     }
-    Uint160.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint160.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint160(uint8Array);
     };
-    Uint160.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint160.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint160(uint8Array);
     };
-    Uint160.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint160.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint160(uint8Array);
     };
-    Uint160.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint160.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint160(uint8Array);
     };
-    Uint160.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint160.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint160(uint8Array);
     };
-    Uint160.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint160.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint160(uint8Array);
     };
@@ -1165,39 +1166,39 @@ var Uint168 = /** @class */ (function (_super) {
     function Uint168(uish) {
         return _super.call(this, Uint168.LENGTH, uish) || this;
     }
-    Uint168.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint168.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint168(uint8Array);
     };
-    Uint168.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint168.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint168(uint8Array);
     };
-    Uint168.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint168.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint168(uint8Array);
     };
-    Uint168.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint168.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint168(uint8Array);
     };
-    Uint168.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint168.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint168(uint8Array);
     };
-    Uint168.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint168.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint168(uint8Array);
     };
@@ -1222,39 +1223,39 @@ var Uint176 = /** @class */ (function (_super) {
     function Uint176(uish) {
         return _super.call(this, Uint176.LENGTH, uish) || this;
     }
-    Uint176.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint176.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint176(uint8Array);
     };
-    Uint176.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint176.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint176(uint8Array);
     };
-    Uint176.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint176.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint176(uint8Array);
     };
-    Uint176.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint176.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint176(uint8Array);
     };
-    Uint176.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint176.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint176(uint8Array);
     };
-    Uint176.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint176.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint176(uint8Array);
     };
@@ -1279,39 +1280,39 @@ var Uint184 = /** @class */ (function (_super) {
     function Uint184(uish) {
         return _super.call(this, Uint184.LENGTH, uish) || this;
     }
-    Uint184.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint184.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint184(uint8Array);
     };
-    Uint184.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint184.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint184(uint8Array);
     };
-    Uint184.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint184.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint184(uint8Array);
     };
-    Uint184.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint184.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint184(uint8Array);
     };
-    Uint184.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint184.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint184(uint8Array);
     };
-    Uint184.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint184.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint184(uint8Array);
     };
@@ -1336,39 +1337,39 @@ var Uint192 = /** @class */ (function (_super) {
     function Uint192(uish) {
         return _super.call(this, Uint192.LENGTH, uish) || this;
     }
-    Uint192.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint192.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint192(uint8Array);
     };
-    Uint192.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint192.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint192(uint8Array);
     };
-    Uint192.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint192.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint192(uint8Array);
     };
-    Uint192.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint192.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint192(uint8Array);
     };
-    Uint192.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint192.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint192(uint8Array);
     };
-    Uint192.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint192.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint192(uint8Array);
     };
@@ -1393,39 +1394,39 @@ var Uint200 = /** @class */ (function (_super) {
     function Uint200(uish) {
         return _super.call(this, Uint200.LENGTH, uish) || this;
     }
-    Uint200.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint200.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint200(uint8Array);
     };
-    Uint200.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint200.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint200(uint8Array);
     };
-    Uint200.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint200.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint200(uint8Array);
     };
-    Uint200.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint200.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint200(uint8Array);
     };
-    Uint200.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint200.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint200(uint8Array);
     };
-    Uint200.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint200.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint200(uint8Array);
     };
@@ -1450,39 +1451,39 @@ var Uint208 = /** @class */ (function (_super) {
     function Uint208(uish) {
         return _super.call(this, Uint208.LENGTH, uish) || this;
     }
-    Uint208.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint208.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint208(uint8Array);
     };
-    Uint208.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint208.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint208(uint8Array);
     };
-    Uint208.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint208.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint208(uint8Array);
     };
-    Uint208.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint208.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint208(uint8Array);
     };
-    Uint208.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint208.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint208(uint8Array);
     };
-    Uint208.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint208.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint208(uint8Array);
     };
@@ -1507,39 +1508,39 @@ var Uint216 = /** @class */ (function (_super) {
     function Uint216(uish) {
         return _super.call(this, Uint216.LENGTH, uish) || this;
     }
-    Uint216.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint216.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint216(uint8Array);
     };
-    Uint216.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint216.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint216(uint8Array);
     };
-    Uint216.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint216.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint216(uint8Array);
     };
-    Uint216.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint216.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint216(uint8Array);
     };
-    Uint216.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint216.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint216(uint8Array);
     };
-    Uint216.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint216.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint216(uint8Array);
     };
@@ -1564,39 +1565,39 @@ var Uint224 = /** @class */ (function (_super) {
     function Uint224(uish) {
         return _super.call(this, Uint224.LENGTH, uish) || this;
     }
-    Uint224.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint224.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint224(uint8Array);
     };
-    Uint224.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint224.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint224(uint8Array);
     };
-    Uint224.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint224.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint224(uint8Array);
     };
-    Uint224.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint224.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint224(uint8Array);
     };
-    Uint224.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint224.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint224(uint8Array);
     };
-    Uint224.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint224.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint224(uint8Array);
     };
@@ -1621,39 +1622,39 @@ var Uint232 = /** @class */ (function (_super) {
     function Uint232(uish) {
         return _super.call(this, Uint232.LENGTH, uish) || this;
     }
-    Uint232.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint232.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint232(uint8Array);
     };
-    Uint232.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint232.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint232(uint8Array);
     };
-    Uint232.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint232.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint232(uint8Array);
     };
-    Uint232.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint232.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint232(uint8Array);
     };
-    Uint232.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint232.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint232(uint8Array);
     };
-    Uint232.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint232.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint232(uint8Array);
     };
@@ -1678,39 +1679,39 @@ var Uint240 = /** @class */ (function (_super) {
     function Uint240(uish) {
         return _super.call(this, Uint240.LENGTH, uish) || this;
     }
-    Uint240.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint240.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint240(uint8Array);
     };
-    Uint240.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint240.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint240(uint8Array);
     };
-    Uint240.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint240.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint240(uint8Array);
     };
-    Uint240.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint240.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint240(uint8Array);
     };
-    Uint240.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint240.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint240(uint8Array);
     };
-    Uint240.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint240.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint240(uint8Array);
     };
@@ -1735,39 +1736,39 @@ var Uint248 = /** @class */ (function (_super) {
     function Uint248(uish) {
         return _super.call(this, Uint248.LENGTH, uish) || this;
     }
-    Uint248.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint248.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint248(uint8Array);
     };
-    Uint248.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint248.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint248(uint8Array);
     };
-    Uint248.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint248.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint248(uint8Array);
     };
-    Uint248.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint248.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint248(uint8Array);
     };
-    Uint248.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint248.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint248(uint8Array);
     };
-    Uint248.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint248.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint248(uint8Array);
     };
@@ -1792,39 +1793,39 @@ var Uint256 = /** @class */ (function (_super) {
     function Uint256(uish) {
         return _super.call(this, Uint256.LENGTH, uish) || this;
     }
-    Uint256.prototype.opAdd = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint256.prototype.opAdd = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.add(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint256(uint8Array);
     };
-    Uint256.prototype.opSub = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint256.prototype.opSub = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.sub(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint256(uint8Array);
     };
-    Uint256.prototype.opMul = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint256.prototype.opMul = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mul(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint256(uint8Array);
     };
-    Uint256.prototype.opDiv = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint256.prototype.opDiv = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.div(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint256(uint8Array);
     };
-    Uint256.prototype.opMod = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint256.prototype.opMod = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.mod(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint256(uint8Array);
     };
-    Uint256.prototype.opPow = function (value) {
-        var thisBn = new bn_js_1["default"](this.uu.u);
-        var valueBn = new bn_js_1["default"](value.uu.u);
+    Uint256.prototype.opPow = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
         var uint8Array = thisBn.pow(valueBn).toArrayLike(Uint8Array, 'be');
         return new Uint256(uint8Array);
     };
