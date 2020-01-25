@@ -73,6 +73,11 @@ test('cast', () => {
   expect(b.uu.toArray()).toStrictEqual([4])
 })
 
+test('fromUintable', () => {
+  expect(Uint8.fromUintable(4).toNumber()).toBe(4)
+  expect(Uint16.fromUintable(Uint8.fromNumber(5)).toNumber()).toBe(5)
+})
+
 test('comparison', () => {
   const a = Uint8.fromNumber(4)
   const b = Uint16.fromNumber(4)

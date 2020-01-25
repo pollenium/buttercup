@@ -44,12 +44,12 @@ test('mod', function () {
 test('pow', function () {
     var a = __1.Uint16.fromNumber(3);
     var b = __1.Uint16.fromNumber(2);
-    expect(a.opMod(b).toNumber()).toBe(9);
+    expect(a.opPow(b).toNumber()).toBe(9);
 });
 test('pow', function () {
     var a = __1.Uint16.fromNumber(4);
     var b = __1.Uint16.fromNumber(3);
-    expect(a.opMod(b).toNumber()).toBe(64);
+    expect(a.opPow(b).toNumber()).toBe(64);
 });
 test('cast', function () {
     var a = __1.Uint8.fromNumber(4);

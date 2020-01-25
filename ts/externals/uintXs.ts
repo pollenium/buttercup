@@ -1,6 +1,7 @@
 import { UintX } from '../internals/UintX'
 import Bn from 'bn.js'
 import { Uish } from 'pollenium-uvaursi'
+import { Uintable } from '../types'
 
 const zeroBn = new Bn(0)
 const oneBn = new Bn(1)
@@ -60,6 +61,15 @@ export class Uint8 extends UintX {
     return new Uint8(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromUintable(uintable: Uintable): Uint8 {
+    if (uintable instanceof UintX) {
+      return new Uint8(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint8.fromNumber(uintable)
+    }
+  }
+
 }
 
 export class Uint16 extends UintX {
@@ -115,6 +125,15 @@ export class Uint16 extends UintX {
   static fromNumber(number: number): Uint16 {
     const bn = new Bn(number)
     return new Uint16(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromUintable(uintable: Uintable): Uint16 {
+    if (uintable instanceof UintX) {
+      return new Uint16(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint16.fromNumber(uintable)
+    }
   }
 
 }
@@ -174,6 +193,15 @@ export class Uint24 extends UintX {
     return new Uint24(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromUintable(uintable: Uintable): Uint24 {
+    if (uintable instanceof UintX) {
+      return new Uint24(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint24.fromNumber(uintable)
+    }
+  }
+
 }
 
 export class Uint32 extends UintX {
@@ -229,6 +257,15 @@ export class Uint32 extends UintX {
   static fromNumber(number: number): Uint32 {
     const bn = new Bn(number)
     return new Uint32(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromUintable(uintable: Uintable): Uint32 {
+    if (uintable instanceof UintX) {
+      return new Uint32(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint32.fromNumber(uintable)
+    }
   }
 
 }
@@ -288,6 +325,15 @@ export class Uint40 extends UintX {
     return new Uint40(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromUintable(uintable: Uintable): Uint40 {
+    if (uintable instanceof UintX) {
+      return new Uint40(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint40.fromNumber(uintable)
+    }
+  }
+
 }
 
 export class Uint48 extends UintX {
@@ -343,6 +389,15 @@ export class Uint48 extends UintX {
   static fromNumber(number: number): Uint48 {
     const bn = new Bn(number)
     return new Uint48(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromUintable(uintable: Uintable): Uint48 {
+    if (uintable instanceof UintX) {
+      return new Uint48(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint48.fromNumber(uintable)
+    }
   }
 
 }
@@ -402,6 +457,15 @@ export class Uint56 extends UintX {
     return new Uint56(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromUintable(uintable: Uintable): Uint56 {
+    if (uintable instanceof UintX) {
+      return new Uint56(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint56.fromNumber(uintable)
+    }
+  }
+
 }
 
 export class Uint64 extends UintX {
@@ -457,6 +521,15 @@ export class Uint64 extends UintX {
   static fromNumber(number: number): Uint64 {
     const bn = new Bn(number)
     return new Uint64(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromUintable(uintable: Uintable): Uint64 {
+    if (uintable instanceof UintX) {
+      return new Uint64(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint64.fromNumber(uintable)
+    }
   }
 
 }
@@ -516,6 +589,15 @@ export class Uint72 extends UintX {
     return new Uint72(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromUintable(uintable: Uintable): Uint72 {
+    if (uintable instanceof UintX) {
+      return new Uint72(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint72.fromNumber(uintable)
+    }
+  }
+
 }
 
 export class Uint80 extends UintX {
@@ -571,6 +653,15 @@ export class Uint80 extends UintX {
   static fromNumber(number: number): Uint80 {
     const bn = new Bn(number)
     return new Uint80(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromUintable(uintable: Uintable): Uint80 {
+    if (uintable instanceof UintX) {
+      return new Uint80(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint80.fromNumber(uintable)
+    }
   }
 
 }
@@ -630,6 +721,15 @@ export class Uint88 extends UintX {
     return new Uint88(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromUintable(uintable: Uintable): Uint88 {
+    if (uintable instanceof UintX) {
+      return new Uint88(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint88.fromNumber(uintable)
+    }
+  }
+
 }
 
 export class Uint96 extends UintX {
@@ -685,6 +785,15 @@ export class Uint96 extends UintX {
   static fromNumber(number: number): Uint96 {
     const bn = new Bn(number)
     return new Uint96(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromUintable(uintable: Uintable): Uint96 {
+    if (uintable instanceof UintX) {
+      return new Uint96(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint96.fromNumber(uintable)
+    }
   }
 
 }
@@ -744,6 +853,15 @@ export class Uint104 extends UintX {
     return new Uint104(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromUintable(uintable: Uintable): Uint104 {
+    if (uintable instanceof UintX) {
+      return new Uint104(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint104.fromNumber(uintable)
+    }
+  }
+
 }
 
 export class Uint112 extends UintX {
@@ -799,6 +917,15 @@ export class Uint112 extends UintX {
   static fromNumber(number: number): Uint112 {
     const bn = new Bn(number)
     return new Uint112(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromUintable(uintable: Uintable): Uint112 {
+    if (uintable instanceof UintX) {
+      return new Uint112(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint112.fromNumber(uintable)
+    }
   }
 
 }
@@ -858,6 +985,15 @@ export class Uint120 extends UintX {
     return new Uint120(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromUintable(uintable: Uintable): Uint120 {
+    if (uintable instanceof UintX) {
+      return new Uint120(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint120.fromNumber(uintable)
+    }
+  }
+
 }
 
 export class Uint128 extends UintX {
@@ -913,6 +1049,15 @@ export class Uint128 extends UintX {
   static fromNumber(number: number): Uint128 {
     const bn = new Bn(number)
     return new Uint128(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromUintable(uintable: Uintable): Uint128 {
+    if (uintable instanceof UintX) {
+      return new Uint128(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint128.fromNumber(uintable)
+    }
   }
 
 }
@@ -972,6 +1117,15 @@ export class Uint136 extends UintX {
     return new Uint136(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromUintable(uintable: Uintable): Uint136 {
+    if (uintable instanceof UintX) {
+      return new Uint136(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint136.fromNumber(uintable)
+    }
+  }
+
 }
 
 export class Uint144 extends UintX {
@@ -1027,6 +1181,15 @@ export class Uint144 extends UintX {
   static fromNumber(number: number): Uint144 {
     const bn = new Bn(number)
     return new Uint144(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromUintable(uintable: Uintable): Uint144 {
+    if (uintable instanceof UintX) {
+      return new Uint144(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint144.fromNumber(uintable)
+    }
   }
 
 }
@@ -1086,6 +1249,15 @@ export class Uint152 extends UintX {
     return new Uint152(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromUintable(uintable: Uintable): Uint152 {
+    if (uintable instanceof UintX) {
+      return new Uint152(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint152.fromNumber(uintable)
+    }
+  }
+
 }
 
 export class Uint160 extends UintX {
@@ -1141,6 +1313,15 @@ export class Uint160 extends UintX {
   static fromNumber(number: number): Uint160 {
     const bn = new Bn(number)
     return new Uint160(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromUintable(uintable: Uintable): Uint160 {
+    if (uintable instanceof UintX) {
+      return new Uint160(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint160.fromNumber(uintable)
+    }
   }
 
 }
@@ -1200,6 +1381,15 @@ export class Uint168 extends UintX {
     return new Uint168(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromUintable(uintable: Uintable): Uint168 {
+    if (uintable instanceof UintX) {
+      return new Uint168(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint168.fromNumber(uintable)
+    }
+  }
+
 }
 
 export class Uint176 extends UintX {
@@ -1255,6 +1445,15 @@ export class Uint176 extends UintX {
   static fromNumber(number: number): Uint176 {
     const bn = new Bn(number)
     return new Uint176(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromUintable(uintable: Uintable): Uint176 {
+    if (uintable instanceof UintX) {
+      return new Uint176(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint176.fromNumber(uintable)
+    }
   }
 
 }
@@ -1314,6 +1513,15 @@ export class Uint184 extends UintX {
     return new Uint184(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromUintable(uintable: Uintable): Uint184 {
+    if (uintable instanceof UintX) {
+      return new Uint184(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint184.fromNumber(uintable)
+    }
+  }
+
 }
 
 export class Uint192 extends UintX {
@@ -1369,6 +1577,15 @@ export class Uint192 extends UintX {
   static fromNumber(number: number): Uint192 {
     const bn = new Bn(number)
     return new Uint192(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromUintable(uintable: Uintable): Uint192 {
+    if (uintable instanceof UintX) {
+      return new Uint192(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint192.fromNumber(uintable)
+    }
   }
 
 }
@@ -1428,6 +1645,15 @@ export class Uint200 extends UintX {
     return new Uint200(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromUintable(uintable: Uintable): Uint200 {
+    if (uintable instanceof UintX) {
+      return new Uint200(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint200.fromNumber(uintable)
+    }
+  }
+
 }
 
 export class Uint208 extends UintX {
@@ -1483,6 +1709,15 @@ export class Uint208 extends UintX {
   static fromNumber(number: number): Uint208 {
     const bn = new Bn(number)
     return new Uint208(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromUintable(uintable: Uintable): Uint208 {
+    if (uintable instanceof UintX) {
+      return new Uint208(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint208.fromNumber(uintable)
+    }
   }
 
 }
@@ -1542,6 +1777,15 @@ export class Uint216 extends UintX {
     return new Uint216(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromUintable(uintable: Uintable): Uint216 {
+    if (uintable instanceof UintX) {
+      return new Uint216(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint216.fromNumber(uintable)
+    }
+  }
+
 }
 
 export class Uint224 extends UintX {
@@ -1597,6 +1841,15 @@ export class Uint224 extends UintX {
   static fromNumber(number: number): Uint224 {
     const bn = new Bn(number)
     return new Uint224(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromUintable(uintable: Uintable): Uint224 {
+    if (uintable instanceof UintX) {
+      return new Uint224(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint224.fromNumber(uintable)
+    }
   }
 
 }
@@ -1656,6 +1909,15 @@ export class Uint232 extends UintX {
     return new Uint232(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromUintable(uintable: Uintable): Uint232 {
+    if (uintable instanceof UintX) {
+      return new Uint232(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint232.fromNumber(uintable)
+    }
+  }
+
 }
 
 export class Uint240 extends UintX {
@@ -1711,6 +1973,15 @@ export class Uint240 extends UintX {
   static fromNumber(number: number): Uint240 {
     const bn = new Bn(number)
     return new Uint240(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromUintable(uintable: Uintable): Uint240 {
+    if (uintable instanceof UintX) {
+      return new Uint240(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint240.fromNumber(uintable)
+    }
   }
 
 }
@@ -1770,6 +2041,15 @@ export class Uint248 extends UintX {
     return new Uint248(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromUintable(uintable: Uintable): Uint248 {
+    if (uintable instanceof UintX) {
+      return new Uint248(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint248.fromNumber(uintable)
+    }
+  }
+
 }
 
 export class Uint256 extends UintX {
@@ -1825,6 +2105,15 @@ export class Uint256 extends UintX {
   static fromNumber(number: number): Uint256 {
     const bn = new Bn(number)
     return new Uint256(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromUintable(uintable: Uintable): Uint256 {
+    if (uintable instanceof UintX) {
+      return new Uint256(uintable.uu.genClone())
+    }
+    if (!Number.isNaN(uintable)) {
+      return Uint256.fromNumber(uintable)
+    }
   }
 
 }

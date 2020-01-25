@@ -65,6 +65,14 @@ var Uint8 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint8(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint8.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint8(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint8.fromNumber(uintable);
+        }
+    };
     Uint8.LENGTH = 1;
     return Uint8;
 }(UintX_1.UintX));
@@ -113,6 +121,14 @@ var Uint16 = /** @class */ (function (_super) {
     Uint16.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint16(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint16.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint16(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint16.fromNumber(uintable);
+        }
     };
     Uint16.LENGTH = 2;
     return Uint16;
@@ -163,6 +179,14 @@ var Uint24 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint24(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint24.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint24(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint24.fromNumber(uintable);
+        }
+    };
     Uint24.LENGTH = 3;
     return Uint24;
 }(UintX_1.UintX));
@@ -211,6 +235,14 @@ var Uint32 = /** @class */ (function (_super) {
     Uint32.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint32(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint32.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint32(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint32.fromNumber(uintable);
+        }
     };
     Uint32.LENGTH = 4;
     return Uint32;
@@ -261,6 +293,14 @@ var Uint40 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint40(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint40.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint40(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint40.fromNumber(uintable);
+        }
+    };
     Uint40.LENGTH = 5;
     return Uint40;
 }(UintX_1.UintX));
@@ -309,6 +349,14 @@ var Uint48 = /** @class */ (function (_super) {
     Uint48.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint48(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint48.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint48(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint48.fromNumber(uintable);
+        }
     };
     Uint48.LENGTH = 6;
     return Uint48;
@@ -359,6 +407,14 @@ var Uint56 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint56(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint56.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint56(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint56.fromNumber(uintable);
+        }
+    };
     Uint56.LENGTH = 7;
     return Uint56;
 }(UintX_1.UintX));
@@ -407,6 +463,14 @@ var Uint64 = /** @class */ (function (_super) {
     Uint64.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint64(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint64.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint64(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint64.fromNumber(uintable);
+        }
     };
     Uint64.LENGTH = 8;
     return Uint64;
@@ -457,6 +521,14 @@ var Uint72 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint72(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint72.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint72(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint72.fromNumber(uintable);
+        }
+    };
     Uint72.LENGTH = 9;
     return Uint72;
 }(UintX_1.UintX));
@@ -505,6 +577,14 @@ var Uint80 = /** @class */ (function (_super) {
     Uint80.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint80(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint80.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint80(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint80.fromNumber(uintable);
+        }
     };
     Uint80.LENGTH = 10;
     return Uint80;
@@ -555,6 +635,14 @@ var Uint88 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint88(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint88.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint88(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint88.fromNumber(uintable);
+        }
+    };
     Uint88.LENGTH = 11;
     return Uint88;
 }(UintX_1.UintX));
@@ -603,6 +691,14 @@ var Uint96 = /** @class */ (function (_super) {
     Uint96.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint96(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint96.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint96(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint96.fromNumber(uintable);
+        }
     };
     Uint96.LENGTH = 12;
     return Uint96;
@@ -653,6 +749,14 @@ var Uint104 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint104(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint104.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint104(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint104.fromNumber(uintable);
+        }
+    };
     Uint104.LENGTH = 13;
     return Uint104;
 }(UintX_1.UintX));
@@ -701,6 +805,14 @@ var Uint112 = /** @class */ (function (_super) {
     Uint112.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint112(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint112.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint112(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint112.fromNumber(uintable);
+        }
     };
     Uint112.LENGTH = 14;
     return Uint112;
@@ -751,6 +863,14 @@ var Uint120 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint120(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint120.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint120(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint120.fromNumber(uintable);
+        }
+    };
     Uint120.LENGTH = 15;
     return Uint120;
 }(UintX_1.UintX));
@@ -799,6 +919,14 @@ var Uint128 = /** @class */ (function (_super) {
     Uint128.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint128(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint128.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint128(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint128.fromNumber(uintable);
+        }
     };
     Uint128.LENGTH = 16;
     return Uint128;
@@ -849,6 +977,14 @@ var Uint136 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint136(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint136.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint136(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint136.fromNumber(uintable);
+        }
+    };
     Uint136.LENGTH = 17;
     return Uint136;
 }(UintX_1.UintX));
@@ -897,6 +1033,14 @@ var Uint144 = /** @class */ (function (_super) {
     Uint144.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint144(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint144.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint144(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint144.fromNumber(uintable);
+        }
     };
     Uint144.LENGTH = 18;
     return Uint144;
@@ -947,6 +1091,14 @@ var Uint152 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint152(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint152.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint152(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint152.fromNumber(uintable);
+        }
+    };
     Uint152.LENGTH = 19;
     return Uint152;
 }(UintX_1.UintX));
@@ -995,6 +1147,14 @@ var Uint160 = /** @class */ (function (_super) {
     Uint160.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint160(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint160.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint160(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint160.fromNumber(uintable);
+        }
     };
     Uint160.LENGTH = 20;
     return Uint160;
@@ -1045,6 +1205,14 @@ var Uint168 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint168(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint168.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint168(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint168.fromNumber(uintable);
+        }
+    };
     Uint168.LENGTH = 21;
     return Uint168;
 }(UintX_1.UintX));
@@ -1093,6 +1261,14 @@ var Uint176 = /** @class */ (function (_super) {
     Uint176.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint176(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint176.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint176(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint176.fromNumber(uintable);
+        }
     };
     Uint176.LENGTH = 22;
     return Uint176;
@@ -1143,6 +1319,14 @@ var Uint184 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint184(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint184.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint184(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint184.fromNumber(uintable);
+        }
+    };
     Uint184.LENGTH = 23;
     return Uint184;
 }(UintX_1.UintX));
@@ -1191,6 +1375,14 @@ var Uint192 = /** @class */ (function (_super) {
     Uint192.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint192(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint192.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint192(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint192.fromNumber(uintable);
+        }
     };
     Uint192.LENGTH = 24;
     return Uint192;
@@ -1241,6 +1433,14 @@ var Uint200 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint200(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint200.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint200(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint200.fromNumber(uintable);
+        }
+    };
     Uint200.LENGTH = 25;
     return Uint200;
 }(UintX_1.UintX));
@@ -1289,6 +1489,14 @@ var Uint208 = /** @class */ (function (_super) {
     Uint208.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint208(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint208.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint208(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint208.fromNumber(uintable);
+        }
     };
     Uint208.LENGTH = 26;
     return Uint208;
@@ -1339,6 +1547,14 @@ var Uint216 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint216(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint216.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint216(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint216.fromNumber(uintable);
+        }
+    };
     Uint216.LENGTH = 27;
     return Uint216;
 }(UintX_1.UintX));
@@ -1387,6 +1603,14 @@ var Uint224 = /** @class */ (function (_super) {
     Uint224.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint224(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint224.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint224(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint224.fromNumber(uintable);
+        }
     };
     Uint224.LENGTH = 28;
     return Uint224;
@@ -1437,6 +1661,14 @@ var Uint232 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint232(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint232.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint232(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint232.fromNumber(uintable);
+        }
+    };
     Uint232.LENGTH = 29;
     return Uint232;
 }(UintX_1.UintX));
@@ -1485,6 +1717,14 @@ var Uint240 = /** @class */ (function (_super) {
     Uint240.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint240(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint240.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint240(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint240.fromNumber(uintable);
+        }
     };
     Uint240.LENGTH = 30;
     return Uint240;
@@ -1535,6 +1775,14 @@ var Uint248 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint248(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint248.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint248(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint248.fromNumber(uintable);
+        }
+    };
     Uint248.LENGTH = 31;
     return Uint248;
 }(UintX_1.UintX));
@@ -1583,6 +1831,14 @@ var Uint256 = /** @class */ (function (_super) {
     Uint256.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint256(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint256.fromUintable = function (uintable) {
+        if (uintable instanceof UintX_1.UintX) {
+            return new Uint256(uintable.uu.genClone());
+        }
+        if (!Number.isNaN(uintable)) {
+            return Uint256.fromNumber(uintable);
+        }
     };
     Uint256.LENGTH = 32;
     return Uint256;
