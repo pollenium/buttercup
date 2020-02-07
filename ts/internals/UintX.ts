@@ -1,8 +1,9 @@
 import { FixLeftButtercup } from '../buttercups/fixButtercups'
 import Bn from 'bn.js'
 import { Uish } from 'pollenium-uvaursi'
-import { Uintable } from '../types'
 import { genBnFromUintable } from '../utils'
+
+export type Uintable = number | UintX | Uish
 
 export abstract class UintX extends FixLeftButtercup {
 
@@ -10,8 +11,8 @@ export abstract class UintX extends FixLeftButtercup {
   private number?: number;
   private numberStringByBase: Record<number, string> = {};
 
-  constructor(length: number, uish: Uish) {
-    super(length, uish)
+  constructor(length: number, uintable: Uintable) {
+    super(length, genBnFromUintable(uintable).toArrayLike(Uint8Array, 'be'))
   }
 
   toNumber(): number {

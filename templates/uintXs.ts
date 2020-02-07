@@ -1,7 +1,6 @@
-import { UintX } from '../internals/UintX'
+import { UintX, Uintable } from '../internals/UintX'
 import Bn from 'bn.js'
 import { Uish } from 'pollenium-uvaursi'
-import { Uintable } from '../types'
 import { genBnFromUintable } from '../utils'
 
 const zeroBn = new Bn(0)
@@ -12,8 +11,8 @@ export class Uint{{bits}} extends UintX {
 
   public static LENGTH: number = {{length}};
 
-  constructor(uish: Uish) {
-    super(Uint{{bits}}.LENGTH, uish)
+  constructor(uintable: Uintable) {
+    super(Uint{{bits}}.LENGTH, uintable)
   }
 
   opAdd(uintable: Uintable): {{className}} {
@@ -61,15 +60,6 @@ export class Uint{{bits}} extends UintX {
   static fromNumber(number: number): {{className}} {
     const bn = new Bn(number)
     return new {{className}}(bn.toArrayLike(Uint8Array, 'be'))
-  }
-
-  static fromUintable(uintable: Uintable): {{className}} {
-    if (uintable instanceof UintX) {
-      return new {{className}}(uintable.uu.genClone())
-    }
-    if (!Number.isNaN(uintable)) {
-      return {{className}}.fromNumber(uintable)
-    }
   }
 
 }

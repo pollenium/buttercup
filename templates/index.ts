@@ -12,5 +12,3 @@ export {
   Bytes{{length}}{{#unless @last}},{{/unless}}
   {{/each}}
 } from './externals/bytesXs'
-
-export { Uintable } from './types'

@@ -23,8 +23,8 @@ var zeroBn = new bn_js_1["default"](0);
 var oneBn = new bn_js_1["default"](1);
 var Uint8 = /** @class */ (function (_super) {
     __extends(Uint8, _super);
-    function Uint8(uish) {
-        return _super.call(this, Uint8.LENGTH, uish) || this;
+    function Uint8(uintable) {
+        return _super.call(this, Uint8.LENGTH, uintable) || this;
     }
     Uint8.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -66,22 +66,14 @@ var Uint8 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint8(bn.toArrayLike(Uint8Array, 'be'));
     };
-    Uint8.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint8(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint8.fromNumber(uintable);
-        }
-    };
     Uint8.LENGTH = 1;
     return Uint8;
 }(UintX_1.UintX));
 exports.Uint8 = Uint8;
 var Uint16 = /** @class */ (function (_super) {
     __extends(Uint16, _super);
-    function Uint16(uish) {
-        return _super.call(this, Uint16.LENGTH, uish) || this;
+    function Uint16(uintable) {
+        return _super.call(this, Uint16.LENGTH, uintable) || this;
     }
     Uint16.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -123,22 +115,14 @@ var Uint16 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint16(bn.toArrayLike(Uint8Array, 'be'));
     };
-    Uint16.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint16(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint16.fromNumber(uintable);
-        }
-    };
     Uint16.LENGTH = 2;
     return Uint16;
 }(UintX_1.UintX));
 exports.Uint16 = Uint16;
 var Uint24 = /** @class */ (function (_super) {
     __extends(Uint24, _super);
-    function Uint24(uish) {
-        return _super.call(this, Uint24.LENGTH, uish) || this;
+    function Uint24(uintable) {
+        return _super.call(this, Uint24.LENGTH, uintable) || this;
     }
     Uint24.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -180,22 +164,14 @@ var Uint24 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint24(bn.toArrayLike(Uint8Array, 'be'));
     };
-    Uint24.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint24(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint24.fromNumber(uintable);
-        }
-    };
     Uint24.LENGTH = 3;
     return Uint24;
 }(UintX_1.UintX));
 exports.Uint24 = Uint24;
 var Uint32 = /** @class */ (function (_super) {
     __extends(Uint32, _super);
-    function Uint32(uish) {
-        return _super.call(this, Uint32.LENGTH, uish) || this;
+    function Uint32(uintable) {
+        return _super.call(this, Uint32.LENGTH, uintable) || this;
     }
     Uint32.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -237,22 +213,14 @@ var Uint32 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint32(bn.toArrayLike(Uint8Array, 'be'));
     };
-    Uint32.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint32(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint32.fromNumber(uintable);
-        }
-    };
     Uint32.LENGTH = 4;
     return Uint32;
 }(UintX_1.UintX));
 exports.Uint32 = Uint32;
 var Uint40 = /** @class */ (function (_super) {
     __extends(Uint40, _super);
-    function Uint40(uish) {
-        return _super.call(this, Uint40.LENGTH, uish) || this;
+    function Uint40(uintable) {
+        return _super.call(this, Uint40.LENGTH, uintable) || this;
     }
     Uint40.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -294,22 +262,14 @@ var Uint40 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint40(bn.toArrayLike(Uint8Array, 'be'));
     };
-    Uint40.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint40(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint40.fromNumber(uintable);
-        }
-    };
     Uint40.LENGTH = 5;
     return Uint40;
 }(UintX_1.UintX));
 exports.Uint40 = Uint40;
 var Uint48 = /** @class */ (function (_super) {
     __extends(Uint48, _super);
-    function Uint48(uish) {
-        return _super.call(this, Uint48.LENGTH, uish) || this;
+    function Uint48(uintable) {
+        return _super.call(this, Uint48.LENGTH, uintable) || this;
     }
     Uint48.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -351,22 +311,14 @@ var Uint48 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint48(bn.toArrayLike(Uint8Array, 'be'));
     };
-    Uint48.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint48(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint48.fromNumber(uintable);
-        }
-    };
     Uint48.LENGTH = 6;
     return Uint48;
 }(UintX_1.UintX));
 exports.Uint48 = Uint48;
 var Uint56 = /** @class */ (function (_super) {
     __extends(Uint56, _super);
-    function Uint56(uish) {
-        return _super.call(this, Uint56.LENGTH, uish) || this;
+    function Uint56(uintable) {
+        return _super.call(this, Uint56.LENGTH, uintable) || this;
     }
     Uint56.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -408,22 +360,14 @@ var Uint56 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint56(bn.toArrayLike(Uint8Array, 'be'));
     };
-    Uint56.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint56(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint56.fromNumber(uintable);
-        }
-    };
     Uint56.LENGTH = 7;
     return Uint56;
 }(UintX_1.UintX));
 exports.Uint56 = Uint56;
 var Uint64 = /** @class */ (function (_super) {
     __extends(Uint64, _super);
-    function Uint64(uish) {
-        return _super.call(this, Uint64.LENGTH, uish) || this;
+    function Uint64(uintable) {
+        return _super.call(this, Uint64.LENGTH, uintable) || this;
     }
     Uint64.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -465,22 +409,14 @@ var Uint64 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint64(bn.toArrayLike(Uint8Array, 'be'));
     };
-    Uint64.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint64(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint64.fromNumber(uintable);
-        }
-    };
     Uint64.LENGTH = 8;
     return Uint64;
 }(UintX_1.UintX));
 exports.Uint64 = Uint64;
 var Uint72 = /** @class */ (function (_super) {
     __extends(Uint72, _super);
-    function Uint72(uish) {
-        return _super.call(this, Uint72.LENGTH, uish) || this;
+    function Uint72(uintable) {
+        return _super.call(this, Uint72.LENGTH, uintable) || this;
     }
     Uint72.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -522,22 +458,14 @@ var Uint72 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint72(bn.toArrayLike(Uint8Array, 'be'));
     };
-    Uint72.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint72(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint72.fromNumber(uintable);
-        }
-    };
     Uint72.LENGTH = 9;
     return Uint72;
 }(UintX_1.UintX));
 exports.Uint72 = Uint72;
 var Uint80 = /** @class */ (function (_super) {
     __extends(Uint80, _super);
-    function Uint80(uish) {
-        return _super.call(this, Uint80.LENGTH, uish) || this;
+    function Uint80(uintable) {
+        return _super.call(this, Uint80.LENGTH, uintable) || this;
     }
     Uint80.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -579,22 +507,14 @@ var Uint80 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint80(bn.toArrayLike(Uint8Array, 'be'));
     };
-    Uint80.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint80(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint80.fromNumber(uintable);
-        }
-    };
     Uint80.LENGTH = 10;
     return Uint80;
 }(UintX_1.UintX));
 exports.Uint80 = Uint80;
 var Uint88 = /** @class */ (function (_super) {
     __extends(Uint88, _super);
-    function Uint88(uish) {
-        return _super.call(this, Uint88.LENGTH, uish) || this;
+    function Uint88(uintable) {
+        return _super.call(this, Uint88.LENGTH, uintable) || this;
     }
     Uint88.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -636,22 +556,14 @@ var Uint88 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint88(bn.toArrayLike(Uint8Array, 'be'));
     };
-    Uint88.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint88(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint88.fromNumber(uintable);
-        }
-    };
     Uint88.LENGTH = 11;
     return Uint88;
 }(UintX_1.UintX));
 exports.Uint88 = Uint88;
 var Uint96 = /** @class */ (function (_super) {
     __extends(Uint96, _super);
-    function Uint96(uish) {
-        return _super.call(this, Uint96.LENGTH, uish) || this;
+    function Uint96(uintable) {
+        return _super.call(this, Uint96.LENGTH, uintable) || this;
     }
     Uint96.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -693,22 +605,14 @@ var Uint96 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint96(bn.toArrayLike(Uint8Array, 'be'));
     };
-    Uint96.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint96(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint96.fromNumber(uintable);
-        }
-    };
     Uint96.LENGTH = 12;
     return Uint96;
 }(UintX_1.UintX));
 exports.Uint96 = Uint96;
 var Uint104 = /** @class */ (function (_super) {
     __extends(Uint104, _super);
-    function Uint104(uish) {
-        return _super.call(this, Uint104.LENGTH, uish) || this;
+    function Uint104(uintable) {
+        return _super.call(this, Uint104.LENGTH, uintable) || this;
     }
     Uint104.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -750,22 +654,14 @@ var Uint104 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint104(bn.toArrayLike(Uint8Array, 'be'));
     };
-    Uint104.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint104(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint104.fromNumber(uintable);
-        }
-    };
     Uint104.LENGTH = 13;
     return Uint104;
 }(UintX_1.UintX));
 exports.Uint104 = Uint104;
 var Uint112 = /** @class */ (function (_super) {
     __extends(Uint112, _super);
-    function Uint112(uish) {
-        return _super.call(this, Uint112.LENGTH, uish) || this;
+    function Uint112(uintable) {
+        return _super.call(this, Uint112.LENGTH, uintable) || this;
     }
     Uint112.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -807,22 +703,14 @@ var Uint112 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint112(bn.toArrayLike(Uint8Array, 'be'));
     };
-    Uint112.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint112(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint112.fromNumber(uintable);
-        }
-    };
     Uint112.LENGTH = 14;
     return Uint112;
 }(UintX_1.UintX));
 exports.Uint112 = Uint112;
 var Uint120 = /** @class */ (function (_super) {
     __extends(Uint120, _super);
-    function Uint120(uish) {
-        return _super.call(this, Uint120.LENGTH, uish) || this;
+    function Uint120(uintable) {
+        return _super.call(this, Uint120.LENGTH, uintable) || this;
     }
     Uint120.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -864,22 +752,14 @@ var Uint120 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint120(bn.toArrayLike(Uint8Array, 'be'));
     };
-    Uint120.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint120(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint120.fromNumber(uintable);
-        }
-    };
     Uint120.LENGTH = 15;
     return Uint120;
 }(UintX_1.UintX));
 exports.Uint120 = Uint120;
 var Uint128 = /** @class */ (function (_super) {
     __extends(Uint128, _super);
-    function Uint128(uish) {
-        return _super.call(this, Uint128.LENGTH, uish) || this;
+    function Uint128(uintable) {
+        return _super.call(this, Uint128.LENGTH, uintable) || this;
     }
     Uint128.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -921,22 +801,14 @@ var Uint128 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint128(bn.toArrayLike(Uint8Array, 'be'));
     };
-    Uint128.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint128(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint128.fromNumber(uintable);
-        }
-    };
     Uint128.LENGTH = 16;
     return Uint128;
 }(UintX_1.UintX));
 exports.Uint128 = Uint128;
 var Uint136 = /** @class */ (function (_super) {
     __extends(Uint136, _super);
-    function Uint136(uish) {
-        return _super.call(this, Uint136.LENGTH, uish) || this;
+    function Uint136(uintable) {
+        return _super.call(this, Uint136.LENGTH, uintable) || this;
     }
     Uint136.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -978,22 +850,14 @@ var Uint136 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint136(bn.toArrayLike(Uint8Array, 'be'));
     };
-    Uint136.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint136(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint136.fromNumber(uintable);
-        }
-    };
     Uint136.LENGTH = 17;
     return Uint136;
 }(UintX_1.UintX));
 exports.Uint136 = Uint136;
 var Uint144 = /** @class */ (function (_super) {
     __extends(Uint144, _super);
-    function Uint144(uish) {
-        return _super.call(this, Uint144.LENGTH, uish) || this;
+    function Uint144(uintable) {
+        return _super.call(this, Uint144.LENGTH, uintable) || this;
     }
     Uint144.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -1035,22 +899,14 @@ var Uint144 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint144(bn.toArrayLike(Uint8Array, 'be'));
     };
-    Uint144.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint144(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint144.fromNumber(uintable);
-        }
-    };
     Uint144.LENGTH = 18;
     return Uint144;
 }(UintX_1.UintX));
 exports.Uint144 = Uint144;
 var Uint152 = /** @class */ (function (_super) {
     __extends(Uint152, _super);
-    function Uint152(uish) {
-        return _super.call(this, Uint152.LENGTH, uish) || this;
+    function Uint152(uintable) {
+        return _super.call(this, Uint152.LENGTH, uintable) || this;
     }
     Uint152.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -1092,22 +948,14 @@ var Uint152 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint152(bn.toArrayLike(Uint8Array, 'be'));
     };
-    Uint152.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint152(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint152.fromNumber(uintable);
-        }
-    };
     Uint152.LENGTH = 19;
     return Uint152;
 }(UintX_1.UintX));
 exports.Uint152 = Uint152;
 var Uint160 = /** @class */ (function (_super) {
     __extends(Uint160, _super);
-    function Uint160(uish) {
-        return _super.call(this, Uint160.LENGTH, uish) || this;
+    function Uint160(uintable) {
+        return _super.call(this, Uint160.LENGTH, uintable) || this;
     }
     Uint160.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -1149,22 +997,14 @@ var Uint160 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint160(bn.toArrayLike(Uint8Array, 'be'));
     };
-    Uint160.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint160(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint160.fromNumber(uintable);
-        }
-    };
     Uint160.LENGTH = 20;
     return Uint160;
 }(UintX_1.UintX));
 exports.Uint160 = Uint160;
 var Uint168 = /** @class */ (function (_super) {
     __extends(Uint168, _super);
-    function Uint168(uish) {
-        return _super.call(this, Uint168.LENGTH, uish) || this;
+    function Uint168(uintable) {
+        return _super.call(this, Uint168.LENGTH, uintable) || this;
     }
     Uint168.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -1206,22 +1046,14 @@ var Uint168 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint168(bn.toArrayLike(Uint8Array, 'be'));
     };
-    Uint168.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint168(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint168.fromNumber(uintable);
-        }
-    };
     Uint168.LENGTH = 21;
     return Uint168;
 }(UintX_1.UintX));
 exports.Uint168 = Uint168;
 var Uint176 = /** @class */ (function (_super) {
     __extends(Uint176, _super);
-    function Uint176(uish) {
-        return _super.call(this, Uint176.LENGTH, uish) || this;
+    function Uint176(uintable) {
+        return _super.call(this, Uint176.LENGTH, uintable) || this;
     }
     Uint176.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -1263,22 +1095,14 @@ var Uint176 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint176(bn.toArrayLike(Uint8Array, 'be'));
     };
-    Uint176.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint176(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint176.fromNumber(uintable);
-        }
-    };
     Uint176.LENGTH = 22;
     return Uint176;
 }(UintX_1.UintX));
 exports.Uint176 = Uint176;
 var Uint184 = /** @class */ (function (_super) {
     __extends(Uint184, _super);
-    function Uint184(uish) {
-        return _super.call(this, Uint184.LENGTH, uish) || this;
+    function Uint184(uintable) {
+        return _super.call(this, Uint184.LENGTH, uintable) || this;
     }
     Uint184.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -1320,22 +1144,14 @@ var Uint184 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint184(bn.toArrayLike(Uint8Array, 'be'));
     };
-    Uint184.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint184(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint184.fromNumber(uintable);
-        }
-    };
     Uint184.LENGTH = 23;
     return Uint184;
 }(UintX_1.UintX));
 exports.Uint184 = Uint184;
 var Uint192 = /** @class */ (function (_super) {
     __extends(Uint192, _super);
-    function Uint192(uish) {
-        return _super.call(this, Uint192.LENGTH, uish) || this;
+    function Uint192(uintable) {
+        return _super.call(this, Uint192.LENGTH, uintable) || this;
     }
     Uint192.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -1377,22 +1193,14 @@ var Uint192 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint192(bn.toArrayLike(Uint8Array, 'be'));
     };
-    Uint192.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint192(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint192.fromNumber(uintable);
-        }
-    };
     Uint192.LENGTH = 24;
     return Uint192;
 }(UintX_1.UintX));
 exports.Uint192 = Uint192;
 var Uint200 = /** @class */ (function (_super) {
     __extends(Uint200, _super);
-    function Uint200(uish) {
-        return _super.call(this, Uint200.LENGTH, uish) || this;
+    function Uint200(uintable) {
+        return _super.call(this, Uint200.LENGTH, uintable) || this;
     }
     Uint200.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -1434,22 +1242,14 @@ var Uint200 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint200(bn.toArrayLike(Uint8Array, 'be'));
     };
-    Uint200.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint200(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint200.fromNumber(uintable);
-        }
-    };
     Uint200.LENGTH = 25;
     return Uint200;
 }(UintX_1.UintX));
 exports.Uint200 = Uint200;
 var Uint208 = /** @class */ (function (_super) {
     __extends(Uint208, _super);
-    function Uint208(uish) {
-        return _super.call(this, Uint208.LENGTH, uish) || this;
+    function Uint208(uintable) {
+        return _super.call(this, Uint208.LENGTH, uintable) || this;
     }
     Uint208.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -1491,22 +1291,14 @@ var Uint208 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint208(bn.toArrayLike(Uint8Array, 'be'));
     };
-    Uint208.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint208(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint208.fromNumber(uintable);
-        }
-    };
     Uint208.LENGTH = 26;
     return Uint208;
 }(UintX_1.UintX));
 exports.Uint208 = Uint208;
 var Uint216 = /** @class */ (function (_super) {
     __extends(Uint216, _super);
-    function Uint216(uish) {
-        return _super.call(this, Uint216.LENGTH, uish) || this;
+    function Uint216(uintable) {
+        return _super.call(this, Uint216.LENGTH, uintable) || this;
     }
     Uint216.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -1548,22 +1340,14 @@ var Uint216 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint216(bn.toArrayLike(Uint8Array, 'be'));
     };
-    Uint216.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint216(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint216.fromNumber(uintable);
-        }
-    };
     Uint216.LENGTH = 27;
     return Uint216;
 }(UintX_1.UintX));
 exports.Uint216 = Uint216;
 var Uint224 = /** @class */ (function (_super) {
     __extends(Uint224, _super);
-    function Uint224(uish) {
-        return _super.call(this, Uint224.LENGTH, uish) || this;
+    function Uint224(uintable) {
+        return _super.call(this, Uint224.LENGTH, uintable) || this;
     }
     Uint224.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -1605,22 +1389,14 @@ var Uint224 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint224(bn.toArrayLike(Uint8Array, 'be'));
     };
-    Uint224.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint224(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint224.fromNumber(uintable);
-        }
-    };
     Uint224.LENGTH = 28;
     return Uint224;
 }(UintX_1.UintX));
 exports.Uint224 = Uint224;
 var Uint232 = /** @class */ (function (_super) {
     __extends(Uint232, _super);
-    function Uint232(uish) {
-        return _super.call(this, Uint232.LENGTH, uish) || this;
+    function Uint232(uintable) {
+        return _super.call(this, Uint232.LENGTH, uintable) || this;
     }
     Uint232.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -1662,22 +1438,14 @@ var Uint232 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint232(bn.toArrayLike(Uint8Array, 'be'));
     };
-    Uint232.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint232(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint232.fromNumber(uintable);
-        }
-    };
     Uint232.LENGTH = 29;
     return Uint232;
 }(UintX_1.UintX));
 exports.Uint232 = Uint232;
 var Uint240 = /** @class */ (function (_super) {
     __extends(Uint240, _super);
-    function Uint240(uish) {
-        return _super.call(this, Uint240.LENGTH, uish) || this;
+    function Uint240(uintable) {
+        return _super.call(this, Uint240.LENGTH, uintable) || this;
     }
     Uint240.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -1719,22 +1487,14 @@ var Uint240 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint240(bn.toArrayLike(Uint8Array, 'be'));
     };
-    Uint240.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint240(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint240.fromNumber(uintable);
-        }
-    };
     Uint240.LENGTH = 30;
     return Uint240;
 }(UintX_1.UintX));
 exports.Uint240 = Uint240;
 var Uint248 = /** @class */ (function (_super) {
     __extends(Uint248, _super);
-    function Uint248(uish) {
-        return _super.call(this, Uint248.LENGTH, uish) || this;
+    function Uint248(uintable) {
+        return _super.call(this, Uint248.LENGTH, uintable) || this;
     }
     Uint248.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -1776,22 +1536,14 @@ var Uint248 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint248(bn.toArrayLike(Uint8Array, 'be'));
     };
-    Uint248.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint248(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint248.fromNumber(uintable);
-        }
-    };
     Uint248.LENGTH = 31;
     return Uint248;
 }(UintX_1.UintX));
 exports.Uint248 = Uint248;
 var Uint256 = /** @class */ (function (_super) {
     __extends(Uint256, _super);
-    function Uint256(uish) {
-        return _super.call(this, Uint256.LENGTH, uish) || this;
+    function Uint256(uintable) {
+        return _super.call(this, Uint256.LENGTH, uintable) || this;
     }
     Uint256.prototype.opAdd = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
@@ -1832,14 +1584,6 @@ var Uint256 = /** @class */ (function (_super) {
     Uint256.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
         return new Uint256(bn.toArrayLike(Uint8Array, 'be'));
-    };
-    Uint256.fromUintable = function (uintable) {
-        if (uintable instanceof UintX_1.UintX) {
-            return new Uint256(uintable.uu.genClone());
-        }
-        if (!Number.isNaN(uintable)) {
-            return Uint256.fromNumber(uintable);
-        }
     };
     Uint256.LENGTH = 32;
     return Uint256;

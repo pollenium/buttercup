@@ -9,9 +9,13 @@ function genBnFromUintable(uintable) {
     if (uintable instanceof UintX_1.UintX) {
         return new bn_js_1["default"](uintable.u);
     }
-    if (!Number.isNaN(uintable)) {
+    if (uintable instanceof Uint8Array) {
+        return new bn_js_1["default"](uintable);
+    }
+    if (typeof uintable === 'number') {
         return genBnFromNumber(uintable);
     }
+    return new bn_js_1["default"](uintable.u);
 }
 exports.genBnFromUintable = genBnFromUintable;
 function genBnFromNumber(number) {

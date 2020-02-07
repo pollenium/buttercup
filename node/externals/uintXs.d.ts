@@ -1,9 +1,7 @@
-import { UintX } from '../internals/UintX';
-import { Uish } from 'pollenium-uvaursi';
-import { Uintable } from '../types';
+import { UintX, Uintable } from '../internals/UintX';
 export declare class Uint8 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint8;
     opSub(uintable: Uintable): Uint8;
     opMul(uintable: Uintable): Uint8;
@@ -11,11 +9,10 @@ export declare class Uint8 extends UintX {
     opMod(uintable: Uintable): Uint8;
     opPow(uintable: Uintable): Uint8;
     static fromNumber(number: number): Uint8;
-    static fromUintable(uintable: Uintable): Uint8;
 }
 export declare class Uint16 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint16;
     opSub(uintable: Uintable): Uint16;
     opMul(uintable: Uintable): Uint16;
@@ -23,11 +20,10 @@ export declare class Uint16 extends UintX {
     opMod(uintable: Uintable): Uint16;
     opPow(uintable: Uintable): Uint16;
     static fromNumber(number: number): Uint16;
-    static fromUintable(uintable: Uintable): Uint16;
 }
 export declare class Uint24 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint24;
     opSub(uintable: Uintable): Uint24;
     opMul(uintable: Uintable): Uint24;
@@ -35,11 +31,10 @@ export declare class Uint24 extends UintX {
     opMod(uintable: Uintable): Uint24;
     opPow(uintable: Uintable): Uint24;
     static fromNumber(number: number): Uint24;
-    static fromUintable(uintable: Uintable): Uint24;
 }
 export declare class Uint32 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint32;
     opSub(uintable: Uintable): Uint32;
     opMul(uintable: Uintable): Uint32;
@@ -47,11 +42,10 @@ export declare class Uint32 extends UintX {
     opMod(uintable: Uintable): Uint32;
     opPow(uintable: Uintable): Uint32;
     static fromNumber(number: number): Uint32;
-    static fromUintable(uintable: Uintable): Uint32;
 }
 export declare class Uint40 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint40;
     opSub(uintable: Uintable): Uint40;
     opMul(uintable: Uintable): Uint40;
@@ -59,11 +53,10 @@ export declare class Uint40 extends UintX {
     opMod(uintable: Uintable): Uint40;
     opPow(uintable: Uintable): Uint40;
     static fromNumber(number: number): Uint40;
-    static fromUintable(uintable: Uintable): Uint40;
 }
 export declare class Uint48 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint48;
     opSub(uintable: Uintable): Uint48;
     opMul(uintable: Uintable): Uint48;
@@ -71,11 +64,10 @@ export declare class Uint48 extends UintX {
     opMod(uintable: Uintable): Uint48;
     opPow(uintable: Uintable): Uint48;
     static fromNumber(number: number): Uint48;
-    static fromUintable(uintable: Uintable): Uint48;
 }
 export declare class Uint56 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint56;
     opSub(uintable: Uintable): Uint56;
     opMul(uintable: Uintable): Uint56;
@@ -83,11 +75,10 @@ export declare class Uint56 extends UintX {
     opMod(uintable: Uintable): Uint56;
     opPow(uintable: Uintable): Uint56;
     static fromNumber(number: number): Uint56;
-    static fromUintable(uintable: Uintable): Uint56;
 }
 export declare class Uint64 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint64;
     opSub(uintable: Uintable): Uint64;
     opMul(uintable: Uintable): Uint64;
@@ -95,11 +86,10 @@ export declare class Uint64 extends UintX {
     opMod(uintable: Uintable): Uint64;
     opPow(uintable: Uintable): Uint64;
     static fromNumber(number: number): Uint64;
-    static fromUintable(uintable: Uintable): Uint64;
 }
 export declare class Uint72 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint72;
     opSub(uintable: Uintable): Uint72;
     opMul(uintable: Uintable): Uint72;
@@ -107,11 +97,10 @@ export declare class Uint72 extends UintX {
     opMod(uintable: Uintable): Uint72;
     opPow(uintable: Uintable): Uint72;
     static fromNumber(number: number): Uint72;
-    static fromUintable(uintable: Uintable): Uint72;
 }
 export declare class Uint80 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint80;
     opSub(uintable: Uintable): Uint80;
     opMul(uintable: Uintable): Uint80;
@@ -119,11 +108,10 @@ export declare class Uint80 extends UintX {
     opMod(uintable: Uintable): Uint80;
     opPow(uintable: Uintable): Uint80;
     static fromNumber(number: number): Uint80;
-    static fromUintable(uintable: Uintable): Uint80;
 }
 export declare class Uint88 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint88;
     opSub(uintable: Uintable): Uint88;
     opMul(uintable: Uintable): Uint88;
@@ -131,11 +119,10 @@ export declare class Uint88 extends UintX {
     opMod(uintable: Uintable): Uint88;
     opPow(uintable: Uintable): Uint88;
     static fromNumber(number: number): Uint88;
-    static fromUintable(uintable: Uintable): Uint88;
 }
 export declare class Uint96 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint96;
     opSub(uintable: Uintable): Uint96;
     opMul(uintable: Uintable): Uint96;
@@ -143,11 +130,10 @@ export declare class Uint96 extends UintX {
     opMod(uintable: Uintable): Uint96;
     opPow(uintable: Uintable): Uint96;
     static fromNumber(number: number): Uint96;
-    static fromUintable(uintable: Uintable): Uint96;
 }
 export declare class Uint104 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint104;
     opSub(uintable: Uintable): Uint104;
     opMul(uintable: Uintable): Uint104;
@@ -155,11 +141,10 @@ export declare class Uint104 extends UintX {
     opMod(uintable: Uintable): Uint104;
     opPow(uintable: Uintable): Uint104;
     static fromNumber(number: number): Uint104;
-    static fromUintable(uintable: Uintable): Uint104;
 }
 export declare class Uint112 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint112;
     opSub(uintable: Uintable): Uint112;
     opMul(uintable: Uintable): Uint112;
@@ -167,11 +152,10 @@ export declare class Uint112 extends UintX {
     opMod(uintable: Uintable): Uint112;
     opPow(uintable: Uintable): Uint112;
     static fromNumber(number: number): Uint112;
-    static fromUintable(uintable: Uintable): Uint112;
 }
 export declare class Uint120 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint120;
     opSub(uintable: Uintable): Uint120;
     opMul(uintable: Uintable): Uint120;
@@ -179,11 +163,10 @@ export declare class Uint120 extends UintX {
     opMod(uintable: Uintable): Uint120;
     opPow(uintable: Uintable): Uint120;
     static fromNumber(number: number): Uint120;
-    static fromUintable(uintable: Uintable): Uint120;
 }
 export declare class Uint128 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint128;
     opSub(uintable: Uintable): Uint128;
     opMul(uintable: Uintable): Uint128;
@@ -191,11 +174,10 @@ export declare class Uint128 extends UintX {
     opMod(uintable: Uintable): Uint128;
     opPow(uintable: Uintable): Uint128;
     static fromNumber(number: number): Uint128;
-    static fromUintable(uintable: Uintable): Uint128;
 }
 export declare class Uint136 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint136;
     opSub(uintable: Uintable): Uint136;
     opMul(uintable: Uintable): Uint136;
@@ -203,11 +185,10 @@ export declare class Uint136 extends UintX {
     opMod(uintable: Uintable): Uint136;
     opPow(uintable: Uintable): Uint136;
     static fromNumber(number: number): Uint136;
-    static fromUintable(uintable: Uintable): Uint136;
 }
 export declare class Uint144 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint144;
     opSub(uintable: Uintable): Uint144;
     opMul(uintable: Uintable): Uint144;
@@ -215,11 +196,10 @@ export declare class Uint144 extends UintX {
     opMod(uintable: Uintable): Uint144;
     opPow(uintable: Uintable): Uint144;
     static fromNumber(number: number): Uint144;
-    static fromUintable(uintable: Uintable): Uint144;
 }
 export declare class Uint152 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint152;
     opSub(uintable: Uintable): Uint152;
     opMul(uintable: Uintable): Uint152;
@@ -227,11 +207,10 @@ export declare class Uint152 extends UintX {
     opMod(uintable: Uintable): Uint152;
     opPow(uintable: Uintable): Uint152;
     static fromNumber(number: number): Uint152;
-    static fromUintable(uintable: Uintable): Uint152;
 }
 export declare class Uint160 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint160;
     opSub(uintable: Uintable): Uint160;
     opMul(uintable: Uintable): Uint160;
@@ -239,11 +218,10 @@ export declare class Uint160 extends UintX {
     opMod(uintable: Uintable): Uint160;
     opPow(uintable: Uintable): Uint160;
     static fromNumber(number: number): Uint160;
-    static fromUintable(uintable: Uintable): Uint160;
 }
 export declare class Uint168 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint168;
     opSub(uintable: Uintable): Uint168;
     opMul(uintable: Uintable): Uint168;
@@ -251,11 +229,10 @@ export declare class Uint168 extends UintX {
     opMod(uintable: Uintable): Uint168;
     opPow(uintable: Uintable): Uint168;
     static fromNumber(number: number): Uint168;
-    static fromUintable(uintable: Uintable): Uint168;
 }
 export declare class Uint176 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint176;
     opSub(uintable: Uintable): Uint176;
     opMul(uintable: Uintable): Uint176;
@@ -263,11 +240,10 @@ export declare class Uint176 extends UintX {
     opMod(uintable: Uintable): Uint176;
     opPow(uintable: Uintable): Uint176;
     static fromNumber(number: number): Uint176;
-    static fromUintable(uintable: Uintable): Uint176;
 }
 export declare class Uint184 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint184;
     opSub(uintable: Uintable): Uint184;
     opMul(uintable: Uintable): Uint184;
@@ -275,11 +251,10 @@ export declare class Uint184 extends UintX {
     opMod(uintable: Uintable): Uint184;
     opPow(uintable: Uintable): Uint184;
     static fromNumber(number: number): Uint184;
-    static fromUintable(uintable: Uintable): Uint184;
 }
 export declare class Uint192 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint192;
     opSub(uintable: Uintable): Uint192;
     opMul(uintable: Uintable): Uint192;
@@ -287,11 +262,10 @@ export declare class Uint192 extends UintX {
     opMod(uintable: Uintable): Uint192;
     opPow(uintable: Uintable): Uint192;
     static fromNumber(number: number): Uint192;
-    static fromUintable(uintable: Uintable): Uint192;
 }
 export declare class Uint200 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint200;
     opSub(uintable: Uintable): Uint200;
     opMul(uintable: Uintable): Uint200;
@@ -299,11 +273,10 @@ export declare class Uint200 extends UintX {
     opMod(uintable: Uintable): Uint200;
     opPow(uintable: Uintable): Uint200;
     static fromNumber(number: number): Uint200;
-    static fromUintable(uintable: Uintable): Uint200;
 }
 export declare class Uint208 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint208;
     opSub(uintable: Uintable): Uint208;
     opMul(uintable: Uintable): Uint208;
@@ -311,11 +284,10 @@ export declare class Uint208 extends UintX {
     opMod(uintable: Uintable): Uint208;
     opPow(uintable: Uintable): Uint208;
     static fromNumber(number: number): Uint208;
-    static fromUintable(uintable: Uintable): Uint208;
 }
 export declare class Uint216 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint216;
     opSub(uintable: Uintable): Uint216;
     opMul(uintable: Uintable): Uint216;
@@ -323,11 +295,10 @@ export declare class Uint216 extends UintX {
     opMod(uintable: Uintable): Uint216;
     opPow(uintable: Uintable): Uint216;
     static fromNumber(number: number): Uint216;
-    static fromUintable(uintable: Uintable): Uint216;
 }
 export declare class Uint224 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint224;
     opSub(uintable: Uintable): Uint224;
     opMul(uintable: Uintable): Uint224;
@@ -335,11 +306,10 @@ export declare class Uint224 extends UintX {
     opMod(uintable: Uintable): Uint224;
     opPow(uintable: Uintable): Uint224;
     static fromNumber(number: number): Uint224;
-    static fromUintable(uintable: Uintable): Uint224;
 }
 export declare class Uint232 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint232;
     opSub(uintable: Uintable): Uint232;
     opMul(uintable: Uintable): Uint232;
@@ -347,11 +317,10 @@ export declare class Uint232 extends UintX {
     opMod(uintable: Uintable): Uint232;
     opPow(uintable: Uintable): Uint232;
     static fromNumber(number: number): Uint232;
-    static fromUintable(uintable: Uintable): Uint232;
 }
 export declare class Uint240 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint240;
     opSub(uintable: Uintable): Uint240;
     opMul(uintable: Uintable): Uint240;
@@ -359,11 +328,10 @@ export declare class Uint240 extends UintX {
     opMod(uintable: Uintable): Uint240;
     opPow(uintable: Uintable): Uint240;
     static fromNumber(number: number): Uint240;
-    static fromUintable(uintable: Uintable): Uint240;
 }
 export declare class Uint248 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint248;
     opSub(uintable: Uintable): Uint248;
     opMul(uintable: Uintable): Uint248;
@@ -371,11 +339,10 @@ export declare class Uint248 extends UintX {
     opMod(uintable: Uintable): Uint248;
     opPow(uintable: Uintable): Uint248;
     static fromNumber(number: number): Uint248;
-    static fromUintable(uintable: Uintable): Uint248;
 }
 export declare class Uint256 extends UintX {
     static LENGTH: number;
-    constructor(uish: Uish);
+    constructor(uintable: Uintable);
     opAdd(uintable: Uintable): Uint256;
     opSub(uintable: Uintable): Uint256;
     opMul(uintable: Uintable): Uint256;
@@ -383,5 +350,4 @@ export declare class Uint256 extends UintX {
     opMod(uintable: Uintable): Uint256;
     opPow(uintable: Uintable): Uint256;
     static fromNumber(number: number): Uint256;
-    static fromUintable(uintable: Uintable): Uint256;
 }

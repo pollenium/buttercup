@@ -1,11 +1,11 @@
 import { FixLeftButtercup } from '../buttercups/fixButtercups';
 import { Uish } from 'pollenium-uvaursi';
-import { Uintable } from '../types';
+export declare type Uintable = number | UintX | Uish;
 export declare abstract class UintX extends FixLeftButtercup {
     private bn?;
     private number?;
     private numberStringByBase;
-    constructor(length: number, uish: Uish);
+    constructor(length: number, uintable: Uintable);
     toNumber(): number;
     toNumberString(base: number): string;
     getIsZero(): boolean;

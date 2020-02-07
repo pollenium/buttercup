@@ -70,5 +70,3 @@ export {
   Bytes31,
   Bytes32
 } from './externals/bytesXs'
-
-export { Uintable } from './types'

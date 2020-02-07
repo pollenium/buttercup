@@ -21,8 +21,8 @@ var bn_js_1 = __importDefault(require("bn.js"));
 var utils_1 = require("../utils");
 var UintX = /** @class */ (function (_super) {
     __extends(UintX, _super);
-    function UintX(length, uish) {
-        var _this = _super.call(this, length, uish) || this;
+    function UintX(length, uintable) {
+        var _this = _super.call(this, length, utils_1.genBnFromUintable(uintable).toArrayLike(Uint8Array, 'be')) || this;
         _this.numberStringByBase = {};
         return _this;
     }
