@@ -4,10 +4,11 @@ import { Uish } from 'pollenium-uvaursi'
 import { Uintable } from '../types'
 import { genBnFromUintable } from '../utils'
 
-export class UintX extends FixLeftButtercup {
+export abstract class UintX extends FixLeftButtercup {
 
   private bn?: Bn;
   private number?: number;
+  private numberStringByBase: Record<number, string> = {};
 
   constructor(length: number, uish: Uish) {
     super(length, uish)
@@ -16,6 +17,14 @@ export class UintX extends FixLeftButtercup {
   toNumber(): number {
     this.number = new Bn(this.uu.u).toNumber()
     return this.number
+  }
+
+  toNumberString(base: number): string {
+    if (this.numberStringByBase[base]) {
+      return this.numberStringByBase[base]
+    }
+    this.numberStringByBase[base] = new Bn(this.uu.u).toString(base)
+    return this.numberStringByBase[base]
   }
 
   getIsZero(): boolean {

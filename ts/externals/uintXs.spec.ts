@@ -85,6 +85,12 @@ test('fromUintable', () => {
   expect(Uint16.fromUintable(Uint8.fromNumber(5)).toNumber()).toBe(5)
 })
 
+test('toNumberString', () => {
+  const a = Uint16.fromUintable(43)
+  expect(a.toNumberString(10)).toBe('43')
+  expect(a.toNumberString(10)).toBe('43')
+})
+
 test('comparison', () => {
   const a = Uint8.fromNumber(4)
   const b = Uint16.fromNumber(4)

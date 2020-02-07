@@ -22,11 +22,20 @@ var utils_1 = require("../utils");
 var UintX = /** @class */ (function (_super) {
     __extends(UintX, _super);
     function UintX(length, uish) {
-        return _super.call(this, length, uish) || this;
+        var _this = _super.call(this, length, uish) || this;
+        _this.numberStringByBase = {};
+        return _this;
     }
     UintX.prototype.toNumber = function () {
         this.number = new bn_js_1["default"](this.uu.u).toNumber();
         return this.number;
+    };
+    UintX.prototype.toNumberString = function (base) {
+        if (this.numberStringByBase[base]) {
+            return this.numberStringByBase[base];
+        }
+        this.numberStringByBase[base] = new bn_js_1["default"](this.uu.u).toString(base);
+        return this.numberStringByBase[base];
     };
     UintX.prototype.getIsZero = function () {
         return this.uu.u.every(function (byte) {

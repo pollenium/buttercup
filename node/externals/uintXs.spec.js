@@ -66,6 +66,12 @@ test('fromUintable', function () {
     expect(__1.Uint8.fromUintable(4).toNumber()).toBe(4);
     expect(__1.Uint16.fromUintable(__1.Uint8.fromNumber(5)).toNumber()).toBe(5);
 });
+test('toNumberString', function () {
+    var a = __1.Uint16.fromUintable(43);
+    console.log(a.toNumberString(10));
+    expect(a.toNumberString(10)).toBe('43');
+    expect(a.toNumberString(10)).toBe('43');
+});
 test('comparison', function () {
     var a = __1.Uint8.fromNumber(4);
     var b = __1.Uint16.fromNumber(4);
