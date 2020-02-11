@@ -71,6 +71,12 @@ test('toNumberString', function () {
     expect(a.toNumberString(10)).toBe('43');
     expect(a.toNumberString(10)).toBe('43');
 });
+test('fromNumberString', function () {
+    var a = __1.Uint256.fromNumberString(16, 'dead');
+    var b = __1.Uint256.fromNumberString(2, '101010');
+    var c = a.opAdd(b);
+    expect(c.toNumberString(10)).toBe('57047');
+});
 test('comparison', function () {
     var a = new __1.Uint8(4);
     var b = new __1.Uint16(4);

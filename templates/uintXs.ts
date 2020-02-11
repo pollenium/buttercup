@@ -62,6 +62,11 @@ export class Uint{{bits}} extends UintX {
     return new {{className}}(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromNumberString(base: number, numberString: string): {{className}} {
+    const bn = new Bn(numberString, base)
+    return new {{className}}(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
 }
 
 {{/each}}

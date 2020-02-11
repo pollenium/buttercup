@@ -1,4 +1,4 @@
-import { Uint8, Uint16, Bytes } from '../'
+import { Uint8, Uint16, Uint256, Bytes } from '../'
 import { Uu } from 'pollenium-uvaursi'
 
 test('add', () => {
@@ -90,6 +90,14 @@ test('toNumberString', () => {
   expect(a.toNumberString(10)).toBe('43')
   expect(a.toNumberString(10)).toBe('43')
 })
+
+test('fromNumberString', () => {
+  const a = Uint256.fromNumberString(16, 'dead');
+  const b = Uint256.fromNumberString(2, '101010');
+  const c = a.opAdd(b)
+  expect(c.toNumberString(10)).toBe('57047')
+})
+
 
 test('comparison', () => {
   const a = new Uint8(4)

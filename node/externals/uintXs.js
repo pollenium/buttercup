@@ -66,6 +66,10 @@ var Uint8 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint8(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint8.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
+        return new Uint8(bn.toArrayLike(Uint8Array, 'be'));
+    };
     Uint8.LENGTH = 1;
     return Uint8;
 }(UintX_1.UintX));
@@ -113,6 +117,10 @@ var Uint16 = /** @class */ (function (_super) {
     };
     Uint16.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
+        return new Uint16(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint16.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
         return new Uint16(bn.toArrayLike(Uint8Array, 'be'));
     };
     Uint16.LENGTH = 2;
@@ -164,6 +172,10 @@ var Uint24 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint24(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint24.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
+        return new Uint24(bn.toArrayLike(Uint8Array, 'be'));
+    };
     Uint24.LENGTH = 3;
     return Uint24;
 }(UintX_1.UintX));
@@ -211,6 +223,10 @@ var Uint32 = /** @class */ (function (_super) {
     };
     Uint32.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
+        return new Uint32(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint32.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
         return new Uint32(bn.toArrayLike(Uint8Array, 'be'));
     };
     Uint32.LENGTH = 4;
@@ -262,6 +278,10 @@ var Uint40 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint40(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint40.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
+        return new Uint40(bn.toArrayLike(Uint8Array, 'be'));
+    };
     Uint40.LENGTH = 5;
     return Uint40;
 }(UintX_1.UintX));
@@ -309,6 +329,10 @@ var Uint48 = /** @class */ (function (_super) {
     };
     Uint48.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
+        return new Uint48(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint48.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
         return new Uint48(bn.toArrayLike(Uint8Array, 'be'));
     };
     Uint48.LENGTH = 6;
@@ -360,6 +384,10 @@ var Uint56 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint56(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint56.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
+        return new Uint56(bn.toArrayLike(Uint8Array, 'be'));
+    };
     Uint56.LENGTH = 7;
     return Uint56;
 }(UintX_1.UintX));
@@ -407,6 +435,10 @@ var Uint64 = /** @class */ (function (_super) {
     };
     Uint64.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
+        return new Uint64(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint64.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
         return new Uint64(bn.toArrayLike(Uint8Array, 'be'));
     };
     Uint64.LENGTH = 8;
@@ -458,6 +490,10 @@ var Uint72 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint72(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint72.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
+        return new Uint72(bn.toArrayLike(Uint8Array, 'be'));
+    };
     Uint72.LENGTH = 9;
     return Uint72;
 }(UintX_1.UintX));
@@ -505,6 +541,10 @@ var Uint80 = /** @class */ (function (_super) {
     };
     Uint80.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
+        return new Uint80(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint80.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
         return new Uint80(bn.toArrayLike(Uint8Array, 'be'));
     };
     Uint80.LENGTH = 10;
@@ -556,6 +596,10 @@ var Uint88 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint88(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint88.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
+        return new Uint88(bn.toArrayLike(Uint8Array, 'be'));
+    };
     Uint88.LENGTH = 11;
     return Uint88;
 }(UintX_1.UintX));
@@ -603,6 +647,10 @@ var Uint96 = /** @class */ (function (_super) {
     };
     Uint96.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
+        return new Uint96(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint96.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
         return new Uint96(bn.toArrayLike(Uint8Array, 'be'));
     };
     Uint96.LENGTH = 12;
@@ -654,6 +702,10 @@ var Uint104 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint104(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint104.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
+        return new Uint104(bn.toArrayLike(Uint8Array, 'be'));
+    };
     Uint104.LENGTH = 13;
     return Uint104;
 }(UintX_1.UintX));
@@ -701,6 +753,10 @@ var Uint112 = /** @class */ (function (_super) {
     };
     Uint112.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
+        return new Uint112(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint112.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
         return new Uint112(bn.toArrayLike(Uint8Array, 'be'));
     };
     Uint112.LENGTH = 14;
@@ -752,6 +808,10 @@ var Uint120 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint120(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint120.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
+        return new Uint120(bn.toArrayLike(Uint8Array, 'be'));
+    };
     Uint120.LENGTH = 15;
     return Uint120;
 }(UintX_1.UintX));
@@ -799,6 +859,10 @@ var Uint128 = /** @class */ (function (_super) {
     };
     Uint128.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
+        return new Uint128(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint128.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
         return new Uint128(bn.toArrayLike(Uint8Array, 'be'));
     };
     Uint128.LENGTH = 16;
@@ -850,6 +914,10 @@ var Uint136 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint136(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint136.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
+        return new Uint136(bn.toArrayLike(Uint8Array, 'be'));
+    };
     Uint136.LENGTH = 17;
     return Uint136;
 }(UintX_1.UintX));
@@ -897,6 +965,10 @@ var Uint144 = /** @class */ (function (_super) {
     };
     Uint144.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
+        return new Uint144(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint144.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
         return new Uint144(bn.toArrayLike(Uint8Array, 'be'));
     };
     Uint144.LENGTH = 18;
@@ -948,6 +1020,10 @@ var Uint152 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint152(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint152.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
+        return new Uint152(bn.toArrayLike(Uint8Array, 'be'));
+    };
     Uint152.LENGTH = 19;
     return Uint152;
 }(UintX_1.UintX));
@@ -995,6 +1071,10 @@ var Uint160 = /** @class */ (function (_super) {
     };
     Uint160.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
+        return new Uint160(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint160.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
         return new Uint160(bn.toArrayLike(Uint8Array, 'be'));
     };
     Uint160.LENGTH = 20;
@@ -1046,6 +1126,10 @@ var Uint168 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint168(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint168.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
+        return new Uint168(bn.toArrayLike(Uint8Array, 'be'));
+    };
     Uint168.LENGTH = 21;
     return Uint168;
 }(UintX_1.UintX));
@@ -1093,6 +1177,10 @@ var Uint176 = /** @class */ (function (_super) {
     };
     Uint176.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
+        return new Uint176(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint176.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
         return new Uint176(bn.toArrayLike(Uint8Array, 'be'));
     };
     Uint176.LENGTH = 22;
@@ -1144,6 +1232,10 @@ var Uint184 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint184(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint184.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
+        return new Uint184(bn.toArrayLike(Uint8Array, 'be'));
+    };
     Uint184.LENGTH = 23;
     return Uint184;
 }(UintX_1.UintX));
@@ -1191,6 +1283,10 @@ var Uint192 = /** @class */ (function (_super) {
     };
     Uint192.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
+        return new Uint192(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint192.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
         return new Uint192(bn.toArrayLike(Uint8Array, 'be'));
     };
     Uint192.LENGTH = 24;
@@ -1242,6 +1338,10 @@ var Uint200 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint200(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint200.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
+        return new Uint200(bn.toArrayLike(Uint8Array, 'be'));
+    };
     Uint200.LENGTH = 25;
     return Uint200;
 }(UintX_1.UintX));
@@ -1289,6 +1389,10 @@ var Uint208 = /** @class */ (function (_super) {
     };
     Uint208.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
+        return new Uint208(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint208.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
         return new Uint208(bn.toArrayLike(Uint8Array, 'be'));
     };
     Uint208.LENGTH = 26;
@@ -1340,6 +1444,10 @@ var Uint216 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint216(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint216.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
+        return new Uint216(bn.toArrayLike(Uint8Array, 'be'));
+    };
     Uint216.LENGTH = 27;
     return Uint216;
 }(UintX_1.UintX));
@@ -1387,6 +1495,10 @@ var Uint224 = /** @class */ (function (_super) {
     };
     Uint224.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
+        return new Uint224(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint224.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
         return new Uint224(bn.toArrayLike(Uint8Array, 'be'));
     };
     Uint224.LENGTH = 28;
@@ -1438,6 +1550,10 @@ var Uint232 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint232(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint232.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
+        return new Uint232(bn.toArrayLike(Uint8Array, 'be'));
+    };
     Uint232.LENGTH = 29;
     return Uint232;
 }(UintX_1.UintX));
@@ -1485,6 +1601,10 @@ var Uint240 = /** @class */ (function (_super) {
     };
     Uint240.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
+        return new Uint240(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint240.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
         return new Uint240(bn.toArrayLike(Uint8Array, 'be'));
     };
     Uint240.LENGTH = 30;
@@ -1536,6 +1656,10 @@ var Uint248 = /** @class */ (function (_super) {
         var bn = new bn_js_1["default"](number);
         return new Uint248(bn.toArrayLike(Uint8Array, 'be'));
     };
+    Uint248.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
+        return new Uint248(bn.toArrayLike(Uint8Array, 'be'));
+    };
     Uint248.LENGTH = 31;
     return Uint248;
 }(UintX_1.UintX));
@@ -1583,6 +1707,10 @@ var Uint256 = /** @class */ (function (_super) {
     };
     Uint256.fromNumber = function (number) {
         var bn = new bn_js_1["default"](number);
+        return new Uint256(bn.toArrayLike(Uint8Array, 'be'));
+    };
+    Uint256.fromNumberString = function (base, numberString) {
+        var bn = new bn_js_1["default"](numberString, base);
         return new Uint256(bn.toArrayLike(Uint8Array, 'be'));
     };
     Uint256.LENGTH = 32;

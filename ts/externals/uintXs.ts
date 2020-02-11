@@ -61,6 +61,11 @@ export class Uint8 extends UintX {
     return new Uint8(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromNumberString(base: number, numberString: string): Uint8 {
+    const bn = new Bn(numberString, base)
+    return new Uint8(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
 }
 
 export class Uint16 extends UintX {
@@ -115,6 +120,11 @@ export class Uint16 extends UintX {
 
   static fromNumber(number: number): Uint16 {
     const bn = new Bn(number)
+    return new Uint16(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromNumberString(base: number, numberString: string): Uint16 {
+    const bn = new Bn(numberString, base)
     return new Uint16(bn.toArrayLike(Uint8Array, 'be'))
   }
 
@@ -175,6 +185,11 @@ export class Uint24 extends UintX {
     return new Uint24(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromNumberString(base: number, numberString: string): Uint24 {
+    const bn = new Bn(numberString, base)
+    return new Uint24(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
 }
 
 export class Uint32 extends UintX {
@@ -229,6 +244,11 @@ export class Uint32 extends UintX {
 
   static fromNumber(number: number): Uint32 {
     const bn = new Bn(number)
+    return new Uint32(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromNumberString(base: number, numberString: string): Uint32 {
+    const bn = new Bn(numberString, base)
     return new Uint32(bn.toArrayLike(Uint8Array, 'be'))
   }
 
@@ -289,6 +309,11 @@ export class Uint40 extends UintX {
     return new Uint40(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromNumberString(base: number, numberString: string): Uint40 {
+    const bn = new Bn(numberString, base)
+    return new Uint40(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
 }
 
 export class Uint48 extends UintX {
@@ -343,6 +368,11 @@ export class Uint48 extends UintX {
 
   static fromNumber(number: number): Uint48 {
     const bn = new Bn(number)
+    return new Uint48(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromNumberString(base: number, numberString: string): Uint48 {
+    const bn = new Bn(numberString, base)
     return new Uint48(bn.toArrayLike(Uint8Array, 'be'))
   }
 
@@ -403,6 +433,11 @@ export class Uint56 extends UintX {
     return new Uint56(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromNumberString(base: number, numberString: string): Uint56 {
+    const bn = new Bn(numberString, base)
+    return new Uint56(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
 }
 
 export class Uint64 extends UintX {
@@ -457,6 +492,11 @@ export class Uint64 extends UintX {
 
   static fromNumber(number: number): Uint64 {
     const bn = new Bn(number)
+    return new Uint64(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromNumberString(base: number, numberString: string): Uint64 {
+    const bn = new Bn(numberString, base)
     return new Uint64(bn.toArrayLike(Uint8Array, 'be'))
   }
 
@@ -517,6 +557,11 @@ export class Uint72 extends UintX {
     return new Uint72(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromNumberString(base: number, numberString: string): Uint72 {
+    const bn = new Bn(numberString, base)
+    return new Uint72(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
 }
 
 export class Uint80 extends UintX {
@@ -571,6 +616,11 @@ export class Uint80 extends UintX {
 
   static fromNumber(number: number): Uint80 {
     const bn = new Bn(number)
+    return new Uint80(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromNumberString(base: number, numberString: string): Uint80 {
+    const bn = new Bn(numberString, base)
     return new Uint80(bn.toArrayLike(Uint8Array, 'be'))
   }
 
@@ -631,6 +681,11 @@ export class Uint88 extends UintX {
     return new Uint88(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromNumberString(base: number, numberString: string): Uint88 {
+    const bn = new Bn(numberString, base)
+    return new Uint88(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
 }
 
 export class Uint96 extends UintX {
@@ -685,6 +740,11 @@ export class Uint96 extends UintX {
 
   static fromNumber(number: number): Uint96 {
     const bn = new Bn(number)
+    return new Uint96(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromNumberString(base: number, numberString: string): Uint96 {
+    const bn = new Bn(numberString, base)
     return new Uint96(bn.toArrayLike(Uint8Array, 'be'))
   }
 
@@ -745,6 +805,11 @@ export class Uint104 extends UintX {
     return new Uint104(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromNumberString(base: number, numberString: string): Uint104 {
+    const bn = new Bn(numberString, base)
+    return new Uint104(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
 }
 
 export class Uint112 extends UintX {
@@ -799,6 +864,11 @@ export class Uint112 extends UintX {
 
   static fromNumber(number: number): Uint112 {
     const bn = new Bn(number)
+    return new Uint112(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromNumberString(base: number, numberString: string): Uint112 {
+    const bn = new Bn(numberString, base)
     return new Uint112(bn.toArrayLike(Uint8Array, 'be'))
   }
 
@@ -859,6 +929,11 @@ export class Uint120 extends UintX {
     return new Uint120(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromNumberString(base: number, numberString: string): Uint120 {
+    const bn = new Bn(numberString, base)
+    return new Uint120(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
 }
 
 export class Uint128 extends UintX {
@@ -913,6 +988,11 @@ export class Uint128 extends UintX {
 
   static fromNumber(number: number): Uint128 {
     const bn = new Bn(number)
+    return new Uint128(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromNumberString(base: number, numberString: string): Uint128 {
+    const bn = new Bn(numberString, base)
     return new Uint128(bn.toArrayLike(Uint8Array, 'be'))
   }
 
@@ -973,6 +1053,11 @@ export class Uint136 extends UintX {
     return new Uint136(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromNumberString(base: number, numberString: string): Uint136 {
+    const bn = new Bn(numberString, base)
+    return new Uint136(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
 }
 
 export class Uint144 extends UintX {
@@ -1027,6 +1112,11 @@ export class Uint144 extends UintX {
 
   static fromNumber(number: number): Uint144 {
     const bn = new Bn(number)
+    return new Uint144(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromNumberString(base: number, numberString: string): Uint144 {
+    const bn = new Bn(numberString, base)
     return new Uint144(bn.toArrayLike(Uint8Array, 'be'))
   }
 
@@ -1087,6 +1177,11 @@ export class Uint152 extends UintX {
     return new Uint152(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromNumberString(base: number, numberString: string): Uint152 {
+    const bn = new Bn(numberString, base)
+    return new Uint152(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
 }
 
 export class Uint160 extends UintX {
@@ -1141,6 +1236,11 @@ export class Uint160 extends UintX {
 
   static fromNumber(number: number): Uint160 {
     const bn = new Bn(number)
+    return new Uint160(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromNumberString(base: number, numberString: string): Uint160 {
+    const bn = new Bn(numberString, base)
     return new Uint160(bn.toArrayLike(Uint8Array, 'be'))
   }
 
@@ -1201,6 +1301,11 @@ export class Uint168 extends UintX {
     return new Uint168(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromNumberString(base: number, numberString: string): Uint168 {
+    const bn = new Bn(numberString, base)
+    return new Uint168(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
 }
 
 export class Uint176 extends UintX {
@@ -1255,6 +1360,11 @@ export class Uint176 extends UintX {
 
   static fromNumber(number: number): Uint176 {
     const bn = new Bn(number)
+    return new Uint176(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromNumberString(base: number, numberString: string): Uint176 {
+    const bn = new Bn(numberString, base)
     return new Uint176(bn.toArrayLike(Uint8Array, 'be'))
   }
 
@@ -1315,6 +1425,11 @@ export class Uint184 extends UintX {
     return new Uint184(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromNumberString(base: number, numberString: string): Uint184 {
+    const bn = new Bn(numberString, base)
+    return new Uint184(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
 }
 
 export class Uint192 extends UintX {
@@ -1369,6 +1484,11 @@ export class Uint192 extends UintX {
 
   static fromNumber(number: number): Uint192 {
     const bn = new Bn(number)
+    return new Uint192(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromNumberString(base: number, numberString: string): Uint192 {
+    const bn = new Bn(numberString, base)
     return new Uint192(bn.toArrayLike(Uint8Array, 'be'))
   }
 
@@ -1429,6 +1549,11 @@ export class Uint200 extends UintX {
     return new Uint200(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromNumberString(base: number, numberString: string): Uint200 {
+    const bn = new Bn(numberString, base)
+    return new Uint200(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
 }
 
 export class Uint208 extends UintX {
@@ -1483,6 +1608,11 @@ export class Uint208 extends UintX {
 
   static fromNumber(number: number): Uint208 {
     const bn = new Bn(number)
+    return new Uint208(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromNumberString(base: number, numberString: string): Uint208 {
+    const bn = new Bn(numberString, base)
     return new Uint208(bn.toArrayLike(Uint8Array, 'be'))
   }
 
@@ -1543,6 +1673,11 @@ export class Uint216 extends UintX {
     return new Uint216(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromNumberString(base: number, numberString: string): Uint216 {
+    const bn = new Bn(numberString, base)
+    return new Uint216(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
 }
 
 export class Uint224 extends UintX {
@@ -1597,6 +1732,11 @@ export class Uint224 extends UintX {
 
   static fromNumber(number: number): Uint224 {
     const bn = new Bn(number)
+    return new Uint224(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromNumberString(base: number, numberString: string): Uint224 {
+    const bn = new Bn(numberString, base)
     return new Uint224(bn.toArrayLike(Uint8Array, 'be'))
   }
 
@@ -1657,6 +1797,11 @@ export class Uint232 extends UintX {
     return new Uint232(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromNumberString(base: number, numberString: string): Uint232 {
+    const bn = new Bn(numberString, base)
+    return new Uint232(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
 }
 
 export class Uint240 extends UintX {
@@ -1711,6 +1856,11 @@ export class Uint240 extends UintX {
 
   static fromNumber(number: number): Uint240 {
     const bn = new Bn(number)
+    return new Uint240(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromNumberString(base: number, numberString: string): Uint240 {
+    const bn = new Bn(numberString, base)
     return new Uint240(bn.toArrayLike(Uint8Array, 'be'))
   }
 
@@ -1771,6 +1921,11 @@ export class Uint248 extends UintX {
     return new Uint248(bn.toArrayLike(Uint8Array, 'be'))
   }
 
+  static fromNumberString(base: number, numberString: string): Uint248 {
+    const bn = new Bn(numberString, base)
+    return new Uint248(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
 }
 
 export class Uint256 extends UintX {
@@ -1825,6 +1980,11 @@ export class Uint256 extends UintX {
 
   static fromNumber(number: number): Uint256 {
     const bn = new Bn(number)
+    return new Uint256(bn.toArrayLike(Uint8Array, 'be'))
+  }
+
+  static fromNumberString(base: number, numberString: string): Uint256 {
+    const bn = new Bn(numberString, base)
     return new Uint256(bn.toArrayLike(Uint8Array, 'be'))
   }
 
