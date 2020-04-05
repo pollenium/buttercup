@@ -1,4 +1,5 @@
 import { Uint8, Uint16, Uint256, Bytes } from '../'
+import { UintUnderflowError, UintOverflowError } from '../internals/UintX'
 import { Uu } from 'pollenium-uvaursi'
 
 test('add', () => {
@@ -19,13 +20,11 @@ test('add', () => {
   expect(a.opAdd(b).toNumber()).toBe(127)
 })
 
-
 test('sub', () => {
   const a = new Uint16(100)
   const b = new Uint16(1)
   expect(a.opSub(b).toNumber()).toBe(99)
 })
-
 
 test('mul', () => {
   const a = new Uint16(5)
@@ -70,7 +69,27 @@ test('pow', () => {
   expect(a.opPow(b).toNumber()).toBe(64)
 })
 
+test('UintUnderflowError', () => {
+  expect.assertions(1)
+  const a = new Uint16(1)
+  const b = new Uint16(2)
+  try {
+    a.opSub(b)
+  } catch(error) {
+    expect(error).toBeInstanceOf(UintUnderflowError)
+  }
+})
 
+test('UintOverflowError', () => {
+  expect.assertions(1)
+  const a = new Uint8(255)
+  const b = new Uint8(1)
+  try {
+    a.opAdd(b)
+  } catch(error) {
+    expect(error).toBeInstanceOf(UintOverflowError)
+  }
+})
 
 test('cast', () => {
   const a = new Uint8(4)

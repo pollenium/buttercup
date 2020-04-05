@@ -5,6 +5,20 @@ import { genBnFromUintable } from '../utils'
 
 export type Uintable = number | UintX | Uish
 
+export class UintUnderflowError extends Error {
+  constructor() {
+    super('UnderflowError')
+    Object.setPrototypeOf(this, UintUnderflowError.prototype)
+  }
+}
+
+export class UintOverflowError extends Error {
+  constructor() {
+    super('OverflowError')
+    Object.setPrototypeOf(this, UintOverflowError.prototype)
+  }
+}
+
 export abstract class UintX extends FixLeftButtercup {
 
   private bn?: Bn;

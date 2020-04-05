@@ -1,4 +1,5 @@
 import { UintX, Uintable } from '../internals/UintX';
+import { Bnish } from '../interfaces';
 export declare class Uint8 extends UintX {
     static LENGTH: number;
     constructor(uintable: Uintable);
@@ -10,6 +11,7 @@ export declare class Uint8 extends UintX {
     opPow(uintable: Uintable): Uint8;
     static fromNumber(number: number): Uint8;
     static fromNumberString(base: number, numberString: string): Uint8;
+    static fromBnish(bnish: Bnish): Uint8;
 }
 export declare class Uint16 extends UintX {
     static LENGTH: number;
@@ -22,6 +24,7 @@ export declare class Uint16 extends UintX {
     opPow(uintable: Uintable): Uint16;
     static fromNumber(number: number): Uint16;
     static fromNumberString(base: number, numberString: string): Uint16;
+    static fromBnish(bnish: Bnish): Uint16;
 }
 export declare class Uint24 extends UintX {
     static LENGTH: number;
@@ -34,6 +37,7 @@ export declare class Uint24 extends UintX {
     opPow(uintable: Uintable): Uint24;
     static fromNumber(number: number): Uint24;
     static fromNumberString(base: number, numberString: string): Uint24;
+    static fromBnish(bnish: Bnish): Uint24;
 }
 export declare class Uint32 extends UintX {
     static LENGTH: number;
@@ -46,6 +50,7 @@ export declare class Uint32 extends UintX {
     opPow(uintable: Uintable): Uint32;
     static fromNumber(number: number): Uint32;
     static fromNumberString(base: number, numberString: string): Uint32;
+    static fromBnish(bnish: Bnish): Uint32;
 }
 export declare class Uint40 extends UintX {
     static LENGTH: number;
@@ -58,6 +63,7 @@ export declare class Uint40 extends UintX {
     opPow(uintable: Uintable): Uint40;
     static fromNumber(number: number): Uint40;
     static fromNumberString(base: number, numberString: string): Uint40;
+    static fromBnish(bnish: Bnish): Uint40;
 }
 export declare class Uint48 extends UintX {
     static LENGTH: number;
@@ -70,6 +76,7 @@ export declare class Uint48 extends UintX {
     opPow(uintable: Uintable): Uint48;
     static fromNumber(number: number): Uint48;
     static fromNumberString(base: number, numberString: string): Uint48;
+    static fromBnish(bnish: Bnish): Uint48;
 }
 export declare class Uint56 extends UintX {
     static LENGTH: number;
@@ -82,6 +89,7 @@ export declare class Uint56 extends UintX {
     opPow(uintable: Uintable): Uint56;
     static fromNumber(number: number): Uint56;
     static fromNumberString(base: number, numberString: string): Uint56;
+    static fromBnish(bnish: Bnish): Uint56;
 }
 export declare class Uint64 extends UintX {
     static LENGTH: number;
@@ -94,6 +102,7 @@ export declare class Uint64 extends UintX {
     opPow(uintable: Uintable): Uint64;
     static fromNumber(number: number): Uint64;
     static fromNumberString(base: number, numberString: string): Uint64;
+    static fromBnish(bnish: Bnish): Uint64;
 }
 export declare class Uint72 extends UintX {
     static LENGTH: number;
@@ -106,6 +115,7 @@ export declare class Uint72 extends UintX {
     opPow(uintable: Uintable): Uint72;
     static fromNumber(number: number): Uint72;
     static fromNumberString(base: number, numberString: string): Uint72;
+    static fromBnish(bnish: Bnish): Uint72;
 }
 export declare class Uint80 extends UintX {
     static LENGTH: number;
@@ -118,6 +128,7 @@ export declare class Uint80 extends UintX {
     opPow(uintable: Uintable): Uint80;
     static fromNumber(number: number): Uint80;
     static fromNumberString(base: number, numberString: string): Uint80;
+    static fromBnish(bnish: Bnish): Uint80;
 }
 export declare class Uint88 extends UintX {
     static LENGTH: number;
@@ -130,6 +141,7 @@ export declare class Uint88 extends UintX {
     opPow(uintable: Uintable): Uint88;
     static fromNumber(number: number): Uint88;
     static fromNumberString(base: number, numberString: string): Uint88;
+    static fromBnish(bnish: Bnish): Uint88;
 }
 export declare class Uint96 extends UintX {
     static LENGTH: number;
@@ -142,6 +154,7 @@ export declare class Uint96 extends UintX {
     opPow(uintable: Uintable): Uint96;
     static fromNumber(number: number): Uint96;
     static fromNumberString(base: number, numberString: string): Uint96;
+    static fromBnish(bnish: Bnish): Uint96;
 }
 export declare class Uint104 extends UintX {
     static LENGTH: number;
@@ -154,6 +167,7 @@ export declare class Uint104 extends UintX {
     opPow(uintable: Uintable): Uint104;
     static fromNumber(number: number): Uint104;
     static fromNumberString(base: number, numberString: string): Uint104;
+    static fromBnish(bnish: Bnish): Uint104;
 }
 export declare class Uint112 extends UintX {
     static LENGTH: number;
@@ -166,6 +180,7 @@ export declare class Uint112 extends UintX {
     opPow(uintable: Uintable): Uint112;
     static fromNumber(number: number): Uint112;
     static fromNumberString(base: number, numberString: string): Uint112;
+    static fromBnish(bnish: Bnish): Uint112;
 }
 export declare class Uint120 extends UintX {
     static LENGTH: number;
@@ -178,6 +193,7 @@ export declare class Uint120 extends UintX {
     opPow(uintable: Uintable): Uint120;
     static fromNumber(number: number): Uint120;
     static fromNumberString(base: number, numberString: string): Uint120;
+    static fromBnish(bnish: Bnish): Uint120;
 }
 export declare class Uint128 extends UintX {
     static LENGTH: number;
@@ -190,6 +206,7 @@ export declare class Uint128 extends UintX {
     opPow(uintable: Uintable): Uint128;
     static fromNumber(number: number): Uint128;
     static fromNumberString(base: number, numberString: string): Uint128;
+    static fromBnish(bnish: Bnish): Uint128;
 }
 export declare class Uint136 extends UintX {
     static LENGTH: number;
@@ -202,6 +219,7 @@ export declare class Uint136 extends UintX {
     opPow(uintable: Uintable): Uint136;
     static fromNumber(number: number): Uint136;
     static fromNumberString(base: number, numberString: string): Uint136;
+    static fromBnish(bnish: Bnish): Uint136;
 }
 export declare class Uint144 extends UintX {
     static LENGTH: number;
@@ -214,6 +232,7 @@ export declare class Uint144 extends UintX {
     opPow(uintable: Uintable): Uint144;
     static fromNumber(number: number): Uint144;
     static fromNumberString(base: number, numberString: string): Uint144;
+    static fromBnish(bnish: Bnish): Uint144;
 }
 export declare class Uint152 extends UintX {
     static LENGTH: number;
@@ -226,6 +245,7 @@ export declare class Uint152 extends UintX {
     opPow(uintable: Uintable): Uint152;
     static fromNumber(number: number): Uint152;
     static fromNumberString(base: number, numberString: string): Uint152;
+    static fromBnish(bnish: Bnish): Uint152;
 }
 export declare class Uint160 extends UintX {
     static LENGTH: number;
@@ -238,6 +258,7 @@ export declare class Uint160 extends UintX {
     opPow(uintable: Uintable): Uint160;
     static fromNumber(number: number): Uint160;
     static fromNumberString(base: number, numberString: string): Uint160;
+    static fromBnish(bnish: Bnish): Uint160;
 }
 export declare class Uint168 extends UintX {
     static LENGTH: number;
@@ -250,6 +271,7 @@ export declare class Uint168 extends UintX {
     opPow(uintable: Uintable): Uint168;
     static fromNumber(number: number): Uint168;
     static fromNumberString(base: number, numberString: string): Uint168;
+    static fromBnish(bnish: Bnish): Uint168;
 }
 export declare class Uint176 extends UintX {
     static LENGTH: number;
@@ -262,6 +284,7 @@ export declare class Uint176 extends UintX {
     opPow(uintable: Uintable): Uint176;
     static fromNumber(number: number): Uint176;
     static fromNumberString(base: number, numberString: string): Uint176;
+    static fromBnish(bnish: Bnish): Uint176;
 }
 export declare class Uint184 extends UintX {
     static LENGTH: number;
@@ -274,6 +297,7 @@ export declare class Uint184 extends UintX {
     opPow(uintable: Uintable): Uint184;
     static fromNumber(number: number): Uint184;
     static fromNumberString(base: number, numberString: string): Uint184;
+    static fromBnish(bnish: Bnish): Uint184;
 }
 export declare class Uint192 extends UintX {
     static LENGTH: number;
@@ -286,6 +310,7 @@ export declare class Uint192 extends UintX {
     opPow(uintable: Uintable): Uint192;
     static fromNumber(number: number): Uint192;
     static fromNumberString(base: number, numberString: string): Uint192;
+    static fromBnish(bnish: Bnish): Uint192;
 }
 export declare class Uint200 extends UintX {
     static LENGTH: number;
@@ -298,6 +323,7 @@ export declare class Uint200 extends UintX {
     opPow(uintable: Uintable): Uint200;
     static fromNumber(number: number): Uint200;
     static fromNumberString(base: number, numberString: string): Uint200;
+    static fromBnish(bnish: Bnish): Uint200;
 }
 export declare class Uint208 extends UintX {
     static LENGTH: number;
@@ -310,6 +336,7 @@ export declare class Uint208 extends UintX {
     opPow(uintable: Uintable): Uint208;
     static fromNumber(number: number): Uint208;
     static fromNumberString(base: number, numberString: string): Uint208;
+    static fromBnish(bnish: Bnish): Uint208;
 }
 export declare class Uint216 extends UintX {
     static LENGTH: number;
@@ -322,6 +349,7 @@ export declare class Uint216 extends UintX {
     opPow(uintable: Uintable): Uint216;
     static fromNumber(number: number): Uint216;
     static fromNumberString(base: number, numberString: string): Uint216;
+    static fromBnish(bnish: Bnish): Uint216;
 }
 export declare class Uint224 extends UintX {
     static LENGTH: number;
@@ -334,6 +362,7 @@ export declare class Uint224 extends UintX {
     opPow(uintable: Uintable): Uint224;
     static fromNumber(number: number): Uint224;
     static fromNumberString(base: number, numberString: string): Uint224;
+    static fromBnish(bnish: Bnish): Uint224;
 }
 export declare class Uint232 extends UintX {
     static LENGTH: number;
@@ -346,6 +375,7 @@ export declare class Uint232 extends UintX {
     opPow(uintable: Uintable): Uint232;
     static fromNumber(number: number): Uint232;
     static fromNumberString(base: number, numberString: string): Uint232;
+    static fromBnish(bnish: Bnish): Uint232;
 }
 export declare class Uint240 extends UintX {
     static LENGTH: number;
@@ -358,6 +388,7 @@ export declare class Uint240 extends UintX {
     opPow(uintable: Uintable): Uint240;
     static fromNumber(number: number): Uint240;
     static fromNumberString(base: number, numberString: string): Uint240;
+    static fromBnish(bnish: Bnish): Uint240;
 }
 export declare class Uint248 extends UintX {
     static LENGTH: number;
@@ -370,6 +401,7 @@ export declare class Uint248 extends UintX {
     opPow(uintable: Uintable): Uint248;
     static fromNumber(number: number): Uint248;
     static fromNumberString(base: number, numberString: string): Uint248;
+    static fromBnish(bnish: Bnish): Uint248;
 }
 export declare class Uint256 extends UintX {
     static LENGTH: number;
@@ -382,4 +414,5 @@ export declare class Uint256 extends UintX {
     opPow(uintable: Uintable): Uint256;
     static fromNumber(number: number): Uint256;
     static fromNumberString(base: number, numberString: string): Uint256;
+    static fromBnish(bnish: Bnish): Uint256;
 }

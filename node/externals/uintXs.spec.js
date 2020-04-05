@@ -1,6 +1,7 @@
 "use strict";
 exports.__esModule = true;
 var __1 = require("../");
+var UintX_1 = require("../internals/UintX");
 test('add', function () {
     var a = new __1.Uint8(4);
     var b = new __1.Uint8(5);
@@ -55,6 +56,28 @@ test('pow', function () {
     var a = new __1.Uint16(4);
     var b = new __1.Uint16(3);
     expect(a.opPow(b).toNumber()).toBe(64);
+});
+test('UintUnderflowError', function () {
+    expect.assertions(1);
+    var a = new __1.Uint16(1);
+    var b = new __1.Uint16(2);
+    try {
+        a.opSub(b);
+    }
+    catch (error) {
+        expect(error).toBeInstanceOf(UintX_1.UintUnderflowError);
+    }
+});
+test('UintOverflowError', function () {
+    expect.assertions(1);
+    var a = new __1.Uint8(255);
+    var b = new __1.Uint8(1);
+    try {
+        a.opAdd(b);
+    }
+    catch (error) {
+        expect(error).toBeInstanceOf(UintX_1.UintOverflowError);
+    }
 });
 test('cast', function () {
     var a = new __1.Uint8(4);

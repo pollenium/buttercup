@@ -19,6 +19,26 @@ exports.__esModule = true;
 var fixButtercups_1 = require("../buttercups/fixButtercups");
 var bn_js_1 = __importDefault(require("bn.js"));
 var utils_1 = require("../utils");
+var UintUnderflowError = /** @class */ (function (_super) {
+    __extends(UintUnderflowError, _super);
+    function UintUnderflowError() {
+        var _this = _super.call(this, 'UnderflowError') || this;
+        Object.setPrototypeOf(_this, UintUnderflowError.prototype);
+        return _this;
+    }
+    return UintUnderflowError;
+}(Error));
+exports.UintUnderflowError = UintUnderflowError;
+var UintOverflowError = /** @class */ (function (_super) {
+    __extends(UintOverflowError, _super);
+    function UintOverflowError() {
+        var _this = _super.call(this, 'OverflowError') || this;
+        Object.setPrototypeOf(_this, UintOverflowError.prototype);
+        return _this;
+    }
+    return UintOverflowError;
+}(Error));
+exports.UintOverflowError = UintOverflowError;
 var UintX = /** @class */ (function (_super) {
     __extends(UintX, _super);
     function UintX(length, uintable) {
