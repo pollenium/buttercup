@@ -7,15 +7,22 @@ export type Uintable = number | UintX | Uish
 
 export class UintUnderflowError extends Error {
   constructor() {
-    super('UnderflowError')
+    super('UintUnderflowError')
     Object.setPrototypeOf(this, UintUnderflowError.prototype)
   }
 }
 
 export class UintOverflowError extends Error {
   constructor() {
-    super('OverflowError')
+    super('UintOverflowError')
     Object.setPrototypeOf(this, UintOverflowError.prototype)
+  }
+}
+
+export class UintNotIntegerError extends Error {
+  constructor() {
+    super('UintNotIntegerError')
+    Object.setPrototypeOf(this, UintNotIntegerError.prototype)
   }
 }
 

@@ -1,7 +1,12 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 exports.__esModule = true;
 var __1 = require("../");
 var UintX_1 = require("../internals/UintX");
+var bignumber_js_1 = __importDefault(require("bignumber.js"));
+var bn_js_1 = __importDefault(require("bn.js"));
 test('add', function () {
     var a = new __1.Uint8(4);
     var b = new __1.Uint8(5);
@@ -79,6 +84,15 @@ test('UintOverflowError', function () {
         expect(error).toBeInstanceOf(UintX_1.UintOverflowError);
     }
 });
+test('UintNotIntegerError', function () {
+    expect.assertions(1);
+    try {
+        __1.Uint16.fromBignumberish(new bignumber_js_1["default"]('1.5'));
+    }
+    catch (error) {
+        expect(error).toBeInstanceOf(UintX_1.UintNotIntegerError);
+    }
+});
 test('cast', function () {
     var a = new __1.Uint8(4);
     var b = a.genCasted(__1.Bytes);
@@ -99,6 +113,14 @@ test('fromNumberString', function () {
     var b = __1.Uint256.fromNumberString(2, '101010');
     var c = a.opAdd(b);
     expect(c.toNumberString(10)).toBe('57047');
+});
+test('fromBnish', function () {
+    var bn = new bn_js_1["default"](5);
+    expect(__1.Uint16.fromBnish(bn).toNumber()).toBe(5);
+});
+test('fromBignumberish', function () {
+    var bignumber = new bignumber_js_1["default"](15);
+    expect(__1.Uint16.fromBignumberish(bignumber).toNumber()).toBe(15);
 });
 test('comparison', function () {
     var a = new __1.Uint8(4);

@@ -1,6 +1,8 @@
 import { Uint8, Uint16, Uint256, Bytes } from '../'
-import { UintUnderflowError, UintOverflowError } from '../internals/UintX'
+import { UintUnderflowError, UintOverflowError, UintNotIntegerError } from '../internals/UintX'
 import { Uu } from 'pollenium-uvaursi'
+import Bignumber from 'bignumber.js'
+import Bn from 'bn.js'
 
 test('add', () => {
   const a = new Uint8(4)
@@ -91,6 +93,15 @@ test('UintOverflowError', () => {
   }
 })
 
+test('UintNotIntegerError', () => {
+  expect.assertions(1)
+  try {
+    Uint16.fromBignumberish(new Bignumber('1.5'))
+  } catch(error) {
+    expect(error).toBeInstanceOf(UintNotIntegerError)
+  }
+})
+
 test('cast', () => {
   const a = new Uint8(4)
   const b = a.genCasted(Bytes)
@@ -115,6 +126,16 @@ test('fromNumberString', () => {
   const b = Uint256.fromNumberString(2, '101010');
   const c = a.opAdd(b)
   expect(c.toNumberString(10)).toBe('57047')
+})
+
+test('fromBnish', () => {
+  const bn = new Bn(5)
+  expect(Uint16.fromBnish(bn).toNumber()).toBe(5)
+})
+
+test('fromBignumberish', () => {
+  const bignumber = new Bignumber(15)
+  expect(Uint16.fromBignumberish(bignumber).toNumber()).toBe(15)
 })
 
 

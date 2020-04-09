@@ -1,7 +1,7 @@
-import { UintX, Uintable, UintUnderflowError, UintOverflowError } from '../internals/UintX'
+import { UintX, Uintable, UintUnderflowError, UintOverflowError, UintNotIntegerError } from '../internals/UintX'
 import Bn from 'bn.js'
 import { Uish } from 'pollenium-uvaursi'
-import { Bnish } from '../interfaces'
+import { Bnish, Bignumberish } from '../interfaces'
 import { genBnFromUintable } from '../utils'
 
 const zeroBn = new Bn(0)
@@ -75,6 +75,12 @@ export class Uint8 extends UintX {
     return new Uint8(uint8Array)
   }
 
+  static fromBignumberish(bignumberish: Bignumberish): Uint8 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint8.fromNumberString(10, bignumberish.toString(10))
+  }
+
 }
 
 export class Uint16 extends UintX {
@@ -143,6 +149,12 @@ export class Uint16 extends UintX {
     if (array.length > 2) { throw new UintOverflowError }
     const uint8Array = new Uint8Array(array)
     return new Uint16(uint8Array)
+  }
+
+  static fromBignumberish(bignumberish: Bignumberish): Uint16 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint16.fromNumberString(10, bignumberish.toString(10))
   }
 
 }
@@ -215,6 +227,12 @@ export class Uint24 extends UintX {
     return new Uint24(uint8Array)
   }
 
+  static fromBignumberish(bignumberish: Bignumberish): Uint24 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint24.fromNumberString(10, bignumberish.toString(10))
+  }
+
 }
 
 export class Uint32 extends UintX {
@@ -283,6 +301,12 @@ export class Uint32 extends UintX {
     if (array.length > 4) { throw new UintOverflowError }
     const uint8Array = new Uint8Array(array)
     return new Uint32(uint8Array)
+  }
+
+  static fromBignumberish(bignumberish: Bignumberish): Uint32 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint32.fromNumberString(10, bignumberish.toString(10))
   }
 
 }
@@ -355,6 +379,12 @@ export class Uint40 extends UintX {
     return new Uint40(uint8Array)
   }
 
+  static fromBignumberish(bignumberish: Bignumberish): Uint40 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint40.fromNumberString(10, bignumberish.toString(10))
+  }
+
 }
 
 export class Uint48 extends UintX {
@@ -423,6 +453,12 @@ export class Uint48 extends UintX {
     if (array.length > 6) { throw new UintOverflowError }
     const uint8Array = new Uint8Array(array)
     return new Uint48(uint8Array)
+  }
+
+  static fromBignumberish(bignumberish: Bignumberish): Uint48 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint48.fromNumberString(10, bignumberish.toString(10))
   }
 
 }
@@ -495,6 +531,12 @@ export class Uint56 extends UintX {
     return new Uint56(uint8Array)
   }
 
+  static fromBignumberish(bignumberish: Bignumberish): Uint56 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint56.fromNumberString(10, bignumberish.toString(10))
+  }
+
 }
 
 export class Uint64 extends UintX {
@@ -563,6 +605,12 @@ export class Uint64 extends UintX {
     if (array.length > 8) { throw new UintOverflowError }
     const uint8Array = new Uint8Array(array)
     return new Uint64(uint8Array)
+  }
+
+  static fromBignumberish(bignumberish: Bignumberish): Uint64 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint64.fromNumberString(10, bignumberish.toString(10))
   }
 
 }
@@ -635,6 +683,12 @@ export class Uint72 extends UintX {
     return new Uint72(uint8Array)
   }
 
+  static fromBignumberish(bignumberish: Bignumberish): Uint72 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint72.fromNumberString(10, bignumberish.toString(10))
+  }
+
 }
 
 export class Uint80 extends UintX {
@@ -703,6 +757,12 @@ export class Uint80 extends UintX {
     if (array.length > 10) { throw new UintOverflowError }
     const uint8Array = new Uint8Array(array)
     return new Uint80(uint8Array)
+  }
+
+  static fromBignumberish(bignumberish: Bignumberish): Uint80 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint80.fromNumberString(10, bignumberish.toString(10))
   }
 
 }
@@ -775,6 +835,12 @@ export class Uint88 extends UintX {
     return new Uint88(uint8Array)
   }
 
+  static fromBignumberish(bignumberish: Bignumberish): Uint88 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint88.fromNumberString(10, bignumberish.toString(10))
+  }
+
 }
 
 export class Uint96 extends UintX {
@@ -843,6 +909,12 @@ export class Uint96 extends UintX {
     if (array.length > 12) { throw new UintOverflowError }
     const uint8Array = new Uint8Array(array)
     return new Uint96(uint8Array)
+  }
+
+  static fromBignumberish(bignumberish: Bignumberish): Uint96 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint96.fromNumberString(10, bignumberish.toString(10))
   }
 
 }
@@ -915,6 +987,12 @@ export class Uint104 extends UintX {
     return new Uint104(uint8Array)
   }
 
+  static fromBignumberish(bignumberish: Bignumberish): Uint104 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint104.fromNumberString(10, bignumberish.toString(10))
+  }
+
 }
 
 export class Uint112 extends UintX {
@@ -983,6 +1061,12 @@ export class Uint112 extends UintX {
     if (array.length > 14) { throw new UintOverflowError }
     const uint8Array = new Uint8Array(array)
     return new Uint112(uint8Array)
+  }
+
+  static fromBignumberish(bignumberish: Bignumberish): Uint112 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint112.fromNumberString(10, bignumberish.toString(10))
   }
 
 }
@@ -1055,6 +1139,12 @@ export class Uint120 extends UintX {
     return new Uint120(uint8Array)
   }
 
+  static fromBignumberish(bignumberish: Bignumberish): Uint120 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint120.fromNumberString(10, bignumberish.toString(10))
+  }
+
 }
 
 export class Uint128 extends UintX {
@@ -1123,6 +1213,12 @@ export class Uint128 extends UintX {
     if (array.length > 16) { throw new UintOverflowError }
     const uint8Array = new Uint8Array(array)
     return new Uint128(uint8Array)
+  }
+
+  static fromBignumberish(bignumberish: Bignumberish): Uint128 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint128.fromNumberString(10, bignumberish.toString(10))
   }
 
 }
@@ -1195,6 +1291,12 @@ export class Uint136 extends UintX {
     return new Uint136(uint8Array)
   }
 
+  static fromBignumberish(bignumberish: Bignumberish): Uint136 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint136.fromNumberString(10, bignumberish.toString(10))
+  }
+
 }
 
 export class Uint144 extends UintX {
@@ -1263,6 +1365,12 @@ export class Uint144 extends UintX {
     if (array.length > 18) { throw new UintOverflowError }
     const uint8Array = new Uint8Array(array)
     return new Uint144(uint8Array)
+  }
+
+  static fromBignumberish(bignumberish: Bignumberish): Uint144 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint144.fromNumberString(10, bignumberish.toString(10))
   }
 
 }
@@ -1335,6 +1443,12 @@ export class Uint152 extends UintX {
     return new Uint152(uint8Array)
   }
 
+  static fromBignumberish(bignumberish: Bignumberish): Uint152 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint152.fromNumberString(10, bignumberish.toString(10))
+  }
+
 }
 
 export class Uint160 extends UintX {
@@ -1403,6 +1517,12 @@ export class Uint160 extends UintX {
     if (array.length > 20) { throw new UintOverflowError }
     const uint8Array = new Uint8Array(array)
     return new Uint160(uint8Array)
+  }
+
+  static fromBignumberish(bignumberish: Bignumberish): Uint160 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint160.fromNumberString(10, bignumberish.toString(10))
   }
 
 }
@@ -1475,6 +1595,12 @@ export class Uint168 extends UintX {
     return new Uint168(uint8Array)
   }
 
+  static fromBignumberish(bignumberish: Bignumberish): Uint168 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint168.fromNumberString(10, bignumberish.toString(10))
+  }
+
 }
 
 export class Uint176 extends UintX {
@@ -1543,6 +1669,12 @@ export class Uint176 extends UintX {
     if (array.length > 22) { throw new UintOverflowError }
     const uint8Array = new Uint8Array(array)
     return new Uint176(uint8Array)
+  }
+
+  static fromBignumberish(bignumberish: Bignumberish): Uint176 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint176.fromNumberString(10, bignumberish.toString(10))
   }
 
 }
@@ -1615,6 +1747,12 @@ export class Uint184 extends UintX {
     return new Uint184(uint8Array)
   }
 
+  static fromBignumberish(bignumberish: Bignumberish): Uint184 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint184.fromNumberString(10, bignumberish.toString(10))
+  }
+
 }
 
 export class Uint192 extends UintX {
@@ -1683,6 +1821,12 @@ export class Uint192 extends UintX {
     if (array.length > 24) { throw new UintOverflowError }
     const uint8Array = new Uint8Array(array)
     return new Uint192(uint8Array)
+  }
+
+  static fromBignumberish(bignumberish: Bignumberish): Uint192 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint192.fromNumberString(10, bignumberish.toString(10))
   }
 
 }
@@ -1755,6 +1899,12 @@ export class Uint200 extends UintX {
     return new Uint200(uint8Array)
   }
 
+  static fromBignumberish(bignumberish: Bignumberish): Uint200 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint200.fromNumberString(10, bignumberish.toString(10))
+  }
+
 }
 
 export class Uint208 extends UintX {
@@ -1823,6 +1973,12 @@ export class Uint208 extends UintX {
     if (array.length > 26) { throw new UintOverflowError }
     const uint8Array = new Uint8Array(array)
     return new Uint208(uint8Array)
+  }
+
+  static fromBignumberish(bignumberish: Bignumberish): Uint208 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint208.fromNumberString(10, bignumberish.toString(10))
   }
 
 }
@@ -1895,6 +2051,12 @@ export class Uint216 extends UintX {
     return new Uint216(uint8Array)
   }
 
+  static fromBignumberish(bignumberish: Bignumberish): Uint216 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint216.fromNumberString(10, bignumberish.toString(10))
+  }
+
 }
 
 export class Uint224 extends UintX {
@@ -1963,6 +2125,12 @@ export class Uint224 extends UintX {
     if (array.length > 28) { throw new UintOverflowError }
     const uint8Array = new Uint8Array(array)
     return new Uint224(uint8Array)
+  }
+
+  static fromBignumberish(bignumberish: Bignumberish): Uint224 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint224.fromNumberString(10, bignumberish.toString(10))
   }
 
 }
@@ -2035,6 +2203,12 @@ export class Uint232 extends UintX {
     return new Uint232(uint8Array)
   }
 
+  static fromBignumberish(bignumberish: Bignumberish): Uint232 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint232.fromNumberString(10, bignumberish.toString(10))
+  }
+
 }
 
 export class Uint240 extends UintX {
@@ -2103,6 +2277,12 @@ export class Uint240 extends UintX {
     if (array.length > 30) { throw new UintOverflowError }
     const uint8Array = new Uint8Array(array)
     return new Uint240(uint8Array)
+  }
+
+  static fromBignumberish(bignumberish: Bignumberish): Uint240 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint240.fromNumberString(10, bignumberish.toString(10))
   }
 
 }
@@ -2175,6 +2355,12 @@ export class Uint248 extends UintX {
     return new Uint248(uint8Array)
   }
 
+  static fromBignumberish(bignumberish: Bignumberish): Uint248 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint248.fromNumberString(10, bignumberish.toString(10))
+  }
+
 }
 
 export class Uint256 extends UintX {
@@ -2243,6 +2429,12 @@ export class Uint256 extends UintX {
     if (array.length > 32) { throw new UintOverflowError }
     const uint8Array = new Uint8Array(array)
     return new Uint256(uint8Array)
+  }
+
+  static fromBignumberish(bignumberish: Bignumberish): Uint256 {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return Uint256.fromNumberString(10, bignumberish.toString(10))
   }
 
 }

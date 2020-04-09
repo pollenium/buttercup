@@ -1,7 +1,7 @@
-import { UintX, Uintable, UintUnderflowError, UintOverflowError } from '../internals/UintX'
+import { UintX, Uintable, UintUnderflowError, UintOverflowError, UintNotIntegerError } from '../internals/UintX'
 import Bn from 'bn.js'
 import { Uish } from 'pollenium-uvaursi'
-import { Bnish } from '../interfaces'
+import { Bnish, Bignumberish } from '../interfaces'
 import { genBnFromUintable } from '../utils'
 
 const zeroBn = new Bn(0)
@@ -74,6 +74,12 @@ export class {{className}} extends UintX {
     if (array.length > {{length}}) { throw new UintOverflowError }
     const uint8Array = new Uint8Array(array)
     return new {{className}}(uint8Array)
+  }
+
+  static fromBignumberish(bignumberish: Bignumberish): {{className}} {
+    if (bignumberish.isNegative()) { throw new UintUnderflowError }
+    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
+    return {{className}}.fromNumberString(10, bignumberish.toString(10))
   }
 
 }
