@@ -1,5 +1,5 @@
 import { Uint8, Uint16, Uint256, Bytes } from '../'
-import { UintUnderflowError, UintOverflowError, UintNotIntegerError } from '../internals/UintX'
+import { UintUnderflowError, UintOverflowError } from '../internals/UintX'
 import { Uu } from 'pollenium-uvaursi'
 import Bignumber from 'bignumber.js'
 import Bn from 'bn.js'

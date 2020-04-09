@@ -1,4 +1,4 @@
-import { UintX, Uintable, UintUnderflowError, UintOverflowError, UintNotIntegerError } from '../internals/UintX'
+import { UintX, Uintable, UintUnderflowError, UintOverflowError } from '../internals/UintX'
 import Bn from 'bn.js'
 import { Uish } from 'pollenium-uvaursi'
 import { Bnish, Bignumberish } from '../interfaces'
