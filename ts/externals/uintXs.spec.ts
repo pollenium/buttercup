@@ -93,15 +93,6 @@ test('UintOverflowError', () => {
   }
 })
 
-test('UintNotIntegerError', () => {
-  expect.assertions(1)
-  try {
-    Uint16.fromBignumberish(new Bignumber('1.5'))
-  } catch(error) {
-    expect(error).toBeInstanceOf(UintNotIntegerError)
-  }
-})
-
 test('cast', () => {
   const a = new Uint8(4)
   const b = a.genCasted(Bytes)

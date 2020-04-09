@@ -7,9 +7,6 @@ export declare class UintUnderflowError extends Error {
 export declare class UintOverflowError extends Error {
     constructor();
 }
-export declare class UintNotIntegerError extends Error {
-    constructor();
-}
 export declare abstract class UintX extends FixLeftButtercup {
     private bn?;
     private number?;

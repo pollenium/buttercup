@@ -19,13 +19,6 @@ export class UintOverflowError extends Error {
   }
 }
 
-export class UintNotIntegerError extends Error {
-  constructor() {
-    super('UintNotIntegerError')
-    Object.setPrototypeOf(this, UintNotIntegerError.prototype)
-  }
-}
-
 export abstract class UintX extends FixLeftButtercup {
 
   private bn?: Bn;

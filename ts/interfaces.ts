@@ -13,4 +13,4 @@ export interface ExternalClass<T> extends Function {
 
 export interface Bnish extends Pick<Bn, 'toArray' | 'isNeg'> { }
 
-export interface Bignumberish extends Pick<Bignumber, 'toString' | 'isNegative' | 'isInteger'> { }
+export interface Bignumberish extends Pick<Bignumber, 'toString'> { }

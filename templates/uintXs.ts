@@ -77,8 +77,6 @@ export class {{className}} extends UintX {
   }
 
   static fromBignumberish(bignumberish: Bignumberish): {{className}} {
-    if (bignumberish.isNegative()) { throw new UintUnderflowError }
-    if (!bignumberish.isInteger()) { throw new UintNotIntegerError }
     return {{className}}.fromNumberString(10, bignumberish.toString(10))
   }
 

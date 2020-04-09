@@ -82,12 +82,6 @@ var Uint8 = /** @class */ (function (_super) {
         return new Uint8(uint8Array);
     };
     Uint8.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint8.fromNumberString(10, bignumberish.toString(10));
     };
     Uint8.LENGTH = 1;
@@ -155,12 +149,6 @@ var Uint16 = /** @class */ (function (_super) {
         return new Uint16(uint8Array);
     };
     Uint16.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint16.fromNumberString(10, bignumberish.toString(10));
     };
     Uint16.LENGTH = 2;
@@ -228,12 +216,6 @@ var Uint24 = /** @class */ (function (_super) {
         return new Uint24(uint8Array);
     };
     Uint24.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint24.fromNumberString(10, bignumberish.toString(10));
     };
     Uint24.LENGTH = 3;
@@ -301,12 +283,6 @@ var Uint32 = /** @class */ (function (_super) {
         return new Uint32(uint8Array);
     };
     Uint32.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint32.fromNumberString(10, bignumberish.toString(10));
     };
     Uint32.LENGTH = 4;
@@ -374,12 +350,6 @@ var Uint40 = /** @class */ (function (_super) {
         return new Uint40(uint8Array);
     };
     Uint40.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint40.fromNumberString(10, bignumberish.toString(10));
     };
     Uint40.LENGTH = 5;
@@ -447,12 +417,6 @@ var Uint48 = /** @class */ (function (_super) {
         return new Uint48(uint8Array);
     };
     Uint48.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint48.fromNumberString(10, bignumberish.toString(10));
     };
     Uint48.LENGTH = 6;
@@ -520,12 +484,6 @@ var Uint56 = /** @class */ (function (_super) {
         return new Uint56(uint8Array);
     };
     Uint56.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint56.fromNumberString(10, bignumberish.toString(10));
     };
     Uint56.LENGTH = 7;
@@ -593,12 +551,6 @@ var Uint64 = /** @class */ (function (_super) {
         return new Uint64(uint8Array);
     };
     Uint64.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint64.fromNumberString(10, bignumberish.toString(10));
     };
     Uint64.LENGTH = 8;
@@ -666,12 +618,6 @@ var Uint72 = /** @class */ (function (_super) {
         return new Uint72(uint8Array);
     };
     Uint72.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint72.fromNumberString(10, bignumberish.toString(10));
     };
     Uint72.LENGTH = 9;
@@ -739,12 +685,6 @@ var Uint80 = /** @class */ (function (_super) {
         return new Uint80(uint8Array);
     };
     Uint80.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint80.fromNumberString(10, bignumberish.toString(10));
     };
     Uint80.LENGTH = 10;
@@ -812,12 +752,6 @@ var Uint88 = /** @class */ (function (_super) {
         return new Uint88(uint8Array);
     };
     Uint88.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint88.fromNumberString(10, bignumberish.toString(10));
     };
     Uint88.LENGTH = 11;
@@ -885,12 +819,6 @@ var Uint96 = /** @class */ (function (_super) {
         return new Uint96(uint8Array);
     };
     Uint96.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint96.fromNumberString(10, bignumberish.toString(10));
     };
     Uint96.LENGTH = 12;
@@ -958,12 +886,6 @@ var Uint104 = /** @class */ (function (_super) {
         return new Uint104(uint8Array);
     };
     Uint104.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint104.fromNumberString(10, bignumberish.toString(10));
     };
     Uint104.LENGTH = 13;
@@ -1031,12 +953,6 @@ var Uint112 = /** @class */ (function (_super) {
         return new Uint112(uint8Array);
     };
     Uint112.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint112.fromNumberString(10, bignumberish.toString(10));
     };
     Uint112.LENGTH = 14;
@@ -1104,12 +1020,6 @@ var Uint120 = /** @class */ (function (_super) {
         return new Uint120(uint8Array);
     };
     Uint120.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint120.fromNumberString(10, bignumberish.toString(10));
     };
     Uint120.LENGTH = 15;
@@ -1177,12 +1087,6 @@ var Uint128 = /** @class */ (function (_super) {
         return new Uint128(uint8Array);
     };
     Uint128.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint128.fromNumberString(10, bignumberish.toString(10));
     };
     Uint128.LENGTH = 16;
@@ -1250,12 +1154,6 @@ var Uint136 = /** @class */ (function (_super) {
         return new Uint136(uint8Array);
     };
     Uint136.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint136.fromNumberString(10, bignumberish.toString(10));
     };
     Uint136.LENGTH = 17;
@@ -1323,12 +1221,6 @@ var Uint144 = /** @class */ (function (_super) {
         return new Uint144(uint8Array);
     };
     Uint144.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint144.fromNumberString(10, bignumberish.toString(10));
     };
     Uint144.LENGTH = 18;
@@ -1396,12 +1288,6 @@ var Uint152 = /** @class */ (function (_super) {
         return new Uint152(uint8Array);
     };
     Uint152.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint152.fromNumberString(10, bignumberish.toString(10));
     };
     Uint152.LENGTH = 19;
@@ -1469,12 +1355,6 @@ var Uint160 = /** @class */ (function (_super) {
         return new Uint160(uint8Array);
     };
     Uint160.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint160.fromNumberString(10, bignumberish.toString(10));
     };
     Uint160.LENGTH = 20;
@@ -1542,12 +1422,6 @@ var Uint168 = /** @class */ (function (_super) {
         return new Uint168(uint8Array);
     };
     Uint168.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint168.fromNumberString(10, bignumberish.toString(10));
     };
     Uint168.LENGTH = 21;
@@ -1615,12 +1489,6 @@ var Uint176 = /** @class */ (function (_super) {
         return new Uint176(uint8Array);
     };
     Uint176.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint176.fromNumberString(10, bignumberish.toString(10));
     };
     Uint176.LENGTH = 22;
@@ -1688,12 +1556,6 @@ var Uint184 = /** @class */ (function (_super) {
         return new Uint184(uint8Array);
     };
     Uint184.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint184.fromNumberString(10, bignumberish.toString(10));
     };
     Uint184.LENGTH = 23;
@@ -1761,12 +1623,6 @@ var Uint192 = /** @class */ (function (_super) {
         return new Uint192(uint8Array);
     };
     Uint192.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint192.fromNumberString(10, bignumberish.toString(10));
     };
     Uint192.LENGTH = 24;
@@ -1834,12 +1690,6 @@ var Uint200 = /** @class */ (function (_super) {
         return new Uint200(uint8Array);
     };
     Uint200.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint200.fromNumberString(10, bignumberish.toString(10));
     };
     Uint200.LENGTH = 25;
@@ -1907,12 +1757,6 @@ var Uint208 = /** @class */ (function (_super) {
         return new Uint208(uint8Array);
     };
     Uint208.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint208.fromNumberString(10, bignumberish.toString(10));
     };
     Uint208.LENGTH = 26;
@@ -1980,12 +1824,6 @@ var Uint216 = /** @class */ (function (_super) {
         return new Uint216(uint8Array);
     };
     Uint216.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint216.fromNumberString(10, bignumberish.toString(10));
     };
     Uint216.LENGTH = 27;
@@ -2053,12 +1891,6 @@ var Uint224 = /** @class */ (function (_super) {
         return new Uint224(uint8Array);
     };
     Uint224.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint224.fromNumberString(10, bignumberish.toString(10));
     };
     Uint224.LENGTH = 28;
@@ -2126,12 +1958,6 @@ var Uint232 = /** @class */ (function (_super) {
         return new Uint232(uint8Array);
     };
     Uint232.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint232.fromNumberString(10, bignumberish.toString(10));
     };
     Uint232.LENGTH = 29;
@@ -2199,12 +2025,6 @@ var Uint240 = /** @class */ (function (_super) {
         return new Uint240(uint8Array);
     };
     Uint240.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint240.fromNumberString(10, bignumberish.toString(10));
     };
     Uint240.LENGTH = 30;
@@ -2272,12 +2092,6 @@ var Uint248 = /** @class */ (function (_super) {
         return new Uint248(uint8Array);
     };
     Uint248.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint248.fromNumberString(10, bignumberish.toString(10));
     };
     Uint248.LENGTH = 31;
@@ -2345,12 +2159,6 @@ var Uint256 = /** @class */ (function (_super) {
         return new Uint256(uint8Array);
     };
     Uint256.fromBignumberish = function (bignumberish) {
-        if (bignumberish.isNegative()) {
-            throw new UintX_1.UintUnderflowError;
-        }
-        if (!bignumberish.isInteger()) {
-            throw new UintX_1.UintNotIntegerError;
-        }
         return Uint256.fromNumberString(10, bignumberish.toString(10));
     };
     Uint256.LENGTH = 32;

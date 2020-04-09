@@ -84,15 +84,6 @@ test('UintOverflowError', function () {
         expect(error).toBeInstanceOf(UintX_1.UintOverflowError);
     }
 });
-test('UintNotIntegerError', function () {
-    expect.assertions(1);
-    try {
-        __1.Uint16.fromBignumberish(new bignumber_js_1["default"]('1.5'));
-    }
-    catch (error) {
-        expect(error).toBeInstanceOf(UintX_1.UintNotIntegerError);
-    }
-});
 test('cast', function () {
     var a = new __1.Uint8(4);
     var b = a.genCasted(__1.Bytes);

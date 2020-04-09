@@ -39,16 +39,6 @@ var UintOverflowError = /** @class */ (function (_super) {
     return UintOverflowError;
 }(Error));
 exports.UintOverflowError = UintOverflowError;
-var UintNotIntegerError = /** @class */ (function (_super) {
-    __extends(UintNotIntegerError, _super);
-    function UintNotIntegerError() {
-        var _this = _super.call(this, 'UintNotIntegerError') || this;
-        Object.setPrototypeOf(_this, UintNotIntegerError.prototype);
-        return _this;
-    }
-    return UintNotIntegerError;
-}(Error));
-exports.UintNotIntegerError = UintNotIntegerError;
 var UintX = /** @class */ (function (_super) {
     __extends(UintX, _super);
     function UintX(length, uintable) {
