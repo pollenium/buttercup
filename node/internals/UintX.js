@@ -18,6 +18,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 exports.__esModule = true;
 var fixButtercups_1 = require("../buttercups/fixButtercups");
 var bn_js_1 = __importDefault(require("bn.js"));
+var bignumber_js_1 = __importDefault(require("bignumber.js"));
 var utils_1 = require("../utils");
 var UintUnderflowError = /** @class */ (function (_super) {
     __extends(UintUnderflowError, _super);
@@ -47,15 +48,24 @@ var UintX = /** @class */ (function (_super) {
         return _this;
     }
     UintX.prototype.toNumber = function () {
-        this.number = new bn_js_1["default"](this.uu.u).toNumber();
+        if (this.number !== undefined) {
+            return this.number;
+        }
+        this.number = this.toBn().toNumber();
         return this.number;
     };
     UintX.prototype.toNumberString = function (base) {
-        if (this.numberStringByBase[base]) {
+        if (this.numberStringByBase[base] !== undefined) {
             return this.numberStringByBase[base];
         }
-        this.numberStringByBase[base] = new bn_js_1["default"](this.uu.u).toString(base);
+        this.numberStringByBase[base] = this.toBn().toString(base);
         return this.numberStringByBase[base];
+    };
+    UintX.prototype.toBn = function () {
+        return new bn_js_1["default"](this.uu.u);
+    };
+    UintX.prototype.toBignumber = function () {
+        return new bignumber_js_1["default"](this.toNumberString(10));
     };
     UintX.prototype.getIsZero = function () {
         return this.uu.u.every(function (byte) {
@@ -63,27 +73,27 @@ var UintX = /** @class */ (function (_super) {
         });
     };
     UintX.prototype.compEq = function (value) {
-        var thisBn = utils_1.genBnFromUintable(this);
+        var thisBn = this.toBn();
         var valueBn = utils_1.genBnFromUintable(value);
         return thisBn.eq(valueBn);
     };
     UintX.prototype.compGt = function (value) {
-        var thisBn = utils_1.genBnFromUintable(this);
+        var thisBn = this.toBn();
         var valueBn = utils_1.genBnFromUintable(value);
         return thisBn.gt(valueBn);
     };
     UintX.prototype.compGte = function (value) {
-        var thisBn = utils_1.genBnFromUintable(this);
+        var thisBn = this.toBn();
         var valueBn = utils_1.genBnFromUintable(value);
         return thisBn.gte(valueBn);
     };
     UintX.prototype.compLt = function (value) {
-        var thisBn = utils_1.genBnFromUintable(this);
+        var thisBn = this.toBn();
         var valueBn = utils_1.genBnFromUintable(value);
         return thisBn.lt(valueBn);
     };
     UintX.prototype.compLte = function (value) {
-        var thisBn = utils_1.genBnFromUintable(this);
+        var thisBn = this.toBn();
         var valueBn = utils_1.genBnFromUintable(value);
         return thisBn.lte(valueBn);
     };

@@ -1,5 +1,6 @@
 import { FixLeftButtercup } from '../buttercups/fixButtercups'
 import Bn from 'bn.js'
+import Bignumber from 'bignumber.js'
 import { Uish } from 'pollenium-uvaursi'
 import { genBnFromUintable } from '../utils'
 
@@ -21,7 +22,6 @@ export class UintOverflowError extends Error {
 
 export abstract class UintX extends FixLeftButtercup {
 
-  private bn?: Bn;
   private number?: number;
   private numberStringByBase: Record<number, string> = {};
 
@@ -30,16 +30,27 @@ export abstract class UintX extends FixLeftButtercup {
   }
 
   toNumber(): number {
-    this.number = new Bn(this.uu.u).toNumber()
+    if (this.number !== undefined) {
+      return this.number
+    }
+    this.number = this.toBn().toNumber()
     return this.number
   }
 
   toNumberString(base: number): string {
-    if (this.numberStringByBase[base]) {
+    if (this.numberStringByBase[base] !== undefined) {
       return this.numberStringByBase[base]
     }
-    this.numberStringByBase[base] = new Bn(this.uu.u).toString(base)
+    this.numberStringByBase[base] = this.toBn().toString(base)
     return this.numberStringByBase[base]
+  }
+
+  toBn(): Bn {
+    return new Bn(this.uu.u)
+  }
+
+  toBignumber(): Bignumber {
+    return new Bignumber(this.toNumberString(10))
   }
 
   getIsZero(): boolean {
@@ -49,31 +60,31 @@ export abstract class UintX extends FixLeftButtercup {
   }
 
   compEq(value: Uintable): boolean {
-    const thisBn = genBnFromUintable(this)
+    const thisBn = this.toBn()
     const valueBn = genBnFromUintable(value)
     return thisBn.eq(valueBn)
   }
 
   compGt(value: Uintable): boolean {
-    const thisBn = genBnFromUintable(this)
+    const thisBn = this.toBn()
     const valueBn = genBnFromUintable(value)
     return thisBn.gt(valueBn)
   }
 
   compGte(value: Uintable): boolean {
-    const thisBn = genBnFromUintable(this)
+    const thisBn = this.toBn()
     const valueBn = genBnFromUintable(value)
     return thisBn.gte(valueBn)
   }
 
   compLt(value: Uintable): boolean {
-    const thisBn = genBnFromUintable(this)
+    const thisBn = this.toBn()
     const valueBn = genBnFromUintable(value)
     return thisBn.lt(valueBn)
   }
 
   compLte(value: Uintable): boolean {
-    const thisBn = genBnFromUintable(this)
+    const thisBn = this.toBn()
     const valueBn = genBnFromUintable(value)
     return thisBn.lte(valueBn)
   }
