@@ -42,6 +42,16 @@ test('div', function () {
     var b = new __1.Uint16(11);
     expect(a.opDiv(b).toNumber()).toBe(3);
 });
+test('divRound (down)', function () {
+    var a = new __1.Uint16(4);
+    var b = new __1.Uint16(3);
+    expect(a.opDivRound(b).toNumber()).toBe(1);
+});
+test('divRound (up)', function () {
+    var a = new __1.Uint16(5);
+    var b = new __1.Uint16(3);
+    expect(a.opDivRound(b).toNumber()).toBe(2);
+});
 test('mod', function () {
     var a = new __1.Uint16(4);
     var b = new __1.Uint16(2);

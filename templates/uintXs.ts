@@ -44,6 +44,13 @@ export class {{className}} extends UintX {
     return {{className}}.fromBnish(bn)
   }
 
+  opDivRound(uintable: Uintable): {{className}} {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
+    return {{className}}.fromBnish(bn)
+  }
+
   opMod(uintable: Uintable): {{className}} {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)

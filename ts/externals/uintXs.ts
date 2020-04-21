@@ -43,6 +43,13 @@ export class Uint8 extends UintX {
     return Uint8.fromBnish(bn)
   }
 
+  opDivRound(uintable: Uintable): Uint8 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
+    return Uint8.fromBnish(bn)
+  }
+
   opMod(uintable: Uintable): Uint8 {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
@@ -114,6 +121,13 @@ export class Uint16 extends UintX {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
     const bn = thisBn.div(valueBn)
+    return Uint16.fromBnish(bn)
+  }
+
+  opDivRound(uintable: Uintable): Uint16 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
     return Uint16.fromBnish(bn)
   }
 
@@ -191,6 +205,13 @@ export class Uint24 extends UintX {
     return Uint24.fromBnish(bn)
   }
 
+  opDivRound(uintable: Uintable): Uint24 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
+    return Uint24.fromBnish(bn)
+  }
+
   opMod(uintable: Uintable): Uint24 {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
@@ -262,6 +283,13 @@ export class Uint32 extends UintX {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
     const bn = thisBn.div(valueBn)
+    return Uint32.fromBnish(bn)
+  }
+
+  opDivRound(uintable: Uintable): Uint32 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
     return Uint32.fromBnish(bn)
   }
 
@@ -339,6 +367,13 @@ export class Uint40 extends UintX {
     return Uint40.fromBnish(bn)
   }
 
+  opDivRound(uintable: Uintable): Uint40 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
+    return Uint40.fromBnish(bn)
+  }
+
   opMod(uintable: Uintable): Uint40 {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
@@ -410,6 +445,13 @@ export class Uint48 extends UintX {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
     const bn = thisBn.div(valueBn)
+    return Uint48.fromBnish(bn)
+  }
+
+  opDivRound(uintable: Uintable): Uint48 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
     return Uint48.fromBnish(bn)
   }
 
@@ -487,6 +529,13 @@ export class Uint56 extends UintX {
     return Uint56.fromBnish(bn)
   }
 
+  opDivRound(uintable: Uintable): Uint56 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
+    return Uint56.fromBnish(bn)
+  }
+
   opMod(uintable: Uintable): Uint56 {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
@@ -558,6 +607,13 @@ export class Uint64 extends UintX {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
     const bn = thisBn.div(valueBn)
+    return Uint64.fromBnish(bn)
+  }
+
+  opDivRound(uintable: Uintable): Uint64 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
     return Uint64.fromBnish(bn)
   }
 
@@ -635,6 +691,13 @@ export class Uint72 extends UintX {
     return Uint72.fromBnish(bn)
   }
 
+  opDivRound(uintable: Uintable): Uint72 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
+    return Uint72.fromBnish(bn)
+  }
+
   opMod(uintable: Uintable): Uint72 {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
@@ -706,6 +769,13 @@ export class Uint80 extends UintX {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
     const bn = thisBn.div(valueBn)
+    return Uint80.fromBnish(bn)
+  }
+
+  opDivRound(uintable: Uintable): Uint80 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
     return Uint80.fromBnish(bn)
   }
 
@@ -783,6 +853,13 @@ export class Uint88 extends UintX {
     return Uint88.fromBnish(bn)
   }
 
+  opDivRound(uintable: Uintable): Uint88 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
+    return Uint88.fromBnish(bn)
+  }
+
   opMod(uintable: Uintable): Uint88 {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
@@ -854,6 +931,13 @@ export class Uint96 extends UintX {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
     const bn = thisBn.div(valueBn)
+    return Uint96.fromBnish(bn)
+  }
+
+  opDivRound(uintable: Uintable): Uint96 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
     return Uint96.fromBnish(bn)
   }
 
@@ -931,6 +1015,13 @@ export class Uint104 extends UintX {
     return Uint104.fromBnish(bn)
   }
 
+  opDivRound(uintable: Uintable): Uint104 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
+    return Uint104.fromBnish(bn)
+  }
+
   opMod(uintable: Uintable): Uint104 {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
@@ -1002,6 +1093,13 @@ export class Uint112 extends UintX {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
     const bn = thisBn.div(valueBn)
+    return Uint112.fromBnish(bn)
+  }
+
+  opDivRound(uintable: Uintable): Uint112 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
     return Uint112.fromBnish(bn)
   }
 
@@ -1079,6 +1177,13 @@ export class Uint120 extends UintX {
     return Uint120.fromBnish(bn)
   }
 
+  opDivRound(uintable: Uintable): Uint120 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
+    return Uint120.fromBnish(bn)
+  }
+
   opMod(uintable: Uintable): Uint120 {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
@@ -1150,6 +1255,13 @@ export class Uint128 extends UintX {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
     const bn = thisBn.div(valueBn)
+    return Uint128.fromBnish(bn)
+  }
+
+  opDivRound(uintable: Uintable): Uint128 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
     return Uint128.fromBnish(bn)
   }
 
@@ -1227,6 +1339,13 @@ export class Uint136 extends UintX {
     return Uint136.fromBnish(bn)
   }
 
+  opDivRound(uintable: Uintable): Uint136 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
+    return Uint136.fromBnish(bn)
+  }
+
   opMod(uintable: Uintable): Uint136 {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
@@ -1298,6 +1417,13 @@ export class Uint144 extends UintX {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
     const bn = thisBn.div(valueBn)
+    return Uint144.fromBnish(bn)
+  }
+
+  opDivRound(uintable: Uintable): Uint144 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
     return Uint144.fromBnish(bn)
   }
 
@@ -1375,6 +1501,13 @@ export class Uint152 extends UintX {
     return Uint152.fromBnish(bn)
   }
 
+  opDivRound(uintable: Uintable): Uint152 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
+    return Uint152.fromBnish(bn)
+  }
+
   opMod(uintable: Uintable): Uint152 {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
@@ -1446,6 +1579,13 @@ export class Uint160 extends UintX {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
     const bn = thisBn.div(valueBn)
+    return Uint160.fromBnish(bn)
+  }
+
+  opDivRound(uintable: Uintable): Uint160 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
     return Uint160.fromBnish(bn)
   }
 
@@ -1523,6 +1663,13 @@ export class Uint168 extends UintX {
     return Uint168.fromBnish(bn)
   }
 
+  opDivRound(uintable: Uintable): Uint168 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
+    return Uint168.fromBnish(bn)
+  }
+
   opMod(uintable: Uintable): Uint168 {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
@@ -1594,6 +1741,13 @@ export class Uint176 extends UintX {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
     const bn = thisBn.div(valueBn)
+    return Uint176.fromBnish(bn)
+  }
+
+  opDivRound(uintable: Uintable): Uint176 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
     return Uint176.fromBnish(bn)
   }
 
@@ -1671,6 +1825,13 @@ export class Uint184 extends UintX {
     return Uint184.fromBnish(bn)
   }
 
+  opDivRound(uintable: Uintable): Uint184 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
+    return Uint184.fromBnish(bn)
+  }
+
   opMod(uintable: Uintable): Uint184 {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
@@ -1742,6 +1903,13 @@ export class Uint192 extends UintX {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
     const bn = thisBn.div(valueBn)
+    return Uint192.fromBnish(bn)
+  }
+
+  opDivRound(uintable: Uintable): Uint192 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
     return Uint192.fromBnish(bn)
   }
 
@@ -1819,6 +1987,13 @@ export class Uint200 extends UintX {
     return Uint200.fromBnish(bn)
   }
 
+  opDivRound(uintable: Uintable): Uint200 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
+    return Uint200.fromBnish(bn)
+  }
+
   opMod(uintable: Uintable): Uint200 {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
@@ -1890,6 +2065,13 @@ export class Uint208 extends UintX {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
     const bn = thisBn.div(valueBn)
+    return Uint208.fromBnish(bn)
+  }
+
+  opDivRound(uintable: Uintable): Uint208 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
     return Uint208.fromBnish(bn)
   }
 
@@ -1967,6 +2149,13 @@ export class Uint216 extends UintX {
     return Uint216.fromBnish(bn)
   }
 
+  opDivRound(uintable: Uintable): Uint216 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
+    return Uint216.fromBnish(bn)
+  }
+
   opMod(uintable: Uintable): Uint216 {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
@@ -2038,6 +2227,13 @@ export class Uint224 extends UintX {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
     const bn = thisBn.div(valueBn)
+    return Uint224.fromBnish(bn)
+  }
+
+  opDivRound(uintable: Uintable): Uint224 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
     return Uint224.fromBnish(bn)
   }
 
@@ -2115,6 +2311,13 @@ export class Uint232 extends UintX {
     return Uint232.fromBnish(bn)
   }
 
+  opDivRound(uintable: Uintable): Uint232 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
+    return Uint232.fromBnish(bn)
+  }
+
   opMod(uintable: Uintable): Uint232 {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
@@ -2186,6 +2389,13 @@ export class Uint240 extends UintX {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
     const bn = thisBn.div(valueBn)
+    return Uint240.fromBnish(bn)
+  }
+
+  opDivRound(uintable: Uintable): Uint240 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
     return Uint240.fromBnish(bn)
   }
 
@@ -2263,6 +2473,13 @@ export class Uint248 extends UintX {
     return Uint248.fromBnish(bn)
   }
 
+  opDivRound(uintable: Uintable): Uint248 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
+    return Uint248.fromBnish(bn)
+  }
+
   opMod(uintable: Uintable): Uint248 {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
@@ -2334,6 +2551,13 @@ export class Uint256 extends UintX {
     const thisBn = genBnFromUintable(this)
     const valueBn = genBnFromUintable(uintable)
     const bn = thisBn.div(valueBn)
+    return Uint256.fromBnish(bn)
+  }
+
+  opDivRound(uintable: Uintable): Uint256 {
+    const thisBn = genBnFromUintable(this)
+    const valueBn = genBnFromUintable(uintable)
+    const bn = thisBn.divRound(valueBn)
     return Uint256.fromBnish(bn)
   }
 

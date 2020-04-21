@@ -50,6 +50,12 @@ var Uint8 = /** @class */ (function (_super) {
         var bn = thisBn.div(valueBn);
         return Uint8.fromBnish(bn);
     };
+    Uint8.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
+        return Uint8.fromBnish(bn);
+    };
     Uint8.prototype.opMod = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
@@ -115,6 +121,12 @@ var Uint16 = /** @class */ (function (_super) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
         var bn = thisBn.div(valueBn);
+        return Uint16.fromBnish(bn);
+    };
+    Uint16.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
         return Uint16.fromBnish(bn);
     };
     Uint16.prototype.opMod = function (uintable) {
@@ -184,6 +196,12 @@ var Uint24 = /** @class */ (function (_super) {
         var bn = thisBn.div(valueBn);
         return Uint24.fromBnish(bn);
     };
+    Uint24.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
+        return Uint24.fromBnish(bn);
+    };
     Uint24.prototype.opMod = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
@@ -249,6 +267,12 @@ var Uint32 = /** @class */ (function (_super) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
         var bn = thisBn.div(valueBn);
+        return Uint32.fromBnish(bn);
+    };
+    Uint32.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
         return Uint32.fromBnish(bn);
     };
     Uint32.prototype.opMod = function (uintable) {
@@ -318,6 +342,12 @@ var Uint40 = /** @class */ (function (_super) {
         var bn = thisBn.div(valueBn);
         return Uint40.fromBnish(bn);
     };
+    Uint40.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
+        return Uint40.fromBnish(bn);
+    };
     Uint40.prototype.opMod = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
@@ -383,6 +413,12 @@ var Uint48 = /** @class */ (function (_super) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
         var bn = thisBn.div(valueBn);
+        return Uint48.fromBnish(bn);
+    };
+    Uint48.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
         return Uint48.fromBnish(bn);
     };
     Uint48.prototype.opMod = function (uintable) {
@@ -452,6 +488,12 @@ var Uint56 = /** @class */ (function (_super) {
         var bn = thisBn.div(valueBn);
         return Uint56.fromBnish(bn);
     };
+    Uint56.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
+        return Uint56.fromBnish(bn);
+    };
     Uint56.prototype.opMod = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
@@ -517,6 +559,12 @@ var Uint64 = /** @class */ (function (_super) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
         var bn = thisBn.div(valueBn);
+        return Uint64.fromBnish(bn);
+    };
+    Uint64.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
         return Uint64.fromBnish(bn);
     };
     Uint64.prototype.opMod = function (uintable) {
@@ -586,6 +634,12 @@ var Uint72 = /** @class */ (function (_super) {
         var bn = thisBn.div(valueBn);
         return Uint72.fromBnish(bn);
     };
+    Uint72.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
+        return Uint72.fromBnish(bn);
+    };
     Uint72.prototype.opMod = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
@@ -651,6 +705,12 @@ var Uint80 = /** @class */ (function (_super) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
         var bn = thisBn.div(valueBn);
+        return Uint80.fromBnish(bn);
+    };
+    Uint80.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
         return Uint80.fromBnish(bn);
     };
     Uint80.prototype.opMod = function (uintable) {
@@ -720,6 +780,12 @@ var Uint88 = /** @class */ (function (_super) {
         var bn = thisBn.div(valueBn);
         return Uint88.fromBnish(bn);
     };
+    Uint88.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
+        return Uint88.fromBnish(bn);
+    };
     Uint88.prototype.opMod = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
@@ -785,6 +851,12 @@ var Uint96 = /** @class */ (function (_super) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
         var bn = thisBn.div(valueBn);
+        return Uint96.fromBnish(bn);
+    };
+    Uint96.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
         return Uint96.fromBnish(bn);
     };
     Uint96.prototype.opMod = function (uintable) {
@@ -854,6 +926,12 @@ var Uint104 = /** @class */ (function (_super) {
         var bn = thisBn.div(valueBn);
         return Uint104.fromBnish(bn);
     };
+    Uint104.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
+        return Uint104.fromBnish(bn);
+    };
     Uint104.prototype.opMod = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
@@ -919,6 +997,12 @@ var Uint112 = /** @class */ (function (_super) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
         var bn = thisBn.div(valueBn);
+        return Uint112.fromBnish(bn);
+    };
+    Uint112.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
         return Uint112.fromBnish(bn);
     };
     Uint112.prototype.opMod = function (uintable) {
@@ -988,6 +1072,12 @@ var Uint120 = /** @class */ (function (_super) {
         var bn = thisBn.div(valueBn);
         return Uint120.fromBnish(bn);
     };
+    Uint120.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
+        return Uint120.fromBnish(bn);
+    };
     Uint120.prototype.opMod = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
@@ -1053,6 +1143,12 @@ var Uint128 = /** @class */ (function (_super) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
         var bn = thisBn.div(valueBn);
+        return Uint128.fromBnish(bn);
+    };
+    Uint128.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
         return Uint128.fromBnish(bn);
     };
     Uint128.prototype.opMod = function (uintable) {
@@ -1122,6 +1218,12 @@ var Uint136 = /** @class */ (function (_super) {
         var bn = thisBn.div(valueBn);
         return Uint136.fromBnish(bn);
     };
+    Uint136.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
+        return Uint136.fromBnish(bn);
+    };
     Uint136.prototype.opMod = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
@@ -1187,6 +1289,12 @@ var Uint144 = /** @class */ (function (_super) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
         var bn = thisBn.div(valueBn);
+        return Uint144.fromBnish(bn);
+    };
+    Uint144.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
         return Uint144.fromBnish(bn);
     };
     Uint144.prototype.opMod = function (uintable) {
@@ -1256,6 +1364,12 @@ var Uint152 = /** @class */ (function (_super) {
         var bn = thisBn.div(valueBn);
         return Uint152.fromBnish(bn);
     };
+    Uint152.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
+        return Uint152.fromBnish(bn);
+    };
     Uint152.prototype.opMod = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
@@ -1321,6 +1435,12 @@ var Uint160 = /** @class */ (function (_super) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
         var bn = thisBn.div(valueBn);
+        return Uint160.fromBnish(bn);
+    };
+    Uint160.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
         return Uint160.fromBnish(bn);
     };
     Uint160.prototype.opMod = function (uintable) {
@@ -1390,6 +1510,12 @@ var Uint168 = /** @class */ (function (_super) {
         var bn = thisBn.div(valueBn);
         return Uint168.fromBnish(bn);
     };
+    Uint168.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
+        return Uint168.fromBnish(bn);
+    };
     Uint168.prototype.opMod = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
@@ -1455,6 +1581,12 @@ var Uint176 = /** @class */ (function (_super) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
         var bn = thisBn.div(valueBn);
+        return Uint176.fromBnish(bn);
+    };
+    Uint176.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
         return Uint176.fromBnish(bn);
     };
     Uint176.prototype.opMod = function (uintable) {
@@ -1524,6 +1656,12 @@ var Uint184 = /** @class */ (function (_super) {
         var bn = thisBn.div(valueBn);
         return Uint184.fromBnish(bn);
     };
+    Uint184.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
+        return Uint184.fromBnish(bn);
+    };
     Uint184.prototype.opMod = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
@@ -1589,6 +1727,12 @@ var Uint192 = /** @class */ (function (_super) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
         var bn = thisBn.div(valueBn);
+        return Uint192.fromBnish(bn);
+    };
+    Uint192.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
         return Uint192.fromBnish(bn);
     };
     Uint192.prototype.opMod = function (uintable) {
@@ -1658,6 +1802,12 @@ var Uint200 = /** @class */ (function (_super) {
         var bn = thisBn.div(valueBn);
         return Uint200.fromBnish(bn);
     };
+    Uint200.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
+        return Uint200.fromBnish(bn);
+    };
     Uint200.prototype.opMod = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
@@ -1723,6 +1873,12 @@ var Uint208 = /** @class */ (function (_super) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
         var bn = thisBn.div(valueBn);
+        return Uint208.fromBnish(bn);
+    };
+    Uint208.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
         return Uint208.fromBnish(bn);
     };
     Uint208.prototype.opMod = function (uintable) {
@@ -1792,6 +1948,12 @@ var Uint216 = /** @class */ (function (_super) {
         var bn = thisBn.div(valueBn);
         return Uint216.fromBnish(bn);
     };
+    Uint216.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
+        return Uint216.fromBnish(bn);
+    };
     Uint216.prototype.opMod = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
@@ -1857,6 +2019,12 @@ var Uint224 = /** @class */ (function (_super) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
         var bn = thisBn.div(valueBn);
+        return Uint224.fromBnish(bn);
+    };
+    Uint224.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
         return Uint224.fromBnish(bn);
     };
     Uint224.prototype.opMod = function (uintable) {
@@ -1926,6 +2094,12 @@ var Uint232 = /** @class */ (function (_super) {
         var bn = thisBn.div(valueBn);
         return Uint232.fromBnish(bn);
     };
+    Uint232.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
+        return Uint232.fromBnish(bn);
+    };
     Uint232.prototype.opMod = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
@@ -1991,6 +2165,12 @@ var Uint240 = /** @class */ (function (_super) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
         var bn = thisBn.div(valueBn);
+        return Uint240.fromBnish(bn);
+    };
+    Uint240.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
         return Uint240.fromBnish(bn);
     };
     Uint240.prototype.opMod = function (uintable) {
@@ -2060,6 +2240,12 @@ var Uint248 = /** @class */ (function (_super) {
         var bn = thisBn.div(valueBn);
         return Uint248.fromBnish(bn);
     };
+    Uint248.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
+        return Uint248.fromBnish(bn);
+    };
     Uint248.prototype.opMod = function (uintable) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
@@ -2125,6 +2311,12 @@ var Uint256 = /** @class */ (function (_super) {
         var thisBn = utils_1.genBnFromUintable(this);
         var valueBn = utils_1.genBnFromUintable(uintable);
         var bn = thisBn.div(valueBn);
+        return Uint256.fromBnish(bn);
+    };
+    Uint256.prototype.opDivRound = function (uintable) {
+        var thisBn = utils_1.genBnFromUintable(this);
+        var valueBn = utils_1.genBnFromUintable(uintable);
+        var bn = thisBn.divRound(valueBn);
         return Uint256.fromBnish(bn);
     };
     Uint256.prototype.opMod = function (uintable) {

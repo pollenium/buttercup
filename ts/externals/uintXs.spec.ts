@@ -46,6 +46,17 @@ test('div', () => {
   expect(a.opDiv(b).toNumber()).toBe(3)
 })
 
+test('divRound (down)', () => {
+  const a = new Uint16(4)
+  const b = new Uint16(3)
+  expect(a.opDivRound(b).toNumber()).toBe(1)
+})
+
+test('divRound (up)', () => {
+  const a = new Uint16(5)
+  const b = new Uint16(3)
+  expect(a.opDivRound(b).toNumber()).toBe(2)
+})
 
 test('mod', () => {
   const a = new Uint16(4)
