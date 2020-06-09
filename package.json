@@ -20,12 +20,12 @@
   "homepage": "https://github.com/pollenium/buttercup#readme",
   "dependencies": {
     "@types/node": "^12.12.7",
+    "bignumber.js": "^9.0.0",
     "bn.js": "^5.0.0",
     "pollenium-uvaursi": "^8.2.0"
   },
   "devDependencies": {
     "@types/jest": "^24.0.23",
-    "bignumber.js": "^9.0.0",
     "handlebars": "^4.5.3",
     "jest": "^24.9.0",
     "ts-jest": "^24.1.0",
